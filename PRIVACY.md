@@ -24,6 +24,15 @@ Through the YouTube Data API, with the channel owner's OAuth consent, the tool:
   private automation. They are never shared.
 - No data is sold, shared with third parties, used for advertising, or combined with other data sources.
 
+## Data retention and deletion
+
+- Comment data from the YouTube API is used for the day's vote and then discarded, except the single winning
+  comment (display name, text, like count), which is kept in `state.json` for as long as the series runs.
+- Stored data is refreshed or deleted at least every 30 days, as required by the YouTube API Services
+  Developer Policies. When the series ends or access is revoked, all stored API data and tokens are deleted
+  within 7 days.
+- To have a comment removed, email the address above; it is deleted within 7 days.
+
 ## Your choices
 
 Anyone who wants their comment removed from a future episode can email the address above. The channel owner can

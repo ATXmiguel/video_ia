@@ -1,5 +1,11 @@
 # Shift Happens — interactive story channel
 
+**Shift Happens Uploader uses YouTube API Services** to publish episodes to the creator's own YouTube channel
+and read the A/B votes in its comments.
+[Privacy Policy](PRIVACY.md) · [Terms of Service](TERMS.md) ·
+[YouTube Terms of Service](https://www.youtube.com/t/terms) ·
+[Google Privacy Policy](https://policies.google.com/privacy)
+
 Vertical (1080×1920) episodes of ~55–60s for YouTube Shorts (channel ATX_amassanoobstroo). Every episode ends on
 an A/B choice; the **most-liked comment** with A or B picks what happens next, and is shown at the start of the
 next episode. Everything is drawn procedurally in Remotion (flat stick-figure style, SVG), voices are Microsoft
