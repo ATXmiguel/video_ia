@@ -1,0 +1,113 @@
+{
+  "series": "Shift Happens",
+  "episode": 2,
+  "arc": {"number": 1, "part": 2, "name": "Big Bun's"},
+  "hudLabels": {"money": "TIPS", "meter": "MANAGER RAGE"},
+  "hook": "YOU EXPOSED TYLER.",
+  "hookAccent": "HE TOUCHED THE FRYER?!",
+  "topComment": {"user": "@heitorfelix3482", "text": "B", "likes": 1},
+  "recap": {
+    "set": "counter",
+    "cast": [{"who": "kevin", "x": 540, "pose": "angry", "face": "angry"}],
+    "hud": {"tips": 8, "rage": 99, "badge": "ON THIN ICE"},
+    "lines": []
+  },
+  "scenes": [
+    {
+      "set": "counter",
+      "cast": [
+        {"who": "you", "x": 300, "pose": "point", "face": "angry"},
+        {"who": "tyler", "x": 760, "pose": "shock", "face": "shock", "flip": true}
+      ],
+      "hud": {"tips": 8, "rage": 90, "badge": "ON THIN ICE"},
+      "stamp": {"text": "EXPOSED", "color": "yellow", "line": 0},
+      "lines": [
+        "You point at Tyler. Everyone gasps.",
+        {"who": "tyler", "text": "Lies! Check the grill cam!"}
+      ]
+    },
+    {
+      "set": "kitchen",
+      "cast": [
+        {"who": "kevin", "x": 360, "pose": "point", "face": "shock"},
+        {"who": "tyler", "x": 760, "pose": "shrug", "face": "sad", "flip": true}
+      ],
+      "hud": {"tips": 8, "rage": 40, "badge": "CLEARED"},
+      "stamp": {"text": "CAUGHT", "color": "green", "line": 0},
+      "lines": [
+        "The tape doesn't lie. Tyler cooked it.",
+        {"who": "kevin", "text": "Tyler. Mop duty. One week."}
+      ]
+    },
+    {
+      "set": "counter",
+      "cast": [
+        {"who": "tyler", "x": 540, "pose": "angry", "face": "angry"}
+      ],
+      "hud": {"tips": 8, "rage": 30, "badge": "CLEARED"},
+      "stamp": {"text": "REVENGE", "color": "red", "line": 0},
+      "zoom": "tyler",
+      "lines": [
+        {"who": "tyler", "text": "You'll regret this, new guy."}
+      ]
+    },
+    {
+      "set": "dining",
+      "cast": [
+        {"who": "lily", "x": 540, "pose": "cheer", "face": "love"}
+      ],
+      "hud": {"tips": 25, "rage": 25, "badge": "LILY'S FAVORITE"},
+      "stamp": {"text": "W LILY", "color": "green", "line": 0},
+      "lines": [
+        {"who": "lily", "text": "You're my hero! Lunch rush in five!"}
+      ]
+    },
+    {
+      "set": "kitchen",
+      "cast": [
+        {"who": "tyler", "x": 640, "pose": "point", "face": "smug", "flip": true}
+      ],
+      "hud": {"tips": 25, "rage": 25, "badge": "LILY'S FAVORITE"},
+      "stamp": {"text": "RULE #2", "color": "red", "line": 0},
+      "fx": "flash",
+      "lines": [
+        "Then Tyler sneaks to the fryer.",
+        "He sets it to MAX."
+      ]
+    },
+    {
+      "set": "counter",
+      "cast": [
+        {"who": "kevin", "x": 540, "pose": "angry", "face": "angry"}
+      ],
+      "hud": {"tips": 25, "rage": 95, "badge": "SUSPECT"},
+      "stamp": {"text": "BOOM", "color": "red", "line": 0},
+      "zoom": "kevin",
+      "fx": "shake",
+      "lines": [
+        {"who": "kevin", "text": "WHO TOUCHED MY FRYER?!"},
+        {"who": "tyler", "text": "The new guy. Again."}
+      ]
+    },
+    {
+      "set": "kitchen",
+      "cast": [
+        {"who": "you", "x": 320, "pose": "shock", "face": "shock"},
+        {"who": "lily", "x": 740, "pose": "shrug", "face": "neutral", "flip": true}
+      ],
+      "hud": {"tips": 25, "rage": 99, "badge": "ON THIN ICE"},
+      "stamp": {"text": "TWICE?!", "color": "yellow", "line": 0},
+      "lines": [
+        "Framed twice in one day.",
+        "Tyler's phone is filming the fryer."
+      ]
+    }
+  ],
+  "choice": {
+    "question": "WHAT DO YOU DO?",
+    "options": [
+      {"key": "A", "label": "Fix the fryer", "teaser": "Lily helps you", "icon": "lily"},
+      {"key": "B", "label": "Steal his phone", "teaser": "Proof inside", "icon": "tyler"}
+    ]
+  }
+}

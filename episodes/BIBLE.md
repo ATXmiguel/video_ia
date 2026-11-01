@@ -59,3 +59,7 @@ New recurring characters need a `CAST` entry (look) and a `VOICES` entry before 
 - Ep 1 "First day. Already framed?!" — Kevin's rules (customer always right; nobody touches his fryer).
   Tyler served Brenda a raw burger and blamed you. Kevin: fix it in ten seconds or you're fired.
   Choice: A take the blame (Lily is watching) / B expose Tyler (he'll want revenge).
+- Ep 2 "You exposed Tyler. He touched the fryer?!" — vote B won (@heitorfelix3482). Grill cam proves Tyler cooked
+  the raw burger; Kevin puts him on mop duty for a week. Lily calls you her hero (badge LILY'S FAVORITE).
+  Tyler takes revenge: sets Kevin's fryer to MAX and blames you again. Phone is filming the fryer.
+  Choice: A fix the fryer (Lily helps) / B steal Tyler's phone (proof inside).

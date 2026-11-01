@@ -1,0 +1,896 @@
+{
+  "series": "Shift Happens",
+  "episode": 2,
+  "hook": "YOU EXPOSED TYLER.",
+  "hookAccent": "HE TOUCHED THE FRYER?!",
+  "choice": {
+    "question": "WHAT DO YOU DO?",
+    "options": [
+      {
+        "key": "A",
+        "label": "Fix the fryer",
+        "teaser": "Lily helps you",
+        "icon": "lily"
+      },
+      {
+        "key": "B",
+        "label": "Steal his phone",
+        "teaser": "Proof inside",
+        "icon": "tyler"
+      }
+    ]
+  },
+  "arc": {
+    "number": 1,
+    "part": 2,
+    "name": "Big Bun's"
+  },
+  "hudLabels": {
+    "money": "TIPS",
+    "meter": "MANAGER RAGE"
+  },
+  "topComment": {
+    "user": "@heitorfelix3482",
+    "text": "B",
+    "likes": 1
+  },
+  "scenes": [
+    {
+      "set": "counter",
+      "cast": [
+        {
+          "who": "kevin",
+          "x": 540,
+          "pose": "angry",
+          "face": "angry"
+        }
+      ],
+      "hud": {
+        "tips": 8,
+        "rage": 99,
+        "badge": "ON THIN ICE"
+      },
+      "kind": "recap",
+      "duration": 4.922,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "Top comment said: B",
+          "audio": "ep002/s0_l0.mp3",
+          "start": 2.6,
+          "duration": 1.872,
+          "words": [
+            {
+              "text": "Top",
+              "start": 0.1,
+              "end": 0.246
+            },
+            {
+              "text": "comment",
+              "start": 0.257,
+              "end": 0.547
+            },
+            {
+              "text": "said",
+              "start": 0.558,
+              "end": 0.804
+            },
+            {
+              "text": "B",
+              "start": 0.871,
+              "end": 1.083
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "counter",
+      "cast": [
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "point",
+          "face": "angry"
+        },
+        {
+          "who": "tyler",
+          "x": 760,
+          "pose": "shock",
+          "face": "shock",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 8,
+        "rage": 90,
+        "badge": "ON THIN ICE"
+      },
+      "stamp": {
+        "text": "EXPOSED",
+        "color": "yellow",
+        "line": 0
+      },
+      "kind": "story",
+      "duration": 6.634,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "You point at Tyler. Everyone gasps.",
+          "audio": "ep002/s1_l0.mp3",
+          "start": 0.25,
+          "duration": 2.376,
+          "words": [
+            {
+              "text": "You",
+              "start": 0.089,
+              "end": 0.156
+            },
+            {
+              "text": "point",
+              "start": 0.167,
+              "end": 0.346
+            },
+            {
+              "text": "at",
+              "start": 0.357,
+              "end": 0.435
+            },
+            {
+              "text": "Tyler",
+              "start": 0.446,
+              "end": 0.815
+            },
+            {
+              "text": "Everyone",
+              "start": 1.183,
+              "end": 1.496
+            },
+            {
+              "text": "gasps",
+              "start": 1.507,
+              "end": 2.042
+            }
+          ]
+        },
+        {
+          "who": "tyler",
+          "text": "Lies! Check the grill cam!",
+          "audio": "ep002/s1_l1.mp3",
+          "start": 2.776,
+          "duration": 3.408,
+          "words": [
+            {
+              "text": "Lies",
+              "start": 0.095,
+              "end": 0.731
+            },
+            {
+              "text": "Check",
+              "start": 1.496,
+              "end": 1.763
+            },
+            {
+              "text": "the",
+              "start": 1.775,
+              "end": 1.864
+            },
+            {
+              "text": "grill",
+              "start": 1.875,
+              "end": 2.154
+            },
+            {
+              "text": "cam",
+              "start": 2.165,
+              "end": 2.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "kitchen",
+      "cast": [
+        {
+          "who": "kevin",
+          "x": 360,
+          "pose": "point",
+          "face": "shock"
+        },
+        {
+          "who": "tyler",
+          "x": 760,
+          "pose": "shrug",
+          "face": "sad",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 8,
+        "rage": 40,
+        "badge": "CLEARED"
+      },
+      "stamp": {
+        "text": "CAUGHT",
+        "color": "green",
+        "line": 0
+      },
+      "kind": "story",
+      "duration": 7.57,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "The tape doesn't lie. Tyler cooked it.",
+          "audio": "ep002/s2_l0.mp3",
+          "start": 0.25,
+          "duration": 2.256,
+          "words": [
+            {
+              "text": "The",
+              "start": 0.1,
+              "end": 0.145
+            },
+            {
+              "text": "tape",
+              "start": 0.156,
+              "end": 0.413
+            },
+            {
+              "text": "doesn't",
+              "start": 0.424,
+              "end": 0.647
+            },
+            {
+              "text": "lie",
+              "start": 0.658,
+              "end": 0.926
+            },
+            {
+              "text": "Tyler",
+              "start": 1.306,
+              "end": 1.529
+            },
+            {
+              "text": "cooked",
+              "start": 1.54,
+              "end": 1.775
+            },
+            {
+              "text": "it",
+              "start": 1.786,
+              "end": 1.92
+            }
+          ]
+        },
+        {
+          "who": "kevin",
+          "text": "Tyler. Mop duty. One week.",
+          "audio": "ep002/s2_l1.mp3",
+          "start": 2.656,
+          "duration": 4.464,
+          "words": [
+            {
+              "text": "Tyler",
+              "start": 0.096,
+              "end": 0.629
+            },
+            {
+              "text": "Mop",
+              "start": 1.412,
+              "end": 1.725
+            },
+            {
+              "text": "duty",
+              "start": 1.736,
+              "end": 2.13
+            },
+            {
+              "text": "One",
+              "start": 2.928,
+              "end": 3.229
+            },
+            {
+              "text": "week",
+              "start": 3.241,
+              "end": 3.657
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "counter",
+      "cast": [
+        {
+          "who": "tyler",
+          "x": 540,
+          "pose": "angry",
+          "face": "angry"
+        }
+      ],
+      "hud": {
+        "tips": 8,
+        "rage": 30,
+        "badge": "CLEARED"
+      },
+      "stamp": {
+        "text": "REVENGE",
+        "color": "red",
+        "line": 0
+      },
+      "zoom": "tyler",
+      "kind": "story",
+      "duration": 3.22,
+      "lines": [
+        {
+          "who": "tyler",
+          "text": "You'll regret this, new guy.",
+          "audio": "ep002/s3_l0.mp3",
+          "start": 0.25,
+          "duration": 2.52,
+          "words": [
+            {
+              "text": "You'll",
+              "start": 0.095,
+              "end": 0.295
+            },
+            {
+              "text": "regret",
+              "start": 0.307,
+              "end": 0.664
+            },
+            {
+              "text": "this",
+              "start": 0.675,
+              "end": 0.976
+            },
+            {
+              "text": "new",
+              "start": 1.133,
+              "end": 1.333
+            },
+            {
+              "text": "guy",
+              "start": 1.345,
+              "end": 1.724
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "dining",
+      "cast": [
+        {
+          "who": "lily",
+          "x": 540,
+          "pose": "cheer",
+          "face": "love"
+        }
+      ],
+      "hud": {
+        "tips": 25,
+        "rage": 25,
+        "badge": "LILY'S FAVORITE"
+      },
+      "stamp": {
+        "text": "W LILY",
+        "color": "green",
+        "line": 0
+      },
+      "kind": "story",
+      "duration": 3.388,
+      "lines": [
+        {
+          "who": "lily",
+          "text": "You're my hero! Lunch rush in five!",
+          "audio": "ep002/s4_l0.mp3",
+          "start": 0.25,
+          "duration": 2.688,
+          "words": [
+            {
+              "text": "You're",
+              "start": 0.08,
+              "end": 0.205
+            },
+            {
+              "text": "my",
+              "start": 0.216,
+              "end": 0.364
+            },
+            {
+              "text": "hero",
+              "start": 0.375,
+              "end": 0.841
+            },
+            {
+              "text": "Lunch",
+              "start": 1.205,
+              "end": 1.455
+            },
+            {
+              "text": "rush",
+              "start": 1.466,
+              "end": 1.705
+            },
+            {
+              "text": "in",
+              "start": 1.716,
+              "end": 1.841
+            },
+            {
+              "text": "five",
+              "start": 1.852,
+              "end": 2.352
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "kitchen",
+      "cast": [
+        {
+          "who": "tyler",
+          "x": 640,
+          "pose": "point",
+          "face": "smug",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 25,
+        "rage": 25,
+        "badge": "LILY'S FAVORITE"
+      },
+      "stamp": {
+        "text": "RULE #2",
+        "color": "red",
+        "line": 0
+      },
+      "fx": "flash",
+      "kind": "story",
+      "duration": 4.594,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "Then Tyler sneaks to the fryer.",
+          "audio": "ep002/s5_l0.mp3",
+          "start": 0.25,
+          "duration": 1.872,
+          "words": [
+            {
+              "text": "Then",
+              "start": 0.1,
+              "end": 0.246
+            },
+            {
+              "text": "Tyler",
+              "start": 0.257,
+              "end": 0.592
+            },
+            {
+              "text": "sneaks",
+              "start": 0.603,
+              "end": 0.882
+            },
+            {
+              "text": "to",
+              "start": 0.893,
+              "end": 0.96
+            },
+            {
+              "text": "the",
+              "start": 0.971,
+              "end": 1.049
+            },
+            {
+              "text": "fryer",
+              "start": 1.06,
+              "end": 1.451
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "He sets it to MAX.",
+          "audio": "ep002/s5_l1.mp3",
+          "start": 2.272,
+          "duration": 1.872,
+          "words": [
+            {
+              "text": "He",
+              "start": 0.1,
+              "end": 0.145
+            },
+            {
+              "text": "sets",
+              "start": 0.156,
+              "end": 0.335
+            },
+            {
+              "text": "it",
+              "start": 0.346,
+              "end": 0.402
+            },
+            {
+              "text": "to",
+              "start": 0.413,
+              "end": 0.469
+            },
+            {
+              "text": "MAX",
+              "start": 0.48,
+              "end": 0.915
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "counter",
+      "cast": [
+        {
+          "who": "kevin",
+          "x": 540,
+          "pose": "angry",
+          "face": "angry"
+        }
+      ],
+      "hud": {
+        "tips": 25,
+        "rage": 95,
+        "badge": "SUSPECT"
+      },
+      "stamp": {
+        "text": "BOOM",
+        "color": "red",
+        "line": 0
+      },
+      "zoom": "kevin",
+      "fx": "shake",
+      "kind": "story",
+      "duration": 5.818,
+      "lines": [
+        {
+          "who": "kevin",
+          "text": "WHO TOUCHED MY FRYER?!",
+          "audio": "ep002/s6_l0.mp3",
+          "start": 0.25,
+          "duration": 2.088,
+          "words": [
+            {
+              "text": "WHO",
+              "start": 0.096,
+              "end": 0.281
+            },
+            {
+              "text": "TOUCHED",
+              "start": 0.293,
+              "end": 0.606
+            },
+            {
+              "text": "MY",
+              "start": 0.617,
+              "end": 0.733
+            },
+            {
+              "text": "FRYER",
+              "start": 0.744,
+              "end": 1.277
+            }
+          ]
+        },
+        {
+          "who": "tyler",
+          "text": "The new guy. Again.",
+          "audio": "ep002/s6_l1.mp3",
+          "start": 2.488,
+          "duration": 2.88,
+          "words": [
+            {
+              "text": "The",
+              "start": 0.095,
+              "end": 0.217
+            },
+            {
+              "text": "new",
+              "start": 0.229,
+              "end": 0.418
+            },
+            {
+              "text": "guy",
+              "start": 0.429,
+              "end": 0.82
+            },
+            {
+              "text": "Again",
+              "start": 1.596,
+              "end": 2.098
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "kitchen",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "shock",
+          "face": "shock"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "shrug",
+          "face": "neutral",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 25,
+        "rage": 99,
+        "badge": "ON THIN ICE"
+      },
+      "stamp": {
+        "text": "TWICE?!",
+        "color": "yellow",
+        "line": 0
+      },
+      "kind": "story",
+      "duration": 4.786,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "Framed twice in one day.",
+          "audio": "ep002/s7_l0.mp3",
+          "start": 0.25,
+          "duration": 1.872,
+          "words": [
+            {
+              "text": "Framed",
+              "start": 0.134,
+              "end": 0.324
+            },
+            {
+              "text": "twice",
+              "start": 0.335,
+              "end": 0.692
+            },
+            {
+              "text": "in",
+              "start": 0.703,
+              "end": 0.781
+            },
+            {
+              "text": "one",
+              "start": 0.792,
+              "end": 0.937
+            },
+            {
+              "text": "day",
+              "start": 0.949,
+              "end": 1.183
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Tyler's phone is filming the fryer.",
+          "audio": "ep002/s7_l1.mp3",
+          "start": 2.272,
+          "duration": 2.064,
+          "words": [
+            {
+              "text": "Tyler's",
+              "start": 0.089,
+              "end": 0.424
+            },
+            {
+              "text": "phone",
+              "start": 0.435,
+              "end": 0.748
+            },
+            {
+              "text": "is",
+              "start": 0.826,
+              "end": 0.938
+            },
+            {
+              "text": "filming",
+              "start": 0.949,
+              "end": 1.228
+            },
+            {
+              "text": "the",
+              "start": 1.239,
+              "end": 1.295
+            },
+            {
+              "text": "fryer",
+              "start": 1.306,
+              "end": 1.719
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "kitchen",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "shock",
+          "face": "shock"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "shrug",
+          "face": "neutral",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 25,
+        "rage": 99,
+        "badge": "ON THIN ICE"
+      },
+      "stamp": {
+        "text": "TWICE?!",
+        "color": "yellow",
+        "line": 0
+      },
+      "kind": "choice",
+      "duration": 11.522,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "What do you do?",
+          "audio": "ep002/s8_l0.mp3",
+          "start": 0.25,
+          "duration": 0.84,
+          "words": [
+            {
+              "text": "What",
+              "start": 0.089,
+              "end": 0.145
+            },
+            {
+              "text": "do",
+              "start": 0.156,
+              "end": 0.19
+            },
+            {
+              "text": "you",
+              "start": 0.201,
+              "end": 0.268
+            },
+            {
+              "text": "do",
+              "start": 0.279,
+              "end": 0.502
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "A: Fix the fryer.",
+          "audio": "ep002/s8_l1.mp3",
+          "start": 1.24,
+          "duration": 1.872,
+          "words": [
+            {
+              "text": "A",
+              "start": 0.089,
+              "end": 0.212
+            },
+            {
+              "text": "Fix",
+              "start": 0.569,
+              "end": 0.77
+            },
+            {
+              "text": "the",
+              "start": 0.781,
+              "end": 0.859
+            },
+            {
+              "text": "fryer",
+              "start": 0.871,
+              "end": 1.25
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Or B: Steal his phone.",
+          "audio": "ep002/s8_l2.mp3",
+          "start": 3.262,
+          "duration": 1.872,
+          "words": [
+            {
+              "text": "Or",
+              "start": 0.089,
+              "end": 0.19
+            },
+            {
+              "text": "B",
+              "start": 0.201,
+              "end": 0.413
+            },
+            {
+              "text": "Steal",
+              "start": 0.748,
+              "end": 0.971
+            },
+            {
+              "text": "his",
+              "start": 0.982,
+              "end": 1.105
+            },
+            {
+              "text": "phone",
+              "start": 1.116,
+              "end": 1.429
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Comment A or B. Top comment decides part 3.",
+          "audio": "ep002/s8_l3.mp3",
+          "start": 5.284,
+          "duration": 3.288,
+          "words": [
+            {
+              "text": "Comment",
+              "start": 0.089,
+              "end": 0.357
+            },
+            {
+              "text": "A",
+              "start": 0.48,
+              "end": 0.714
+            },
+            {
+              "text": "or",
+              "start": 0.804,
+              "end": 0.915
+            },
+            {
+              "text": "B",
+              "start": 0.926,
+              "end": 1.183
+            },
+            {
+              "text": "Top",
+              "start": 1.529,
+              "end": 1.752
+            },
+            {
+              "text": "comment",
+              "start": 1.763,
+              "end": 2.076
+            },
+            {
+              "text": "decides",
+              "start": 2.087,
+              "end": 2.433
+            },
+            {
+              "text": "part 3",
+              "start": 2.444,
+              "end": 2.946
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "music": "ep002/music.mp3"
+}
