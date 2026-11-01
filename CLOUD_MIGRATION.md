@@ -8,15 +8,18 @@ YouTube keeps every API upload **private** until the Google Cloud project passes
 
 ## Status (2026-11-01)
 
-- Repo: https://github.com/ATXmiguel/video_ia (private), pushed. `gh` not installed/logged in yet.
-- Google Cloud project `shift-happens-uploader`: YouTube Data API v3 enabled; OAuth consent screen External,
-  status **Testing** (test user: the owner); Desktop client saved in `secrets/client_secret.json`.
-  In Testing, refresh tokens for YouTube scopes expire after 7 days → before migrating, the app must be
-  switched to **In production** (Google Auth Platform → Público-alvo → Publicar app). That button needs the
-  branding page filled: home page + public privacy policy + terms URLs (`PRIVACY.md`, `TERMS.md`) and the
-  authorized domain. Those URLs must be public, which the private repo isn't.
-- Audit form (https://support.google.com/youtube/contact/yt_api_form): not submitted yet. Needs the owner's
-  legal name + address and the public privacy policy URL. Diagrams for section 6 are in `docs/audit/`.
+- Repo: https://github.com/ATXmiguel/video_ia — **public** (scanned: no secrets in history; `secrets/` is
+  gitignored). Actions logs are public too: never print tokens. `gh` CLI not installed/logged in yet.
+- Google Cloud project `shift-happens-uploader` (number 541014094342), **no billing account** (keep it that way:
+  the API is free within the 10k units/day quota). YouTube Data API v3 enabled. OAuth app "Shift Happens
+  Uploader": External, **In production** (unverified, which is fine for a single owner), branding points to
+  README/PRIVACY/TERMS on GitHub. Desktop client in `secrets/client_secret.json`.
+- OAuth done for the channel owner account → channel `UCYr4LVpGYwMKC5MgANp63qQ`
+  ATX_amassanoobstroo. Refresh token in `secrets/token.json` (gitignored). `scripts/youtube_api.py whoami`
+  and `top <video>` work. Uploads via the API stay **private** until the audit is approved.
+- Audit form: fully filled in and evidence attached (`docs/audit/`), waiting for the owner to tick the
+  section 7 attestations and press Enviar. After that, the approval arrives by email (Gmail of
+  miguel.barbosa.godinho@gmail.com) — that email is prerequisite #4.
 
 ## Prerequisites (the user does 1–3 once; the daily run checks them every day)
 

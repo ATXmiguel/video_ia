@@ -17,7 +17,14 @@ import re
 import sys
 from pathlib import Path
 
-from google.auth.transport.requests import Request
+try:  # some networks need the OS certificate store (no-op where it isn't installed, e.g. CI)
+    import truststore
+
+    truststore.inject_into_ssl()
+except ImportError:
+    pass
+
+from google.auth.transport.requests import Request  # noqa: E402
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
