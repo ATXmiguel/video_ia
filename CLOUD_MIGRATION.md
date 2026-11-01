@@ -17,9 +17,7 @@ YouTube keeps every API upload **private** until the Google Cloud project passes
 - OAuth done for the channel owner account → channel `UCYr4LVpGYwMKC5MgANp63qQ`
   ATX_amassanoobstroo. Refresh token in `secrets/token.json` (gitignored). `scripts/youtube_api.py whoami`
   and `top <video>` work. Uploads via the API stay **private** until the audit is approved.
-- Audit form **NOT submitted yet**: it must be sent by the owner (section 7 attestations are theirs to
-  accept). Evidence is kept locally in `docs/audit/`, not in git. Until it's sent, remind the owner in the
-  daily report.
+- Audit form **submitted by the owner on 2026-11-01** (evidence kept locally in `docs/audit/`, not in git).
   The answer arrives by email to miguel.barbosa.godinho@gmail.com. Daily check: Gmail search
   `newer_than:60d (from:google.com OR from:youtube.com) (audit OR auditoria OR quota OR "API Services")`;
   read the thread — only an explicit approval counts as prerequisite #4. If Google asks for more info,
