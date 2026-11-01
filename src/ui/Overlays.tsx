@@ -4,13 +4,7 @@ import {INK, RED, YELLOW} from '../palette';
 import {BODY, DISPLAY} from './fonts';
 
 // Title card over the opening seconds. Fully visible on frame 0 so it doubles as the thumbnail.
-export const Cover: React.FC<{hook: string; accent: string; series: string; episode: number; frames: number}> = ({
-  hook,
-  accent,
-  series,
-  episode,
-  frames,
-}) => {
+export const Cover: React.FC<{hook: string; accent: string; tag: string; frames: number}> = ({hook, accent, tag, frames}) => {
   const frame = useCurrentFrame();
   const out = interpolate(frame, [frames - 8, frames], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const wobble = Math.sin(frame * 0.2) * 1.2;
@@ -48,7 +42,7 @@ export const Cover: React.FC<{hook: string; accent: string; series: string; epis
           transform: 'rotate(2deg)',
         }}
       >
-        {series.toUpperCase()} · EP {episode}
+        {tag.toUpperCase()}
       </div>
     </AbsoluteFill>
   );

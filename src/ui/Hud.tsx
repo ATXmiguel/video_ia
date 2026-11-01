@@ -6,7 +6,11 @@ import type {Hud as HudT} from '../types';
 import {BODY, DISPLAY} from './fonts';
 
 // Game-style overlay: tips card top-left, manager rage gauge top-right. Values tween in from the previous scene.
-export const Hud: React.FC<{prev: HudT; cur: HudT}> = ({prev, cur}) => {
+export const Hud: React.FC<{prev: HudT; cur: HudT; labels?: {money: string; meter: string}}> = ({
+  prev,
+  cur,
+  labels = {money: 'TIPS', meter: 'MANAGER RAGE'},
+}) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
   const t = interpolate(frame, [4, 22], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
@@ -67,7 +71,7 @@ export const Hud: React.FC<{prev: HudT; cur: HudT}> = ({prev, cur}) => {
             </g>
           </svg>
           <div>
-            <div style={{fontFamily: BODY, fontWeight: 800, fontSize: 24, color: '#8a8a9a', letterSpacing: 3}}>TIPS</div>
+            <div style={{fontFamily: BODY, fontWeight: 800, fontSize: 24, color: '#8a8a9a', letterSpacing: 3}}>{labels.money}</div>
             <div
               style={{
                 fontFamily: DISPLAY,
@@ -116,7 +120,7 @@ export const Hud: React.FC<{prev: HudT; cur: HudT}> = ({prev, cur}) => {
         }}
       >
         <div style={{position: 'absolute', left: 20, top: 12, fontFamily: BODY, fontWeight: 800, fontSize: 22, color: '#fff', letterSpacing: 2}}>
-          MANAGER RAGE
+          {labels.meter}
         </div>
         <div style={{position: 'absolute', right: 20, bottom: 10, fontFamily: DISPLAY, fontSize: 46, color: rageColor}}>{Math.round(rage)}%</div>
         <svg width={330} height={150} viewBox="0 0 330 150" style={{position: 'absolute', left: 0, top: 0}}>
@@ -147,7 +151,7 @@ export const Hud: React.FC<{prev: HudT; cur: HudT}> = ({prev, cur}) => {
           }}
         >
           {dRage > 0 ? '+' : '-'}
-          {Math.abs(Math.round(dRage))}% RAGE
+          {Math.abs(Math.round(dRage))}% {labels.meter.split(' ').pop()}
         </div>
       )}
     </div>

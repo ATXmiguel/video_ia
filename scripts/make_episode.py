@@ -139,6 +139,15 @@ def upload_copy(src: Path, dest: Path, seconds: float) -> None:
         f.unlink()
 
 
+def cta_line(ep: dict) -> str:
+    arc = ep.get("arc")
+    if arc and arc.get("final"):
+        return "Comment A or B. Top comment picks the next story."
+    if arc:
+        return f"Comment A or B. Top comment decides part {arc['part'] + 1}."
+    return f"Comment A or B. Top comment decides episode {ep['episode'] + 1}."
+
+
 async def main(ep_path: Path, render: bool) -> None:
     ep = json.loads(ep_path.read_text(encoding="utf-8"))
     n = ep["episode"]
@@ -162,7 +171,7 @@ async def main(ep_path: Path, render: bool) -> None:
     opts = choice["options"]
     choice_lines = [choice["question"].capitalize()] + [
         f"{'' if k == 0 else 'Or '}{o['key']}: {o['label']}." for k, o in enumerate(opts)
-    ] + [f"Comment A or B. Top comment decides episode {n + 1}."]
+    ] + [cta_line(ep)]
     backdrop = {k: v for k, v in ep["scenes"][-1].items() if k != "lines"}
     print("choice card")
     scenes.append(await build_scene(backdrop, choice_lines, "choice", slug, len(scenes)))
@@ -171,7 +180,7 @@ async def main(ep_path: Path, render: bool) -> None:
     print(f"music ({total:.1f}s)")
     make_music(PUBLIC / slug / "music.mp3", total + 1)
 
-    build = {k: ep[k] for k in ("series", "episode", "hook", "hookAccent", "choice")}
+    build = {k: ep[k] for k in ("series", "episode", "hook", "hookAccent", "choice", "arc", "hudLabels") if k in ep}
     build.update(topComment=top, scenes=scenes, music=f"{slug}/music.mp3")
     build_path = PUBLIC / slug / "build.json"
     build_path.write_text(json.dumps(build, indent=2), encoding="utf-8")

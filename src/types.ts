@@ -46,9 +46,14 @@ export type BuiltScene = SceneSpec & {
 
 export type Option = {key: string; label: string; teaser: string; icon: Exclude<Who, 'narrator'>};
 
+// A saga ("story") is one job for YOU, 4–7 parts long. The finale's vote picks the next saga.
+export type Arc = {number: number; part: number; name: string; final?: boolean};
+
 export type Build = {
   series: string;
   episode: number;
+  arc?: Arc;
+  hudLabels?: {money: string; meter: string};
   hook: string;
   hookAccent: string;
   topComment: {user: string; text: string; likes: number} | null;

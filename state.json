@@ -22,7 +22,19 @@
       },
       "pinned": false,
       "topComment": null,
-      "winner": null
+      "winner": null,
+      "arc": 1,
+      "part": 1
+    }
+  ],
+  "arcs": [
+    {
+      "number": 1,
+      "name": "Big Bun's",
+      "job": "burger place",
+      "started_episode": 1,
+      "ended_episode": null,
+      "peak_views": null
     }
   ]
 }

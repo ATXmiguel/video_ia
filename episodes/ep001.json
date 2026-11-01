@@ -1,15 +1,39 @@
 {
   "series": "Shift Happens",
   "episode": 1,
+  "arc": {
+    "number": 1,
+    "part": 1,
+    "name": "Big Bun's"
+  },
+  "hudLabels": {
+    "money": "TIPS",
+    "meter": "MANAGER RAGE"
+  },
   "hook": "FIRST DAY.",
   "hookAccent": "ALREADY FRAMED?!",
   "topComment": null,
   "scenes": [
     {
       "set": "exterior",
-      "cast": [{"who": "you", "x": 200, "toX": 540, "face": "happy"}],
-      "hud": {"tips": 0, "rage": 10, "badge": "NEW HIRE"},
-      "stamp": {"text": "DAY 1", "color": "yellow", "line": 1},
+      "cast": [
+        {
+          "who": "you",
+          "x": 200,
+          "toX": 540,
+          "face": "happy"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 10,
+        "badge": "NEW HIRE"
+      },
+      "stamp": {
+        "text": "DAY 1",
+        "color": "yellow",
+        "line": 1
+      },
       "lines": [
         "You just got your first job at Big Bun's.",
         "Minimum wage. Maximum chaos."
@@ -17,81 +41,213 @@
     },
     {
       "set": "counter",
-      "cast": [{"who": "kevin", "x": 540, "pose": "point", "face": "angry"}],
-      "hud": {"tips": 0, "rage": 10, "badge": "NEW HIRE"},
-      "stamp": {"text": "RULE #1", "color": "blue", "line": 0},
+      "cast": [
+        {
+          "who": "kevin",
+          "x": 540,
+          "pose": "point",
+          "face": "angry"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 10,
+        "badge": "NEW HIRE"
+      },
+      "stamp": {
+        "text": "RULE #1",
+        "color": "blue",
+        "line": 0
+      },
       "lines": [
-        {"who": "kevin", "text": "I'm Kevin. Your manager. Rule one: the customer is always right."},
-        {"who": "kevin", "text": "Rule two: nobody touches my fryer."}
+        {
+          "who": "kevin",
+          "text": "I'm Kevin. Your manager. Rule one: the customer is always right."
+        },
+        {
+          "who": "kevin",
+          "text": "Rule two: nobody touches my fryer."
+        }
       ]
     },
     {
       "set": "counter",
       "cast": [
-        {"who": "you", "x": 300, "face": "neutral"},
-        {"who": "tyler", "x": 740, "pose": "angry", "face": "smug", "flip": true}
+        {
+          "who": "you",
+          "x": 300,
+          "face": "neutral"
+        },
+        {
+          "who": "tyler",
+          "x": 740,
+          "pose": "angry",
+          "face": "smug",
+          "flip": true
+        }
       ],
-      "hud": {"tips": 0, "rage": 10, "badge": "NEW HIRE"},
-      "stamp": {"text": "RIVAL", "color": "red", "line": 1},
+      "hud": {
+        "tips": 0,
+        "rage": 10,
+        "badge": "NEW HIRE"
+      },
+      "stamp": {
+        "text": "RIVAL",
+        "color": "red",
+        "line": 1
+      },
       "lines": [
-        {"who": "tyler", "text": "Tyler. Employee of the month. Six months straight."},
+        {
+          "who": "tyler",
+          "text": "Tyler. Employee of the month. Six months straight."
+        },
         "He already hates you. You can tell."
       ]
     },
     {
       "set": "kitchen",
       "cast": [
-        {"who": "you", "x": 320, "face": "love"},
-        {"who": "lily", "x": 740, "pose": "cheer", "face": "happy", "flip": true}
+        {
+          "who": "you",
+          "x": 320,
+          "face": "love"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "cheer",
+          "face": "happy",
+          "flip": true
+        }
       ],
-      "hud": {"tips": 8, "rage": 10, "badge": "NEW HIRE"},
-      "stamp": {"text": "W LILY", "color": "green", "line": 1},
+      "hud": {
+        "tips": 8,
+        "rage": 10,
+        "badge": "NEW HIRE"
+      },
+      "stamp": {
+        "text": "W LILY",
+        "color": "green",
+        "line": 1
+      },
       "lines": [
-        {"who": "lily", "text": "Hey new guy! Ignore Tyler. Here, half my tips."},
+        {
+          "who": "lily",
+          "text": "Hey new guy! Ignore Tyler. Here, half my tips."
+        },
         "That's Lily. Your shift just got way better."
       ]
     },
     {
       "set": "dining",
-      "cast": [{"who": "brenda", "x": 540, "pose": "point", "face": "angry", "flip": true}],
-      "hud": {"tips": 8, "rage": 60, "badge": "NEW HIRE"},
-      "stamp": {"text": "RAW?!", "color": "red", "line": 0},
+      "cast": [
+        {
+          "who": "brenda",
+          "x": 540,
+          "pose": "point",
+          "face": "angry",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 8,
+        "rage": 60,
+        "badge": "NEW HIRE"
+      },
+      "stamp": {
+        "text": "RAW?!",
+        "color": "red",
+        "line": 0
+      },
       "fx": "shake",
       "lines": [
-        {"who": "brenda", "text": "Excuse me! This burger is RAW! Who made this?!"}
+        {
+          "who": "brenda",
+          "text": "Excuse me! This burger is RAW! Who made this?!"
+        }
       ]
     },
     {
       "set": "counter",
       "cast": [
-        {"who": "you", "x": 300, "pose": "shock", "face": "shock"},
-        {"who": "tyler", "x": 760, "pose": "point", "face": "smug", "flip": true}
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "shock",
+          "face": "shock"
+        },
+        {
+          "who": "tyler",
+          "x": 760,
+          "pose": "point",
+          "face": "smug",
+          "flip": true
+        }
       ],
-      "hud": {"tips": 8, "rage": 85, "badge": "SUSPECT"},
-      "stamp": {"text": "FRAMED", "color": "red", "line": 1},
+      "hud": {
+        "tips": 8,
+        "rage": 85,
+        "badge": "SUSPECT"
+      },
+      "stamp": {
+        "text": "FRAMED",
+        "color": "red",
+        "line": 1
+      },
       "fx": "flash",
       "lines": [
-        {"who": "tyler", "text": "It was the new guy."},
+        {
+          "who": "tyler",
+          "text": "It was the new guy."
+        },
         "It wasn't. Tyler cooked it."
       ]
     },
     {
       "set": "counter",
-      "cast": [{"who": "kevin", "x": 540, "pose": "angry", "face": "angry"}],
-      "hud": {"tips": 8, "rage": 99, "badge": "ON THIN ICE"},
-      "stamp": {"text": "FIRED?", "color": "red", "line": 0},
+      "cast": [
+        {
+          "who": "kevin",
+          "x": 540,
+          "pose": "angry",
+          "face": "angry"
+        }
+      ],
+      "hud": {
+        "tips": 8,
+        "rage": 99,
+        "badge": "ON THIN ICE"
+      },
+      "stamp": {
+        "text": "FIRED?",
+        "color": "red",
+        "line": 0
+      },
       "zoom": "kevin",
       "fx": "shake",
       "lines": [
-        {"who": "kevin", "text": "Fix this in ten seconds. Or you're FIRED."}
+        {
+          "who": "kevin",
+          "text": "Fix this in ten seconds. Or you're FIRED."
+        }
       ]
     }
   ],
   "choice": {
     "question": "WHAT DO YOU DO?",
     "options": [
-      {"key": "A", "label": "Take the blame", "teaser": "Lily is watching", "icon": "lily"},
-      {"key": "B", "label": "Expose Tyler", "teaser": "He'll want revenge", "icon": "tyler"}
+      {
+        "key": "A",
+        "label": "Take the blame",
+        "teaser": "Lily is watching",
+        "icon": "lily"
+      },
+      {
+        "key": "B",
+        "label": "Expose Tyler",
+        "teaser": "He'll want revenge",
+        "icon": "tyler"
+      }
     ]
   }
 }

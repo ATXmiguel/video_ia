@@ -136,7 +136,11 @@ export const ChoiceCard: React.FC<{scene: BuiltScene; build: Build}> = ({scene, 
         COMMENT A OR B
       </div>
       <div style={{marginTop: 26, fontFamily: BODY, fontWeight: 800, fontSize: 38, letterSpacing: 3, color: '#fff', opacity: cta}}>
-        TOP COMMENT DECIDES EP {build.episode + 1}
+        {build.arc?.final
+          ? 'TOP COMMENT PICKS THE NEXT STORY'
+          : build.arc
+            ? `TOP COMMENT DECIDES PART ${build.arc.part + 1}`
+            : `TOP COMMENT DECIDES EP ${build.episode + 1}`}
       </div>
     </AbsoluteFill>
   );

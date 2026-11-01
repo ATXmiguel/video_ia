@@ -64,7 +64,7 @@ const SceneBlock: React.FC<{scene: BuiltScene; prevHud: HudT; first: boolean; du
       <AbsoluteFill style={{background: '#fff', opacity: flash}} />
       {!isChoice && !isRecap && (
         <Sequence from={hudFrom} layout="none">
-          <Hud prev={first ? scene.hud : prevHud} cur={scene.hud} />
+          <Hud prev={first ? scene.hud : prevHud} cur={scene.hud} labels={build.hudLabels} />
         </Sequence>
       )}
       {isRecap && build.topComment && (
@@ -115,7 +115,12 @@ export const Episode: React.FC<Build> = (build) => {
           </Series.Sequence>
         ))}
       </Series>
-      <Cover hook={build.hook} accent={build.hookAccent} series={build.series} episode={build.episode} frames={COVER_FRAMES} />
+      <Cover
+        hook={build.hook}
+        accent={build.hookAccent}
+        tag={build.arc ? `${build.series} · STORY ${build.arc.number} · PART ${build.arc.part}` : `${build.series} · EP ${build.episode}`}
+        frames={COVER_FRAMES}
+      />
     </AbsoluteFill>
   );
 };

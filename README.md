@@ -32,6 +32,8 @@ Check frames with `npx remotion bundle src/index.ts --out-dir=build` then
 | field | meaning |
 |---|---|
 | `hook`, `hookAccent` | title card over the first 2.2 s (also the thumbnail): short line + red punchline |
+| `arc` | `{number, part, name, final?}` — story number, part in it, job name; `final: true` on the last part |
+| `hudLabels` | `{money, meter}` — HUD texts for this story's job (default TIPS / MANAGER RAGE) |
 | `topComment` | `null` for ep 1, else `{user, text, likes}` of last episode's winning comment |
 | `recap` | optional scene spec shown in gray behind the top comment (copy last episode's final scene) |
 | `scenes[]` | 6–8 scenes, 1–2 short lines each |

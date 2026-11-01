@@ -9,12 +9,14 @@ Usage:
   python3 scripts/youtube_api.py upload FILE.mp4 meta.json   # meta: title, description, tags, privacy
   python3 scripts/youtube_api.py comment VIDEO_ID "text"
   python3 scripts/youtube_api.py top VIDEO_ID         # most-liked comment that votes A or B, as JSON
+  python3 scripts/youtube_api.py stats ID [ID ...]    # views, likes, comments per video, as JSON
 """
 
 import json
 import os
 import re
 import sys
+import time
 from pathlib import Path
 
 try:  # some networks need the OS certificate store (no-op where it isn't installed, e.g. CI)
@@ -44,8 +46,15 @@ def credentials() -> Credentials:
     raw = os.environ.get("YT_TOKEN_JSON")
     info = json.loads(raw) if raw else json.loads((SECRETS / "token.json").read_text())
     creds = Credentials.from_authorized_user_info(info, SCOPES)
-    if not creds.valid:
-        creds.refresh(Request())
+    for attempt in range(3):  # this network drops TLS handshakes now and then
+        if creds.valid:
+            break
+        try:
+            creds.refresh(Request())
+        except Exception:
+            if attempt == 2:
+                raise
+            time.sleep(3)
     return creds
 
 
@@ -100,6 +109,13 @@ def comment(video_id: str, text: str) -> None:
     print(res["id"])
 
 
+def stats(*video_ids: str) -> None:
+    res = youtube().videos().list(part="statistics", id=",".join(video_ids)).execute()
+    out = {v["id"]: {k: int(v["statistics"].get(k, 0)) for k in ("viewCount", "likeCount", "commentCount")}
+           for v in res.get("items", [])}
+    print(json.dumps(out))
+
+
 def top(video_id: str) -> None:
     yt = youtube()
     owner = yt.videos().list(part="snippet", id=video_id).execute()["items"][0]["snippet"]["channelId"]
@@ -122,4 +138,4 @@ def top(video_id: str) -> None:
 
 if __name__ == "__main__":
     cmd, *args = sys.argv[1:]
-    {"auth": auth, "whoami": whoami, "upload": upload, "comment": comment, "top": top}[cmd](*args)
+    {"auth": auth, "whoami": whoami, "upload": upload, "comment": comment, "top": top, "stats": stats}[cmd](*args)
