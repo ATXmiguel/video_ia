@@ -1,0 +1,7 @@
+node_modules/
+build/
+out/
+secrets/
+public/ep*/*.mp3
+public/sfx/
+src/latest.json

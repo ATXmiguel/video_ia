@@ -1,0 +1,28 @@
+{
+  "channel": "ATX_amassanoobstroo",
+  "series": "Shift Happens",
+  "migrated": false,
+  "retired": [
+    {
+      "series": "The Last Light",
+      "episode": 1,
+      "url": "https://youtube.com/shorts/8jMuuSpmJUo",
+      "note": "set to private 2026-10-31; user deletes it"
+    }
+  ],
+  "episodes": [
+    {
+      "episode": 1,
+      "file": "episodes/ep001.json",
+      "url": "https://youtube.com/shorts/WY-XWMnnTMk",
+      "published": "2026-10-31",
+      "options": {
+        "A": "Take the blame",
+        "B": "Expose Tyler"
+      },
+      "pinned": false,
+      "topComment": null,
+      "winner": null
+    }
+  ]
+}
