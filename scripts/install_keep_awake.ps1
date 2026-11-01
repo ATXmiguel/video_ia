@@ -8,7 +8,7 @@ $start = (Get-Date).ToString('yyyy-MM-dd') + 'T13:00:00'  # 30 min before the 13
 $xml = @"
 <?xml version="1.0" encoding="UTF-16"?>
 <Task version="1.4" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
-  <RegistrationInfo><Description>Keeps the PC awake until the daily Shift Happens episode is published (or 16:30).</Description></RegistrationInfo>
+  <RegistrationInfo><Description>Keeps the PC awake until the daily Shift Happens episode is published (or 14:30).</Description></RegistrationInfo>
   <Triggers>
     <LogonTrigger><Enabled>true</Enabled><UserId>$user</UserId></LogonTrigger>
     <CalendarTrigger><StartBoundary>$start</StartBoundary><Enabled>true</Enabled><ScheduleByDay><DaysInterval>1</DaysInterval></ScheduleByDay></CalendarTrigger>
@@ -33,4 +33,4 @@ $tmp = Join-Path $env:TEMP 'shifthappens-keepawake.xml'
 schtasks /Create /TN "ShiftHappens-KeepAwake" /XML $tmp /F
 Remove-Item $tmp
 schtasks /Run /TN "ShiftHappens-KeepAwake"
-Write-Host "Done. The PC now stays awake each day until the episode is published (or 16:30)."
+Write-Host "Done. The PC now stays awake each day until the episode is published (or 14:30)."
