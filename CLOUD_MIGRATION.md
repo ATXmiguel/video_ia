@@ -6,6 +6,18 @@ workflow renders it and uploads it through the YouTube Data API; votes are read 
 Why it can't happen today: in the cloud there is no logged-in Chrome, so uploads must use the YouTube API, and
 YouTube keeps every API upload **private** until the Google Cloud project passes an API audit.
 
+## Status (2026-11-01)
+
+- Repo: https://github.com/ATXmiguel/video_ia (private), pushed. `gh` not installed/logged in yet.
+- Google Cloud project `shift-happens-uploader`: YouTube Data API v3 enabled; OAuth consent screen External,
+  status **Testing** (test user: the owner); Desktop client saved in `secrets/client_secret.json`.
+  In Testing, refresh tokens for YouTube scopes expire after 7 days → before migrating, the app must be
+  switched to **In production** (Google Auth Platform → Público-alvo → Publicar app). That button needs the
+  branding page filled: home page + public privacy policy + terms URLs (`PRIVACY.md`, `TERMS.md`) and the
+  authorized domain. Those URLs must be public, which the private repo isn't.
+- Audit form (https://support.google.com/youtube/contact/yt_api_form): not submitted yet. Needs the owner's
+  legal name + address and the public privacy policy URL. Diagrams for section 6 are in `docs/audit/`.
+
 ## Prerequisites (the user does 1–3 once; the daily run checks them every day)
 
 | # | what | how the daily run checks it |

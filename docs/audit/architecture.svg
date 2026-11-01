@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" font-family="Arial, sans-serif">
+<rect width="1600" height="900" fill="#ffffff"/>
+<text x="800" y="70" text-anchor="middle" font-size="40" font-weight="bold" fill="#1e1d2b">Shift Happens Uploader - architecture</text>
+<text x="800" y="110" text-anchor="middle" font-size="22" fill="#555">Single user: the owner of the YouTube channel ATX_amassanoobstroo</text>
+<g font-size="22" fill="#1e1d2b">
+<rect x="60" y="200" width="360" height="200" rx="18" fill="#fff3d6" stroke="#1e1d2b" stroke-width="3"/>
+<text x="240" y="245" text-anchor="middle" font-weight="bold" font-size="26">Episode writer</text>
+<text x="240" y="285" text-anchor="middle">Daily scheduled job writes</text>
+<text x="240" y="315" text-anchor="middle">the next episode script</text>
+<text x="240" y="345" text-anchor="middle">(JSON) in a private GitHub repo</text>
+<rect x="620" y="200" width="360" height="200" rx="18" fill="#e3f1ff" stroke="#1e1d2b" stroke-width="3"/>
+<text x="800" y="245" text-anchor="middle" font-weight="bold" font-size="26">Renderer</text>
+<text x="800" y="285" text-anchor="middle">GitHub Actions: Remotion +</text>
+<text x="800" y="315" text-anchor="middle">ffmpeg render the animated</text>
+<text x="800" y="345" text-anchor="middle">episode (MP4, 1080x1920)</text>
+<rect x="1180" y="200" width="360" height="200" rx="18" fill="#e5f8ec" stroke="#1e1d2b" stroke-width="3"/>
+<text x="1360" y="245" text-anchor="middle" font-weight="bold" font-size="26">Uploader</text>
+<text x="1360" y="285" text-anchor="middle">YouTube Data API v3:</text>
+<text x="1360" y="315" text-anchor="middle">videos.insert (own channel)</text>
+<text x="1360" y="345" text-anchor="middle">commentThreads.insert</text>
+<rect x="1180" y="560" width="360" height="200" rx="18" fill="#ffe3e0" stroke="#1e1d2b" stroke-width="3"/>
+<text x="1360" y="605" text-anchor="middle" font-weight="bold" font-size="26">YouTube channel</text>
+<text x="1360" y="645" text-anchor="middle">ATX_amassanoobstroo</text>
+<text x="1360" y="675" text-anchor="middle">Viewers vote A or B</text>
+<text x="1360" y="705" text-anchor="middle">in the comments</text>
+<rect x="620" y="560" width="360" height="200" rx="18" fill="#f0e6ff" stroke="#1e1d2b" stroke-width="3"/>
+<text x="800" y="605" text-anchor="middle" font-weight="bold" font-size="26">Vote reader</text>
+<text x="800" y="645" text-anchor="middle">commentThreads.list</text>
+<text x="800" y="675" text-anchor="middle">(order=relevance) on the</text>
+<text x="800" y="705" text-anchor="middle">latest episode only</text>
+<rect x="60" y="560" width="360" height="200" rx="18" fill="#f3f3f3" stroke="#1e1d2b" stroke-width="3"/>
+<text x="240" y="605" text-anchor="middle" font-weight="bold" font-size="26">Storage</text>
+<text x="240" y="645" text-anchor="middle">state.json: winning comment</text>
+<text x="240" y="675" text-anchor="middle">(name, text, likes) only.</text>
+<text x="240" y="705" text-anchor="middle">OAuth token: encrypted secret</text>
+</g>
+<g stroke="#1e1d2b" stroke-width="4" fill="none" marker-end="url(#a)">
+<path d="M420 300 H610"/><path d="M980 300 H1170"/><path d="M1360 400 V550"/><path d="M1180 660 H990"/><path d="M620 660 H430"/><path d="M240 560 V410"/>
+</g>
+<defs><marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 Z" fill="#1e1d2b"/></marker></defs>
+<text x="800" y="840" text-anchor="middle" font-size="22" fill="#555">OAuth 2.0 (installed app) with the channel owner's own Google account. Scopes: youtube.upload, youtube.force-ssl.</text>
+</svg>

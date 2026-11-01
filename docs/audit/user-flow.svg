@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" font-family="Arial, sans-serif">
+<rect width="1600" height="900" fill="#ffffff"/>
+<text x="800" y="70" text-anchor="middle" font-size="40" font-weight="bold" fill="#1e1d2b">Shift Happens Uploader - daily user flow</text>
+<g font-size="24" fill="#1e1d2b">
+<g transform="translate(80 150)"><rect width="1440" height="90" rx="16" fill="#fff3d6" stroke="#1e1d2b" stroke-width="3"/><text x="30" y="56"><tspan font-weight="bold">1. One-time setup:</tspan> the channel owner signs in with Google and grants upload + comment access to their own channel.</text></g>
+<g transform="translate(80 270)"><rect width="1440" height="90" rx="16" fill="#e3f1ff" stroke="#1e1d2b" stroke-width="3"/><text x="30" y="56"><tspan font-weight="bold">2. Every morning:</tspan> read the top comments of yesterday's episode and pick the most-liked "A" or "B" vote.</text></g>
+<g transform="translate(80 390)"><rect width="1440" height="90" rx="16" fill="#e5f8ec" stroke="#1e1d2b" stroke-width="3"/><text x="30" y="56"><tspan font-weight="bold">3.</tspan> Write and render the next animated episode that continues the story with the winning choice.</text></g>
+<g transform="translate(80 510)"><rect width="1440" height="90" rx="16" fill="#ffe3e0" stroke="#1e1d2b" stroke-width="3"/><text x="30" y="56"><tspan font-weight="bold">4.</tspan> Upload it to the owner's channel (public, not made for kids) and post "Comment A or B" on it.</text></g>
+<g transform="translate(80 630)"><rect width="1440" height="90" rx="16" fill="#f0e6ff" stroke="#1e1d2b" stroke-width="3"/><text x="30" y="56"><tspan font-weight="bold">5.</tspan> Viewers watch and vote in the comments; the cycle repeats the next day. About 1 upload per day.</text></g>
+</g>
+<text x="800" y="820" text-anchor="middle" font-size="22" fill="#555">No third-party users, no data sharing. The only API user is the channel owner.</text>
+</svg>
