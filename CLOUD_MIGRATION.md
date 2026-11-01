@@ -41,7 +41,7 @@ When 1, 2 and 4 are all true and the `migrated` flag in `state.json` is not set,
 3. Add GitHub secrets with `gh secret set` (client secret + refresh token); never commit `secrets/`.
 4. Add `.github/workflows/episode.yml`: on push of `episodes/*.json` → install Node, Python, ffmpeg → render with
    `make_episode.py` (no Chrome short-path config on Linux) → upload via `youtube_api.py` → commit `state.json`.
-5. Create a Claude cloud routine (daily 09:00) with this repo, whose prompt is `DAILY_PLAN.md` steps 1–3 and 7–8
+5. Create a Claude cloud routine (daily 13:30 BRT) with this repo, whose prompt is `DAILY_PLAN.md` steps 1–3 and 7–8
    using `youtube_api.py` for votes, then push.
 6. Run the cloud pipeline once end-to-end. Only if the episode goes live: set `"migrated": true` in
    `state.json` (from then on the local task exits immediately) and tell the user they can disable the local

@@ -6,7 +6,7 @@ and read the A/B votes in its comments.
 [YouTube Terms of Service](https://www.youtube.com/t/terms) ·
 [Google Privacy Policy](https://policies.google.com/privacy)
 
-Vertical (1080×1920) episodes of ~55–60s for YouTube Shorts (channel ATX_amassanoobstroo). Every episode ends on
+Vertical (1080×1920) episodes of ~55–60s for YouTube Shorts (channel "Shift Happens", @shifthappensyoudecide — formerly ATX_amassanoobstroo). Every episode ends on
 an A/B choice; the **most-liked comment** with A or B picks what happens next, and is shown at the start of the
 next episode. Everything is drawn procedurally in Remotion (flat stick-figure style, SVG), voices are Microsoft
 neural TTS via `edge-tts` (one voice per character), music and sfx are synthesized with ffmpeg. No paid APIs.

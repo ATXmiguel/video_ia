@@ -1,8 +1,8 @@
 # Daily run — Shift Happens
 
-Runs every day at 09:00 as a scheduled task in the Claude desktop app, on this PC
+Runs every day at 13:30 (Brasília) as a scheduled task in the Claude desktop app, on this PC
 (project: `D:\CODE\IA\automações\video_diarios_ia`). Chrome with the Claude extension must be open.
-If the app is closed at 09:00, the run happens when it's next opened. One episode per day, maximum.
+If the app is closed at 13:30, the run happens when it's next opened. One episode per day, maximum.
 
 ## Steps
 
@@ -22,7 +22,7 @@ If the app is closed at 09:00, the run happens when it's next opened. One episod
    Update the canon in `episodes/BIBLE.md`.
 4. **Render** — `python3 scripts/make_episode.py episodes/epNNN.json`. Bundle and look at ~8 stills (cover,
    each scene, choice card). Fix anything broken (overlaps, cut-off text, wrong character) and re-render.
-5. **Upload** in Chrome → studio.youtube.com (channel ATX_amassanoobstroo) → Create → Upload
+5. **Upload** in Chrome → studio.youtube.com (channel "Shift Happens", @shifthappensyoudecide — formerly ATX_amassanoobstroo) → Create → Upload
    `out/epNNN_upload.mp4`:
    - title: `<hook> <hookAccent> | Shift Happens Ep.N #shorts` (≤ 100 chars)
    - description: 2-line recap, `A - ...` / `B - ...`, "Comment A or B. Top comment decides Episode N+1.",
