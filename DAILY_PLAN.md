@@ -4,7 +4,7 @@ Runs every day at 13:30 (Brasília) as a scheduled task in the Claude desktop ap
 (project: `D:\CODE\IA\automações\video_diarios_ia`). Chrome with the Claude extension must be open.
 If the app is closed at 13:30, the run happens when it's next opened. The Windows task `ShiftHappens-KeepAwake`
 (installed once by the user with `scripts/install_keep_awake.ps1`) wakes the PC at 13:00 and keeps it awake until
-today's episode is in `state.json` (or 14:30). One episode per day, maximum.
+today's episode is in `state.json` (or 16:30). One episode per day, maximum.
 
 ## Steps
 

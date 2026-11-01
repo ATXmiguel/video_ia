@@ -1,6 +1,6 @@
 # Keeps Windows from idle-sleeping until today's episode is published (state.json) or until $Until, then lets it sleep.
 # Started by the Windows scheduled task "ShiftHappens-KeepAwake" (at logon and daily at 13:00, waking the PC).
-param([string]$Until = "14:30")
+param([string]$Until = "16:30")
 
 Add-Type -Namespace Win32 -Name Power -MemberDefinition '[DllImport("kernel32.dll")] public static extern uint SetThreadExecutionState(uint esFlags);'
 $ES_CONTINUOUS = [uint32]2147483648
