@@ -53,6 +53,6 @@ New sets go in `src/art/Sets.tsx`, new characters in `src/palette.ts` (look) + `
 
 ## Notes
 
-- `remotion.config.ts` uses a short-path copy of headless Chrome (`C:/Users/migue/.cache/remotion-chrome`)
+- `remotion.config.ts` uses a short-path copy of headless Chrome (`~/.cache/remotion-chrome`)
   when present; delete that config line if renders work without it.
 - `edge-tts` needs `truststore` on this network (handled in the script).
