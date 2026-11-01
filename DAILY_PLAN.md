@@ -2,9 +2,7 @@
 
 Runs every day at 13:30 (Brasília) as a scheduled task in the Claude desktop app, on this PC
 (project: `D:\CODE\IA\automações\video_diarios_ia`). Chrome with the Claude extension must be open.
-If the app is closed at 13:30, the run happens when it's next opened. The Windows task `ShiftHappens-KeepAwake`
-(installed once by the user with `scripts/install_keep_awake.ps1`) wakes the PC at 13:00 and keeps it awake until
-today's episode is in `state.json` (or 16:30). One episode per day, maximum.
+If the app is closed at 13:30, the run happens when it's next opened. One episode per day, maximum.
 
 ## Steps
 
@@ -41,7 +39,7 @@ today's episode is in `state.json` (or 16:30). One episode per day, maximum.
    is `#contenteditable-root` *before* typing (otherwise keystrokes trigger YouTube shortcuts). Then pin it
    (⋮ → "Fixar no topo"). If YouTube asks for the one-time "recursos avançados" verification, cancel, keep the
    comment unpinned and remind the user in the report.
-7. **Save** — update `state.json` (episode, URL, `"published": "YYYY-MM-DD"` — `scripts/keep_awake.ps1` watches this to let the PC sleep), `git add -A && git commit`, `git push` if a remote exists.
+7. **Save** — update `state.json` (episode, URL, date), `git add -A && git commit`, `git push` if a remote exists.
 8. **Report** — a short message: winner (user + likes), new episode link, anything that failed or was skipped.
 
 ## Limits
