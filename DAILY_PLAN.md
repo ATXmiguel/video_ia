@@ -34,6 +34,14 @@ If the app is closed at 13:30, the run happens when it's next opened. One episod
    - description: 2-line recap, `A - ...` / `B - ...`, "Comment A or B. Top comment decides Part P+1." (final part: "...picks the next story."),
      hashtags `#shifthappens #youdecide #interactivestory #animation #funny #shorts`
    - not made for kids · AI use: No (stylized cartoon) · video language English · **Public**
+   - Before uploading, check `out/epNNN_upload.mp4` is ≤ 6.5 MB (`make_episode.py` targets ~6 MB; the 9.4 MB
+     files of ep001–ep003 dropped the extension's connection on 2026-11-02). If it is bigger, re-run the render.
+   - If `file_upload` returns "connection was lost", that is not a failed upload yet: wait ~10 s, call
+     `tabs_context_mcp`, then look at the page (upload dialog with progress?) and Studio → Content → Shorts for a
+     new draft. Continue with that draft if it exists; only retry the upload (in a freshly loaded Studio tab) if
+     nothing arrived. Never leave two drafts of the same episode.
+   - A pending episode in `state.json` (`url: null`, status "rendered, upload failed") is uploaded first, before
+     writing the next one; it keeps its own title, options and topComment.
 6. **Comment + pin** on the new video (youtube.com/watch?v=ID): `Comment A or B 👇 Top comment decides Part P+1` (final part: `...picks the next story`).
    Comments load lazily: scroll down, click `#simplebox-placeholder`, and check that `document.activeElement`
    is `#contenteditable-root` *before* typing (otherwise keystrokes trigger YouTube shortcuts). Then pin it

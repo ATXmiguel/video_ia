@@ -49,9 +49,8 @@
     {
       "episode": 3,
       "file": "episodes/ep003.json",
-      "url": null,
-      "published": null,
-      "status": "rendered, upload failed 2026-11-02 (Chrome file_upload lost connection twice) - upload out/ep003_upload.mp4 before writing ep004",
+      "url": "https://youtube.com/shorts/O_303NrF6-o",
+      "published": "2026-11-02",
       "options": {
         "A": "Play the video",
         "B": "Make a deal"

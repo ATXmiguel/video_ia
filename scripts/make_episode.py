@@ -129,8 +129,9 @@ def normalize(src: Path, dest: Path) -> None:
 
 
 def upload_copy(src: Path, dest: Path, seconds: float) -> None:
-    # The Chrome extension can only hand files under 10 MB to the upload form: two-pass to ~9.4 MB.
-    kbps = int(9.4 * 8000 / seconds) - 128
+    # The Chrome extension can only hand files under 10 MB to the upload form, and at ~9.4 MB the
+    # transfer (base64, ~12.5 MB) dropped the connection on 2026-11-02: two-pass to ~6 MB for margin.
+    kbps = int(6.0 * 8000 / seconds) - 128
     log = str(dest.with_suffix(""))
     common = ["-i", str(src), "-c:v", "libx264", "-preset", "slow", "-b:v", f"{kbps}k", "-passlogfile", log]
     run_ffmpeg(*common, "-pass", "1", "-an", "-f", "null", "NUL")
