@@ -16,12 +16,18 @@ YouTube keeps every API upload **private** until the Google Cloud project passes
   README/PRIVACY/TERMS on GitHub. Desktop client in `secrets/client_secret.json`.
 - OAuth done for the channel owner account → channel `UCYr4LVpGYwMKC5MgANp63qQ`
   ATX_amassanoobstroo. Refresh token in `secrets/token.json` (gitignored). `scripts/youtube_api.py whoami`
-  and `top <video>` work. Uploads via the API stay **private** until the audit is approved.
+  and `top <video>` work. Uploads via the API stay **public** (tested 2026-11-02, see below).
 - Audit form **submitted by the owner on 2026-11-01** (evidence kept locally in `docs/audit/`, not in git).
   The answer arrives by email to miguel.barbosa.godinho@gmail.com. Daily check: Gmail search
   `newer_than:60d (from:google.com OR from:youtube.com) (audit OR auditoria OR quota OR "API Services")`;
   read the thread — only an explicit approval counts as prerequisite #4. If Google asks for more info,
   tell the owner (don't reply yourself).
+
+- **API upload test 2026-11-02:** `videos.insert` with `privacyStatus=public` (video `-xBt-iG747k`) stayed
+  **public** after processing — this project is *not* locked to private. So prerequisite #4 (audit approval) is
+  not needed for uploads; the default 10k units/day covers ~1 upload + comments + vote reads. The test video was
+  set to unlisted. Screencast for Google (unlisted): https://www.youtube.com/watch?v=D8hzyZTnX3I. Google asked
+  for more info on 2026-11-02 (deadline ~11-11); the reply is a Gmail draft for the owner to review and send.
 
 ## Prerequisites (the user does 1–3 once; the daily run checks them every day)
 
@@ -30,7 +36,7 @@ YouTube keeps every API upload **private** until the Google Cloud project passes
 | 1 | GitHub repo for this project, and `gh` logged in on this PC | `git remote get-url origin` works and `gh auth status` is OK |
 | 2 | Google Cloud project with **YouTube Data API v3** enabled + OAuth client (Desktop app); JSON saved as `secrets/client_secret.json` | the file exists |
 | 3 | Audit requested: YouTube API Services audit/quota form, for uploads to the user's own channel | — |
-| 4 | **Audit approved** | Gmail has an approval message for the API audit from YouTube/Google API Services |
+| 4 | API uploads stay public — **done** (test 2026-11-02). The audit answer is no longer blocking | `scripts/youtube_api.py status <id>` of the latest API upload is `public` |
 
 When 1, 2 and 4 are all true and the `migrated` flag in `state.json` is not set, the daily run migrates:
 

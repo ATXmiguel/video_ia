@@ -10,6 +10,7 @@ Usage:
   python3 scripts/youtube_api.py comment VIDEO_ID "text"
   python3 scripts/youtube_api.py top VIDEO_ID [WORD_A WORD_B]  # most-liked comment that votes, as JSON
   python3 scripts/youtube_api.py stats ID [ID ...]    # views, likes, comments per video, as JSON
+  python3 scripts/youtube_api.py status VIDEO_ID      # title, channel, upload and privacy status
 """
 
 import json
@@ -116,6 +117,13 @@ def stats(*video_ids: str) -> None:
     print(json.dumps(out))
 
 
+def status(video_id: str) -> None:
+    res = youtube().videos().list(part="snippet,status", id=video_id).execute()
+    v = res["items"][0]
+    print(json.dumps({"id": v["id"], "title": v["snippet"]["title"], "channel": v["snippet"]["channelTitle"],
+                      "uploadStatus": v["status"]["uploadStatus"], "privacyStatus": v["status"]["privacyStatus"]}))
+
+
 def vote_of(text: str, words: tuple[str, ...]) -> str | None:
     # A vote is the option's word (episodes from ep004 on), else its letter ("a" is also an article, so a word wins).
     # A comment naming both options is no vote.
@@ -147,4 +155,4 @@ def top(video_id: str, *words: str) -> None:
 
 if __name__ == "__main__":
     cmd, *args = sys.argv[1:]
-    {"auth": auth, "whoami": whoami, "upload": upload, "comment": comment, "top": top, "stats": stats}[cmd](*args)
+    {"auth": auth, "whoami": whoami, "upload": upload, "comment": comment, "top": top, "stats": stats, "status": status}[cmd](*args)
