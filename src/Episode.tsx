@@ -45,6 +45,8 @@ const SceneBlock: React.FC<{scene: BuiltScene; prevHud: HudT; first: boolean; du
   const isChoice = scene.kind === 'choice';
   const isRecap = scene.kind === 'recap';
   const hudFrom = first ? COVER_FRAMES : 0;
+  // The recap turns gray only after the title card: the first frames are what the Shorts feed shows, keep them in color.
+  const gray = isRecap ? interpolate(frame, [COVER_FRAMES - 6, COVER_FRAMES + 6], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}) : 0;
 
   return (
     <AbsoluteFill>
@@ -52,7 +54,7 @@ const SceneBlock: React.FC<{scene: BuiltScene; prevHud: HudT; first: boolean; du
         style={{
           transform: `translate(${shake[0]}px, ${shake[1]}px) scale(${push * punch * zoomIn})`,
           transformOrigin: origin,
-          filter: isRecap ? 'grayscale(1) brightness(0.75)' : undefined,
+          filter: isRecap ? `grayscale(${gray}) brightness(${1 - 0.25 * gray})` : undefined,
         }}
       >
         {isPhone ? (
