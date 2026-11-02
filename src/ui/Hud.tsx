@@ -1,12 +1,15 @@
 import React from 'react';
 import {interpolate, interpolateColors, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {Head} from '../art/Character';
-import {INK, RED} from '../palette';
-import type {Hud as HudT} from '../types';
+import {INK, RED, YELLOW} from '../palette';
+import type {Goal, Hud as HudT} from '../types';
 import {BODY, DISPLAY} from './fonts';
 
+export const Hud: React.FC<{prev: HudT; cur: HudT; labels?: {money: string; meter: string}; goal?: Goal}> = ({goal, ...rest}) =>
+  goal ? <GoalHud prev={rest.prev} cur={rest.cur} goal={goal} /> : <ClassicHud {...rest} />;
+
 // Game-style overlay: tips card top-left, manager rage gauge top-right. Values tween in from the previous scene.
-export const Hud: React.FC<{prev: HudT; cur: HudT; labels?: {money: string; meter: string}}> = ({
+const ClassicHud: React.FC<{prev: HudT; cur: HudT; labels?: {money: string; meter: string}}> = ({
   prev,
   cur,
   labels = {money: 'TIPS', meter: 'MANAGER RAGE'},
@@ -152,6 +155,78 @@ export const Hud: React.FC<{prev: HudT; cur: HudT; labels?: {money: string; mete
         >
           {dRage > 0 ? '+' : '-'}
           {Math.abs(Math.round(dRage))}% {labels.meter.split(' ').pop()}
+        </div>
+      )}
+    </div>
+  );
+};
+
+// Stories with a finish line: a countdown top-left ("SHIFTS LEFT 5") and a progress bar top-right ("PROMOTION 40%").
+const GoalHud: React.FC<{prev: HudT; cur: HudT; goal: Goal}> = ({prev, cur, goal}) => {
+  const frame = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const t = interpolate(frame, [4, 26], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const from = prev.progress ?? 0;
+  const to = cur.progress ?? 0;
+  const progress = from + (to - from) * t;
+  const left = cur.left ?? 0;
+  const tick = (prev.left ?? left) !== left ? spring({frame: frame - 4, fps, config: {damping: 7}}) : 1;
+  const d = to - from;
+  const badgePop = prev.badge !== cur.badge ? spring({frame: frame - 6, fps, config: {damping: 9}}) : 1;
+  const floatO = interpolate(frame, [8, 14, 36, 46], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const barColor = interpolateColors(progress, [0, 50, 100], ['#ff4a3d', '#ffc83d', '#2fd27a']);
+  const card = {background: '#1d1b2e', border: `6px solid ${INK}`, borderRadius: 24, boxShadow: '0 8px 0 rgba(0,0,0,0.25)'};
+
+  return (
+    <div style={{position: 'absolute', inset: 0}}>
+      <div style={{...card, position: 'absolute', left: 36, top: 80, width: 300, height: 150, textAlign: 'center'}}>
+        <div style={{marginTop: 14, fontFamily: BODY, fontWeight: 800, fontSize: 24, color: '#c9c6e0', letterSpacing: 3}}>{goal.countdown}</div>
+        <div style={{fontFamily: DISPLAY, fontSize: 84, lineHeight: 1, color: YELLOW, transform: `scale(${0.6 + 0.4 * tick})`}}>{left}</div>
+      </div>
+      <div style={{...card, position: 'absolute', right: 36, top: 80, width: 640, height: 150, padding: '14px 26px'}}>
+        <div style={{display: 'flex', justifyContent: 'space-between', fontFamily: BODY, fontWeight: 800, fontSize: 24, color: '#c9c6e0', letterSpacing: 3}}>
+          <span>{goal.progress}</span>
+          <span style={{fontFamily: DISPLAY, fontSize: 40, color: barColor, letterSpacing: 0}}>{Math.round(progress)}%</span>
+        </div>
+        <div style={{marginTop: 12, height: 44, borderRadius: 999, background: '#34314d', border: `4px solid ${INK}`, overflow: 'hidden'}}>
+          <div style={{width: `${Math.max(4, Math.min(100, progress))}%`, height: '100%', background: barColor, borderRadius: 999}} />
+        </div>
+      </div>
+      <div
+        style={{
+          position: 'absolute',
+          left: 36,
+          top: 240,
+          background: RED,
+          color: '#fff',
+          fontFamily: BODY,
+          fontWeight: 800,
+          fontSize: 28,
+          padding: '6px 18px',
+          borderRadius: 10,
+          border: `4px solid ${INK}`,
+          transform: `rotate(-2deg) scale(${badgePop})`,
+          whiteSpace: 'nowrap',
+        }}
+      >
+        {cur.badge}
+      </div>
+      {d !== 0 && (
+        <div
+          style={{
+            position: 'absolute',
+            right: 60,
+            top: 250,
+            opacity: floatO,
+            fontFamily: DISPLAY,
+            fontSize: 60,
+            color: d > 0 ? '#2fd27a' : '#ff4a3d',
+            WebkitTextStroke: `8px ${INK}`,
+            paintOrder: 'stroke fill',
+          }}
+        >
+          {d > 0 ? '+' : '-'}
+          {Math.abs(Math.round(d))}%
         </div>
       )}
     </div>

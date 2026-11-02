@@ -8,7 +8,7 @@ Usage:
   python3 scripts/youtube_api.py whoami               # channel the token belongs to
   python3 scripts/youtube_api.py upload FILE.mp4 meta.json   # meta: title, description, tags, privacy
   python3 scripts/youtube_api.py comment VIDEO_ID "text"
-  python3 scripts/youtube_api.py top VIDEO_ID         # most-liked comment that votes A or B, as JSON
+  python3 scripts/youtube_api.py top VIDEO_ID [WORD_A WORD_B]  # most-liked comment that votes, as JSON
   python3 scripts/youtube_api.py stats ID [ID ...]    # views, likes, comments per video, as JSON
 """
 
@@ -116,7 +116,16 @@ def stats(*video_ids: str) -> None:
     print(json.dumps(out))
 
 
-def top(video_id: str) -> None:
+def vote_of(text: str, words: tuple[str, ...]) -> str | None:
+    # A vote is the option's word (episodes from ep004 on), else its letter ("a" is also an article, so a word wins).
+    # A comment naming both options is no vote.
+    up = text.upper()
+    hits = {k for k, w in zip("AB", words) if re.search(rf"\b{re.escape(w.upper())}\b", up)}
+    hits = hits or set(re.findall(r"\b([AB])\b", up))
+    return hits.pop() if len(hits) == 1 else None
+
+
+def top(video_id: str, *words: str) -> None:
     yt = youtube()
     owner = yt.videos().list(part="snippet", id=video_id).execute()["items"][0]["snippet"]["channelId"]
     best, token = None, None

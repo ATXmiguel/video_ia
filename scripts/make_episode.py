@@ -51,7 +51,7 @@ def probe_duration(path: Path) -> float:
 
 async def speak(text: str, who: str, dest: Path) -> list[dict]:
     voice, rate, pitch = VOICES[who]
-    for attempt in range(3):
+    for attempt in range(6):
         try:
             words, audio = [], bytearray()
             comm = edge_tts.Communicate(text, voice, rate=rate, pitch=pitch, boundary="WordBoundary")
@@ -64,11 +64,11 @@ async def speak(text: str, who: str, dest: Path) -> list[dict]:
                                   "end": round(start + chunk["duration"] / 1e7, 3)})
             dest.write_bytes(audio)
             return words
-        except Exception as e:  # network hiccups are common, retry
-            if attempt == 2:
+        except Exception as e:  # the service drops requests for a few seconds at a time: back off and retry
+            if attempt == 5:
                 raise
             print(f"  tts retry ({e})")
-            await asyncio.sleep(2)
+            await asyncio.sleep(2 * 2**attempt)
     return []
 
 
@@ -131,9 +131,11 @@ def normalize(src: Path, dest: Path) -> None:
 def upload_copy(src: Path, dest: Path, seconds: float) -> None:
     # The Chrome extension can only hand files under 10 MB to the upload form, and at ~9.4 MB the
     # transfer (base64, ~12.5 MB) dropped the connection on 2026-11-02: two-pass to ~6 MB for margin.
+    # Long episodes get too few bits for 1080p, so they go out at 720p (plenty for a phone screen).
     kbps = int(6.0 * 8000 / seconds) - 128
     log = str(dest.with_suffix(""))
-    common = ["-i", str(src), "-c:v", "libx264", "-preset", "slow", "-b:v", f"{kbps}k", "-passlogfile", log]
+    scale = ["-vf", "scale=720:1280:flags=lanczos"] if kbps < 650 else []
+    common = ["-i", str(src), *scale, "-c:v", "libx264", "-preset", "slow", "-b:v", f"{kbps}k", "-passlogfile", log]
     run_ffmpeg(*common, "-pass", "1", "-an", "-f", "null", "NUL")
     run_ffmpeg(*common, "-pass", "2", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", str(dest))
     for f in dest.parent.glob(f"{dest.stem}*.log*"):
@@ -141,12 +143,18 @@ def upload_copy(src: Path, dest: Path, seconds: float) -> None:
 
 
 def cta_line(ep: dict) -> str:
+    opts = ep["choice"]["options"]
+    if all(o.get("word") for o in opts):
+        vote = "Comment one word: " + " or ".join(o["word"].upper() for o in opts) + "."
+        win = "The most-liked one"
+    else:
+        vote, win = "Comment A or B.", "Top comment"
     arc = ep.get("arc")
     if arc and arc.get("final"):
-        return "Comment A or B. Top comment picks the next story."
+        return f"{vote} {win} picks the next story."
     if arc:
-        return f"Comment A or B. Top comment decides part {arc['part'] + 1}."
-    return f"Comment A or B. Top comment decides episode {ep['episode'] + 1}."
+        return f"{vote} {win} decides part {arc['part'] + 1}."
+    return f"{vote} {win} decides episode {ep['episode'] + 1}."
 
 
 async def main(ep_path: Path, render: bool) -> None:
@@ -171,7 +179,7 @@ async def main(ep_path: Path, render: bool) -> None:
     choice = ep["choice"]
     opts = choice["options"]
     choice_lines = [choice["question"].capitalize()] + [
-        f"{'' if k == 0 else 'Or '}{o['key']}: {o['label']}." for k, o in enumerate(opts)
+        f"{'' if k == 0 else 'Or '}{o.get('word', o['key'])}: {o['label']}." for k, o in enumerate(opts)
     ] + [cta_line(ep)]
     backdrop = {k: v for k, v in ep["scenes"][-1].items() if k != "lines"}
     print("choice card")
@@ -181,7 +189,7 @@ async def main(ep_path: Path, render: bool) -> None:
     print(f"music ({total:.1f}s)")
     make_music(PUBLIC / slug / "music.mp3", total + 1)
 
-    build = {k: ep[k] for k in ("series", "episode", "hook", "hookAccent", "choice", "arc", "hudLabels") if k in ep}
+    build = {k: ep[k] for k in ("series", "episode", "hook", "hookAccent", "choice", "arc", "hudLabels", "goal") if k in ep}
     build.update(topComment=top, scenes=scenes, music=f"{slug}/music.mp3")
     build_path = PUBLIC / slug / "build.json"
     build_path.write_text(json.dumps(build, indent=2), encoding="utf-8")

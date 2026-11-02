@@ -34,14 +34,17 @@ Check frames with `npx remotion bundle src/index.ts --out-dir=build` then
 | `hook`, `hookAccent` | title card over the first 2.2 s (also the thumbnail): short line + red punchline |
 | `arc` | `{number, part, name, final?}` — story number, part in it, job name; `final: true` on the last part |
 | `hudLabels` | `{money, meter}` — HUD texts for this story's job (default TIPS / MANAGER RAGE) |
+| `goal` | optional finish line, replaces the tips/rage HUD: `{countdown: "SHIFTS LEFT", progress: "PROMOTION"}`; scenes then set `hud.left` and `hud.progress` (0–100) |
 | `topComment` | `null` for ep 1, else `{user, text, likes}` of last episode's winning comment |
 | `recap` | optional scene spec shown in gray behind the top comment (copy last episode's final scene) |
 | `scenes[]` | 6–8 scenes, 1–2 short lines each |
-| `choice` | `question` + 2 `options` (`key`, `label` ≤ 4 words, `teaser` ≤ 4 words, `icon` = cast member) |
+| `choice` | `question` + 2 `options` (`key`, `word` = the ONE word viewers comment, `label` ≤ 4 words, `teaser` ≤ 4 words, `icon` = cast member, `pose`/`face` = how YOU is drawn doing it on the split-screen card) |
 
 Scene keys:
 
-- `set`: `exterior` | `counter` (cast stands behind the counter) | `kitchen` | `dining`
+- `set`: `exterior` | `counter` (cast stands behind the counter) | `kitchen` | `dining` | `phone`
+- `phone` (with `set: "phone"`, `cast: []`): `{contact, messages: [{from: "me"|"them", text, line?}]}` — a full-screen
+  chat; message i pops in when line `line` (default i) starts. No emoji in messages (the renderer has no emoji font).
 - `cast[]`: `who` (you, kevin, tyler, lily, brenda), `x` (0–1080), `pose` (idle, point, shock, cheer, angry,
   shrug, sad), `face` (neutral, happy, shock, angry, smug, sad, love), `flip` (face left), `toX` (walk there)
 - `lines[]`: a string is narration; `{"who": "kevin", "text": "..."}` is a character speaking
@@ -54,9 +57,12 @@ New sets go in `src/art/Sets.tsx`, new characters in `src/palette.ts` (look) + `
 ## Writing rules
 
 - Second person, present tense, short punchy sentences — they become 1–2 word captions.
+- Part 1 of a story opens with a world in one line: "Imagine…", "In this job…", "You have five shifts to…".
+- Use at least one `phone` scene when the plot has a text, a video, a schedule or a bank balance.
 - Episode 2+: the first story scene resolves the winning choice immediately.
 - A twist around 40 s; end on a dilemma where both options are tempting.
-- ~120–140 words total (55–60 s). Something visible changes in the HUD in most scenes.
+- ~150–190 words total (70–90 s), a new set every 5–10 s. Something visible changes in the HUD in most scenes.
+- Options are one concrete noun each (`"word": "VIDEO"` / `"word": "DEAL"`), different first letters, no articles.
 - Teen-friendly humor, no real brands, no real people, nothing mean-spirited about real groups.
 
 ## Notes

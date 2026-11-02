@@ -7,6 +7,7 @@ import type {Build, BuiltScene, Hud as HudT} from './types';
 import {Captions} from './ui/Captions';
 import {ChoiceCard} from './ui/ChoiceCard';
 import {Hud} from './ui/Hud';
+import {PhoneScreen} from './ui/PhoneScreen';
 import {Cover, TopComment} from './ui/Overlays';
 import {Stamp} from './ui/Stamp';
 
@@ -27,7 +28,8 @@ const SceneBlock: React.FC<{scene: BuiltScene; prevHud: HudT; first: boolean; du
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
   const t = frame / fps;
-  const set = SETS[scene.set];
+  const isPhone = scene.set === 'phone';
+  const set = SETS[scene.set === 'phone' ? 'kitchen' : scene.set];
   const stampFrame = scene.stamp ? Math.round((scene.lines[scene.stamp.line ?? 0]?.start ?? 0) * fps) : -1;
   const since = frame - stampFrame;
   const hit = stampFrame >= 0 && since >= 0 && since < 14;
@@ -53,18 +55,22 @@ const SceneBlock: React.FC<{scene: BuiltScene; prevHud: HudT; first: boolean; du
           filter: isRecap ? 'grayscale(1) brightness(0.75)' : undefined,
         }}
       >
-        <svg viewBox="0 0 1080 1920" width="100%" height="100%">
-          <set.Back />
-          {scene.cast.map((m, i) => (
-            <Character key={i} m={m} footY={set.floorY} talking={speaking === m.who} progress={frame / dur} seed={i} />
-          ))}
-          {set.Front && <set.Front />}
-        </svg>
+        {isPhone ? (
+          <PhoneScreen scene={scene} />
+        ) : (
+          <svg viewBox="0 0 1080 1920" width="100%" height="100%">
+            <set.Back />
+            {scene.cast.map((m, i) => (
+              <Character key={i} m={m} footY={set.floorY} talking={speaking === m.who} progress={frame / dur} seed={i} />
+            ))}
+            {set.Front && <set.Front />}
+          </svg>
+        )}
       </AbsoluteFill>
       <AbsoluteFill style={{background: '#fff', opacity: flash}} />
       {!isChoice && !isRecap && (
         <Sequence from={hudFrom} layout="none">
-          <Hud prev={first ? scene.hud : prevHud} cur={scene.hud} labels={build.hudLabels} />
+          <Hud prev={first ? scene.hud : prevHud} cur={scene.hud} labels={build.hudLabels} goal={build.goal} />
         </Sequence>
       )}
       {isRecap && build.topComment && (

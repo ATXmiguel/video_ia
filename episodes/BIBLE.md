@@ -11,6 +11,12 @@ The series is a run of **stories of 4–7 parts (target 5)**. Each story is **a 
 truck, haunted mansion tour... YOU, the second-person narration and the HUD stay; the set, the boss, the
 coworkers and the HUD labels change (`hudLabels`, e.g. TIPS / MANAGER RAGE, TICKETS SOLD / BOSS PATIENCE).
 
+**Every story from story 2 on has a finish line** (what made escolhas.app's "30 days to the date" hold 1M+ views
+for 14 episodes): YOU get N shifts to reach a goal or lose the job — "5 SHIFTS TO GET PROMOTED", "3 NIGHTS TO
+SURVIVE THE HAUNTED HOTEL". Use `goal` in the episode (`SHIFTS LEFT` counting down, a progress bar toward the goal).
+Every choice moves the bar, and wins stay won. Story 1 (Big Bun's) keeps the tips/rage HUD until it ends.
+From ep004, votes are ONE word per option (see README).
+
 Shape of a story:
 1. **Part 1 — new job.** Establish the place, the boss, the rival and an ally in 10 s; first disaster; vote.
 2. **Parts 2–4 — escalation.** Each part resolves the vote in its first scene, makes things worse, adds a twist
