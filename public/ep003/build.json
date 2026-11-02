@@ -1,0 +1,1013 @@
+{
+  "series": "Shift Happens",
+  "episode": 3,
+  "hook": "YOU STOLE HIS PHONE.",
+  "hookAccent": "HE'S THE BOSS'S NEPHEW?!",
+  "choice": {
+    "question": "WHAT DO YOU DO?",
+    "options": [
+      {
+        "key": "A",
+        "label": "Play the video",
+        "teaser": "Family drama",
+        "icon": "kevin"
+      },
+      {
+        "key": "B",
+        "label": "Make a deal",
+        "teaser": "Tyler owes you",
+        "icon": "tyler"
+      }
+    ]
+  },
+  "arc": {
+    "number": 1,
+    "part": 3,
+    "name": "Big Bun's"
+  },
+  "hudLabels": {
+    "money": "TIPS",
+    "meter": "MANAGER RAGE"
+  },
+  "topComment": {
+    "user": "@PerezFamily-m2v6i",
+    "text": "B if you can guess his password unless tyler is an idiot and doesn't have a password",
+    "likes": 2
+  },
+  "scenes": [
+    {
+      "set": "kitchen",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "shock",
+          "face": "shock"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "shrug",
+          "face": "neutral",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 25,
+        "rage": 99,
+        "badge": "ON THIN ICE"
+      },
+      "kind": "recap",
+      "duration": 8.522,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "Top comment said: B if you can guess his password unless tyler is an idiot and doesn't have a password",
+          "audio": "ep003/s0_l0.mp3",
+          "start": 2.6,
+          "duration": 5.472,
+          "words": [
+            {
+              "text": "Top",
+              "start": 0.1,
+              "end": 0.257
+            },
+            {
+              "text": "comment",
+              "start": 0.268,
+              "end": 0.558
+            },
+            {
+              "text": "said",
+              "start": 0.569,
+              "end": 0.848
+            },
+            {
+              "text": "B",
+              "start": 1.239,
+              "end": 1.339
+            },
+            {
+              "text": "if",
+              "start": 1.35,
+              "end": 1.429
+            },
+            {
+              "text": "you",
+              "start": 1.44,
+              "end": 1.518
+            },
+            {
+              "text": "can",
+              "start": 1.529,
+              "end": 1.652
+            },
+            {
+              "text": "guess",
+              "start": 1.663,
+              "end": 1.864
+            },
+            {
+              "text": "his",
+              "start": 1.875,
+              "end": 2.009
+            },
+            {
+              "text": "password",
+              "start": 2.02,
+              "end": 2.511
+            },
+            {
+              "text": "unless",
+              "start": 2.522,
+              "end": 2.79
+            },
+            {
+              "text": "tyler",
+              "start": 2.801,
+              "end": 3.158
+            },
+            {
+              "text": "is",
+              "start": 3.17,
+              "end": 3.304
+            },
+            {
+              "text": "an",
+              "start": 3.315,
+              "end": 3.404
+            },
+            {
+              "text": "idiot",
+              "start": 3.504,
+              "end": 3.839
+            },
+            {
+              "text": "and",
+              "start": 4.062,
+              "end": 4.129
+            },
+            {
+              "text": "doesn't",
+              "start": 4.141,
+              "end": 4.431
+            },
+            {
+              "text": "have",
+              "start": 4.442,
+              "end": 4.531
+            },
+            {
+              "text": "a",
+              "start": 4.542,
+              "end": 4.587
+            },
+            {
+              "text": "password",
+              "start": 4.598,
+              "end": 5.134
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "kitchen",
+      "cast": [
+        {
+          "who": "you",
+          "x": 540,
+          "pose": "point",
+          "face": "smug"
+        }
+      ],
+      "hud": {
+        "tips": 25,
+        "rage": 99,
+        "badge": "ON THIN ICE"
+      },
+      "stamp": {
+        "text": "YOINK",
+        "color": "yellow",
+        "line": 0
+      },
+      "kind": "story",
+      "duration": 3.874,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "You snatch Tyler's phone.",
+          "audio": "ep003/s1_l0.mp3",
+          "start": 0.25,
+          "duration": 1.416,
+          "words": [
+            {
+              "text": "You",
+              "start": 0.089,
+              "end": 0.167
+            },
+            {
+              "text": "snatch",
+              "start": 0.179,
+              "end": 0.446
+            },
+            {
+              "text": "Tyler's",
+              "start": 0.458,
+              "end": 0.781
+            },
+            {
+              "text": "phone",
+              "start": 0.792,
+              "end": 1.083
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Locked. Of course.",
+          "audio": "ep003/s1_l1.mp3",
+          "start": 1.816,
+          "duration": 1.608,
+          "words": [
+            {
+              "text": "Locked",
+              "start": 0.089,
+              "end": 0.424
+            },
+            {
+              "text": "Of",
+              "start": 0.792,
+              "end": 0.871
+            },
+            {
+              "text": "course",
+              "start": 0.882,
+              "end": 1.272
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "counter",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "shrug",
+          "face": "neutral"
+        },
+        {
+          "who": "lily",
+          "x": 760,
+          "pose": "point",
+          "face": "happy",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 25,
+        "rage": 99,
+        "badge": "HACKER"
+      },
+      "stamp": {
+        "text": "UNLOCKED",
+        "color": "green",
+        "line": 1
+      },
+      "kind": "story",
+      "duration": 5.314,
+      "lines": [
+        {
+          "who": "lily",
+          "text": "Try his name. He's not that smart.",
+          "audio": "ep003/s2_l0.mp3",
+          "start": 0.25,
+          "duration": 2.592,
+          "words": [
+            {
+              "text": "Try",
+              "start": 0.057,
+              "end": 0.261
+            },
+            {
+              "text": "his",
+              "start": 0.273,
+              "end": 0.477
+            },
+            {
+              "text": "name",
+              "start": 0.489,
+              "end": 0.886
+            },
+            {
+              "text": "He's",
+              "start": 1.227,
+              "end": 1.352
+            },
+            {
+              "text": "not",
+              "start": 1.364,
+              "end": 1.568
+            },
+            {
+              "text": "that",
+              "start": 1.58,
+              "end": 1.75
+            },
+            {
+              "text": "smart",
+              "start": 1.761,
+              "end": 2.25
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "T-Y-L-E-R. It opens.",
+          "audio": "ep003/s2_l1.mp3",
+          "start": 2.992,
+          "duration": 1.872,
+          "words": [
+            {
+              "text": "T-Y-L-E-R",
+              "start": 0.089,
+              "end": 0.67
+            },
+            {
+              "text": "It",
+              "start": 1.038,
+              "end": 1.116
+            },
+            {
+              "text": "opens",
+              "start": 1.127,
+              "end": 1.54
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "kitchen",
+      "cast": [
+        {
+          "who": "you",
+          "x": 540,
+          "pose": "cheer",
+          "face": "happy"
+        }
+      ],
+      "hud": {
+        "tips": 25,
+        "rage": 99,
+        "badge": "HAS PROOF"
+      },
+      "stamp": {
+        "text": "PROOF",
+        "color": "green",
+        "line": 0
+      },
+      "zoom": "you",
+      "kind": "story",
+      "duration": 5.818,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "There it is. Tyler. Fryer. MAX.",
+          "audio": "ep003/s3_l0.mp3",
+          "start": 0.25,
+          "duration": 3.096,
+          "words": [
+            {
+              "text": "There",
+              "start": 0.1,
+              "end": 0.19
+            },
+            {
+              "text": "it",
+              "start": 0.201,
+              "end": 0.257
+            },
+            {
+              "text": "is",
+              "start": 0.268,
+              "end": 0.525
+            },
+            {
+              "text": "Tyler",
+              "start": 0.893,
+              "end": 1.217
+            },
+            {
+              "text": "Fryer",
+              "start": 1.641,
+              "end": 1.953
+            },
+            {
+              "text": "MAX",
+              "start": 2.321,
+              "end": 2.757
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "You're saved.",
+          "audio": "ep003/s3_l1.mp3",
+          "start": 3.496,
+          "duration": 1.872,
+          "words": [
+            {
+              "text": "You're",
+              "start": 0.089,
+              "end": 0.167
+            },
+            {
+              "text": "saved",
+              "start": 0.179,
+              "end": 0.569
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "counter",
+      "cast": [
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "point",
+          "face": "happy",
+          "toX": 380
+        },
+        {
+          "who": "kevin",
+          "x": 760,
+          "pose": "idle",
+          "face": "angry",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 25,
+        "rage": 80,
+        "badge": "HAS PROOF"
+      },
+      "stamp": {
+        "text": "SHOWTIME",
+        "color": "blue",
+        "line": 0
+      },
+      "kind": "story",
+      "duration": 4.666,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "You run to Kevin.",
+          "audio": "ep003/s4_l0.mp3",
+          "start": 0.25,
+          "duration": 1.872,
+          "words": [
+            {
+              "text": "You",
+              "start": 0.089,
+              "end": 0.201
+            },
+            {
+              "text": "run",
+              "start": 0.212,
+              "end": 0.368
+            },
+            {
+              "text": "to",
+              "start": 0.379,
+              "end": 0.458
+            },
+            {
+              "text": "Kevin",
+              "start": 0.469,
+              "end": 0.781
+            }
+          ]
+        },
+        {
+          "who": "kevin",
+          "text": "This better be good.",
+          "audio": "ep003/s4_l1.mp3",
+          "start": 2.272,
+          "duration": 1.944,
+          "words": [
+            {
+              "text": "This",
+              "start": 0.096,
+              "end": 0.328
+            },
+            {
+              "text": "better",
+              "start": 0.339,
+              "end": 0.594
+            },
+            {
+              "text": "be",
+              "start": 0.606,
+              "end": 0.721
+            },
+            {
+              "text": "good",
+              "start": 0.733,
+              "end": 1.126
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "counter",
+      "cast": [
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "shock",
+          "face": "shock"
+        },
+        {
+          "who": "tyler",
+          "x": 760,
+          "pose": "point",
+          "face": "angry",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 25,
+        "rage": 97,
+        "badge": "PHONE THIEF"
+      },
+      "stamp": {
+        "text": "UNCLE?!",
+        "color": "red",
+        "line": 1
+      },
+      "fx": "flash",
+      "kind": "story",
+      "duration": 5.722,
+      "lines": [
+        {
+          "who": "tyler",
+          "text": "Uncle Kevin! He stole my phone!",
+          "audio": "ep003/s5_l0.mp3",
+          "start": 0.25,
+          "duration": 3.552,
+          "words": [
+            {
+              "text": "Uncle",
+              "start": 0.095,
+              "end": 0.418
+            },
+            {
+              "text": "Kevin",
+              "start": 0.429,
+              "end": 0.876
+            },
+            {
+              "text": "He",
+              "start": 1.652,
+              "end": 1.808
+            },
+            {
+              "text": "stole",
+              "start": 1.819,
+              "end": 2.121
+            },
+            {
+              "text": "my",
+              "start": 2.132,
+              "end": 2.266
+            },
+            {
+              "text": "phone",
+              "start": 2.277,
+              "end": 2.746
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Wait. UNCLE?!",
+          "audio": "ep003/s5_l1.mp3",
+          "start": 3.952,
+          "duration": 1.32,
+          "words": [
+            {
+              "text": "Wait",
+              "start": 0.1,
+              "end": 0.346
+            },
+            {
+              "text": "UNCLE",
+              "start": 0.714,
+              "end": 0.971
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "counter",
+      "cast": [
+        {
+          "who": "kevin",
+          "x": 540,
+          "pose": "angry",
+          "face": "angry"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 99,
+        "badge": "PHONE THIEF"
+      },
+      "stamp": {
+        "text": "NEPHEW",
+        "color": "red",
+        "line": 0
+      },
+      "zoom": "kevin",
+      "fx": "shake",
+      "kind": "story",
+      "duration": 6.61,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "Tyler is Kevin's nephew.",
+          "audio": "ep003/s6_l0.mp3",
+          "start": 0.25,
+          "duration": 1.872,
+          "words": [
+            {
+              "text": "Tyler",
+              "start": 0.089,
+              "end": 0.391
+            },
+            {
+              "text": "is",
+              "start": 0.458,
+              "end": 0.547
+            },
+            {
+              "text": "Kevin's",
+              "start": 0.558,
+              "end": 0.859
+            },
+            {
+              "text": "nephew",
+              "start": 0.871,
+              "end": 1.228
+            }
+          ]
+        },
+        {
+          "who": "kevin",
+          "text": "Phone thief! Your tips go to Tyler!",
+          "audio": "ep003/s6_l1.mp3",
+          "start": 2.272,
+          "duration": 3.888,
+          "words": [
+            {
+              "text": "Phone",
+              "start": 0.096,
+              "end": 0.478
+            },
+            {
+              "text": "thief",
+              "start": 0.49,
+              "end": 0.987
+            },
+            {
+              "text": "Your",
+              "start": 1.782,
+              "end": 1.968
+            },
+            {
+              "text": "tips",
+              "start": 1.979,
+              "end": 2.268
+            },
+            {
+              "text": "go",
+              "start": 2.28,
+              "end": 2.431
+            },
+            {
+              "text": "to",
+              "start": 2.442,
+              "end": 2.523
+            },
+            {
+              "text": "Tyler",
+              "start": 2.535,
+              "end": 3.079
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "kitchen",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "sad",
+          "face": "sad"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "shrug",
+          "face": "neutral",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 99,
+        "badge": "PHONE THIEF"
+      },
+      "stamp": {
+        "text": "STILL ON",
+        "color": "yellow",
+        "line": 0
+      },
+      "kind": "story",
+      "duration": 5.002,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "But the video is still on screen.",
+          "audio": "ep003/s7_l0.mp3",
+          "start": 0.25,
+          "duration": 1.824,
+          "words": [
+            {
+              "text": "But",
+              "start": 0.1,
+              "end": 0.167
+            },
+            {
+              "text": "the",
+              "start": 0.179,
+              "end": 0.246
+            },
+            {
+              "text": "video",
+              "start": 0.257,
+              "end": 0.636
+            },
+            {
+              "text": "is",
+              "start": 0.647,
+              "end": 0.737
+            },
+            {
+              "text": "still",
+              "start": 0.748,
+              "end": 0.971
+            },
+            {
+              "text": "on",
+              "start": 0.982,
+              "end": 1.094
+            },
+            {
+              "text": "screen",
+              "start": 1.105,
+              "end": 1.484
+            }
+          ]
+        },
+        {
+          "who": "lily",
+          "text": "Play it. Or make Tyler a deal.",
+          "audio": "ep003/s7_l1.mp3",
+          "start": 2.224,
+          "duration": 2.328,
+          "words": [
+            {
+              "text": "Play",
+              "start": 0.057,
+              "end": 0.25
+            },
+            {
+              "text": "it",
+              "start": 0.261,
+              "end": 0.455
+            },
+            {
+              "text": "Or",
+              "start": 0.807,
+              "end": 0.886
+            },
+            {
+              "text": "make",
+              "start": 0.898,
+              "end": 1.091
+            },
+            {
+              "text": "Tyler",
+              "start": 1.102,
+              "end": 1.477
+            },
+            {
+              "text": "a",
+              "start": 1.489,
+              "end": 1.557
+            },
+            {
+              "text": "deal",
+              "start": 1.568,
+              "end": 1.977
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "kitchen",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "sad",
+          "face": "sad"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "shrug",
+          "face": "neutral",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 99,
+        "badge": "PHONE THIEF"
+      },
+      "stamp": {
+        "text": "STILL ON",
+        "color": "yellow",
+        "line": 0
+      },
+      "kind": "choice",
+      "duration": 10.874,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "What do you do?",
+          "audio": "ep003/s8_l0.mp3",
+          "start": 0.25,
+          "duration": 0.84,
+          "words": [
+            {
+              "text": "What",
+              "start": 0.089,
+              "end": 0.145
+            },
+            {
+              "text": "do",
+              "start": 0.156,
+              "end": 0.19
+            },
+            {
+              "text": "you",
+              "start": 0.201,
+              "end": 0.268
+            },
+            {
+              "text": "do",
+              "start": 0.279,
+              "end": 0.502
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "A: Play the video.",
+          "audio": "ep003/s8_l1.mp3",
+          "start": 1.24,
+          "duration": 1.464,
+          "words": [
+            {
+              "text": "A",
+              "start": 0.089,
+              "end": 0.212
+            },
+            {
+              "text": "Play",
+              "start": 0.547,
+              "end": 0.692
+            },
+            {
+              "text": "the",
+              "start": 0.703,
+              "end": 0.781
+            },
+            {
+              "text": "video",
+              "start": 0.792,
+              "end": 1.127
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Or B: Make a deal.",
+          "audio": "ep003/s8_l2.mp3",
+          "start": 2.854,
+          "duration": 1.584,
+          "words": [
+            {
+              "text": "Or",
+              "start": 0.1,
+              "end": 0.201
+            },
+            {
+              "text": "B",
+              "start": 0.212,
+              "end": 0.413
+            },
+            {
+              "text": "Make",
+              "start": 0.759,
+              "end": 0.882
+            },
+            {
+              "text": "a",
+              "start": 0.893,
+              "end": 0.938
+            },
+            {
+              "text": "deal",
+              "start": 0.949,
+              "end": 1.239
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Comment A or B. Top comment decides part 4.",
+          "audio": "ep003/s8_l3.mp3",
+          "start": 4.588,
+          "duration": 3.336,
+          "words": [
+            {
+              "text": "Comment",
+              "start": 0.089,
+              "end": 0.346
+            },
+            {
+              "text": "A",
+              "start": 0.458,
+              "end": 0.692
+            },
+            {
+              "text": "or",
+              "start": 0.792,
+              "end": 0.904
+            },
+            {
+              "text": "B",
+              "start": 0.915,
+              "end": 1.172
+            },
+            {
+              "text": "Top",
+              "start": 1.518,
+              "end": 1.741
+            },
+            {
+              "text": "comment",
+              "start": 1.752,
+              "end": 2.076
+            },
+            {
+              "text": "decides",
+              "start": 2.087,
+              "end": 2.433
+            },
+            {
+              "text": "part 4",
+              "start": 2.444,
+              "end": 2.991
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "music": "ep003/music.mp3"
+}

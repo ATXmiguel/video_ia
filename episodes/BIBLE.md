@@ -63,3 +63,8 @@ New recurring characters need a `CAST` entry (look) and a `VOICES` entry before 
   the raw burger; Kevin puts him on mop duty for a week. Lily calls you her hero (badge LILY'S FAVORITE).
   Tyler takes revenge: sets Kevin's fryer to MAX and blames you again. Phone is filming the fryer.
   Choice: A fix the fryer (Lily helps) / B steal Tyler's phone (proof inside).
+- Ep 3 "You stole his phone. He's the boss's nephew?!" — vote B won (@PerezFamily-m2v6i, joked Tyler's password
+  would be dumb). Lily guesses it: TYLER. The video shows Tyler setting the fryer to MAX. You run to Kevin, but
+  Tyler yells "Uncle Kevin! He stole my phone!" — **Tyler is Kevin's nephew** (why he's always employee of the
+  month). Kevin gives your tips to Tyler (TIPS $0, badge PHONE THIEF, rage 99). The video is still on screen.
+  Choice: A play the video (family drama) / B make Tyler a deal (he owes you).

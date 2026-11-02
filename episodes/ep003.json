@@ -1,0 +1,119 @@
+{
+  "series": "Shift Happens",
+  "episode": 3,
+  "arc": {"number": 1, "part": 3, "name": "Big Bun's"},
+  "hudLabels": {"money": "TIPS", "meter": "MANAGER RAGE"},
+  "hook": "YOU STOLE HIS PHONE.",
+  "hookAccent": "HE'S THE BOSS'S NEPHEW?!",
+  "topComment": {"user": "@PerezFamily-m2v6i", "text": "B if you can guess his password unless tyler is an idiot and doesn't have a password", "likes": 2},
+  "recap": {
+    "set": "kitchen",
+    "cast": [
+      {"who": "you", "x": 320, "pose": "shock", "face": "shock"},
+      {"who": "lily", "x": 740, "pose": "shrug", "face": "neutral", "flip": true}
+    ],
+    "hud": {"tips": 25, "rage": 99, "badge": "ON THIN ICE"},
+    "lines": []
+  },
+  "scenes": [
+    {
+      "set": "kitchen",
+      "cast": [
+        {"who": "you", "x": 540, "pose": "point", "face": "smug"}
+      ],
+      "hud": {"tips": 25, "rage": 99, "badge": "ON THIN ICE"},
+      "stamp": {"text": "YOINK", "color": "yellow", "line": 0},
+      "lines": [
+        "You snatch Tyler's phone.",
+        "Locked. Of course."
+      ]
+    },
+    {
+      "set": "counter",
+      "cast": [
+        {"who": "you", "x": 320, "pose": "shrug", "face": "neutral"},
+        {"who": "lily", "x": 760, "pose": "point", "face": "happy", "flip": true}
+      ],
+      "hud": {"tips": 25, "rage": 99, "badge": "HACKER"},
+      "stamp": {"text": "UNLOCKED", "color": "green", "line": 1},
+      "lines": [
+        {"who": "lily", "text": "Try his name. He's not that smart."},
+        "T-Y-L-E-R. It opens."
+      ]
+    },
+    {
+      "set": "kitchen",
+      "cast": [
+        {"who": "you", "x": 540, "pose": "cheer", "face": "happy"}
+      ],
+      "hud": {"tips": 25, "rage": 99, "badge": "HAS PROOF"},
+      "stamp": {"text": "PROOF", "color": "green", "line": 0},
+      "zoom": "you",
+      "lines": [
+        "There it is. Tyler. Fryer. MAX.",
+        "You're saved."
+      ]
+    },
+    {
+      "set": "counter",
+      "cast": [
+        {"who": "you", "x": 300, "pose": "point", "face": "happy", "toX": 380},
+        {"who": "kevin", "x": 760, "pose": "idle", "face": "angry", "flip": true}
+      ],
+      "hud": {"tips": 25, "rage": 80, "badge": "HAS PROOF"},
+      "stamp": {"text": "SHOWTIME", "color": "blue", "line": 0},
+      "lines": [
+        "You run to Kevin.",
+        {"who": "kevin", "text": "This better be good."}
+      ]
+    },
+    {
+      "set": "counter",
+      "cast": [
+        {"who": "you", "x": 300, "pose": "shock", "face": "shock"},
+        {"who": "tyler", "x": 760, "pose": "point", "face": "angry", "flip": true}
+      ],
+      "hud": {"tips": 25, "rage": 97, "badge": "PHONE THIEF"},
+      "stamp": {"text": "UNCLE?!", "color": "red", "line": 1},
+      "fx": "flash",
+      "lines": [
+        {"who": "tyler", "text": "Uncle Kevin! He stole my phone!"},
+        "Wait. UNCLE?!"
+      ]
+    },
+    {
+      "set": "counter",
+      "cast": [
+        {"who": "kevin", "x": 540, "pose": "angry", "face": "angry"}
+      ],
+      "hud": {"tips": 0, "rage": 99, "badge": "PHONE THIEF"},
+      "stamp": {"text": "NEPHEW", "color": "red", "line": 0},
+      "zoom": "kevin",
+      "fx": "shake",
+      "lines": [
+        "Tyler is Kevin's nephew.",
+        {"who": "kevin", "text": "Phone thief! Your tips go to Tyler!"}
+      ]
+    },
+    {
+      "set": "kitchen",
+      "cast": [
+        {"who": "you", "x": 320, "pose": "sad", "face": "sad"},
+        {"who": "lily", "x": 740, "pose": "shrug", "face": "neutral", "flip": true}
+      ],
+      "hud": {"tips": 0, "rage": 99, "badge": "PHONE THIEF"},
+      "stamp": {"text": "STILL ON", "color": "yellow", "line": 0},
+      "lines": [
+        "But the video is still on screen.",
+        {"who": "lily", "text": "Play it. Or make Tyler a deal."}
+      ]
+    }
+  ],
+  "choice": {
+    "question": "WHAT DO YOU DO?",
+    "options": [
+      {"key": "A", "label": "Play the video", "teaser": "Family drama", "icon": "kevin"},
+      {"key": "B", "label": "Make a deal", "teaser": "Tyler owes you", "icon": "tyler"}
+    ]
+  }
+}

@@ -45,6 +45,28 @@
       "arc": 1,
       "part": 2,
       "views_ep1_at_check": 663
+    },
+    {
+      "episode": 3,
+      "file": "episodes/ep003.json",
+      "url": null,
+      "published": null,
+      "status": "rendered, upload failed 2026-11-02 (Chrome file_upload lost connection twice) - upload out/ep003_upload.mp4 before writing ep004",
+      "options": {
+        "A": "Play the video",
+        "B": "Make a deal"
+      },
+      "pinned": false,
+      "topComment": {
+        "user": "@PerezFamily-m2v6i",
+        "text": "B if you can guess his password unless tyler is an idiot and doesn't have a password",
+        "likes": 2
+      },
+      "winner": "B",
+      "arc": 1,
+      "part": 3,
+      "views_ep1_at_check": 1083,
+      "views_ep2_at_check": 592
     }
   ],
   "arcs": [
@@ -56,5 +78,10 @@
       "ended_episode": null,
       "peak_views": null
     }
-  ]
+  ],
+  "cloud_check": {
+    "date": "2026-11-02",
+    "audit": "submission acknowledged only (youtube-disputes@google.com), no approval yet",
+    "gh_cli": "not installed"
+  }
 }
