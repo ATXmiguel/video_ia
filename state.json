@@ -24,7 +24,9 @@
       "topComment": null,
       "winner": null,
       "arc": 1,
-      "part": 1
+      "part": 1,
+      "instagram": "https://www.instagram.com/shifthappensyoudecide/reel/DfSSVnOvOjV/",
+      "tiktok": null
     },
     {
       "episode": 2,
@@ -44,7 +46,9 @@
       "winner": "B",
       "arc": 1,
       "part": 2,
-      "views_ep1_at_check": 663
+      "views_ep1_at_check": 663,
+      "instagram": "https://www.instagram.com/shifthappensyoudecide/reel/DfSSlP0vfab/",
+      "tiktok": null
     },
     {
       "episode": 3,
@@ -65,7 +69,39 @@
       "arc": 1,
       "part": 3,
       "views_ep1_at_check": 1083,
-      "views_ep2_at_check": 592
+      "views_ep2_at_check": 592,
+      "instagram": "https://www.instagram.com/shifthappensyoudecide/reel/DfSTYlJPcMn/",
+      "tiktok": null
+    },
+    {
+      "episode": 4,
+      "file": "episodes/ep004.json",
+      "url": "https://youtube.com/shorts/IduHb5EsZwI",
+      "instagram": "https://www.instagram.com/shifthappensyoudecide/reel/DfSUIBHPK60/",
+      "tiktok": null,
+      "published": "2026-11-03",
+      "options": {
+        "A": "THEATER",
+        "B": "PARK"
+      },
+      "pinned": false,
+      "topComment": {
+        "user": "@heitorfelix3482",
+        "text": "A, Will help prove your inocent",
+        "likes": 2,
+        "platform": "youtube"
+      },
+      "winner": "A",
+      "arc": 1,
+      "part": 4,
+      "final": true,
+      "views_at_check": {
+        "youtube": {
+          "ep1": 1096,
+          "ep2": 679,
+          "ep3": 324
+        }
+      }
     }
   ],
   "arcs": [
@@ -74,13 +110,19 @@
       "name": "Big Bun's",
       "job": "burger place",
       "started_episode": 1,
-      "ended_episode": null,
-      "peak_views": null
+      "ended_episode": 4,
+      "peak_views": 1096,
+      "ending": "ended early (part 3 views 70% below part 1): Tyler on mop duty, Brenda owns Big Bun's and promotes YOU, then the MAX fryer explodes and Big Bun's closes"
     }
   ],
   "cloud_check": {
-    "date": "2026-11-02",
-    "audit": "submission acknowledged only (youtube-disputes@google.com), no approval yet",
-    "gh_cli": "not installed"
-  }
+    "date": "2026-11-03",
+    "audit": "only the submission acknowledgment in Gmail; Google's request for more info (deadline ~11-11) still has a draft reply waiting for the owner",
+    "gh_cli": "not installed (prerequisite 1 missing)"
+  },
+  "backfilled": {
+    "instagram": true,
+    "tiktok": false
+  },
+  "tiktok_note": "2026-11-03: tiktok.com/upload showed a browser certificate/privacy error twice; TikTok skipped (backfill + Part 4 pending)"
 }

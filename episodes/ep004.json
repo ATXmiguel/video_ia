@@ -1,0 +1,135 @@
+{
+  "series": "Shift Happens",
+  "episode": 4,
+  "arc": {"number": 1, "part": 4, "name": "Big Bun's", "final": true},
+  "hudLabels": {"money": "TIPS", "meter": "MANAGER RAGE"},
+  "hook": "YOU PLAYED THE VIDEO.",
+  "hookAccent": "SHE OWNS THE PLACE?!",
+  "topComment": {"user": "@heitorfelix3482", "text": "A, Will help prove your inocent", "likes": 2},
+  "recap": {
+    "set": "kitchen",
+    "cast": [
+      {"who": "you", "x": 320, "pose": "sad", "face": "sad"},
+      {"who": "lily", "x": 740, "pose": "shrug", "face": "neutral", "flip": true}
+    ],
+    "hud": {"tips": 0, "rage": 99, "badge": "PHONE THIEF"},
+    "lines": []
+  },
+  "scenes": [
+    {
+      "set": "counter",
+      "cast": [
+        {"who": "you", "x": 300, "pose": "point", "face": "smug"},
+        {"who": "kevin", "x": 760, "pose": "shock", "face": "shock", "flip": true}
+      ],
+      "hud": {"tips": 0, "rage": 99, "badge": "PHONE THIEF"},
+      "stamp": {"text": "PLAY", "color": "green", "line": 0},
+      "lines": [
+        "You hit play. Full volume.",
+        {"who": "kevin", "text": "Is that Tyler? At MY fryer?"}
+      ]
+    },
+    {
+      "set": "counter",
+      "cast": [
+        {"who": "tyler", "x": 540, "pose": "shock", "face": "shock"}
+      ],
+      "hud": {"tips": 0, "rage": 70, "badge": "INNOCENT"},
+      "stamp": {"text": "BUSTED", "color": "red", "line": 1},
+      "zoom": "tyler",
+      "fx": "flash",
+      "lines": [
+        {"who": "tyler", "text": "Uncle Kevin, it's a deepfake!"},
+        "It's not. He waved at the camera."
+      ]
+    },
+    {
+      "set": "counter",
+      "cast": [
+        {"who": "kevin", "x": 540, "pose": "angry", "face": "angry"}
+      ],
+      "hud": {"tips": 40, "rage": 40, "badge": "INNOCENT"},
+      "stamp": {"text": "MOP DUTY", "color": "yellow", "line": 0},
+      "zoom": "kevin",
+      "fx": "shake",
+      "lines": [
+        {"who": "kevin", "text": "Nephew or not. Mop duty. Forever."},
+        "Your tips come back. Plus Tyler's."
+      ]
+    },
+    {
+      "set": "kitchen",
+      "cast": [
+        {"who": "you", "x": 320, "pose": "cheer", "face": "happy"},
+        {"who": "lily", "x": 740, "pose": "cheer", "face": "love", "flip": true}
+      ],
+      "hud": {"tips": 40, "rage": 20, "badge": "LILY'S HERO"},
+      "stamp": {"text": "HIGH FIVE", "color": "green", "line": 0},
+      "lines": [
+        {"who": "lily", "text": "You did it! Shift's almost over!"},
+        "For once, nothing is on fire."
+      ]
+    },
+    {
+      "set": "dining",
+      "cast": [
+        {"who": "you", "x": 300, "pose": "shock", "face": "shock"},
+        {"who": "brenda", "x": 760, "pose": "point", "face": "angry", "flip": true}
+      ],
+      "hud": {"tips": 40, "rage": 20, "badge": "LILY'S HERO"},
+      "stamp": {"text": "OWNER?!", "color": "red", "line": 1},
+      "fx": "flash",
+      "lines": [
+        {"who": "brenda", "text": "I saw everything. I own Big Bun's."},
+        "Angry Brenda. Is the OWNER?!"
+      ]
+    },
+    {
+      "set": "dining",
+      "cast": [
+        {"who": "you", "x": 300, "pose": "cheer", "face": "happy"},
+        {"who": "brenda", "x": 760, "pose": "point", "face": "happy", "flip": true}
+      ],
+      "hud": {"tips": 100, "rage": 0, "badge": "MANAGER"},
+      "stamp": {"text": "PROMOTED", "color": "green", "line": 0},
+      "zoom": "you",
+      "lines": [
+        {"who": "brenda", "text": "Kevin is out. You're the new manager."},
+        "Day four. Manager. Not bad."
+      ]
+    },
+    {
+      "set": "kitchen",
+      "cast": [
+        {"who": "you", "x": 540, "pose": "shock", "face": "shock"}
+      ],
+      "hud": {"tips": 0, "rage": 0, "badge": "UNEMPLOYED"},
+      "stamp": {"text": "BOOM", "color": "red", "line": 0},
+      "fx": "shake",
+      "lines": [
+        "Then the fryer, still on MAX, explodes.",
+        "Big Bun's is closed. Forever."
+      ]
+    },
+    {
+      "set": "exterior",
+      "cast": [
+        {"who": "you", "x": 320, "pose": "shrug", "face": "neutral"},
+        {"who": "lily", "x": 740, "pose": "shrug", "face": "happy", "flip": true}
+      ],
+      "hud": {"tips": 0, "rage": 0, "badge": "JOB HUNTING"},
+      "stamp": {"text": "THE END", "color": "yellow", "line": 0},
+      "lines": [
+        "Story one: over.",
+        {"who": "lily", "text": "So... where do we work next?"}
+      ]
+    }
+  ],
+  "choice": {
+    "question": "WHERE DO YOU WORK NEXT?",
+    "options": [
+      {"key": "A", "word": "THEATER", "label": "Movie theater", "teaser": "Popcorn chaos", "icon": "you", "pose": "cheer", "face": "happy"},
+      {"key": "B", "word": "PARK", "label": "Theme park", "teaser": "Rides break down", "icon": "you", "pose": "shock", "face": "shock"}
+    ]
+  }
+}

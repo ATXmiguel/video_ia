@@ -1,0 +1,1162 @@
+{
+  "series": "Shift Happens",
+  "episode": 4,
+  "hook": "YOU PLAYED THE VIDEO.",
+  "hookAccent": "SHE OWNS THE PLACE?!",
+  "choice": {
+    "question": "WHERE DO YOU WORK NEXT?",
+    "options": [
+      {
+        "key": "A",
+        "word": "THEATER",
+        "label": "Movie theater",
+        "teaser": "Popcorn chaos",
+        "icon": "you",
+        "pose": "cheer",
+        "face": "happy"
+      },
+      {
+        "key": "B",
+        "word": "PARK",
+        "label": "Theme park",
+        "teaser": "Rides break down",
+        "icon": "you",
+        "pose": "shock",
+        "face": "shock"
+      }
+    ]
+  },
+  "arc": {
+    "number": 1,
+    "part": 4,
+    "name": "Big Bun's",
+    "final": true
+  },
+  "hudLabels": {
+    "money": "TIPS",
+    "meter": "MANAGER RAGE"
+  },
+  "topComment": {
+    "user": "@heitorfelix3482",
+    "text": "A, Will help prove your inocent",
+    "likes": 2
+  },
+  "scenes": [
+    {
+      "set": "kitchen",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "sad",
+          "face": "sad"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "shrug",
+          "face": "neutral",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 99,
+        "badge": "PHONE THIEF"
+      },
+      "kind": "recap",
+      "duration": 6.266,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "Top comment said: A, Will help prove your inocent",
+          "audio": "ep004/s0_l0.mp3",
+          "start": 2.6,
+          "duration": 3.216,
+          "words": [
+            {
+              "text": "Top",
+              "start": 0.089,
+              "end": 0.246
+            },
+            {
+              "text": "comment",
+              "start": 0.257,
+              "end": 0.536
+            },
+            {
+              "text": "said",
+              "start": 0.547,
+              "end": 0.804
+            },
+            {
+              "text": "A",
+              "start": 1.25,
+              "end": 1.417
+            },
+            {
+              "text": "Will",
+              "start": 1.752,
+              "end": 1.842
+            },
+            {
+              "text": "help",
+              "start": 1.853,
+              "end": 2.065
+            },
+            {
+              "text": "prove",
+              "start": 2.076,
+              "end": 2.31
+            },
+            {
+              "text": "your",
+              "start": 2.321,
+              "end": 2.422
+            },
+            {
+              "text": "inocent",
+              "start": 2.433,
+              "end": 2.879
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "counter",
+      "cast": [
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "point",
+          "face": "smug"
+        },
+        {
+          "who": "kevin",
+          "x": 760,
+          "pose": "shock",
+          "face": "shock",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 99,
+        "badge": "PHONE THIEF"
+      },
+      "stamp": {
+        "text": "PLAY",
+        "color": "green",
+        "line": 0
+      },
+      "kind": "story",
+      "duration": 6.226,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "You hit play. Full volume.",
+          "audio": "ep004/s1_l0.mp3",
+          "start": 0.25,
+          "duration": 1.848,
+          "words": [
+            {
+              "text": "You",
+              "start": 0.089,
+              "end": 0.156
+            },
+            {
+              "text": "hit",
+              "start": 0.167,
+              "end": 0.279
+            },
+            {
+              "text": "play",
+              "start": 0.29,
+              "end": 0.536
+            },
+            {
+              "text": "Full",
+              "start": 0.982,
+              "end": 1.116
+            },
+            {
+              "text": "volume",
+              "start": 1.127,
+              "end": 1.518
+            }
+          ]
+        },
+        {
+          "who": "kevin",
+          "text": "Is that Tyler? At MY fryer?",
+          "audio": "ep004/s1_l1.mp3",
+          "start": 2.248,
+          "duration": 3.528,
+          "words": [
+            {
+              "text": "Is",
+              "start": 0.096,
+              "end": 0.258
+            },
+            {
+              "text": "that",
+              "start": 0.27,
+              "end": 0.455
+            },
+            {
+              "text": "Tyler",
+              "start": 0.467,
+              "end": 0.964
+            },
+            {
+              "text": "At",
+              "start": 1.759,
+              "end": 1.898
+            },
+            {
+              "text": "MY",
+              "start": 1.91,
+              "end": 2.176
+            },
+            {
+              "text": "fryer",
+              "start": 2.188,
+              "end": 2.72
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "counter",
+      "cast": [
+        {
+          "who": "tyler",
+          "x": 540,
+          "pose": "shock",
+          "face": "shock"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 70,
+        "badge": "INNOCENT"
+      },
+      "stamp": {
+        "text": "BUSTED",
+        "color": "red",
+        "line": 1
+      },
+      "zoom": "tyler",
+      "fx": "flash",
+      "kind": "story",
+      "duration": 5.65,
+      "lines": [
+        {
+          "who": "tyler",
+          "text": "Uncle Kevin, it's a deepfake!",
+          "audio": "ep004/s2_l0.mp3",
+          "start": 0.25,
+          "duration": 2.736,
+          "words": [
+            {
+              "text": "Uncle",
+              "start": 0.095,
+              "end": 0.418
+            },
+            {
+              "text": "Kevin",
+              "start": 0.429,
+              "end": 0.809
+            },
+            {
+              "text": "it's",
+              "start": 1.066,
+              "end": 1.2
+            },
+            {
+              "text": "a",
+              "start": 1.211,
+              "end": 1.3
+            },
+            {
+              "text": "deepfake",
+              "start": 1.311,
+              "end": 1.936
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "It's not. He waved at the camera.",
+          "audio": "ep004/s2_l1.mp3",
+          "start": 3.136,
+          "duration": 2.064,
+          "words": [
+            {
+              "text": "It's",
+              "start": 0.089,
+              "end": 0.19
+            },
+            {
+              "text": "not",
+              "start": 0.201,
+              "end": 0.48
+            },
+            {
+              "text": "He",
+              "start": 0.871,
+              "end": 0.937
+            },
+            {
+              "text": "waved",
+              "start": 0.949,
+              "end": 1.194
+            },
+            {
+              "text": "at",
+              "start": 1.205,
+              "end": 1.261
+            },
+            {
+              "text": "the",
+              "start": 1.272,
+              "end": 1.328
+            },
+            {
+              "text": "camera",
+              "start": 1.339,
+              "end": 1.719
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "counter",
+      "cast": [
+        {
+          "who": "kevin",
+          "x": 540,
+          "pose": "angry",
+          "face": "angry"
+        }
+      ],
+      "hud": {
+        "tips": 40,
+        "rage": 40,
+        "badge": "INNOCENT"
+      },
+      "stamp": {
+        "text": "MOP DUTY",
+        "color": "yellow",
+        "line": 0
+      },
+      "zoom": "kevin",
+      "fx": "shake",
+      "kind": "story",
+      "duration": 7.882,
+      "lines": [
+        {
+          "who": "kevin",
+          "text": "Nephew or not. Mop duty. Forever.",
+          "audio": "ep004/s3_l0.mp3",
+          "start": 0.25,
+          "duration": 4.848,
+          "words": [
+            {
+              "text": "Nephew",
+              "start": 0.096,
+              "end": 0.571
+            },
+            {
+              "text": "or",
+              "start": 0.582,
+              "end": 0.687
+            },
+            {
+              "text": "not",
+              "start": 0.698,
+              "end": 1.103
+            },
+            {
+              "text": "Mop",
+              "start": 1.898,
+              "end": 2.211
+            },
+            {
+              "text": "duty",
+              "start": 2.222,
+              "end": 2.616
+            },
+            {
+              "text": "Forever",
+              "start": 3.414,
+              "end": 4.051
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Your tips come back. Plus Tyler's.",
+          "audio": "ep004/s3_l1.mp3",
+          "start": 5.248,
+          "duration": 2.184,
+          "words": [
+            {
+              "text": "Your",
+              "start": 0.1,
+              "end": 0.167
+            },
+            {
+              "text": "tips",
+              "start": 0.179,
+              "end": 0.368
+            },
+            {
+              "text": "come",
+              "start": 0.379,
+              "end": 0.513
+            },
+            {
+              "text": "back",
+              "start": 0.525,
+              "end": 0.837
+            },
+            {
+              "text": "Plus",
+              "start": 1.216,
+              "end": 1.384
+            },
+            {
+              "text": "Tyler's",
+              "start": 1.395,
+              "end": 1.853
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "kitchen",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "cheer",
+          "face": "happy"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "cheer",
+          "face": "love",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 40,
+        "rage": 20,
+        "badge": "LILY'S HERO"
+      },
+      "stamp": {
+        "text": "HIGH FIVE",
+        "color": "green",
+        "line": 0
+      },
+      "kind": "story",
+      "duration": 5.338,
+      "lines": [
+        {
+          "who": "lily",
+          "text": "You did it! Shift's almost over!",
+          "audio": "ep004/s4_l0.mp3",
+          "start": 0.25,
+          "duration": 2.52,
+          "words": [
+            {
+              "text": "You",
+              "start": 0.08,
+              "end": 0.193
+            },
+            {
+              "text": "did",
+              "start": 0.205,
+              "end": 0.409
+            },
+            {
+              "text": "it",
+              "start": 0.42,
+              "end": 0.67
+            },
+            {
+              "text": "Shift's",
+              "start": 1.034,
+              "end": 1.386
+            },
+            {
+              "text": "almost",
+              "start": 1.398,
+              "end": 1.773
+            },
+            {
+              "text": "over",
+              "start": 1.784,
+              "end": 2.182
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "For once, nothing is on fire.",
+          "audio": "ep004/s4_l1.mp3",
+          "start": 2.92,
+          "duration": 1.968,
+          "words": [
+            {
+              "text": "For",
+              "start": 0.112,
+              "end": 0.201
+            },
+            {
+              "text": "once",
+              "start": 0.212,
+              "end": 0.569
+            },
+            {
+              "text": "nothing",
+              "start": 0.804,
+              "end": 1.038
+            },
+            {
+              "text": "is",
+              "start": 1.049,
+              "end": 1.138
+            },
+            {
+              "text": "on",
+              "start": 1.15,
+              "end": 1.261
+            },
+            {
+              "text": "fire",
+              "start": 1.272,
+              "end": 1.641
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "dining",
+      "cast": [
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "shock",
+          "face": "shock"
+        },
+        {
+          "who": "brenda",
+          "x": 760,
+          "pose": "point",
+          "face": "angry",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 40,
+        "rage": 20,
+        "badge": "LILY'S HERO"
+      },
+      "stamp": {
+        "text": "OWNER?!",
+        "color": "red",
+        "line": 1
+      },
+      "fx": "flash",
+      "kind": "story",
+      "duration": 6.658,
+      "lines": [
+        {
+          "who": "brenda",
+          "text": "I saw everything. I own Big Bun's.",
+          "audio": "ep004/s5_l0.mp3",
+          "start": 0.25,
+          "duration": 3.864,
+          "words": [
+            {
+              "text": "I",
+              "start": 0.094,
+              "end": 0.247
+            },
+            {
+              "text": "saw",
+              "start": 0.258,
+              "end": 0.521
+            },
+            {
+              "text": "everything",
+              "start": 0.532,
+              "end": 1.103
+            },
+            {
+              "text": "I",
+              "start": 1.853,
+              "end": 2.072
+            },
+            {
+              "text": "own",
+              "start": 2.083,
+              "end": 2.303
+            },
+            {
+              "text": "Big",
+              "start": 2.314,
+              "end": 2.544
+            },
+            {
+              "text": "Bun's",
+              "start": 2.555,
+              "end": 3.07
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Angry Brenda. Is the OWNER?!",
+          "audio": "ep004/s5_l1.mp3",
+          "start": 4.264,
+          "duration": 1.944,
+          "words": [
+            {
+              "text": "Angry",
+              "start": 0.089,
+              "end": 0.335
+            },
+            {
+              "text": "Brenda",
+              "start": 0.346,
+              "end": 0.703
+            },
+            {
+              "text": "Is",
+              "start": 1.071,
+              "end": 1.172
+            },
+            {
+              "text": "the",
+              "start": 1.183,
+              "end": 1.261
+            },
+            {
+              "text": "OWNER",
+              "start": 1.272,
+              "end": 1.585
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "dining",
+      "cast": [
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "cheer",
+          "face": "happy"
+        },
+        {
+          "who": "brenda",
+          "x": 760,
+          "pose": "point",
+          "face": "happy",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 100,
+        "rage": 0,
+        "badge": "MANAGER"
+      },
+      "stamp": {
+        "text": "PROMOTED",
+        "color": "green",
+        "line": 0
+      },
+      "zoom": "you",
+      "kind": "story",
+      "duration": 6.802,
+      "lines": [
+        {
+          "who": "brenda",
+          "text": "Kevin is out. You're the new manager.",
+          "audio": "ep004/s6_l0.mp3",
+          "start": 0.25,
+          "duration": 3.432,
+          "words": [
+            {
+              "text": "Kevin",
+              "start": 0.094,
+              "end": 0.412
+            },
+            {
+              "text": "is",
+              "start": 0.423,
+              "end": 0.543
+            },
+            {
+              "text": "out",
+              "start": 0.554,
+              "end": 0.894
+            },
+            {
+              "text": "You're",
+              "start": 1.656,
+              "end": 1.875
+            },
+            {
+              "text": "the",
+              "start": 1.886,
+              "end": 1.963
+            },
+            {
+              "text": "new",
+              "start": 1.974,
+              "end": 2.116
+            },
+            {
+              "text": "manager",
+              "start": 2.127,
+              "end": 2.654
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Day four. Manager. Not bad.",
+          "audio": "ep004/s6_l1.mp3",
+          "start": 3.832,
+          "duration": 2.52,
+          "words": [
+            {
+              "text": "Day",
+              "start": 0.089,
+              "end": 0.223
+            },
+            {
+              "text": "four",
+              "start": 0.234,
+              "end": 0.58
+            },
+            {
+              "text": "Manager",
+              "start": 0.949,
+              "end": 1.339
+            },
+            {
+              "text": "Not",
+              "start": 1.708,
+              "end": 1.864
+            },
+            {
+              "text": "bad",
+              "start": 1.875,
+              "end": 2.188
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "kitchen",
+      "cast": [
+        {
+          "who": "you",
+          "x": 540,
+          "pose": "shock",
+          "face": "shock"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "UNEMPLOYED"
+      },
+      "stamp": {
+        "text": "BOOM",
+        "color": "red",
+        "line": 0
+      },
+      "fx": "shake",
+      "kind": "story",
+      "duration": 5.77,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "Then the fryer, still on MAX, explodes.",
+          "audio": "ep004/s7_l0.mp3",
+          "start": 0.25,
+          "duration": 2.736,
+          "words": [
+            {
+              "text": "Then",
+              "start": 0.1,
+              "end": 0.19
+            },
+            {
+              "text": "the",
+              "start": 0.201,
+              "end": 0.257
+            },
+            {
+              "text": "fryer",
+              "start": 0.268,
+              "end": 0.647
+            },
+            {
+              "text": "still",
+              "start": 0.859,
+              "end": 1.094
+            },
+            {
+              "text": "on",
+              "start": 1.105,
+              "end": 1.228
+            },
+            {
+              "text": "MAX",
+              "start": 1.239,
+              "end": 1.663
+            },
+            {
+              "text": "explodes",
+              "start": 1.752,
+              "end": 2.4
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Big Bun's is closed. Forever.",
+          "audio": "ep004/s7_l1.mp3",
+          "start": 3.136,
+          "duration": 2.184,
+          "words": [
+            {
+              "text": "Big",
+              "start": 0.1,
+              "end": 0.257
+            },
+            {
+              "text": "Bun's",
+              "start": 0.268,
+              "end": 0.491
+            },
+            {
+              "text": "is",
+              "start": 0.502,
+              "end": 0.592
+            },
+            {
+              "text": "closed",
+              "start": 0.603,
+              "end": 1.071
+            },
+            {
+              "text": "Forever",
+              "start": 1.462,
+              "end": 1.841
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "exterior",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "shrug",
+          "face": "neutral"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "shrug",
+          "face": "happy",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "JOB HUNTING"
+      },
+      "stamp": {
+        "text": "THE END",
+        "color": "yellow",
+        "line": 0
+      },
+      "kind": "story",
+      "duration": 4.834,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "Story one: over.",
+          "audio": "ep004/s8_l0.mp3",
+          "start": 0.25,
+          "duration": 1.584,
+          "words": [
+            {
+              "text": "Story",
+              "start": 0.089,
+              "end": 0.357
+            },
+            {
+              "text": "one",
+              "start": 0.368,
+              "end": 0.625
+            },
+            {
+              "text": "over",
+              "start": 0.96,
+              "end": 1.239
+            }
+          ]
+        },
+        {
+          "who": "lily",
+          "text": "So... where do we work next?",
+          "audio": "ep004/s8_l1.mp3",
+          "start": 1.984,
+          "duration": 2.4,
+          "words": [
+            {
+              "text": "So",
+              "start": 0.049,
+              "end": 0.356
+            },
+            {
+              "text": "where",
+              "start": 0.878,
+              "end": 1.106
+            },
+            {
+              "text": "do",
+              "start": 1.117,
+              "end": 1.197
+            },
+            {
+              "text": "we",
+              "start": 1.208,
+              "end": 1.333
+            },
+            {
+              "text": "work",
+              "start": 1.344,
+              "end": 1.583
+            },
+            {
+              "text": "next",
+              "start": 1.594,
+              "end": 2.072
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "exterior",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "shrug",
+          "face": "neutral"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "shrug",
+          "face": "happy",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "JOB HUNTING"
+      },
+      "stamp": {
+        "text": "THE END",
+        "color": "yellow",
+        "line": 0
+      },
+      "kind": "choice",
+      "duration": 12.986,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "Where do you work next?",
+          "audio": "ep004/s9_l0.mp3",
+          "start": 0.25,
+          "duration": 1.272,
+          "words": [
+            {
+              "text": "Where",
+              "start": 0.089,
+              "end": 0.156
+            },
+            {
+              "text": "do",
+              "start": 0.167,
+              "end": 0.212
+            },
+            {
+              "text": "you",
+              "start": 0.223,
+              "end": 0.29
+            },
+            {
+              "text": "work",
+              "start": 0.301,
+              "end": 0.458
+            },
+            {
+              "text": "next",
+              "start": 0.469,
+              "end": 0.926
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "THEATER: Movie theater.",
+          "audio": "ep004/s9_l1.mp3",
+          "start": 1.672,
+          "duration": 1.632,
+          "words": [
+            {
+              "text": "THEATER",
+              "start": 0.123,
+              "end": 0.446
+            },
+            {
+              "text": "Movie",
+              "start": 0.692,
+              "end": 0.915
+            },
+            {
+              "text": "theater",
+              "start": 0.926,
+              "end": 1.295
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Or PARK: Theme park.",
+          "audio": "ep004/s9_l2.mp3",
+          "start": 3.454,
+          "duration": 1.872,
+          "words": [
+            {
+              "text": "Or",
+              "start": 0.089,
+              "end": 0.179
+            },
+            {
+              "text": "PARK",
+              "start": 0.19,
+              "end": 0.502
+            },
+            {
+              "text": "Theme park",
+              "start": 0.759,
+              "end": 1.261
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Comment one word: THEATER or PARK. The most-liked one picks the next story.",
+          "audio": "ep004/s9_l3.mp3",
+          "start": 5.476,
+          "duration": 4.56,
+          "words": [
+            {
+              "text": "Comment",
+              "start": 0.089,
+              "end": 0.357
+            },
+            {
+              "text": "one",
+              "start": 0.368,
+              "end": 0.547
+            },
+            {
+              "text": "word",
+              "start": 0.558,
+              "end": 0.848
+            },
+            {
+              "text": "THEATER",
+              "start": 1.094,
+              "end": 1.484
+            },
+            {
+              "text": "or",
+              "start": 1.585,
+              "end": 1.674
+            },
+            {
+              "text": "PARK",
+              "start": 1.685,
+              "end": 2.065
+            },
+            {
+              "text": "The",
+              "start": 2.444,
+              "end": 2.5
+            },
+            {
+              "text": "most-liked",
+              "start": 2.511,
+              "end": 2.991
+            },
+            {
+              "text": "one",
+              "start": 3.002,
+              "end": 3.259
+            },
+            {
+              "text": "picks",
+              "start": 3.27,
+              "end": 3.571
+            },
+            {
+              "text": "the",
+              "start": 3.583,
+              "end": 3.65
+            },
+            {
+              "text": "next",
+              "start": 3.661,
+              "end": 3.873
+            },
+            {
+              "text": "story",
+              "start": 3.884,
+              "end": 4.23
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "music": "ep004/music.mp3"
+}

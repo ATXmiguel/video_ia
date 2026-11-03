@@ -58,7 +58,7 @@ New recurring characters need a `CAST` entry (look) and a `VOICES` entry before 
 
 | # | job | parts | how it ended | views best part |
 |---|---|---|---|---|
-| 1 | Big Bun's (burger place) | in progress | — | — |
+| 1 | Big Bun's (burger place) | 4 (ended early: part 3 had 70% fewer views than part 1) | Tyler busted on video and put on mop duty; Brenda turns out to OWN Big Bun's, fires Kevin and makes YOU manager — then the fryer, still on MAX, explodes and Big Bun's closes forever. Lily comes along to the next job | 1,096 (part 1) |
 
 ## Canon so far (story 1: Big Bun's)
 
@@ -74,3 +74,8 @@ New recurring characters need a `CAST` entry (look) and a `VOICES` entry before 
   Tyler yells "Uncle Kevin! He stole my phone!" — **Tyler is Kevin's nephew** (why he's always employee of the
   month). Kevin gives your tips to Tyler (TIPS $0, badge PHONE THIEF, rage 99). The video is still on screen.
   Choice: A play the video (family drama) / B make Tyler a deal (he owes you).
+- Ep 4 (final) "You played the video. She owns the place?!" — vote A won (@heitorfelix3482, 2 likes). Kevin sees Tyler
+  set the fryer to MAX ("it's a deepfake!" — he waved at the camera). Kevin: mop duty forever, nephew or not; your tips
+  come back plus Tyler's. Twist: **Brenda owns Big Bun's**; she puts Kevin out and makes YOU manager on day four. Then the
+  fryer (still on MAX) explodes and Big Bun's closes forever. Lily: "So... where do we work next?"
+  Next-story vote: THEATER (movie theater) / PARK (theme park). Lily can follow YOU into story 2.
