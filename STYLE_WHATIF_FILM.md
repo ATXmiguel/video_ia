@@ -7,11 +7,12 @@ the full transcript plus one frame every 3 s across all 8:56 (178 frames).
 Learn the craft below. Don't reuse its story, characters, names, jokes, hero design or lines.
 
 What was not checked: voice and music were not listened to, so anything about sound comes from the transcript and
-a loudness reading. The cut counts come from ffmpeg scene detection, which misses cuts in dark, low-contrast scenes.
+a loudness reading. The second pass used the watch-video skill at 1280 px on scene cuts (159 frames, about 10 read at
+full size). The cut counts come from ffmpeg scene detection, which misses cuts in dark, low-contrast scenes.
 
 ## Format
 
-- 16:9 at 24 fps, with thin black bars top and bottom. 8:56 long, marked "Part 1 of 3".
+- 16:9 at 24 fps, with wide black bars top and bottom. 8:56 long, marked "Part 1 of 3".
 - Second-person narrator all the way through ("you"), plus short character lines.
 - Few words on screen and no running captions. Text only appears inside the world or as a small label.
 - Measured: 127 detected cuts, about 4.1 s per shot on average. Roughly 22, 16, 10, 18, 24, 11, 2, 18, 6 cuts per
@@ -26,6 +27,30 @@ a loudness reading. The cut counts come from ffmpeg scene detection, which misse
 - Rim light around the silhouette carries the mood: warm orange when safe, cold blue when tense.
 - Extras are thin dark silhouettes with no face details.
 - Body acting is minimal: leaning, a slow head turn, a shift in the eyes. Faces do most of the work.
+
+## What makes it look lit instead of flat (second pass, frames studied at full size)
+
+The first version of our film copied the shot types and still looked flat. These are what was missing:
+
+- **Wide bars.** 40 px of 720 top and bottom (60 px at 1080), not a thin line.
+- **Vignette on every shot.** Corners fall off strongly, and it does a lot of the "film" look.
+- **Muted sets, one strong subject.** Backgrounds are low-saturation and low-contrast, with lifted blacks. The
+  black character and the one saturated garment sit on top and pop.
+- **One clear light source per shot.** A window or lamp. The wall glows around it and falls off with distance, and the
+  floor gets a pool under it. Night is the same room with less light, not a different palette.
+- **Rim light is thick and directional.** A solid crescent, about 14 px of 720 on a close-up, on the side facing the
+  source, on the head, arms and legs alike. Warm when safe, cold when tense.
+- **Heavy background blur on close-ups.** About 8 px of 720 (we use 19 px at 1080 on the set layer). The strip of counter
+  nearest the lens stays sharp, so there are three planes.
+- **The camera is close.** Close-up heads are about 330 px across on a 720 frame, and wide shots still crop the room.
+  Characters fill the frame; sets are never fully visible.
+- **Parallax.** Background, cast and foreground move at different speeds during the slow push.
+- **Foreground objects near the lens.** Dark, very blurred shapes at the frame edge in many shots.
+- **Soft shadows everywhere.** Under props on the desk, under furniture, contact shadows at the feet, and a faint
+  blurred shadow of the character on the wall.
+- **Texture.** Stitching on the bag, tile grids, wood planks, wall panels, plus a little grain.
+- **Characters.** Long neck, sleeves in the garment color with a dark outline, cream dot eyes with half lids for mood.
+- **Rack focus.** Sometimes two objects at different depths: the far one soft, the near one sharp.
 
 ## Shot vocabulary (rotate these; never hold one type for long)
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import {AbsoluteFill, Html5Audio, interpolate, random, Sequence, Series, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import '../ui/fonts';
-import {FLOOR, FrontStrip, SETS} from './sets';
+import {FLOOR, FrontStrip, SetDefs, SETS} from './sets';
 import {Sil} from './Sil';
 
 export const SPECIAL_FPS = 24;
@@ -18,18 +18,19 @@ const frames = (s: {duration: number}) => Math.round(s.duration * SPECIAL_FPS);
 export const specialFrames = (b: SpecialBuild) => b.shots.reduce((n, s) => n + frames(s), 0);
 const clamp = {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'} as const;
 
-const MOODS: Record<string, {filter?: string; overlay?: string; opacity?: number; rim: string}> = {
-  warm: {overlay: '#ffb765', opacity: 0.08, rim: '#e2954a'},
-  night: {filter: 'brightness(0.78) saturate(0.9)', overlay: '#0a2230', opacity: 0.25, rim: '#d98a3f'},
-  cost: {filter: 'grayscale(0.88) brightness(0.86)', overlay: '#1c3a55', opacity: 0.28, rim: '#7fb2d9'},
-  dark: {filter: 'brightness(0.55) saturate(0.8)', overlay: '#051520', opacity: 0.35, rim: '#7fb2d9'},
-  fire: {filter: 'brightness(0.72) saturate(1.1)', overlay: '#d9531e', opacity: 0.22, rim: '#ff8a3c'},
-  dawn: {overlay: '#ffc58a', opacity: 0.14, rim: '#ffb765'},
-  day: {filter: 'saturate(0.8)', overlay: '#8fa5ad', opacity: 0.1, rim: '#c9d6db'},
+const MOODS: Record<string, {filter: string; ambient: string; rim: string; glow?: number}> = {
+  warm: {filter: 'saturate(0.8) contrast(0.94)', ambient: '#8f7c68', rim: '#f0a860', glow: 0.34},
+  night: {filter: 'saturate(0.72) contrast(0.94)', ambient: '#5a6470', rim: '#eaa45c', glow: 0.34},
+  cost: {filter: 'grayscale(0.86) contrast(0.92)', ambient: '#6d7680', rim: '#8fbfe0', glow: 0.1},
+  dark: {filter: 'saturate(0.6) contrast(0.92)', ambient: '#262d36', rim: '#8fbfe0', glow: 0.22},
+  fire: {filter: 'saturate(0.85) contrast(0.96)', ambient: '#6f4a3c', rim: '#ff8a3c', glow: 0.42},
+  dawn: {filter: 'saturate(0.82) contrast(0.94)', ambient: '#8c7867', rim: '#ffbb7a', glow: 0.3},
+  day: {filter: 'saturate(0.62) contrast(0.92)', ambient: '#858a90', rim: '#d5e0e6', glow: 0.2},
 };
 
 const Svg: React.FC<{children: React.ReactNode; style?: React.CSSProperties}> = ({children, style}) => (
   <svg viewBox="0 0 1920 1080" width="100%" height="100%" style={{position: 'absolute', inset: 0, ...style}}>
+    <SetDefs />
     {children}
   </svg>
 );
@@ -51,7 +52,7 @@ const Tag: React.FC<{word: string}> = ({word}) => {
   const perk = word === 'PERK';
   const c = perk ? BRASS : '#9fb3bd';
   return (
-    <g transform="translate(1655 92)">
+    <g transform="translate(1660 104)">
       <path d="M0 34 L 34 0 H 196 V 68 H 34 Z" fill={c} />
       <circle cx={30} cy={34} r={10} fill="#0a1214" />
       <text x={116} y={46} textAnchor="middle" fontFamily="Anton" fontSize={38} letterSpacing={3} fill="#0a1214">
@@ -61,26 +62,29 @@ const Tag: React.FC<{word: string}> = ({word}) => {
   );
 };
 
-const Hand: React.FC<{x: number; y: number; rot?: number; cuff?: string; s?: number}> = ({x, y, rot = 0, cuff = '#d8a02c', s = 1}) => (
-  <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${s})`}>
-    <rect x={-40} y={40} width={80} height={520} fill={cuff} />
-    <rect x={-44} y={34} width={88} height={22} fill="#f2e7c9" />
-    <path d="M-46 40 Q -54 -30 -38 -46 H 38 Q 54 -30 46 40 Z" fill="#111119" />
-    {[-33, -11, 11, 33].map((fx, i) => {
-      const len = [64, 82, 78, 58][i];
+const Hand: React.FC<{x: number; y: number; rot?: number; cuff?: string; s?: number}> = ({x, y, rot = 0, cuff = '#c28c24', s = 1.5}) => (
+  <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${s})`} filter="url(#propShadow)">
+    <rect x={-48} y={44} width={96} height={560} fill={cuff} />
+    <rect x={-48} y={44} width={22} height={560} fill="#000" opacity={0.28} />
+    <rect x={-54} y={36} width={108} height={22} rx={4} fill="#efe6cd" />
+    <path d="M-52 44 Q -60 -34 -44 -50 H 44 Q 60 -34 52 44 Z" fill="#0c0c12" />
+    {[-36, -12, 12, 36].map((fx, i) => {
+      const len = [62, 80, 76, 56][i];
       return (
         <g key={fx}>
-          <rect x={fx - 9} y={-46 - len} width={18} height={len + 8} rx={9} fill="#111119" />
-          <path d={`M${fx - 7} ${-46 - len * 0.55} H ${fx + 7} M${fx - 7} ${-46 - len * 0.2} H ${fx + 7}`} stroke="#3a3a48" strokeWidth={2} />
+          <rect x={fx - 12} y={-50 - len} width={24} height={len + 12} rx={12} fill="#0c0c12" />
+          <rect x={fx - 3} y={-42 - len} width={6} height={len * 0.42} rx={3} fill="#54535f" />
+          <rect x={fx - 3} y={-48 - len * 0.34} width={6} height={len * 0.28} rx={3} fill="#3a3a46" />
         </g>
       );
     })}
-    <path d="M44 10 Q 92 -22 94 -58" stroke="#111119" strokeWidth={20} fill="none" strokeLinecap="round" />
+    <path d="M50 12 Q 96 -18 100 -60" stroke="#0c0c12" strokeWidth={25} fill="none" strokeLinecap="round" />
   </g>
 );
 
 const Bell: React.FC<{x: number; y: number; s?: number; wave?: number}> = ({x, y, s = 1, wave = -1}) => (
   <g transform={`translate(${x} ${y}) scale(${s})`}>
+    <ellipse cx={20} cy={34} rx={170} ry={46} fill="#000" opacity={0.55} filter="url(#softShadowSmall)" />
     <ellipse cx={0} cy={18} rx={150} ry={46} fill="#3d291c" />
     <path d="M-122 6 A 122 122 0 0 1 122 6 Z" fill="#d9a93f" />
     <path d="M-92 -30 A 100 100 0 0 1 -30 -96" stroke="#f6dd9a" strokeWidth={12} fill="none" strokeLinecap="round" />
@@ -95,7 +99,7 @@ const Bell: React.FC<{x: number; y: number; s?: number; wave?: number}> = ({x, y
 );
 
 const Key: React.FC<{x: number; y: number; rot?: number; label?: string; s?: number}> = ({x, y, rot = 0, label = '412', s = 1}) => (
-  <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${s})`}>
+  <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${s})`} filter="url(#propShadow)">
     <circle cx={0} cy={0} r={30} fill="none" stroke={BRASS} strokeWidth={13} />
     <rect x={26} y={-7} width={120} height={14} fill={BRASS} />
     <rect x={118} y={7} width={13} height={22} fill={BRASS} />
@@ -109,8 +113,8 @@ const Key: React.FC<{x: number; y: number; rot?: number; label?: string; s?: num
 );
 
 const Note: React.FC<{x: number; y: number; text: string; rot?: number; s?: number}> = ({x, y, text, rot = -5, s = 1}) => (
-  <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${s})`}>
-    <rect x={-120} y={-100} width={240} height={200} fill="#efd55e" />
+  <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${s})`} filter="url(#propShadow)">
+    <rect x={-120} y={-100} width={240} height={200} fill="#e0c656" />
     <rect x={-120} y={-100} width={240} height={34} fill="#dcc24a" />
     {text.split('|').map((t, i) => (
       <text key={i} x={0} y={-16 + i * 52} textAnchor="middle" fontFamily="Inter" fontWeight={800} fontSize={40} fill="#1a1a1a">
@@ -122,15 +126,17 @@ const Note: React.FC<{x: number; y: number; text: string; rot?: number; s?: numb
 
 const Wood: React.FC<{dark?: boolean}> = ({dark}) => (
   <g>
-    <rect width={1920} height={1080} fill={dark ? '#2e2018' : '#71513a'} />
-    {Array.from({length: 9}).map((_, i) => (
-      <path key={i} d={`M0 ${60 + i * 120} H 1920`} stroke="#00000022" strokeWidth={4} />
+    <rect width={1920} height={1080} fill={dark ? '#3a2a20' : '#6a4d38'} />
+    {Array.from({length: 7}).map((_, i) => (
+      <g key={i}>
+        <rect y={i * 170 - 20} width={1920} height={170} fill={i % 2 ? '#000' : '#fff'} opacity={0.035} />
+        <path d={`M0 ${i * 170 - 20} H 1920`} stroke="#000" strokeOpacity={0.32} strokeWidth={4} />
+        {[0, 1, 2].map((k) => (
+          <path key={k} d={`M${random(`g${i}${k}`) * 900} ${i * 170 + 26 + k * 44} q 300 ${random(`h${i}${k}`) * 16 - 8} 760 0`} stroke="#000" strokeOpacity={0.09} strokeWidth={3} fill="none" />
+        ))}
+      </g>
     ))}
-    <radialGradient id="deskglow">
-      <stop offset="0" stopColor="#ffcf8f" stopOpacity={0.14} />
-      <stop offset="1" stopColor="#ffcf8f" stopOpacity={0} />
-    </radialGradient>
-    <rect width={1920} height={1080} fill="url(#deskglow)" />
+    <rect width={1920} height={1080} fill="url(#deskGlow)" />
   </g>
 );
 
@@ -153,7 +159,7 @@ const Props: React.FC<{props: any[]; p: number; wave: number}> = ({props, p, wav
           return <Note key={i} x={x} y={y} text={o.text} rot={o.rot} s={o.s} />;
         case 'mug':
           return (
-            <g key={i} transform={`translate(${x} ${y})`}>
+            <g key={i} transform={`translate(${x} ${y})`} filter="url(#propShadow)">
               <circle r={78} fill={o.color ?? '#d9d2bd'} />
               <circle r={60} fill="#3a2214" />
               <path d="M76 -14 q 44 14 0 28" stroke={o.color ?? '#d9d2bd'} strokeWidth={14} fill="none" />
@@ -161,7 +167,7 @@ const Props: React.FC<{props: any[]; p: number; wave: number}> = ({props, p, wav
           );
         case 'card':
           return (
-            <g key={i} transform={`translate(${x} ${y}) rotate(${o.rot ?? 0})`}>
+            <g key={i} transform={`translate(${x} ${y}) rotate(${o.rot ?? 0})`} filter="url(#propShadow)">
               <rect x={-74} y={-104} width={148} height={208} rx={12} fill={o.back ? '#6b2233' : '#f4efdf'} />
               {!o.back && (
                 <text x={0} y={22} textAnchor="middle" fontFamily="Anton" fontSize={84} fill={o.red ? '#c0392b' : '#14141c'}>
@@ -172,7 +178,7 @@ const Props: React.FC<{props: any[]; p: number; wave: number}> = ({props, p, wav
           );
         case 'button':
           return (
-            <g key={i} transform={`translate(${x} ${y}) scale(${o.s ?? 1})`}>
+            <g key={i} transform={`translate(${x} ${y}) scale(${o.s ?? 1})`} filter="url(#propShadow)">
               <circle r={120} fill={BRASS} />
               <circle r={92} fill="none" stroke="#a9812e" strokeWidth={8} />
               <path d="M-40 -56 Q -60 -30 -56 0" stroke="#f6dd9a" strokeWidth={12} strokeLinecap="round" fill="none" />
@@ -188,7 +194,7 @@ const Props: React.FC<{props: any[]; p: number; wave: number}> = ({props, p, wav
   </>
 );
 
-const Cast: React.FC<{cast: any[]; frame: number; dur: number; t: number; speaking?: string; dings: Ding[]; rim: string; y?: number}> = ({cast, frame, dur, t, speaking, dings, rim, y = FLOOR}) => (
+const Cast: React.FC<{cast: any[]; frame: number; dur: number; t: number; speaking?: string; dings: Ding[]; rim: string; y?: number; light?: [number, number]; shadows?: boolean}> = ({cast, frame, dur, t, speaking, dings, rim, y = FLOOR, light, shadows}) => (
   <>
     {cast.map((m, i) => {
       const prog = interpolate(frame, [0, dur], [0, 1], clamp);
@@ -209,6 +215,9 @@ const Cast: React.FC<{cast: any[]; frame: number; dur: number; t: number; speaki
           frame={frame + i * 7}
           rim={m.rim ?? rim}
           ringAge={last ? t - last.t : undefined}
+          light={light}
+          floorShadow={shadows && !m.noShadow}
+          wallShadow={shadows && !m.y}
         />
       );
     })}
@@ -229,18 +238,68 @@ const Lights: React.FC<{frame: number}> = ({frame}) => (
   <AbsoluteFill style={{background: Math.floor(frame / 10) % 2 ? '#e5332a' : '#2a5fe5', opacity: 0.16, mixBlendMode: 'screen'}} />
 );
 
+// The light in the room: everything away from the source falls toward the ambient color, and the source itself blooms.
+const RoomLight: React.FC<{set: string; mood: string; frame: number; flicker?: boolean}> = ({set, mood, frame, flicker}) => {
+  const S = SETS[set];
+  const M = MOODS[mood];
+  const [lx, ly] = S.light;
+  const pulse = flicker ? 0.82 + 0.18 * Math.sin(frame * 0.5) * Math.sin(frame * 0.23) : 1;
+  return (
+    <>
+      <AbsoluteFill
+        style={{
+          background: `radial-gradient(ellipse 72% 88% at ${(lx / 1920) * 100}% ${(ly / 1080) * 100}%, #ffffff 0%, #f2eee6 22%, ${M.ambient} 88%)`,
+          mixBlendMode: 'multiply',
+        }}
+      />
+      <AbsoluteFill
+        style={{
+          background: `radial-gradient(ellipse 34% 46% at ${(lx / 1920) * 100}% ${(ly / 1080) * 100}%, ${S.lightColor} 0%, transparent 100%)`,
+          mixBlendMode: 'screen',
+          opacity: (M.glow ?? 0.2) * pulse,
+        }}
+      />
+      <AbsoluteFill
+        style={{
+          background: `radial-gradient(ellipse 38% 13% at ${(lx / 1920) * 100}% 87%, ${S.lightColor} 0%, transparent 100%)`,
+          mixBlendMode: 'soft-light',
+          opacity: Math.min(1, (M.glow ?? 0.2) * 2) * pulse,
+        }}
+      />
+    </>
+  );
+};
+
+const Fore: React.FC<{set: string; frame: number; dur: number; mood: string}> = ({set, frame, dur, mood}) => {
+  const F = SETS[set].Fore;
+  if (!F) return null;
+  // Nearest the lens, so it travels furthest as the camera moves.
+  const shift = interpolate(frame, [0, dur], [0, -34]);
+  return (
+    <AbsoluteFill style={{filter: `blur(18px) ${MOODS[mood].filter}`, transform: `translateX(${shift}px) scale(1.08)`}}>
+      <Svg>
+        <F />
+      </Svg>
+    </AbsoluteFill>
+  );
+};
+
 const Wide: React.FC<{shot: any; frame: number; dur: number; t: number; speaking?: string}> = ({shot, frame, dur, t, speaking}) => {
   const set = SETS[shot.set];
-  const mood = MOODS[shot.mood ?? 'night'];
+  const moodName = shot.mood ?? 'night';
+  const mood = MOODS[moodName];
+  // The background layer drifts less than the cast, which is what reads as depth.
+  const drift = interpolate(frame, [0, dur], [10, -10]);
   return (
     <AbsoluteFill>
-      <AbsoluteFill style={{filter: mood.filter}}>
+      <AbsoluteFill style={{filter: `blur(${shot.dof ?? 2.4}px) ${mood.filter}`, transform: `translateX(${drift}px) scale(1.03)`}}>
         <Svg>
           <set.Back />
         </Svg>
       </AbsoluteFill>
-      {mood.overlay && <AbsoluteFill style={{background: mood.overlay, opacity: mood.opacity, mixBlendMode: 'multiply'}} />}
+      <RoomLight set={shot.set} mood={moodName} frame={frame} flicker={moodName === 'fire'} />
       <Svg>
+        <Cast cast={shot.cast ?? []} frame={frame} dur={dur} t={t} speaking={speaking} dings={shot.dings} rim={mood.rim} light={set.light} shadows />
         {shot.stretcher && (
           <g transform={`translate(${interpolate(frame, [0, dur], shot.stretcher, clamp)} 800)`}>
             <g transform="rotate(90) translate(-12 220) scale(0.8)">
@@ -250,9 +309,8 @@ const Wide: React.FC<{shot: any; frame: number; dur: number; t: number; speaking
             <ellipse cx={46} cy={-12} rx={15} ry={20} fill="#6fb3c9" opacity={0.9} />
           </g>
         )}
-        <Cast cast={shot.cast ?? []} frame={frame} dur={dur} t={t} speaking={speaking} dings={shot.dings} rim={mood.rim} />
         {shot.desk && set.Front && (
-          <g style={{filter: mood.filter}}>
+          <g style={{filter: `${mood.filter} brightness(0.62)`}}>
             <set.Front />
           </g>
         )}
@@ -260,40 +318,44 @@ const Wide: React.FC<{shot: any; frame: number; dur: number; t: number; speaking
           <Pill key={i} {...p} />
         ))}
       </Svg>
+      <Fore set={shot.set} frame={frame} dur={dur} mood={moodName} />
     </AbsoluteFill>
   );
 };
 
 const Close: React.FC<{shot: any; frame: number; dur: number; t: number; speaking?: string}> = ({shot, frame, dur, t, speaking}) => {
   const set = SETS[shot.set];
-  const mood = MOODS[shot.mood ?? 'night'];
+  const moodName = shot.mood ?? 'night';
+  const mood = MOODS[moodName];
   const who = shot.who;
+  const drift = interpolate(frame, [0, dur], [14, -14]);
   return (
     <AbsoluteFill>
-      <AbsoluteFill style={{filter: `blur(13px) ${mood.filter ?? ''}`, transform: 'scale(1.15)'}}>
+      <AbsoluteFill style={{filter: `blur(${shot.dof ?? 19}px) ${mood.filter}`, transform: `translateX(${drift}px) scale(1.2)`}}>
         <Svg>
           <set.Back />
         </Svg>
       </AbsoluteFill>
-      {mood.overlay && <AbsoluteFill style={{background: mood.overlay, opacity: mood.opacity, mixBlendMode: 'multiply'}} />}
+      <RoomLight set={shot.set} mood={moodName} frame={frame} flicker={moodName === 'fire'} />
       <Svg>
         <Cast
-          cast={[{who, look: shot.look, x: shot.x ?? 960, y: shot.y ?? 1570, s: shot.s ?? 3, face: shot.face, pose: shot.pose ?? 'idle', flip: shot.flip}]}
+          cast={[{who, look: shot.look, x: shot.x ?? 960, y: shot.y ?? 2110, s: shot.s ?? 4.2, face: shot.face, pose: shot.pose ?? 'idle', flip: shot.flip}]}
           frame={frame}
           dur={dur}
           t={t}
           speaking={speaking}
           dings={shot.dings}
           rim={mood.rim}
+          light={set.light}
         />
         {shot.mic && (
           <g>
-            <path d="M1160 1090 Q 1200 800 1080 700" stroke="#2a2a2a" strokeWidth={12} fill="none" />
-            <rect x={1034} y={648} width={64} height={102} rx={32} fill="#3a3a44" transform="rotate(-30 1066 700)" />
+            <path d="M1230 1090 Q 1290 900 1190 790" stroke="#1c1c1c" strokeWidth={14} fill="none" />
+            <rect x={1146} y={720} width={80} height={120} rx={38} fill="#2f2f38" transform="rotate(-30 1186 780)" />
           </g>
         )}
-        {shot.strip !== false && <FrontStrip color={shot.stripColor} />}
-        {shot.note && <Note x={260} y={830} text={shot.note} rot={-6} />}
+        {shot.strip !== false && <FrontStrip color={shot.stripColor} kind={set.strip} />}
+        {shot.note && <Note x={270} y={806} text={shot.note} rot={-6} />}
       </Svg>
     </AbsoluteFill>
   );
@@ -479,7 +541,7 @@ const News: React.FC<{shot: any; frame: number; dur: number; t: number; speaking
   <AbsoluteFill style={{background: '#121a26'}}>
     <Svg>
       <rect x={0} y={0} width={1920} height={1080} fill="#20314a" />
-      <Cast cast={shot.cast ?? []} frame={frame} dur={dur} t={t} speaking={speaking} dings={shot.dings} rim="#7fb2d9" y={1180} />
+      <Cast cast={shot.cast ?? []} frame={frame} dur={dur} t={t} speaking={speaking} dings={shot.dings} rim="#8fbfe0" y={1180} light={[1500, 200]} />
       <rect x={0} y={800} width={1920} height={280} fill="#7c1f33" />
       <text x={70} y={880} fontFamily="Anton" fontSize={72} letterSpacing={2} fill="#fff">
         HOTEL OWNER: "I HAD NO IDEA"
@@ -487,8 +549,8 @@ const News: React.FC<{shot: any; frame: number; dur: number; t: number; speaking
       <text x={70} y={950} fontFamily="Inter" fontWeight={800} fontSize={34} letterSpacing={3} fill="#f0d68a">
         212 GUESTS OUT · ALARM LOG HANDED TO INSPECTORS
       </text>
-      <rect x={70} y={60} width={170} height={60} fill="#e03a30" />
-      <text x={155} y={104} textAnchor="middle" fontFamily="Inter" fontWeight={800} fontSize={34} fill="#fff">
+      <rect x={70} y={96} width={170} height={60} fill="#e03a30" />
+      <text x={155} y={140} textAnchor="middle" fontFamily="Inter" fontWeight={800} fontSize={34} fill="#fff">
         LIVE
       </text>
     </Svg>
@@ -533,15 +595,15 @@ const EndCard: React.FC<{frame: number; p: number; t: number}> = ({frame, p, t})
     <Svg>
       <circle cx={960} cy={720} r={380} fill="#ffcc7f" opacity={0.1} />
       <circle cx={960} cy={720} r={380} fill="none" stroke={BRASS} strokeWidth={6} opacity={0.75} />
-      <text x={960} y={170} textAnchor="middle" fontFamily="Anton" fontSize={104} letterSpacing={3} fill={CREAM}>
+      <text x={960} y={196} textAnchor="middle" fontFamily="Anton" fontSize={104} letterSpacing={3} fill={CREAM}>
         WOULD YOU WANT TO
       </text>
-      <text x={960} y={290} textAnchor="middle" fontFamily="Anton" fontSize={116} letterSpacing={3} fill={BRASS}>
+      <text x={960} y={312} textAnchor="middle" fontFamily="Anton" fontSize={116} letterSpacing={3} fill={BRASS}>
         HEAR EVERY LIE?
       </text>
-      <Sil look="otis" x={640} y={1010} s={1.05} face="smile" frame={frame} />
-      <Sil look="you" x={960} y={1010} s={1.15} face="neutral" frame={frame} />
-      <Sil look="quill" x={1280} y={1010} s={1.05} face="smug" pose="idle" frame={frame} flip />
+      <Sil look="otis" x={640} y={1015} s={1.05} face="smile" frame={frame} light={[960, 500]} />
+      <Sil look="you" x={960} y={1015} s={1.15} face="neutral" frame={frame} light={[960, 200]} />
+      <Sil look="quill" x={1280} y={1015} s={1.05} face="smug" pose="idle" frame={frame} flip light={[960, 500]} />
       {t > 2.5 && (
         <>
           <text x={290} y={720} textAnchor="middle" fontFamily="Anton" fontSize={96} letterSpacing={4} fill={BRASS}>
@@ -617,9 +679,12 @@ const Split: React.FC<{shot: Shot; frame: number; dur: number}> = ({shot, frame,
 const ShotBlock: React.FC<{shot: Shot; dur: number}> = ({shot, dur}) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
-  const [a, b] = shot.push ?? [1, 1.05];
+  const cast = shot.cast ?? [];
+  const meanX = cast.length ? cast.reduce((n: number, m: any) => n + (m.x + (m.toX ?? m.x)) / 2, 0) / cast.length : 960;
+  const near = shot.kind === 'wide' ? [1.3, 1.37] : shot.kind === 'table' ? [1.18, 1.25] : shot.kind === 'end' ? [1, 1.015] : [1, 1.05];
+  const [a, b] = shot.push ?? near;
   const scale = interpolate(frame, [0, dur], [a, b]);
-  const [ox, oy] = shot.origin ?? [960, 540];
+  const [ox, oy] = shot.origin ?? (shot.kind === 'wide' ? [Math.min(1400, Math.max(520, meanX)), 700] : [960, 540]);
   const shakeOn = shot.shake && frame % 2 === 0;
   return (
     <AbsoluteFill style={{background: '#000'}}>
@@ -662,13 +727,25 @@ const ShotBlock: React.FC<{shot: Shot; dur: number}> = ({shot, dur}) => {
   );
 };
 
-// Bars top and bottom, like a film. Everything sits inside them.
-const Bars: React.FC = () => (
-  <>
-    <div style={{position: 'absolute', top: 0, left: 0, right: 0, height: 34, background: '#000'}} />
-    <div style={{position: 'absolute', bottom: 0, left: 0, right: 0, height: 34, background: '#000'}} />
-  </>
-);
+// The film's finish over every shot: vignette, a little grain, and wide bars top and bottom.
+const Finish: React.FC = () => {
+  const frame = useCurrentFrame();
+  return (
+    <>
+      <AbsoluteFill style={{background: 'radial-gradient(ellipse 78% 82% at 50% 50%, transparent 48%, rgba(0,0,0,0.5) 100%)'}} />
+      <AbsoluteFill
+        style={{
+          backgroundImage: `url(${staticFile('sfx/grain.png')})`,
+          backgroundPosition: `${Math.floor(random(`gx${frame}`) * 640)}px ${Math.floor(random(`gy${frame}`) * 640)}px`,
+          mixBlendMode: 'overlay',
+          opacity: 0.16,
+        }}
+      />
+      <div style={{position: 'absolute', top: 0, left: 0, right: 0, height: 60, background: '#000'}} />
+      <div style={{position: 'absolute', bottom: 0, left: 0, right: 0, height: 60, background: '#000'}} />
+    </>
+  );
+};
 
 export const Special: React.FC<SpecialBuild> = (build) => {
   const total = specialFrames(build);
@@ -698,7 +775,7 @@ export const Special: React.FC<SpecialBuild> = (build) => {
           </Series.Sequence>
         ))}
       </Series>
-      <Bars />
+      <Finish />
     </AbsoluteFill>
   );
 };
