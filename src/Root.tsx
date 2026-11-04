@@ -3,6 +3,7 @@ import {Composition} from 'remotion';
 import {Avatar, Banner} from './Branding';
 import {TerminalReplay} from './TerminalReplay';
 import {Episode, FPS, totalFrames} from './Episode';
+import {Special, SPECIAL_FPS, specialFrames, type SpecialBuild} from './special/Special';
 import type {Build} from './types';
 import latest from './latest.json';
 
@@ -28,6 +29,16 @@ export const RemotionRoot: React.FC = () => (
     durationInFrames={300}
     defaultProps={latest as Build}
     calculateMetadata={({props}) => ({durationInFrames: totalFrames(props)})}
+  />
+  <Composition
+    id="Special"
+    component={Special}
+    width={1920}
+    height={1080}
+    fps={SPECIAL_FPS}
+    durationInFrames={240}
+    defaultProps={{shots: [], pad: '', tension: ''} as SpecialBuild}
+    calculateMetadata={({props}) => ({durationInFrames: Math.max(1, specialFrames(props))})}
   />
   </>
 );
