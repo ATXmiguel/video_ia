@@ -12,11 +12,12 @@ export type Look = {
   shirt: string;
   pants: string;
   height: number; // px, feet to top of head
-  hair: 'cap' | 'spiky' | 'ponytail' | 'bald' | 'puff';
+  hair: 'cap' | 'spiky' | 'ponytail' | 'bald' | 'puff' | 'bun' | 'swoop';
   hairColor: string;
   tie?: string;
   mustache?: boolean;
   shades?: boolean;
+  glasses?: boolean;
 };
 
 // The recurring cast. Keep looks stable across episodes so viewers recognise everyone instantly.
@@ -26,4 +27,7 @@ export const CAST: Record<Exclude<Who, 'narrator'>, Look> = {
   tyler: {name: 'TYLER', shirt: '#e8443a', pants: '#2e3a5c', height: 660, hair: 'spiky', hairColor: '#2a2230'},
   lily: {name: 'LILY', shirt: '#e8443a', pants: '#2e3a5c', height: 570, hair: 'ponytail', hairColor: '#7a4a2a'},
   brenda: {name: 'BRENDA', shirt: '#9b4fe0', pants: '#5b2f8c', height: 600, hair: 'puff', hairColor: '#ffd36b', shades: true},
+  // Story 2: Starlite Cinema
+  gloria: {name: 'GLORIA', shirt: '#2b2a3a', pants: '#2b2a3a', height: 640, hair: 'bun', hairColor: '#9aa0ad', tie: '#c0392b', glasses: true},
+  chad: {name: 'CHAD', shirt: '#7b2cbf', pants: '#2e3a5c', height: 650, hair: 'swoop', hairColor: '#f2c14e'},
 };

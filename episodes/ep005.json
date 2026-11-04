@@ -1,0 +1,344 @@
+{
+  "series": "Shift Happens",
+  "episode": 5,
+  "arc": {
+    "number": 2,
+    "part": 1,
+    "name": "Starlite Cinema"
+  },
+  "goal": {
+    "countdown": "SHIFTS LEFT",
+    "progress": "SOLD OUT"
+  },
+  "hook": "NEW JOB: OLD CINEMA.",
+  "hookAccent": "5 SHIFTS TO SAVE IT?!",
+  "topComment": {
+    "user": "@heitorfelix3482",
+    "text": "Theater",
+    "likes": 2
+  },
+  "recap": {
+    "set": "marquee",
+    "cast": [
+      {
+        "who": "you",
+        "x": 320,
+        "pose": "shrug",
+        "face": "neutral"
+      },
+      {
+        "who": "lily",
+        "x": 740,
+        "pose": "shrug",
+        "face": "happy",
+        "flip": true
+      }
+    ],
+    "hud": {
+      "tips": 0,
+      "rage": 0,
+      "badge": "JOB HUNTING",
+      "left": 5,
+      "progress": 0
+    },
+    "lines": []
+  },
+  "scenes": [
+    {
+      "set": "marquee",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "cheer",
+          "face": "happy"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "point",
+          "face": "happy",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "NEW HIRE",
+        "left": 5,
+        "progress": 0
+      },
+      "stamp": {
+        "text": "NEW JOB",
+        "color": "green",
+        "line": 0
+      },
+      "lines": [
+        "Imagine your new job is a cinema with five shifts to live.",
+        {
+          "who": "lily",
+          "text": "After Big Bun's? This can't be worse."
+        }
+      ]
+    },
+    {
+      "set": "lobby",
+      "cast": [
+        {
+          "who": "gloria",
+          "x": 540,
+          "pose": "point",
+          "face": "angry"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "NEW HIRE",
+        "left": 5,
+        "progress": 0
+      },
+      "stamp": {
+        "text": "5 SHIFTS",
+        "color": "yellow",
+        "line": 0
+      },
+      "zoom": "gloria",
+      "lines": [
+        {
+          "who": "gloria",
+          "text": "I'm Gloria. Sell out Friday's premiere, or this place becomes a parking lot."
+        },
+        {
+          "who": "gloria",
+          "text": "And nobody touches my projector."
+        }
+      ]
+    },
+    {
+      "set": "lobby",
+      "cast": [
+        {
+          "who": "chad",
+          "x": 540,
+          "pose": "point",
+          "face": "smug"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "ON CAMERA",
+        "left": 5,
+        "progress": 0
+      },
+      "stamp": {
+        "text": "2M FOLLOWERS",
+        "color": "blue",
+        "line": 0
+      },
+      "zoom": "chad",
+      "lines": [
+        "This is Chad. Head usher. Films everything.",
+        {
+          "who": "chad",
+          "text": "Smile, new kid. You're in my vlog."
+        }
+      ]
+    },
+    {
+      "set": "lobby",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "cheer",
+          "face": "happy"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "cheer",
+          "face": "love",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "POPCORN PRO",
+        "left": 5,
+        "progress": 15
+      },
+      "stamp": {
+        "text": "SOLD",
+        "color": "green",
+        "line": 0
+      },
+      "fx": "flash",
+      "lines": [
+        "You sell a popcorn bucket the size of a car. Plus twenty tickets.",
+        {
+          "who": "lily",
+          "text": "Fifteen percent! We're legends!"
+        }
+      ]
+    },
+    {
+      "set": "blackout",
+      "cast": [
+        {
+          "who": "you",
+          "x": 540,
+          "pose": "shock",
+          "face": "shock"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "PANIC",
+        "left": 5,
+        "progress": 5
+      },
+      "stamp": {
+        "text": "BLACKOUT",
+        "color": "red",
+        "line": 0
+      },
+      "fx": "shake",
+      "lines": [
+        "Then the screen goes black. Mid-movie.",
+        "Forty zombie fans start booing. Ten want refunds."
+      ]
+    },
+    {
+      "set": "phone",
+      "cast": [],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "PANIC",
+        "left": 5,
+        "progress": 5
+      },
+      "phone": {
+        "contact": "CHAD VLOGS - LIVE",
+        "messages": [
+          {
+            "from": "them",
+            "text": "LOL the screen died",
+            "line": 0
+          },
+          {
+            "from": "them",
+            "text": "worst cinema ever, it's DONE",
+            "line": 1
+          },
+          {
+            "from": "them",
+            "text": "wait... is that Chad's hand on the switch?",
+            "line": 2
+          }
+        ]
+      },
+      "lines": [
+        "Chad is live. Thousands watching.",
+        "His fans love it.",
+        "And in the corner of his stream... his hand. On the power switch."
+      ]
+    },
+    {
+      "set": "blackout",
+      "cast": [
+        {
+          "who": "gloria",
+          "x": 760,
+          "pose": "angry",
+          "face": "angry",
+          "flip": true
+        },
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "sad",
+          "face": "sad"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "ON THIN ICE",
+        "left": 5,
+        "progress": 0
+      },
+      "stamp": {
+        "text": "10 MINUTES",
+        "color": "red",
+        "line": 0
+      },
+      "lines": [
+        {
+          "who": "gloria",
+          "text": "Get my screen back in ten minutes, or you're both fired."
+        },
+        "Refunds. Zero percent sold."
+      ]
+    },
+    {
+      "set": "blackout",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "shrug",
+          "face": "neutral"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "point",
+          "face": "neutral",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "ON THIN ICE",
+        "left": 5,
+        "progress": 0
+      },
+      "lines": [
+        {
+          "who": "lily",
+          "text": "I can fix the projector. But that's Gloria's rule two."
+        },
+        "Or you grab Chad's phone and show his fans the truth."
+      ]
+    }
+  ],
+  "choice": {
+    "question": "WHAT DO YOU DO?",
+    "options": [
+      {
+        "key": "A",
+        "word": "PROJECTOR",
+        "label": "Fix the projector",
+        "teaser": "Breaks rule two",
+        "icon": "lily",
+        "pose": "cheer",
+        "face": "happy"
+      },
+      {
+        "key": "B",
+        "word": "STREAM",
+        "label": "Hijack his stream",
+        "teaser": "Chad goes viral",
+        "icon": "chad",
+        "pose": "point",
+        "face": "smug"
+      }
+    ]
+  }
+}

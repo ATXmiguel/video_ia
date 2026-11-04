@@ -190,7 +190,152 @@ const Dining: React.FC = () => (
   </>
 );
 
+// Story 2: Starlite Cinema — a run-down old movie theater.
+const Bulbs: React.FC<{x: number; y: number; w: number; h: number}> = ({x, y, w, h}) => {
+  const frame = useCurrentFrame();
+  const pts: [number, number][] = [];
+  for (let i = 0; i <= 12; i++) pts.push([x + (w * i) / 12, y], [x + (w * i) / 12, y + h]);
+  for (let i = 1; i < 4; i++) pts.push([x, y + (h * i) / 4], [x + w, y + (h * i) / 4]);
+  return (
+    <g>
+      {pts.map(([bx, by], i) => (
+        <circle key={i} cx={bx} cy={by} r={11} fill={(i + Math.floor(frame / 6)) % 3 ? '#fff3a8' : '#ff9f3d'} stroke={INK} strokeWidth={3} />
+      ))}
+    </g>
+  );
+};
+
+const Marquee: React.FC = () => {
+  const frame = useCurrentFrame();
+  return (
+    <>
+      <rect width={1080} height={1920} fill="#1d1640" />
+      {new Array(40).fill(0).map((_, i) => (
+        <circle key={i} cx={random(`s${i}`) * 1080} cy={random(`t${i}`) * 560} r={3 + random(`u${i}`) * 3} fill="#fff" opacity={0.4 + 0.6 * Math.abs(Math.sin(frame * 0.05 + i))} />
+      ))}
+      <rect x={90} y={520} width={900} height={1000} fill="#8e2b3a" stroke={INK} strokeWidth={SW} />
+      <rect x={400} y={240} width={280} height={370} rx={20} fill="#c23b4f" stroke={INK} strokeWidth={SW} />
+      {'STARLITE'.split('').map((ch, i) => (
+        <text key={i} x={540} y={284 + i * 40} textAnchor="middle" fontFamily={DISPLAY} fontSize={40} fill={YELLOW} stroke={INK} strokeWidth={4} paintOrder="stroke">
+          {ch}
+        </text>
+      ))}
+      <rect x={60} y={600} width={960} height={300} rx={18} fill="#fffbe9" stroke={INK} strokeWidth={SW} />
+      <Bulbs x={60} y={600} w={960} h={300} />
+      <text x={540} y={720} textAnchor="middle" fontFamily={DISPLAY} fontSize={78} fill={INK}>
+        TONIGHT ONLY
+      </text>
+      <text x={540} y={830} textAnchor="middle" fontFamily={DISPLAY} fontSize={72} fill={RED}>
+        ZOMBIE PROM 3
+      </text>
+      {[150, 690].map((px) => (
+        <g key={px}>
+          <rect x={px} y={1000} width={240} height={340} rx={10} fill="#ffd84d" stroke={INK} strokeWidth={SW} />
+          <rect x={px + 20} y={1020} width={200} height={300} fill={px < 500 ? '#3fa8ff' : '#2fd27a'} stroke={INK} strokeWidth={4} />
+          <circle cx={px + 120} cy={1130} r={50} fill="#fff" stroke={INK} strokeWidth={4} />
+        </g>
+      ))}
+      <rect x={430} y={1060} width={220} height={460} rx={10} fill="#4a1d26" stroke={INK} strokeWidth={SW} />
+      <line x1={540} y1={1060} x2={540} y2={1520} stroke={INK} strokeWidth={SW} />
+      <rect x={0} y={1520} width={1080} height={110} fill="#c9ccd6" stroke={INK} strokeWidth={SW} />
+      <rect x={0} y={1630} width={1080} height={290} fill="#3a2f5c" />
+      <rect x={300} y={1520} width={480} height={110} fill={RED} />
+    </>
+  );
+};
+
+const LobbyBack: React.FC = () => {
+  const frame = useCurrentFrame();
+  return (
+    <>
+      <rect width={1080} height={1920} fill="#5a1e3a" />
+      {new Array(12).fill(0).map((_, i) => (
+        <rect key={i} x={i * 90} y={0} width={45} height={1920} fill="#4e1832" />
+      ))}
+      <rect x={0} y={170} width={1080} height={90} fill="#2b2a3a" />
+      <text x={540} y={238} textAnchor="middle" fontFamily={DISPLAY} fontSize={64} fill={YELLOW}>
+        CONCESSIONS
+      </text>
+      {[60, 760].map((px, i) => (
+        <g key={px}>
+          <rect x={px} y={330} width={260} height={380} rx={8} fill="#ffd84d" stroke={INK} strokeWidth={SW} />
+          <rect x={px + 18} y={348} width={224} height={344} fill={i ? '#9b4fe0' : '#2fae5f'} stroke={INK} strokeWidth={4} />
+          <text x={px + 130} y={560} textAnchor="middle" fontFamily={DISPLAY} fontSize={40} fill="#fff" stroke={INK} strokeWidth={4} paintOrder="stroke">
+            {i ? 'SPACE' : 'ZOMBIE'}
+          </text>
+          <text x={px + 130} y={610} textAnchor="middle" fontFamily={DISPLAY} fontSize={40} fill="#fff" stroke={INK} strokeWidth={4} paintOrder="stroke">
+            {i ? 'COWS' : 'PROM 3'}
+          </text>
+        </g>
+      ))}
+      <rect x={380} y={360} width={320} height={420} rx={14} fill="#e8443a" stroke={INK} strokeWidth={SW} />
+      <rect x={405} y={390} width={270} height={300} rx={8} fill="#fff8d8" stroke={INK} strokeWidth={5} />
+      {new Array(18).fill(0).map((_, i) => (
+        <circle key={i} cx={425 + random(`p${i}`) * 230} cy={680 - random(`q${i}`) * 220 - Math.abs(Math.sin(frame * 0.25 + i)) * 30} r={14} fill="#fffdf2" stroke={INK} strokeWidth={3} />
+      ))}
+      <text x={540} y={755} textAnchor="middle" fontFamily={DISPLAY} fontSize={46} fill={YELLOW}>
+        POPCORN
+      </text>
+      <rect x={0} y={860} width={1080} height={22} fill={YELLOW} />
+    </>
+  );
+};
+
+const LobbyFront: React.FC = () => (
+  <>
+    <rect x={-10} y={1290} width={1100} height={56} rx={12} fill="#d9c08a" stroke={INK} strokeWidth={SW} />
+    <rect x={-10} y={1346} width={1100} height={600} fill="#2b2a3a" stroke={INK} strokeWidth={SW} />
+    {new Array(10).fill(0).map((_, i) => (
+      <rect key={i} x={i * 120} y={1346} width={60} height={600} fill="#36344a" />
+    ))}
+    <rect x={-10} y={1440} width={1100} height={40} fill={RED} stroke={INK} strokeWidth={SW} />
+    {[170, 910].map((bx) => (
+      <g key={bx} stroke={INK} strokeWidth={5}>
+        <path d={`M ${bx - 55} 1170 L ${bx + 55} 1170 L ${bx + 42} 1290 L ${bx - 42} 1290 Z`} fill="#fff" />
+        {[-30, 0, 30].map((sx) => (
+          <rect key={sx} x={bx + sx - 9} y={1170} width={18} height={120} fill={RED} strokeWidth={0} />
+        ))}
+        {[-36, -12, 12, 36].map((sx, i) => (
+          <circle key={sx} cx={bx + sx} cy={1160 - (i % 2) * 14} r={18} fill="#fffdf2" strokeWidth={3} />
+        ))}
+      </g>
+    ))}
+  </>
+);
+
+const Auditorium: React.FC<{dark?: boolean}> = ({dark}) => {
+  const frame = useCurrentFrame();
+  const glow = 0.85 + 0.15 * Math.sin(frame * 0.3);
+  return (
+    <>
+      <rect width={1080} height={1920} fill="#1a1426" />
+      <path d="M 0 0 L 150 0 Q 120 600 0 1100 Z" fill="#8e2b3a" stroke={INK} strokeWidth={SW} />
+      <path d="M 1080 0 L 930 0 Q 960 600 1080 1100 Z" fill="#8e2b3a" stroke={INK} strokeWidth={SW} />
+      <rect x={140} y={200} width={800} height={520} rx={10} fill={dark ? '#08070d' : '#bfe6ff'} opacity={dark ? 1 : glow} stroke={INK} strokeWidth={SW} />
+      {!dark && <path d="M 140 720 L 0 1300 L 1080 1300 L 940 720 Z" fill="#bfe6ff" opacity={0.12} />}
+      {[0, 1, 2].map((row) =>
+        new Array(7).fill(0).map((_, c) => (
+          <g key={`${row}-${c}`} stroke={INK} strokeWidth={5}>
+            <rect x={c * 160 - 20 + (row % 2) * 40} y={1200 + row * 130} width={140} height={150} rx={24} fill={row % 2 ? '#a8323f' : '#c23b4f'} />
+          </g>
+        )),
+      )}
+      <rect x={0} y={1600} width={1080} height={320} fill="#2b2340" />
+      <line x1={0} y1={1600} x2={1080} y2={1600} stroke={INK} strokeWidth={SW} />
+      {[160, 540, 920].map((lx) => (
+        <rect key={lx} x={lx - 30} y={1625} width={60} height={14} rx={7} fill={YELLOW} opacity={0.8} />
+      ))}
+    </>
+  );
+};
+
+const Blackout: React.FC = () => <Auditorium dark />;
+
 export const SETS = {
+  marquee: {floorY: 1575, Back: Marquee, Front: null},
+  lobby: {floorY: 1560, Back: LobbyBack, Front: LobbyFront},
+  auditorium: {floorY: 1700, Back: Auditorium, Front: null},
+  blackout: {floorY: 1700, Back: Blackout, Front: null},
   exterior: {floorY: 1575, Back: Exterior, Front: null},
   counter: {floorY: 1560, Back: CounterBack, Front: CounterFront},
   kitchen: {floorY: 1640, Back: Kitchen, Front: null},

@@ -144,9 +144,9 @@ def top(video_id: str, *words: str) -> None:
             c = item["snippet"]["topLevelComment"]["snippet"]
             if c.get("authorChannelId", {}).get("value") == owner:
                 continue
-            m = re.search(r"\b([AB])\b", c["textDisplay"].upper())
-            if m and (best is None or c["likeCount"] > best["likes"]):
-                best = {"user": c["authorDisplayName"], "text": c["textDisplay"], "likes": c["likeCount"], "vote": m.group(1)}
+            vote = vote_of(c["textDisplay"], words)
+            if vote and (best is None or c["likeCount"] > best["likes"]):
+                best = {"user": c["authorDisplayName"], "text": c["textDisplay"], "likes": c["likeCount"], "vote": vote}
         token = res.get("nextPageToken")
         if not token:
             break

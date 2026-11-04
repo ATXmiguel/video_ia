@@ -102,6 +102,37 @@
           "ep3": 324
         }
       }
+    },
+    {
+      "episode": 5,
+      "file": "episodes/ep005.json",
+      "url": "https://youtube.com/shorts/x73w4P745SE",
+      "instagram": null,
+      "tiktok": null,
+      "published": "2026-11-04",
+      "options": {
+        "A": "PROJECTOR",
+        "B": "STREAM"
+      },
+      "pinned": false,
+      "topComment": {
+        "user": "@heitorfelix3482",
+        "text": "Theater",
+        "likes": 2,
+        "platform": "youtube"
+      },
+      "winner": "A",
+      "arc": 2,
+      "part": 1,
+      "uploaded_via": "api",
+      "views_at_check": {
+        "youtube": {
+          "ep1": 1112,
+          "ep2": 694,
+          "ep3": 443,
+          "ep4": 364
+        }
+      }
     }
   ],
   "arcs": [
@@ -113,16 +144,24 @@
       "ended_episode": 4,
       "peak_views": 1096,
       "ending": "ended early (part 3 views 70% below part 1): Tyler on mop duty, Brenda owns Big Bun's and promotes YOU, then the MAX fryer explodes and Big Bun's closes"
+    },
+    {
+      "number": 2,
+      "name": "Starlite Cinema",
+      "job": "movie theater",
+      "started_episode": 5,
+      "goal": "5 shifts to sell out the premiere"
     }
   ],
   "cloud_check": {
-    "date": "2026-11-03",
-    "audit": "only the submission acknowledgment in Gmail; Google's request for more info (deadline ~11-11) still has a draft reply waiting for the owner",
+    "date": "2026-11-04",
+    "audit": "Google email 2026-11-03: compliance review completed, no further action required",
     "gh_cli": "not installed (prerequisite 1 missing)"
   },
   "backfilled": {
     "instagram": true,
     "tiktok": false
   },
-  "tiktok_note": "2026-11-03: tiktok.com/upload showed a browser certificate/privacy error twice; TikTok skipped (backfill + Part 4 pending)"
+  "tiktok_note": "2026-11-04: tiktok.com/upload loads again, but this run had no read access to the project folder (session started without it, moving needs a person's approval). TikTok backfill Parts 1-4 + Part 5 episode pending.",
+  "instagram_note": "2026-11-04: ep005 not posted to Instagram for the same reason; no comments posted there."
 }

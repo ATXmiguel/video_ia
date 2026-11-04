@@ -49,7 +49,7 @@ export const Cover: React.FC<{hook: string; accent: string; tag: string; frames:
 };
 
 // Episode 2+ opener: the winning comment from last episode, likes counting up, over a gray recap.
-export const TopComment: React.FC<{user: string; text: string; likes: number; episode: number}> = ({user, text, likes, episode}) => {
+export const TopComment: React.FC<{user: string; text: string; likes: number; part: number}> = ({user, text, likes, part}) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
   const inn = spring({frame: frame - 6, fps, config: {damping: 12}});
@@ -57,7 +57,7 @@ export const TopComment: React.FC<{user: string; text: string; likes: number; ep
   return (
     <AbsoluteFill style={{alignItems: 'center'}}>
       <div style={{marginTop: 300, fontFamily: DISPLAY, fontSize: 150, color: YELLOW, WebkitTextStroke: `14px ${INK}`, paintOrder: 'stroke fill'}}>
-        PART {episode}
+        PART {part}
       </div>
       <div
         style={{

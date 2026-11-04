@@ -1,0 +1,1383 @@
+{
+  "series": "Shift Happens",
+  "episode": 5,
+  "hook": "NEW JOB: OLD CINEMA.",
+  "hookAccent": "5 SHIFTS TO SAVE IT?!",
+  "choice": {
+    "question": "WHAT DO YOU DO?",
+    "options": [
+      {
+        "key": "A",
+        "word": "PROJECTOR",
+        "label": "Fix the projector",
+        "teaser": "Breaks rule two",
+        "icon": "lily",
+        "pose": "cheer",
+        "face": "happy"
+      },
+      {
+        "key": "B",
+        "word": "STREAM",
+        "label": "Hijack his stream",
+        "teaser": "Chad goes viral",
+        "icon": "chad",
+        "pose": "point",
+        "face": "smug"
+      }
+    ]
+  },
+  "arc": {
+    "number": 2,
+    "part": 1,
+    "name": "Starlite Cinema"
+  },
+  "goal": {
+    "countdown": "SHIFTS LEFT",
+    "progress": "SOLD OUT"
+  },
+  "topComment": {
+    "user": "@heitorfelix3482",
+    "text": "Theater",
+    "likes": 2
+  },
+  "scenes": [
+    {
+      "set": "marquee",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "shrug",
+          "face": "neutral"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "shrug",
+          "face": "happy",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "JOB HUNTING",
+        "left": 5,
+        "progress": 0
+      },
+      "kind": "recap",
+      "duration": 4.802,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "Top comment said: Theater",
+          "audio": "ep005/s0_l0.mp3",
+          "start": 2.6,
+          "duration": 1.752,
+          "words": [
+            {
+              "text": "Top",
+              "start": 0.089,
+              "end": 0.246
+            },
+            {
+              "text": "comment",
+              "start": 0.257,
+              "end": 0.558
+            },
+            {
+              "text": "said",
+              "start": 0.569,
+              "end": 0.837
+            },
+            {
+              "text": "Theater",
+              "start": 1.06,
+              "end": 1.406
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "marquee",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "cheer",
+          "face": "happy"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "point",
+          "face": "happy",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "NEW HIRE",
+        "left": 5,
+        "progress": 0
+      },
+      "stamp": {
+        "text": "NEW JOB",
+        "color": "green",
+        "line": 0
+      },
+      "kind": "story",
+      "duration": 7.066,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "Imagine your new job is a cinema with five shifts to live.",
+          "audio": "ep005/s1_l0.mp3",
+          "start": 0.25,
+          "duration": 3.36,
+          "words": [
+            {
+              "text": "Imagine",
+              "start": 0.089,
+              "end": 0.391
+            },
+            {
+              "text": "your",
+              "start": 0.402,
+              "end": 0.491
+            },
+            {
+              "text": "new",
+              "start": 0.502,
+              "end": 0.647
+            },
+            {
+              "text": "job",
+              "start": 0.658,
+              "end": 1.004
+            },
+            {
+              "text": "is",
+              "start": 1.083,
+              "end": 1.172
+            },
+            {
+              "text": "a",
+              "start": 1.183,
+              "end": 1.228
+            },
+            {
+              "text": "cinema",
+              "start": 1.239,
+              "end": 1.696
+            },
+            {
+              "text": "with",
+              "start": 1.819,
+              "end": 1.942
+            },
+            {
+              "text": "five",
+              "start": 1.953,
+              "end": 2.266
+            },
+            {
+              "text": "shifts",
+              "start": 2.277,
+              "end": 2.634
+            },
+            {
+              "text": "to",
+              "start": 2.645,
+              "end": 2.723
+            },
+            {
+              "text": "live",
+              "start": 2.734,
+              "end": 3.025
+            }
+          ]
+        },
+        {
+          "who": "lily",
+          "text": "After Big Bun's? This can't be worse.",
+          "audio": "ep005/s1_l1.mp3",
+          "start": 3.76,
+          "duration": 2.856,
+          "words": [
+            {
+              "text": "After",
+              "start": 0.08,
+              "end": 0.352
+            },
+            {
+              "text": "Big",
+              "start": 0.364,
+              "end": 0.58
+            },
+            {
+              "text": "Bun's",
+              "start": 0.591,
+              "end": 1.08
+            },
+            {
+              "text": "This",
+              "start": 1.432,
+              "end": 1.591
+            },
+            {
+              "text": "can't",
+              "start": 1.602,
+              "end": 1.841
+            },
+            {
+              "text": "be",
+              "start": 1.852,
+              "end": 2.0
+            },
+            {
+              "text": "worse",
+              "start": 2.011,
+              "end": 2.523
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "lobby",
+      "cast": [
+        {
+          "who": "gloria",
+          "x": 540,
+          "pose": "point",
+          "face": "angry"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "NEW HIRE",
+        "left": 5,
+        "progress": 0
+      },
+      "stamp": {
+        "text": "5 SHIFTS",
+        "color": "yellow",
+        "line": 0
+      },
+      "zoom": "gloria",
+      "kind": "story",
+      "duration": 4.354,
+      "lines": [
+        {
+          "who": "gloria",
+          "text": "I'm Gloria. Sell out Friday's premiere, or this place becomes a parking lot.",
+          "audio": "ep005/s2_l0.mp3",
+          "start": 0.25,
+          "duration": 0.84,
+          "words": [
+            {
+              "text": "I'm",
+              "start": 0.097,
+              "end": 0.286
+            },
+            {
+              "text": "Gloria",
+              "start": 0.298,
+              "end": 0.899
+            },
+            {
+              "text": "Sell",
+              "start": 1.722,
+              "end": 2.028
+            },
+            {
+              "text": "out",
+              "start": 2.04,
+              "end": 2.229
+            },
+            {
+              "text": "Friday's",
+              "start": 2.241,
+              "end": 2.618
+            },
+            {
+              "text": "premiere",
+              "start": 2.63,
+              "end": 3.066
+            },
+            {
+              "text": "or",
+              "start": 3.302,
+              "end": 3.443
+            },
+            {
+              "text": "this",
+              "start": 3.455,
+              "end": 3.632
+            },
+            {
+              "text": "place",
+              "start": 3.644,
+              "end": 3.95
+            },
+            {
+              "text": "becomes",
+              "start": 3.962,
+              "end": 4.304
+            },
+            {
+              "text": "a",
+              "start": 4.316,
+              "end": 4.375
+            }
+          ]
+        },
+        {
+          "who": "gloria",
+          "text": "And nobody touches my projector.",
+          "audio": "ep005/s2_l1.mp3",
+          "start": 1.24,
+          "duration": 2.664,
+          "words": [
+            {
+              "text": "And",
+              "start": 0.097,
+              "end": 0.286
+            },
+            {
+              "text": "nobody",
+              "start": 0.298,
+              "end": 0.663
+            },
+            {
+              "text": "touches",
+              "start": 0.675,
+              "end": 1.029
+            },
+            {
+              "text": "my",
+              "start": 1.041,
+              "end": 1.17
+            },
+            {
+              "text": "projector",
+              "start": 1.182,
+              "end": 1.831
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "lobby",
+      "cast": [
+        {
+          "who": "chad",
+          "x": 540,
+          "pose": "point",
+          "face": "smug"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "ON CAMERA",
+        "left": 5,
+        "progress": 0
+      },
+      "stamp": {
+        "text": "2M FOLLOWERS",
+        "color": "blue",
+        "line": 0
+      },
+      "zoom": "chad",
+      "kind": "story",
+      "duration": 7.09,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "This is Chad. Head usher. Films everything.",
+          "audio": "ep005/s3_l0.mp3",
+          "start": 0.25,
+          "duration": 2.832,
+          "words": [
+            {
+              "text": "This",
+              "start": 0.089,
+              "end": 0.201
+            },
+            {
+              "text": "is",
+              "start": 0.212,
+              "end": 0.324
+            },
+            {
+              "text": "Chad",
+              "start": 0.335,
+              "end": 0.714
+            },
+            {
+              "text": "Head",
+              "start": 1.094,
+              "end": 1.183
+            },
+            {
+              "text": "usher",
+              "start": 1.194,
+              "end": 1.507
+            },
+            {
+              "text": "Films",
+              "start": 1.909,
+              "end": 2.109
+            },
+            {
+              "text": "everything",
+              "start": 2.121,
+              "end": 2.5
+            }
+          ]
+        },
+        {
+          "who": "chad",
+          "text": "Smile, new kid. You're in my vlog.",
+          "audio": "ep005/s3_l1.mp3",
+          "start": 3.232,
+          "duration": 3.408,
+          "words": [
+            {
+              "text": "Smile",
+              "start": 0.095,
+              "end": 0.563
+            },
+            {
+              "text": "new",
+              "start": 0.575,
+              "end": 0.708
+            },
+            {
+              "text": "kid",
+              "start": 0.72,
+              "end": 1.077
+            },
+            {
+              "text": "You're",
+              "start": 1.665,
+              "end": 1.888
+            },
+            {
+              "text": "in",
+              "start": 1.9,
+              "end": 1.978
+            },
+            {
+              "text": "my",
+              "start": 1.989,
+              "end": 2.123
+            },
+            {
+              "text": "vlog",
+              "start": 2.134,
+              "end": 2.614
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "lobby",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "cheer",
+          "face": "happy"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "cheer",
+          "face": "love",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "POPCORN PRO",
+        "left": 5,
+        "progress": 15
+      },
+      "stamp": {
+        "text": "SOLD",
+        "color": "green",
+        "line": 0
+      },
+      "fx": "flash",
+      "kind": "story",
+      "duration": 7.09,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "You sell a popcorn bucket the size of a car. Plus twenty tickets.",
+          "audio": "ep005/s4_l0.mp3",
+          "start": 0.25,
+          "duration": 3.72,
+          "words": [
+            {
+              "text": "You",
+              "start": 0.089,
+              "end": 0.156
+            },
+            {
+              "text": "sell",
+              "start": 0.167,
+              "end": 0.335
+            },
+            {
+              "text": "a",
+              "start": 0.346,
+              "end": 0.391
+            },
+            {
+              "text": "popcorn",
+              "start": 0.402,
+              "end": 0.837
+            },
+            {
+              "text": "bucket",
+              "start": 0.848,
+              "end": 1.15
+            },
+            {
+              "text": "the",
+              "start": 1.161,
+              "end": 1.228
+            },
+            {
+              "text": "size",
+              "start": 1.239,
+              "end": 1.529
+            },
+            {
+              "text": "of",
+              "start": 1.54,
+              "end": 1.585
+            },
+            {
+              "text": "a",
+              "start": 1.596,
+              "end": 1.641
+            },
+            {
+              "text": "car",
+              "start": 1.652,
+              "end": 2.02
+            },
+            {
+              "text": "Plus",
+              "start": 2.4,
+              "end": 2.667
+            },
+            {
+              "text": "twenty",
+              "start": 2.679,
+              "end": 2.924
+            },
+            {
+              "text": "tickets",
+              "start": 2.935,
+              "end": 3.393
+            }
+          ]
+        },
+        {
+          "who": "lily",
+          "text": "Fifteen percent! We're legends!",
+          "audio": "ep005/s4_l1.mp3",
+          "start": 4.12,
+          "duration": 2.52,
+          "words": [
+            {
+              "text": "Fifteen",
+              "start": 0.068,
+              "end": 0.5
+            },
+            {
+              "text": "percent",
+              "start": 0.511,
+              "end": 1.08
+            },
+            {
+              "text": "We're",
+              "start": 1.443,
+              "end": 1.591
+            },
+            {
+              "text": "legends",
+              "start": 1.602,
+              "end": 2.182
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "blackout",
+      "cast": [
+        {
+          "who": "you",
+          "x": 540,
+          "pose": "shock",
+          "face": "shock"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "PANIC",
+        "left": 5,
+        "progress": 5
+      },
+      "stamp": {
+        "text": "BLACKOUT",
+        "color": "red",
+        "line": 0
+      },
+      "fx": "shake",
+      "kind": "story",
+      "duration": 6.154,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "Then the screen goes black. Mid-movie.",
+          "audio": "ep005/s5_l0.mp3",
+          "start": 0.25,
+          "duration": 2.304,
+          "words": [
+            {
+              "text": "Then",
+              "start": 0.1,
+              "end": 0.167
+            },
+            {
+              "text": "the",
+              "start": 0.179,
+              "end": 0.246
+            },
+            {
+              "text": "screen",
+              "start": 0.257,
+              "end": 0.558
+            },
+            {
+              "text": "goes",
+              "start": 0.569,
+              "end": 0.792
+            },
+            {
+              "text": "black",
+              "start": 0.804,
+              "end": 1.183
+            },
+            {
+              "text": "Mid-movie",
+              "start": 1.551,
+              "end": 1.953
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Forty zombie fans start booing. Ten want refunds.",
+          "audio": "ep005/s5_l1.mp3",
+          "start": 2.704,
+          "duration": 3.0,
+          "words": [
+            {
+              "text": "Forty",
+              "start": 0.123,
+              "end": 0.279
+            },
+            {
+              "text": "zombie",
+              "start": 0.29,
+              "end": 0.591
+            },
+            {
+              "text": "fans",
+              "start": 0.603,
+              "end": 0.904
+            },
+            {
+              "text": "start",
+              "start": 0.915,
+              "end": 1.161
+            },
+            {
+              "text": "booing",
+              "start": 1.172,
+              "end": 1.44
+            },
+            {
+              "text": "Ten",
+              "start": 1.819,
+              "end": 1.942
+            },
+            {
+              "text": "want",
+              "start": 1.953,
+              "end": 2.121
+            },
+            {
+              "text": "refunds",
+              "start": 2.132,
+              "end": 2.667
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "phone",
+      "cast": [],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "PANIC",
+        "left": 5,
+        "progress": 5
+      },
+      "phone": {
+        "contact": "CHAD VLOGS - LIVE",
+        "messages": [
+          {
+            "from": "them",
+            "text": "LOL the screen died",
+            "line": 0
+          },
+          {
+            "from": "them",
+            "text": "worst cinema ever, it's DONE",
+            "line": 1
+          },
+          {
+            "from": "them",
+            "text": "wait... is that Chad's hand on the switch?",
+            "line": 2
+          }
+        ]
+      },
+      "kind": "story",
+      "duration": 8.704,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "Chad is live. Thousands watching.",
+          "audio": "ep005/s6_l0.mp3",
+          "start": 0.25,
+          "duration": 2.112,
+          "words": [
+            {
+              "text": "Chad",
+              "start": 0.089,
+              "end": 0.268
+            },
+            {
+              "text": "is",
+              "start": 0.279,
+              "end": 0.368
+            },
+            {
+              "text": "live",
+              "start": 0.379,
+              "end": 0.692
+            },
+            {
+              "text": "Thousands",
+              "start": 1.071,
+              "end": 1.384
+            },
+            {
+              "text": "watching",
+              "start": 1.395,
+              "end": 1.775
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "His fans love it.",
+          "audio": "ep005/s6_l1.mp3",
+          "start": 2.512,
+          "duration": 1.872,
+          "words": [
+            {
+              "text": "His",
+              "start": 0.089,
+              "end": 0.179
+            },
+            {
+              "text": "fans",
+              "start": 0.19,
+              "end": 0.424
+            },
+            {
+              "text": "love",
+              "start": 0.435,
+              "end": 0.603
+            },
+            {
+              "text": "it",
+              "start": 0.614,
+              "end": 0.737
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "And in the corner of his stream... his hand. On the power switch.",
+          "audio": "ep005/s6_l2.mp3",
+          "start": 4.534,
+          "duration": 3.72,
+          "words": [
+            {
+              "text": "And",
+              "start": 0.089,
+              "end": 0.156
+            },
+            {
+              "text": "in",
+              "start": 0.167,
+              "end": 0.234
+            },
+            {
+              "text": "the",
+              "start": 0.246,
+              "end": 0.324
+            },
+            {
+              "text": "corner",
+              "start": 0.335,
+              "end": 0.692
+            },
+            {
+              "text": "of",
+              "start": 0.703,
+              "end": 0.77
+            },
+            {
+              "text": "his",
+              "start": 0.781,
+              "end": 0.893
+            },
+            {
+              "text": "stream",
+              "start": 0.904,
+              "end": 1.328
+            },
+            {
+              "text": "his",
+              "start": 1.674,
+              "end": 1.775
+            },
+            {
+              "text": "hand",
+              "start": 1.786,
+              "end": 2.187
+            },
+            {
+              "text": "On",
+              "start": 2.556,
+              "end": 2.623
+            },
+            {
+              "text": "the",
+              "start": 2.634,
+              "end": 2.69
+            },
+            {
+              "text": "power",
+              "start": 2.701,
+              "end": 2.969
+            },
+            {
+              "text": "switch",
+              "start": 2.98,
+              "end": 3.371
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "blackout",
+      "cast": [
+        {
+          "who": "gloria",
+          "x": 760,
+          "pose": "angry",
+          "face": "angry",
+          "flip": true
+        },
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "sad",
+          "face": "sad"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "ON THIN ICE",
+        "left": 5,
+        "progress": 0
+      },
+      "stamp": {
+        "text": "10 MINUTES",
+        "color": "red",
+        "line": 0
+      },
+      "kind": "story",
+      "duration": 7.042,
+      "lines": [
+        {
+          "who": "gloria",
+          "text": "Get my screen back in ten minutes, or you're both fired.",
+          "audio": "ep005/s7_l0.mp3",
+          "start": 0.25,
+          "duration": 3.888,
+          "words": [
+            {
+              "text": "Get",
+              "start": 0.097,
+              "end": 0.298
+            },
+            {
+              "text": "my",
+              "start": 0.309,
+              "end": 0.451
+            },
+            {
+              "text": "screen",
+              "start": 0.463,
+              "end": 0.828
+            },
+            {
+              "text": "back",
+              "start": 0.84,
+              "end": 1.064
+            },
+            {
+              "text": "in",
+              "start": 1.076,
+              "end": 1.17
+            },
+            {
+              "text": "ten",
+              "start": 1.182,
+              "end": 1.383
+            },
+            {
+              "text": "minutes",
+              "start": 1.394,
+              "end": 1.819
+            },
+            {
+              "text": "or",
+              "start": 1.984,
+              "end": 2.137
+            },
+            {
+              "text": "you're",
+              "start": 2.149,
+              "end": 2.279
+            },
+            {
+              "text": "both",
+              "start": 2.291,
+              "end": 2.538
+            },
+            {
+              "text": "fired",
+              "start": 2.55,
+              "end": 3.057
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Refunds. Zero percent sold.",
+          "audio": "ep005/s7_l1.mp3",
+          "start": 4.288,
+          "duration": 2.304,
+          "words": [
+            {
+              "text": "Refunds",
+              "start": 0.089,
+              "end": 0.625
+            },
+            {
+              "text": "Zero",
+              "start": 0.993,
+              "end": 1.25
+            },
+            {
+              "text": "percent",
+              "start": 1.261,
+              "end": 1.607
+            },
+            {
+              "text": "sold",
+              "start": 1.618,
+              "end": 1.964
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "blackout",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "shrug",
+          "face": "neutral"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "point",
+          "face": "neutral",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "ON THIN ICE",
+        "left": 5,
+        "progress": 0
+      },
+      "kind": "story",
+      "duration": 7.378,
+      "lines": [
+        {
+          "who": "lily",
+          "text": "I can fix the projector. But that's Gloria's rule two.",
+          "audio": "ep005/s8_l0.mp3",
+          "start": 0.25,
+          "duration": 3.672,
+          "words": [
+            {
+              "text": "I",
+              "start": 0.068,
+              "end": 0.125
+            },
+            {
+              "text": "can",
+              "start": 0.136,
+              "end": 0.284
+            },
+            {
+              "text": "fix",
+              "start": 0.295,
+              "end": 0.58
+            },
+            {
+              "text": "the",
+              "start": 0.591,
+              "end": 0.693
+            },
+            {
+              "text": "projector",
+              "start": 0.705,
+              "end": 1.375
+            },
+            {
+              "text": "But",
+              "start": 1.75,
+              "end": 1.864
+            },
+            {
+              "text": "that's",
+              "start": 1.875,
+              "end": 2.136
+            },
+            {
+              "text": "Gloria's",
+              "start": 2.148,
+              "end": 2.682
+            },
+            {
+              "text": "rule",
+              "start": 2.693,
+              "end": 2.92
+            },
+            {
+              "text": "two",
+              "start": 2.932,
+              "end": 3.33
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Or you grab Chad's phone and show his fans the truth.",
+          "audio": "ep005/s8_l1.mp3",
+          "start": 4.072,
+          "duration": 2.856,
+          "words": [
+            {
+              "text": "Or",
+              "start": 0.089,
+              "end": 0.179
+            },
+            {
+              "text": "you",
+              "start": 0.19,
+              "end": 0.279
+            },
+            {
+              "text": "grab",
+              "start": 0.29,
+              "end": 0.547
+            },
+            {
+              "text": "Chad's",
+              "start": 0.558,
+              "end": 0.859
+            },
+            {
+              "text": "phone",
+              "start": 0.871,
+              "end": 1.205
+            },
+            {
+              "text": "and",
+              "start": 1.384,
+              "end": 1.451
+            },
+            {
+              "text": "show",
+              "start": 1.462,
+              "end": 1.652
+            },
+            {
+              "text": "his",
+              "start": 1.663,
+              "end": 1.775
+            },
+            {
+              "text": "fans",
+              "start": 1.786,
+              "end": 2.031
+            },
+            {
+              "text": "the",
+              "start": 2.042,
+              "end": 2.109
+            },
+            {
+              "text": "truth",
+              "start": 2.121,
+              "end": 2.511
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "blackout",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "shrug",
+          "face": "neutral"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "point",
+          "face": "neutral",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "ON THIN ICE",
+        "left": 5,
+        "progress": 0
+      },
+      "kind": "choice",
+      "duration": 13.322,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "What do you do?",
+          "audio": "ep005/s9_l0.mp3",
+          "start": 0.25,
+          "duration": 0.84,
+          "words": [
+            {
+              "text": "What",
+              "start": 0.089,
+              "end": 0.145
+            },
+            {
+              "text": "do",
+              "start": 0.156,
+              "end": 0.19
+            },
+            {
+              "text": "you",
+              "start": 0.201,
+              "end": 0.268
+            },
+            {
+              "text": "do",
+              "start": 0.279,
+              "end": 0.502
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "PROJECTOR: Fix the projector.",
+          "audio": "ep005/s9_l1.mp3",
+          "start": 1.24,
+          "duration": 2.04,
+          "words": [
+            {
+              "text": "PROJECTOR",
+              "start": 0.1,
+              "end": 0.536
+            },
+            {
+              "text": "Fix",
+              "start": 0.882,
+              "end": 1.083
+            },
+            {
+              "text": "the",
+              "start": 1.094,
+              "end": 1.172
+            },
+            {
+              "text": "projector",
+              "start": 1.183,
+              "end": 1.696
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Or STREAM: Hijack his stream.",
+          "audio": "ep005/s9_l2.mp3",
+          "start": 3.43,
+          "duration": 2.112,
+          "words": [
+            {
+              "text": "Or",
+              "start": 0.1,
+              "end": 0.19
+            },
+            {
+              "text": "STREAM",
+              "start": 0.201,
+              "end": 0.58
+            },
+            {
+              "text": "Hijack",
+              "start": 0.926,
+              "end": 1.283
+            },
+            {
+              "text": "his",
+              "start": 1.295,
+              "end": 1.417
+            },
+            {
+              "text": "stream",
+              "start": 1.429,
+              "end": 1.763
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Comment one word: PROJECTOR or STREAM. The most-liked one decides part 2.",
+          "audio": "ep005/s9_l3.mp3",
+          "start": 5.692,
+          "duration": 4.68,
+          "words": [
+            {
+              "text": "Comment",
+              "start": 0.089,
+              "end": 0.391
+            },
+            {
+              "text": "one",
+              "start": 0.402,
+              "end": 0.592
+            },
+            {
+              "text": "word",
+              "start": 0.603,
+              "end": 0.915
+            },
+            {
+              "text": "PROJECTOR",
+              "start": 1.15,
+              "end": 1.708
+            },
+            {
+              "text": "or",
+              "start": 1.808,
+              "end": 1.897
+            },
+            {
+              "text": "STREAM",
+              "start": 1.909,
+              "end": 2.299
+            },
+            {
+              "text": "The",
+              "start": 2.679,
+              "end": 2.734
+            },
+            {
+              "text": "most-liked",
+              "start": 2.746,
+              "end": 3.237
+            },
+            {
+              "text": "one",
+              "start": 3.248,
+              "end": 3.438
+            },
+            {
+              "text": "decides",
+              "start": 3.449,
+              "end": 3.806
+            },
+            {
+              "text": "part 2",
+              "start": 3.817,
+              "end": 4.33
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "music": "ep005/music.mp3"
+}

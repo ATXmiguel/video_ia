@@ -44,6 +44,9 @@ const Hair: React.FC<{look: Look; r: number; layer: 'back' | 'front'; frame: num
         </g>
       );
     }
+    if (look.hair === 'bun') {
+      return <circle cx={0} cy={-1.12 * r} r={0.42 * r} fill={c} stroke={INK} strokeWidth={sw} />;
+    }
     return null;
   }
   switch (look.hair) {
@@ -79,6 +82,25 @@ const Hair: React.FC<{look: Look; r: number; layer: 'back' | 'front'; frame: num
           <path d={`M ${-0.98 * r} ${-0.05 * r} Q ${-1.12 * r} ${0.2 * r} ${-0.9 * r} ${0.4 * r} Z`} />
           <path d={`M ${0.98 * r} ${-0.05 * r} Q ${1.12 * r} ${0.2 * r} ${0.9 * r} ${0.4 * r} Z`} />
         </g>
+      );
+    case 'bun':
+      return (
+        <path
+          d={`M ${-1.02 * r} ${0.1 * r} A ${1.02 * r} ${1.02 * r} 0 0 1 ${1.02 * r} ${0.1 * r} Q ${0.6 * r} ${-0.45 * r} ${0} ${-0.42 * r} Q ${-0.6 * r} ${-0.45 * r} ${-1.02 * r} ${0.1 * r} Z`}
+          fill={c}
+          stroke={INK}
+          strokeWidth={sw}
+        />
+      );
+    case 'swoop':
+      return (
+        <path
+          d={`M ${-1.05 * r} ${0.05 * r} Q ${-1.15 * r} ${-1.15 * r} ${0.2 * r} ${-1.2 * r} Q ${1.45 * r} ${-1.15 * r} ${1.25 * r} ${-0.15 * r} Q ${0.6 * r} ${-0.75 * r} ${-0.35 * r} ${-0.38 * r} Q ${-0.8 * r} ${-0.25 * r} ${-1.05 * r} ${0.05 * r} Z`}
+          fill={c}
+          stroke={INK}
+          strokeWidth={sw}
+          strokeLinejoin="round"
+        />
       );
     case 'puff':
       return look.shades ? (
@@ -181,6 +203,13 @@ export const Head: React.FC<{who: Exclude<Who, 'narrator'>; r: number; face?: Fa
       <circle cx={0} cy={0} r={r} fill={SKIN} stroke={INK} strokeWidth={7} />
       <Hair look={look} r={r} layer="front" frame={frame} />
       <FaceArt face={face} r={r} blink={blink} talking={talking} frame={frame} mustache={look.mustache} />
+      {look.glasses && (
+        <g fill="none" stroke={INK} strokeWidth={6}>
+          <rect x={-0.62 * r} y={-0.2 * r} width={0.52 * r} height={0.42 * r} rx={0.1 * r} />
+          <rect x={0.1 * r} y={-0.2 * r} width={0.52 * r} height={0.42 * r} rx={0.1 * r} />
+          <line x1={-0.1 * r} y1={-0.05 * r} x2={0.1 * r} y2={-0.05 * r} />
+        </g>
+      )}
     </g>
   );
 };

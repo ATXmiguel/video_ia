@@ -77,7 +77,7 @@ const SceneBlock: React.FC<{scene: BuiltScene; prevHud: HudT; first: boolean; du
       )}
       {isRecap && build.topComment && (
         <Sequence from={hudFrom} layout="none">
-          <TopComment {...build.topComment} episode={build.episode} />
+          <TopComment {...build.topComment} part={build.arc?.part ?? build.episode} />
         </Sequence>
       )}
       {scene.stamp && stampFrame >= 0 && (

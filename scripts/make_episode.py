@@ -34,6 +34,8 @@ VOICES = {
     "tyler": ("en-US-EricNeural", "+12%", "+0Hz"),
     "lily": ("en-US-EmmaNeural", "+10%", "+6Hz"),
     "brenda": ("en-US-MichelleNeural", "+14%", "+12Hz"),
+    "gloria": ("en-US-AriaNeural", "+6%", "-6Hz"),
+    "chad": ("en-US-RogerNeural", "+12%", "+2Hz"),
 }
 
 

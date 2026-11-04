@@ -2,7 +2,7 @@
 
 export type Word = {text: string; start: number; end: number}; // seconds, relative to the line's audio
 
-export type Who = 'narrator' | 'you' | 'kevin' | 'tyler' | 'lily' | 'brenda';
+export type Who = 'narrator' | 'you' | 'kevin' | 'tyler' | 'lily' | 'brenda' | 'gloria' | 'chad';
 
 export type Line = {
   who: Who;
@@ -33,7 +33,7 @@ export type Phone = {contact: string; messages: {from: 'me' | 'them'; text: stri
 export type Stamp = {text: string; color: 'red' | 'green' | 'yellow' | 'blue'; line?: number};
 
 export type SceneSpec = {
-  set: 'exterior' | 'counter' | 'kitchen' | 'dining' | 'phone';
+  set: 'exterior' | 'counter' | 'kitchen' | 'dining' | 'marquee' | 'lobby' | 'auditorium' | 'blackout' | 'phone';
   cast: CastMember[];
   hud: Hud;
   stamp?: Stamp;

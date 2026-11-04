@@ -59,6 +59,7 @@ New recurring characters need a `CAST` entry (look) and a `VOICES` entry before 
 | # | job | parts | how it ended | views best part |
 |---|---|---|---|---|
 | 1 | Big Bun's (burger place) | 4 (ended early: part 3 had 70% fewer views than part 1) | Tyler busted on video and put on mop duty; Brenda turns out to OWN Big Bun's, fires Kevin and makes YOU manager — then the fryer, still on MAX, explodes and Big Bun's closes forever. Lily comes along to the next job | 1,096 (part 1) |
+| 2 | Starlite Cinema (old movie theater) | in progress | finish line: 5 shifts to sell out Friday's premiere (Zombie Prom 3) or it becomes a parking lot | |
 
 ## Canon so far (story 1: Big Bun's)
 
@@ -79,3 +80,13 @@ New recurring characters need a `CAST` entry (look) and a `VOICES` entry before 
   come back plus Tyler's. Twist: **Brenda owns Big Bun's**; she puts Kevin out and makes YOU manager on day four. Then the
   fryer (still on MAX) explodes and Big Bun's closes forever. Lily: "So... where do we work next?"
   Next-story vote: THEATER (movie theater) / PARK (theme park). Lily can follow YOU into story 2.
+
+## Canon so far (story 2: Starlite Cinema)
+
+Cast: **gloria** (owner-manager, gray bun, glasses, dark suit; strict; rule two: nobody touches her projector), **chad** (head
+usher, blond swoop, purple shirt, 2M followers, films everything), lily came along. HUD: SHIFTS LEFT / SOLD OUT %.
+
+- Ep 5 (story 2 part 1) "New job: old cinema. 5 shifts to save it?!" — vote THEATER won (@heitorfelix3482, 2 likes). Gloria: sell
+  out Friday or it's a parking lot. You sell a car-sized popcorn bucket (15%). The screen goes black mid-movie, refunds, back to 0%.
+  Twist: Chad's live stream shows his own hand on the power switch. Gloria: ten minutes or you're both fired.
+  Choice: PROJECTOR (Lily fixes it, breaks rule two) / STREAM (hijack Chad's live, show his fans the truth).

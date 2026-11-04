@@ -55,7 +55,7 @@ export const PhoneScreen: React.FC<{scene: BuiltScene}> = ({scene}) => {
               <div style={{fontFamily: BODY, fontWeight: 600, fontSize: 28, color: '#2fb36a'}}>online</div>
             </div>
           </div>
-          <div style={{flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', gap: 22, padding: '30px 34px 60px'}}>
+          <div style={{flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', gap: 22, padding: '30px 34px 60px'}}>
             {phone.messages.map((m, i) => {
               const s = spring({frame: frame - at(i), fps, config: {damping: 13}});
               if (frame < at(i)) return null;
