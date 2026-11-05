@@ -59,6 +59,18 @@ export const P: Record<string, Partial<Pose>> = {
   deskReady: {lean: 6, headX: 2, near: [36, 46], far: [30, 60], rootY: 0},
   sit: {rootY: 112, lean: 5, nearFoot: [112, 0], farFoot: [96, 0], near: [30, 50], far: [18, 56]},
   sitDesk: {rootY: 112, lean: 12, headX: 6, nearFoot: [112, 0], farFoot: [96, 0], near: [52, 42], far: [44, 52]},
+  // Added for data-built films (src/special/Film.tsx).
+  grab: {lean: 6, near: [78, 22], far: [64, 30], rootY: 4, nearFoot: [22, 0], farFoot: [-24, 0]},
+  carry: {lean: -2, near: [46, 52], far: [40, 58], headX: -1},
+  point: {lean: 4, near: [86, 6], far: [-6, 14], headX: 3},
+  pour: {lean: 9, headX: 6, near: [62, 34], far: [-4, 40], nearFoot: [20, 0], farFoot: [-24, 0], rootY: 2},
+  raiseHand: {lean: 0, near: [142, 8], far: [-6, 14], headX: -3},
+  flail: {lean: -4, near: [132, 30], far: [150, -18], headY: 2},
+  crouch: {lean: 22, headX: 12, headY: 8, rootY: 46, near: [30, 34], far: [18, 40], nearFoot: [30, 0], farFoot: [-30, 0]},
+  sitDown: {rootY: 112, lean: 5, nearFoot: [112, 0], farFoot: [96, 0], near: [40, 44], far: [28, 50]},
+  sitForkUp: {rootY: 112, lean: 8, headX: 3, nearFoot: [112, 0], farFoot: [96, 0], near: [48, 86], far: [44, 52]},
+  sitForkDown: {rootY: 112, lean: 14, headX: 7, nearFoot: [112, 0], farFoot: [96, 0], near: [58, 24], far: [50, 30]},
+  sitFloat: {rootY: 60, lean: -6, nearFoot: [92, 24], farFoot: [70, 12], near: [70, 30], far: [60, 40]},
 };
 
 export type Ease = 'io' | 'snap' | 'out' | 'in' | 'slow';
@@ -97,7 +109,7 @@ export const poseAt = (track: Key[], f: number, start: Pose = NEUTRAL): Pose => 
   return p;
 };
 
-export type Walk = {from: number; to: number; x0: number; x1: number; cycle?: number};
+export type Walk = {from: number; to: number; x0: number; x1: number; cycle?: number; keepArms?: boolean};
 
 // Measured cycle: 16 frames, so 8 per step. The head rises and falls twice per cycle by about a tenth of its diameter.
 const walkPose = (w: Walk, f: number, settle: Pose): Pose => {
@@ -129,8 +141,8 @@ const walkPose = (w: Walk, f: number, settle: Pose): Pose => {
     headX: 2 + 1.5 * Math.cos(2 * Math.PI * ph),
     headY: 0,
     dir: dirn,
-    near: [-22 * swing + 4, 18 + 10 * Math.max(0, -swing)],
-    far: [22 * swing + 4, 18 + 10 * Math.max(0, swing)],
+    near: w.keepArms ? settle.near : [-22 * swing + 4, 18 + 10 * Math.max(0, -swing)],
+    far: w.keepArms ? settle.far : [22 * swing + 4, 18 + 10 * Math.max(0, swing)],
     nearFoot: [a.x, a.y],
     farFoot: [b.x, b.y],
     nearToe: a.toe,
@@ -410,6 +422,8 @@ export type PuppetProps = {
   sway?: number; // gentle drift while holding a pose; about half a percent of the head
   hold?: (J: Joints) => React.ReactNode;
   id?: string;
+  lookDef?: Look; // a film's own costume, instead of a name from LOOKS
+  lift?: number; // raises the body off the floor while the floor shadow stays on the floor
 };
 
 export const RigDefs: React.FC = () => (
@@ -427,8 +441,8 @@ export const RigDefs: React.FC = () => (
   </defs>
 );
 
-export const Puppet: React.FC<PuppetProps> = ({look, x, y, s = 1, frame, track = [], face = [], walks = [], visemes, start, rim = '#e8a25a', light, floorShadow, wallShadow, highlight, sway = 1, hold, id}) => {
-  const L = LOOKS[look] ?? LOOKS.extra;
+export const Puppet: React.FC<PuppetProps> = ({look, x, y, s = 1, frame, track = [], face = [], walks = [], visemes, start, rim = '#e8a25a', light, floorShadow, wallShadow, highlight, sway = 1, hold, id, lookDef, lift = 0}) => {
+  const L = lookDef ?? LOOKS[look] ?? LOOKS.extra;
   let pose = poseAt(track, frame, start ?? NEUTRAL);
   const walk = walks.find((w) => frame >= w.from && frame < w.to);
   const lastWalk = walks.filter((w) => frame >= w.to).pop();
@@ -480,8 +494,8 @@ export const Puppet: React.FC<PuppetProps> = ({look, x, y, s = 1, frame, track =
           <Silhouette J={J} L={L} tone="#000" />
         </g>
       )}
-      {floorShadow && <ellipse cx={wx + shadowX * 36 * s} cy={y + 3} rx={82 * s} ry={13 * s} fill="#000" opacity={0.5} filter="url(#rigSoftFloor)" />}
-      <g transform={`translate(${wx} ${y}) scale(${dirS * s} ${s})`}>
+      {floorShadow && <ellipse cx={wx + shadowX * 36 * s} cy={y + 3} rx={82 * s} ry={13 * s} fill="#000" opacity={0.5 / (1 + lift / 120)} filter="url(#rigSoftFloor)" />}
+      <g transform={`translate(${wx} ${y - lift}) scale(${dirS * s} ${s})`}>
         <g transform={`translate(${rimX} ${rimY})`}>
           <Silhouette J={J} L={L} tone={rim} />
         </g>

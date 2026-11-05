@@ -309,8 +309,7 @@ These are 12% of shots and the most distinctive. On wood at `#674f37` to `#6f553
 - **Cuts lean toward phrase starts but aren't tied to them:** 37% fall within 0.25 s of one (random: 21%). 28% land inside a word.
 - **Rule:** let picture run under speech. Cut on the idea change, or mid-phrase on the noun being shown, and don't pad shots to fit lines.
 
-**What this means for our builder:** `make_special.py` makes each shot as long as its lines plus padding, one shot per line group. That alone forces our 5 s pace. A next film needs the voice laid
-out first, then shots timed against it with several shots per line.
+**What this means for our builder:** `make_special.py` makes each shot as long as its lines plus padding, one shot per line group. That alone forces our 5 s pace. A next film should use `scripts/make_film.py` (section 17), which lays the voice out first and times shots against it, with several shots per line.
 
 ## 13. Sound (measured, not heard)
 
@@ -332,7 +331,8 @@ out first, then shots timed against it with several shots per line.
 | Detailed room, top-down hand, wood, dust, pill, torn wipe | `src/special/world.tsx` |
 | Example scene using all of it | `src/special/Proof.tsx`, composition `SpecialProof` |
 | Voices, mouth shapes, stereo bed, render | `scripts/make_proof.py` |
-| Measure any film | `scripts/whatif/` (see below) |
+| Measure any film | `scripts/whatif/` (see below), or `measure_film.sh` for all of it at once |
+| Build a film from a data file | `scripts/make_film.py`, `src/special/Film.tsx`, `filmActs.ts`, `filmProps.tsx`, `filmSets.tsx` (section 17) |
 
 `Special.tsx`, `Sil.tsx` and `sets.tsx` are unchanged, so the published film still rebuilds. A next film should build its shots on `Puppet` and `world.tsx`.
 
@@ -416,4 +416,136 @@ Not addressed:
 - Lip movement is derived from loudness and has not been judged by ear.
 - Whether the clip plays well at full speed. A person needs to watch it.
 
-**Cost to keep in mind.** `Proof.tsx` is about 520 lines for 19 s, and rendering took about 8 minutes at 1080p with blur layers. A full film at this pace is about 130 shots for 5 minutes, so it needs a shot data format rather than hand-written components, plus a builder that lays out voice first (section 12). Neither exists yet.
+**Cost to keep in mind.** `Proof.tsx` is about 520 lines for 19 s, and rendering took about 8 minutes at 1080p with blur layers. A full film at this pace is about 130 shots for 5 minutes, so it needs a shot data format rather than hand-written components, plus a builder that lays out voice first (section 12). Section 17 is that builder.
+
+## 17. The film builder
+
+`scripts/make_film.py` builds a film from one data file, `specials/<slug>/film.json`. It is separate from the daily series (`make_episode.py`, `Episode.tsx`) and from the published special (`make_special.py`, `Special.tsx`).
+
+```bash
+python3 scripts/make_film.py gravity-off --check
+```
+
+```bash
+python3 scripts/make_film.py gravity-off --preview
+```
+
+```bash
+python3 scripts/make_film.py gravity-off
+```
+
+`--check` makes the voices and prints the timing report, without rendering. `--preview` renders at half size with no sound. With neither flag, the film is written to `out/film/<slug>/<slug>.mp4` at -15 LUFS. On Windows, use the `python3` that has `truststore` and `edge_tts` installed.
+
+**How a film is built:**
+
+1. **Voice.** Every line is spoken with edge-tts, with word timings. Each script item gets its place on the clock from the line's length plus `after`, or from `silence`. Audio is cached by text and voice.
+2. **Cuts.** Each shot's cut is placed against that voice. A shot runs until the next cut, so picture runs under speech and nothing is padded to fit a line.
+3. **Lint.** The plan is compared with the measured targets before any render time is spent.
+4. **Render.** The `SpecialFilm` composition draws shots from the data. Mouths come from the voice automatically, for whoever is speaking and in frame.
+
+**Script items.** A line has `id`, `who`, `text`, `after` (seconds of silence following it) and `shots`. A silent beat has `id`, `silence` (seconds) and `shots`.
+
+**Placing a cut.** The first shot of an item starts with that item unless told otherwise.
+
+| Field | Cut falls |
+|---|---|
+| `on: "coffee"` | On that word. Case and accents are ignored, and repeated words are found in order. |
+| `tail: 0.25` | That many seconds after the line ends |
+| `at: 1.2` | That many seconds after the item starts |
+| None of these | Evenly between its neighbours |
+| `nudge: -4` | Moves any of the above by frames |
+
+**A shot:**
+
+```json
+{"id": "gasp", "kind": "close", "set": "diner", "cx": 760, "cy": 470, "light": [1320, 40],
+ "action": "Tess flinches as a lump of coffee drifts past her face",
+ "cast": [{"who": "tess", "face": {"eyes": "dot", "mouth": "flat"}, "acts": [{"a": "flinch", "at": 3}]}],
+ "props": [{"p": "blob", "x": 1560, "y": 420, "s": 1.5, "moves": [{"at": 0, "dur": 40, "x": 1250}]}]}
+```
+
+- **`action` is required.** It names the shot's one action, in words (section 5).
+- **`kind` sets the measured camera defaults:** `wide` (1 %/s push), `medium`, `close` (locked, background blur 9), `rack`, `top` (1.3 %/s), `insert` (2.2 %/s). Override with `z`, `push`, `cx`, `to` for a pan, or `step` for the eased fast zoom.
+- **`acts`** take an action from `filmActs.ts` or any pose name from `P` in `rig.tsx`, with the measured frame counts built in. They start on frame 6 unless `at` says otherwise.
+- **`props`** come from `filmProps.tsx`, with `moves` as keyframes. A cast member's `hold` puts one in their hand.
+- **Also available:** `pill`, `sfx`, `trans` (`torn` or `dissolve`), `walks` (with `keepArms` for carrying), `rack`, `motes`, `fore`.
+- **`develops: true`** allows a shot over 4 s that has its own internal development.
+- **At film level:** `looks` for costumes, `voices` as `[voice, rate, pitch]`, and `bedVolume`, `roomVolume`, `lead`, `tail`, `fade`.
+
+**A new set** goes in `SETS` in `filmSets.tsx`. The diner and street are examples, and the proof's lobby is registered there too.
+
+**The lint fails on:** a missing action; a shot where nothing moves; a first move after frame 12; a shot over 4 s without `develops`; a shot under 10 frames; and mean, median, same-kind-in-a-row or wordless-shot figures outside the target range. Treat its timing as a floor rather than proof of quality. It can only read what the data asks for.
+
+**To measure a render and make the comparison stills** (these contain reference frames, so they stay under `out/`):
+
+```bash
+PYTHON=python3 bash scripts/whatif/measure_film.sh out/film/gravity-off/gravity-off.mp4 out/film/gravity-off/data out/film/gravity-off/words.json
+```
+
+```bash
+python3 scripts/whatif/compare_film.py <reference_frames_dir> docs/whatif/shots.csv out/film/gravity-off/gravity-off.mp4 out/film/gravity-off/timeline.json out/film/gravity-off/compare out/film/gravity-off/data/shots_raw.csv
+```
+
+### The test scene
+
+"What If Gravity Took One Second Off?" is an original test in `specials/gravity-off/film.json`: 26 shots, 60.7 s, two new day sets. Rendering took 5 to 8 minutes at 1080p on this machine, against about 8 minutes for the 19 s proof. The direction lives entirely in the data file.
+
+| Measure | Reference | Test scene | Reading |
+|---|---|---|---|
+| Mean shot, as planned | 2.27 s | 2.33 s | Close |
+| Median shot, as planned | 1.85 s | 2.08 s | A little long |
+| Shot length p10 to p90 | 0.88 to 4.21 s | 1.25 to 3.62 s | Narrower: too even |
+| Frames with local motion | 60% | 52% | Under, above the 50% target |
+| Shots with no local motion | 2.6% | 0 | Met |
+| Motion bursts per 10 s | 9.2 | 8.4 | Close |
+| Median push: wide, close-up, top-down | 0.96, 0.04, 1.27 %/s | 1.03, 0.01, 1.31 %/s | Close |
+| Median push: insert | 2.2 %/s | 0.17 %/s measured | Tracker reads the still background. Only the object pushes. |
+| Same kind follows itself | 25% | 12% | Over-rotated |
+| Words per shot, median and p90 | 3 and 9 | 4 and 7.7 | Close |
+| Shots with no words | 21% | 12.5% | Too few |
+| Cuts within 0.25 s of a phrase start | 37% | 48% | Too tied to phrases |
+| Cuts landing inside a word | 28% | 24% | Close |
+| Words per second, inside phrases | 2.8 | 3.07 | A little fast, after slowing the voices |
+| Speech share of running time | 59% | 50% | Under |
+| Integrated loudness, range, true peak | -15.0 LUFS, 4.7 LU, -1.6 dBFS | -15.3 LUFS, 5.4 LU, -1.4 dBFS | Close |
+| Side vs mid | -19 dB | -25.6 dB | Now too narrow. The proof was too wide at -5 dB. |
+| Voice above the bed | 11.6 dB | 6.1 dB | **Bed is still too loud** |
+| Bed in gaps between words | -29.3 dB | -25.3 dB | **Same problem** |
+| Cuts with a jump over 6 dB | 23% | 12% | Too few cuts carry a sound |
+| Overall median luma | 75 | 105 | Too bright, because only day sets exist so far |
+| Corner over center | 0.57 | 0.65 | Lighter vignette |
+
+**About those figures:**
+
+- The cut detector found 26 shots, but they are not all the right 26. It missed the torn wipe at frame 1003 and counted the fast zoom at frame 24 as a cut. So its 1.88 s median is off, and the table uses the planned cuts for shot lengths. The other 24 planned cuts were all found.
+- 60 s of carefully written data can score well on these. As with the proof, they show the method reaches the numbers, not that a 5-minute film will.
+
+**Judged from frames: two frames per shot in contact sheets, a few side-by-side stills. Nobody watched it at speed or listened to it.**
+
+Closed, or close:
+
+- **Pace and structure.** Several shots per line, cuts on nouns, shots running under speech and across line ends. Rendering from data worked on all 26 shots.
+- **Readable single actions.** Each planned action can be read in the stills, including the rise, the drop and the cake leaving her hands.
+- **Rack focus, torn wipe, pills, eased zoom and tracked walks** all work from data alone.
+
+Better but still short:
+
+- **Staging.** The diner is the weakest. Six diners sit in a symmetrical row, nearly the same size and evenly spaced, and it looks posed. The reference places fewer, smaller figures with more air and depth.
+- **Rim light.** It meets the guide's size, but in the bright diner a pale rim plus dark sleeve outlines reads as a sticker edge. It is heavier than in the reference.
+- **Light.** Rooms are evenly lit and bright, without the reference's soft pools and shadow.
+- **Sets.** The diner and street have decent detail but flat shop windows and simple props.
+
+Known weak moments in the test scene:
+
+- People holding the lamp post at the end read more like a hug.
+- The floating coffee reads more as a brown lump than as liquid.
+- Top-down hands still read as gloves (section 2, gap 7).
+- The insert push isn't visible on the blurred background, so it may read as locked.
+
+Not addressed or not tested:
+
+- **Whether it works at full speed**, and whether anything is funny. A person needs to watch it.
+- **Voice and music by ear.** The bed is the same kind of synthesized test and doesn't move by act. Its volume needs lowering further, by someone listening.
+- **Lip movement.** Still derived from loudness.
+- **A long film.** Writing 130 shots of this JSON is real work, about 26 shots here for 60 s. Nothing here tests holding a story, a set or a character across 5 minutes.
+- **Portuguese.** The word anchors ignore accents and voices are set per film, so the format allows it, but no Portuguese line has been run.

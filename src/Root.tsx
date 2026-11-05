@@ -5,6 +5,7 @@ import {TerminalReplay} from './TerminalReplay';
 import {Episode, FPS, totalFrames} from './Episode';
 import {Special, SPECIAL_FPS, specialFrames, type SpecialBuild} from './special/Special';
 import {Proof, PROOF_FRAMES, type ProofBuild} from './special/Proof';
+import {Film, filmFrames, type FilmBuild} from './special/Film';
 import type {Build} from './types';
 import latest from './latest.json';
 
@@ -49,6 +50,16 @@ export const RemotionRoot: React.FC = () => (
     fps={SPECIAL_FPS}
     durationInFrames={PROOF_FRAMES}
     defaultProps={{lines: {}, bed: '', room: ''} as unknown as ProofBuild}
+  />
+  <Composition
+    id="SpecialFilm"
+    component={Film}
+    width={1920}
+    height={1080}
+    fps={SPECIAL_FPS}
+    durationInFrames={240}
+    defaultProps={{frames: 240, shots: [], lines: [], looks: {}} as unknown as FilmBuild}
+    calculateMetadata={({props}) => ({durationInFrames: Math.max(1, filmFrames(props))})}
   />
   </>
 );

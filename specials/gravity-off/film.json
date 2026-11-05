@@ -1,0 +1,2501 @@
+{
+ "title": "What If Gravity Took One Second Off?",
+ "lead": 0.3,
+ "tail": 0.4,
+ "fade": 14,
+ "bedVolume": 0.16,
+ "roomVolume": 0.08,
+ "looks": {
+  "tess": {
+   "torso": "#c4492f",
+   "sleeve": "#b03f28",
+   "item": "bob"
+  },
+  "gus": {
+   "torso": "#d8d2c2",
+   "item": "slick",
+   "tie": "#5e2531"
+  },
+  "cook": {
+   "torso": "#e6e0d0",
+   "legs": "#3a3a3a",
+   "item": "hat"
+  },
+  "barber": {
+   "torso": "#cfd4cc",
+   "item": "tufts",
+   "tie": "#2c5f60"
+  },
+  "painter": {
+   "torso": "#7e8573",
+   "legs": "#6d7364",
+   "item": "curls"
+  },
+  "guy": {
+   "torso": "#5c6a6e"
+  },
+  "guy2": {
+   "torso": "#54605a",
+   "item": "slick"
+  },
+  "gal": {
+   "torso": "#6f5a66",
+   "item": "bun"
+  },
+  "gal2": {
+   "torso": "#6a5f4c",
+   "item": "bob"
+  },
+  "reader": {
+   "torso": "#4f5a52",
+   "item": "curls"
+  }
+ },
+ "voices": {
+  "tess": [
+   "en-US-AriaNeural",
+   "-6%",
+   "+0Hz"
+  ],
+  "gus": [
+   "en-US-GuyNeural",
+   "-10%",
+   "-4Hz"
+  ],
+  "narrator": [
+   "en-US-AndrewNeural",
+   "-10%",
+   "-2Hz"
+  ]
+ },
+ "script": [
+  {
+   "id": "n01",
+   "who": "narrator",
+   "text": "What if, once an hour, gravity took one second off?",
+   "after": 0.6,
+   "shots": [
+    {
+     "id": "mug",
+     "kind": "top",
+     "action": "a hand sets the spoon down, then the lens steps back to show breakfast",
+     "focus": [
+      1060,
+      470
+     ],
+     "z": 1.7,
+     "step": {
+      "at": 16,
+      "to": 0.64,
+      "toFocus": [
+       960,
+       540
+      ]
+     },
+     "motes": true,
+     "props": [
+      {
+       "p": "plate",
+       "x": 640,
+       "y": 560,
+       "n": 1,
+       "r": 8,
+       "shadow": true
+      },
+      {
+       "p": "toast",
+       "x": 320,
+       "y": 260,
+       "r": -14,
+       "shadow": true
+      },
+      {
+       "p": "fork",
+       "x": 330,
+       "y": 700,
+       "r": -24,
+       "shadow": true
+      },
+      {
+       "p": "napkin",
+       "x": 1510,
+       "y": 860,
+       "r": 12,
+       "shadow": true
+      },
+      {
+       "p": "topMug",
+       "x": 1060,
+       "y": 440,
+       "shadow": true
+      },
+      {
+       "p": "spoon",
+       "x": 1320,
+       "y": 250,
+       "r": 28,
+       "shadow": true,
+       "moves": [
+        {
+         "at": 4,
+         "dur": 9,
+         "y": 380,
+         "x": 1300,
+         "r": 12
+        }
+       ]
+      },
+      {
+       "p": "hand",
+       "x": 1390,
+       "y": 440,
+       "r": -18,
+       "s": 1.35,
+       "c": "#b03f28",
+       "curl": [
+        0.3,
+        0.2,
+        0.26,
+        0.34
+       ],
+       "moves": [
+        {
+         "at": 4,
+         "dur": 9,
+         "y": 570
+        },
+        {
+         "at": 20,
+         "dur": 10,
+         "y": 1060,
+         "x": 1520
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "room",
+     "on": "gravity",
+     "kind": "wide",
+     "set": "diner",
+     "cx": 640,
+     "action": "Gus tips the pot over a cup while the diners eat",
+     "cast": [
+      {
+       "who": "tess",
+       "x": 430,
+       "dir": 1,
+       "pose": "sitDown",
+       "face": {
+        "eyes": "dot",
+        "mouth": "flat",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "fuss",
+         "at": 3,
+         "n": 8
+        }
+       ]
+      },
+      {
+       "who": "guy",
+       "x": 730,
+       "dir": -1,
+       "pose": "sitDown",
+       "face": {
+        "eyes": "dot",
+        "mouth": "flat",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "fuss",
+         "at": 5,
+         "n": 8
+        }
+       ]
+      },
+      {
+       "who": "gal",
+       "x": -50,
+       "dir": 1,
+       "pose": "sitDown",
+       "face": {
+        "eyes": "dot",
+        "mouth": "flat",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "fuss",
+         "at": 7,
+         "n": 8
+        }
+       ]
+      },
+      {
+       "who": "reader",
+       "x": 250,
+       "dir": -1,
+       "pose": "sitDown",
+       "face": {
+        "eyes": "dot",
+        "mouth": "flat",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "fuss",
+         "at": 9,
+         "n": 8
+        }
+       ]
+      },
+      {
+       "who": "guy2",
+       "x": 910,
+       "dir": 1,
+       "pose": "sitDown",
+       "face": {
+        "eyes": "dot",
+        "mouth": "flat",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "fuss",
+         "at": 11,
+         "n": 8
+        }
+       ]
+      },
+      {
+       "who": "gal2",
+       "x": 1210,
+       "dir": -1,
+       "pose": "sitDown",
+       "face": {
+        "eyes": "dot",
+        "mouth": "flat",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "fuss",
+         "at": 13,
+         "n": 8
+        }
+       ]
+      },
+      {
+       "who": "gus",
+       "x": 850,
+       "dir": -1,
+       "pose": "stand",
+       "face": {
+        "eyes": "dot",
+        "mouth": "smile",
+        "look": 0.5
+       },
+       "hold": {
+        "p": "coffeepot",
+        "x": 6,
+        "y": 40,
+        "s": 0.8
+       },
+       "acts": [
+        {
+         "a": "pour",
+         "at": 6,
+         "dur": 8
+        }
+       ]
+      }
+     ],
+     "props": [
+      {
+       "p": "mug",
+       "x": 520,
+       "y": 718,
+       "s": 0.8,
+       "layer": "back"
+      },
+      {
+       "p": "mug",
+       "x": 650,
+       "y": 718,
+       "s": 0.8,
+       "layer": "back"
+      },
+      {
+       "p": "mug",
+       "x": 1000,
+       "y": 718,
+       "s": 0.8,
+       "layer": "back"
+      },
+      {
+       "p": "mug",
+       "x": 1130,
+       "y": 718,
+       "s": 0.8,
+       "layer": "back"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "n02",
+   "who": "narrator",
+   "text": "Just one.",
+   "after": 0.15,
+   "shots": [
+    {
+     "id": "look",
+     "kind": "close",
+     "set": "diner",
+     "cx": 760,
+     "cy": 470,
+     "light": [
+      1320,
+      40
+     ],
+     "action": "Tess's eyes come up off her plate",
+     "cast": [
+      {
+       "who": "tess",
+       "face": {
+        "eyes": "dot",
+        "mouth": "flat",
+        "look": 0.3,
+        "lookY": 0.8
+       },
+       "acts": [
+        {
+         "a": "lookUp",
+         "at": 5
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1",
+   "silence": 3.8,
+   "shots": [
+    {
+     "id": "rise",
+     "kind": "wide",
+     "set": "diner",
+     "cx": 640,
+     "action": "the whole room lifts a hand's width off the floor",
+     "sfx": [
+      {
+       "s": "rumble",
+       "at": 0,
+       "v": 0.18,
+       "len": 48
+      }
+     ],
+     "cast": [
+      {
+       "who": "tess",
+       "x": 430,
+       "dir": 1,
+       "pose": "sitDown",
+       "face": {
+        "eyes": "dot",
+        "mouth": "flat",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "rise",
+         "at": 4,
+         "h": 64,
+         "dur": 9
+        },
+        {
+         "a": "sitFloat",
+         "at": 4,
+         "dur": 9,
+         "eyes": "wide",
+         "mouth": "o"
+        }
+       ]
+      },
+      {
+       "who": "guy",
+       "x": 730,
+       "dir": -1,
+       "pose": "sitDown",
+       "face": {
+        "eyes": "dot",
+        "mouth": "flat",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "rise",
+         "at": 5,
+         "h": 69,
+         "dur": 9
+        },
+        {
+         "a": "sitFloat",
+         "at": 5,
+         "dur": 9,
+         "eyes": "wide",
+         "mouth": "o"
+        }
+       ]
+      },
+      {
+       "who": "gal",
+       "x": -50,
+       "dir": 1,
+       "pose": "sitDown",
+       "face": {
+        "eyes": "dot",
+        "mouth": "flat",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "rise",
+         "at": 6,
+         "h": 74,
+         "dur": 9
+        },
+        {
+         "a": "sitFloat",
+         "at": 6,
+         "dur": 9,
+         "eyes": "wide",
+         "mouth": "o"
+        }
+       ]
+      },
+      {
+       "who": "reader",
+       "x": 250,
+       "dir": -1,
+       "pose": "sitDown",
+       "face": {
+        "eyes": "dot",
+        "mouth": "flat",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "rise",
+         "at": 4,
+         "h": 79,
+         "dur": 9
+        },
+        {
+         "a": "sitFloat",
+         "at": 4,
+         "dur": 9,
+         "eyes": "wide",
+         "mouth": "o"
+        }
+       ]
+      },
+      {
+       "who": "guy2",
+       "x": 910,
+       "dir": 1,
+       "pose": "sitDown",
+       "face": {
+        "eyes": "dot",
+        "mouth": "flat",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "rise",
+         "at": 5,
+         "h": 84,
+         "dur": 9
+        },
+        {
+         "a": "sitFloat",
+         "at": 5,
+         "dur": 9,
+         "eyes": "wide",
+         "mouth": "o"
+        }
+       ]
+      },
+      {
+       "who": "gal2",
+       "x": 1210,
+       "dir": -1,
+       "pose": "sitDown",
+       "face": {
+        "eyes": "dot",
+        "mouth": "flat",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "rise",
+         "at": 6,
+         "h": 89,
+         "dur": 9
+        },
+        {
+         "a": "sitFloat",
+         "at": 6,
+         "dur": 9,
+         "eyes": "wide",
+         "mouth": "o"
+        }
+       ]
+      },
+      {
+       "who": "gus",
+       "x": 850,
+       "dir": -1,
+       "pose": "pour",
+       "hold": {
+        "p": "coffeepot",
+        "x": 6,
+        "y": 40,
+        "s": 0.8
+       },
+       "face": {
+        "eyes": "dot",
+        "mouth": "flat",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "rise",
+         "at": 5,
+         "h": 70,
+         "dur": 10
+        },
+        {
+         "a": "flail",
+         "at": 8,
+         "dur": 6,
+         "eyes": "wide",
+         "mouth": "ah"
+        }
+       ]
+      }
+     ],
+     "props": [
+      {
+       "p": "mug",
+       "x": 520,
+       "y": 718,
+       "s": 0.8,
+       "layer": "back",
+       "moves": [
+        {
+         "at": 3,
+         "dur": 12,
+         "y": 640,
+         "r": -14
+        }
+       ]
+      },
+      {
+       "p": "mug",
+       "x": 650,
+       "y": 718,
+       "s": 0.8,
+       "layer": "back",
+       "moves": [
+        {
+         "at": 4,
+         "dur": 12,
+         "y": 624,
+         "r": 0
+        }
+       ]
+      },
+      {
+       "p": "mug",
+       "x": 1000,
+       "y": 718,
+       "s": 0.8,
+       "layer": "back",
+       "moves": [
+        {
+         "at": 5,
+         "dur": 12,
+         "y": 608,
+         "r": 14
+        }
+       ]
+      },
+      {
+       "p": "mug",
+       "x": 1130,
+       "y": 718,
+       "s": 0.8,
+       "layer": "back",
+       "moves": [
+        {
+         "at": 6,
+         "dur": 12,
+         "y": 592,
+         "r": 28
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "float",
+     "kind": "top",
+     "action": "egg, peas and fork rise off the table toward the lens",
+     "focus": [
+      960,
+      540
+     ],
+     "z": 1.2,
+     "push": 2,
+     "motes": true,
+     "props": [
+      {
+       "p": "plate",
+       "x": 640,
+       "y": 560,
+       "r": 8,
+       "shadow": true,
+       "moves": [
+        {
+         "at": 2,
+         "dur": 14,
+         "s": 1.12
+        }
+       ]
+      },
+      {
+       "p": "toast",
+       "x": 320,
+       "y": 260,
+       "r": -14,
+       "shadow": true,
+       "moves": [
+        {
+         "at": 4,
+         "dur": 14,
+         "s": 1.3,
+         "r": -40
+        }
+       ]
+      },
+      {
+       "p": "fork",
+       "x": 330,
+       "y": 700,
+       "r": -24,
+       "shadow": true,
+       "moves": [
+        {
+         "at": 3,
+         "dur": 16,
+         "s": 1.4,
+         "r": 40
+        }
+       ]
+      },
+      {
+       "p": "topMug",
+       "x": 1060,
+       "y": 440,
+       "shadow": true,
+       "moves": [
+        {
+         "at": 5,
+         "dur": 14,
+         "s": 1.2,
+         "x": 1090
+        }
+       ]
+      },
+      {
+       "p": "peas",
+       "x": 720,
+       "y": 540,
+       "s": 1.2,
+       "shadow": true,
+       "drift": 10,
+       "moves": [
+        {
+         "at": 4,
+         "dur": 14,
+         "s": 2.3,
+         "x": 800,
+         "y": 470
+        }
+       ]
+      },
+      {
+       "p": "blob",
+       "x": 1210,
+       "y": 360,
+       "s": 0.8,
+       "drift": 10,
+       "moves": [
+        {
+         "at": 6,
+         "dur": 14,
+         "s": 1.5,
+         "x": 1280,
+         "y": 300
+        }
+       ]
+      },
+      {
+       "p": "spoon",
+       "x": 1300,
+       "y": 680,
+       "r": 12,
+       "shadow": true,
+       "moves": [
+        {
+         "at": 5,
+         "dur": 14,
+         "s": 1.4,
+         "r": 70
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "gasp",
+     "kind": "close",
+     "set": "diner",
+     "cx": 760,
+     "cy": 470,
+     "light": [
+      1320,
+      40
+     ],
+     "action": "Tess flinches as a lump of coffee drifts past her face",
+     "cast": [
+      {
+       "who": "tess",
+       "face": {
+        "eyes": "dot",
+        "mouth": "flat",
+        "look": 0.3
+       },
+       "acts": [
+        {
+         "a": "flinch",
+         "at": 3
+        }
+       ]
+      }
+     ],
+     "props": [
+      {
+       "p": "blob",
+       "x": 1560,
+       "y": 420,
+       "s": 1.5,
+       "drift": 8,
+       "moves": [
+        {
+         "at": 0,
+         "dur": 40,
+         "x": 1250,
+         "y": 390,
+         "ease": "io"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "n03",
+   "who": "narrator",
+   "text": "Not enough to hurt anybody.",
+   "after": 0.6,
+   "shots": [
+    {
+     "id": "land",
+     "kind": "wide",
+     "set": "diner",
+     "cx": 700,
+     "z": 1.2,
+     "action": "everyone drops back into their seats at once",
+     "sfx": [
+      {
+       "s": "knock",
+       "at": 7,
+       "v": 0.8
+      },
+      {
+       "s": "click",
+       "at": 8,
+       "v": 0.6
+      }
+     ],
+     "cast": [
+      {
+       "who": "tess",
+       "x": 430,
+       "dir": 1,
+       "pose": "sitFloat",
+       "face": {
+        "eyes": "wide",
+        "mouth": "o",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "rise",
+         "at": 0,
+         "h": 64,
+         "dur": 1
+        },
+        {
+         "a": "fall",
+         "at": 4
+        },
+        {
+         "a": "sitDown",
+         "at": 5,
+         "ease": "snap",
+         "eyes": "wide",
+         "mouth": "flat"
+        }
+       ]
+      },
+      {
+       "who": "guy",
+       "x": 730,
+       "dir": -1,
+       "pose": "sitFloat",
+       "face": {
+        "eyes": "wide",
+        "mouth": "o",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "rise",
+         "at": 0,
+         "h": 69,
+         "dur": 1
+        },
+        {
+         "a": "fall",
+         "at": 5
+        },
+        {
+         "a": "sitDown",
+         "at": 6,
+         "ease": "snap",
+         "eyes": "wide",
+         "mouth": "flat"
+        }
+       ]
+      },
+      {
+       "who": "gal",
+       "x": -50,
+       "dir": 1,
+       "pose": "sitFloat",
+       "face": {
+        "eyes": "wide",
+        "mouth": "o",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "rise",
+         "at": 0,
+         "h": 74,
+         "dur": 1
+        },
+        {
+         "a": "fall",
+         "at": 4
+        },
+        {
+         "a": "sitDown",
+         "at": 5,
+         "ease": "snap",
+         "eyes": "wide",
+         "mouth": "flat"
+        }
+       ]
+      },
+      {
+       "who": "reader",
+       "x": 250,
+       "dir": -1,
+       "pose": "sitFloat",
+       "face": {
+        "eyes": "wide",
+        "mouth": "o",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "rise",
+         "at": 0,
+         "h": 79,
+         "dur": 1
+        },
+        {
+         "a": "fall",
+         "at": 5
+        },
+        {
+         "a": "sitDown",
+         "at": 6,
+         "ease": "snap",
+         "eyes": "wide",
+         "mouth": "flat"
+        }
+       ]
+      },
+      {
+       "who": "guy2",
+       "x": 910,
+       "dir": 1,
+       "pose": "sitFloat",
+       "face": {
+        "eyes": "wide",
+        "mouth": "o",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "rise",
+         "at": 0,
+         "h": 84,
+         "dur": 1
+        },
+        {
+         "a": "fall",
+         "at": 4
+        },
+        {
+         "a": "sitDown",
+         "at": 5,
+         "ease": "snap",
+         "eyes": "wide",
+         "mouth": "flat"
+        }
+       ]
+      },
+      {
+       "who": "gal2",
+       "x": 1210,
+       "dir": -1,
+       "pose": "sitFloat",
+       "face": {
+        "eyes": "wide",
+        "mouth": "o",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "rise",
+         "at": 0,
+         "h": 89,
+         "dur": 1
+        },
+        {
+         "a": "fall",
+         "at": 5
+        },
+        {
+         "a": "sitDown",
+         "at": 6,
+         "ease": "snap",
+         "eyes": "wide",
+         "mouth": "flat"
+        }
+       ]
+      },
+      {
+       "who": "gus",
+       "x": 850,
+       "dir": -1,
+       "pose": "flail",
+       "face": {
+        "eyes": "wide",
+        "mouth": "ah",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "rise",
+         "at": 0,
+         "h": 70,
+         "dur": 1
+        },
+        {
+         "a": "fall",
+         "at": 5
+        },
+        {
+         "a": "crouch",
+         "at": 9,
+         "ease": "snap"
+        }
+       ]
+      }
+     ],
+     "props": [
+      {
+       "p": "mug",
+       "x": 520,
+       "y": 718,
+       "s": 0.8,
+       "layer": "back",
+       "moves": [
+        {
+         "at": 0,
+         "dur": 0,
+         "y": 620
+        },
+        {
+         "at": 4,
+         "dur": 6,
+         "y": 718,
+         "ease": "gravity"
+        }
+       ]
+      },
+      {
+       "p": "mug",
+       "x": 650,
+       "y": 718,
+       "s": 0.8,
+       "layer": "back",
+       "moves": [
+        {
+         "at": 0,
+         "dur": 0,
+         "y": 620
+        },
+        {
+         "at": 4,
+         "dur": 6,
+         "y": 718,
+         "ease": "gravity"
+        }
+       ]
+      },
+      {
+       "p": "mug",
+       "x": 1000,
+       "y": 718,
+       "s": 0.8,
+       "layer": "back",
+       "moves": [
+        {
+         "at": 0,
+         "dur": 0,
+         "y": 620
+        },
+        {
+         "at": 4,
+         "dur": 6,
+         "y": 718,
+         "ease": "gravity"
+        }
+       ]
+      },
+      {
+       "p": "mug",
+       "x": 1130,
+       "y": 718,
+       "s": 0.8,
+       "layer": "back",
+       "moves": [
+        {
+         "at": 0,
+         "dur": 0,
+         "y": 620
+        },
+        {
+         "at": 4,
+         "dur": 6,
+         "y": 718,
+         "ease": "gravity"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "n04",
+   "who": "narrator",
+   "text": "Just enough to ruin breakfast.",
+   "after": 1.0,
+   "shots": [
+    {
+     "id": "stain",
+     "on": "breakfast",
+     "kind": "close",
+     "set": "diner",
+     "cx": 760,
+     "cy": 470,
+     "light": [
+      1320,
+      40
+     ],
+     "action": "coffee lands on her chest and she closes her eyes",
+     "sfx": [
+      {
+       "s": "click",
+       "at": 5,
+       "v": 0.4
+      }
+     ],
+     "cast": [
+      {
+       "who": "tess",
+       "face": {
+        "eyes": "wide",
+        "mouth": "flat",
+        "look": 0.1
+       },
+       "acts": [
+        {
+         "a": "sigh",
+         "at": 10,
+         "eyes": "half"
+        }
+       ]
+      }
+     ],
+     "props": [
+      {
+       "p": "blob",
+       "x": 980,
+       "y": 320,
+       "s": 1.3,
+       "moves": [
+        {
+         "at": 0,
+         "dur": 6,
+         "y": 870,
+         "ease": "gravity"
+        },
+        {
+         "at": 6,
+         "dur": 0,
+         "o": 0
+        }
+       ]
+      },
+      {
+       "p": "stain",
+       "x": 980,
+       "y": 880,
+       "s": 2.6,
+       "o": 0,
+       "moves": [
+        {
+         "at": 6,
+         "dur": 0,
+         "o": 1
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "n05",
+   "who": "gus",
+   "text": "Refill?",
+   "after": 0.35,
+   "shots": [
+    {
+     "id": "refill",
+     "nudge": -8,
+     "kind": "rack",
+     "set": "diner",
+     "cx": 980,
+     "cy": 470,
+     "light": [
+      1500,
+      120
+     ],
+     "action": "Gus holds up the pot, focus racks to him and off her",
+     "rack": {
+      "at": 3,
+      "to": "far"
+     },
+     "cast": [
+      {
+       "who": "gus",
+       "plane": "far",
+       "x": 620,
+       "y": 1190,
+       "s": 1.7,
+       "pose": "pour",
+       "face": {
+        "eyes": "happy",
+        "mouth": "smile",
+        "look": 0.6
+       },
+       "hold": {
+        "p": "coffeepot",
+        "x": 8,
+        "y": 30,
+        "s": 0.9
+       },
+       "acts": [
+        {
+         "a": "lean",
+         "at": 4,
+         "dur": 7
+        }
+       ]
+      },
+      {
+       "who": "tess",
+       "plane": "near",
+       "x": 1420,
+       "y": 1830,
+       "s": 3.3,
+       "pose": "front",
+       "dir": -1,
+       "face": {
+        "eyes": "half",
+        "mouth": "flat",
+        "look": 0.45
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "n06",
+   "who": "tess",
+   "text": "I'm wearing the last one.",
+   "after": 0.8,
+   "shots": [
+    {
+     "id": "deadpan",
+     "kind": "close",
+     "set": "diner",
+     "cx": 760,
+     "cy": 470,
+     "light": [
+      1320,
+      40
+     ],
+     "action": "Tess looks down at the stain, then back at him",
+     "cast": [
+      {
+       "who": "tess",
+       "face": {
+        "eyes": "half",
+        "mouth": "flat",
+        "look": 0.3
+       },
+       "acts": [
+        {
+         "a": "lookDown",
+         "at": 3
+        },
+        {
+         "a": "turn",
+         "at": 34,
+         "look": 0.5,
+         "lookY": 0
+        }
+       ]
+      }
+     ],
+     "props": [
+      {
+       "p": "stain",
+       "x": 980,
+       "y": 880,
+       "s": 2.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "n07",
+   "who": "narrator",
+   "text": "The first week, the whole town screamed. By the second, they'd stopped looking up.",
+   "after": 0.8,
+   "shots": [
+    {
+     "id": "panic",
+     "trans": "torn",
+     "nudge": -6,
+     "kind": "wide",
+     "set": "street",
+     "cx": 1250,
+     "action": "the street runs in every direction with arms in the air",
+     "pill": {
+      "text": "WEEK ONE",
+      "x": 420,
+      "y": 190,
+      "at": 8
+     },
+     "cast": [
+      {
+       "who": "guy",
+       "x": 760,
+       "pose": "armsUp",
+       "face": {
+        "eyes": "wide",
+        "mouth": "ah",
+        "look": 0.5
+       },
+       "walks": [
+        {
+         "from": 0,
+         "to": 400,
+         "x0": 0,
+         "x1": 6000,
+         "cycle": 12,
+         "keepArms": true
+        }
+       ]
+      },
+      {
+       "who": "gal",
+       "x": 1880,
+       "pose": "armsUp",
+       "dir": -1,
+       "face": {
+        "eyes": "wide",
+        "mouth": "o",
+        "look": 0.5
+       },
+       "walks": [
+        {
+         "from": 0,
+         "to": 400,
+         "x0": 0,
+         "x1": -5600,
+         "cycle": 12,
+         "keepArms": true
+        }
+       ]
+      },
+      {
+       "who": "reader",
+       "x": 1280,
+       "pose": "armsUp",
+       "face": {
+        "eyes": "wide",
+        "mouth": "ah",
+        "look": 0.5
+       },
+       "walks": [
+        {
+         "from": 3,
+         "to": 400,
+         "x0": 0,
+         "x1": 5200,
+         "cycle": 12,
+         "keepArms": true
+        }
+       ]
+      },
+      {
+       "who": "extra",
+       "x": 1560,
+       "pose": "handToMouth",
+       "dir": -1,
+       "acts": [
+        {
+         "a": "armsUp",
+         "at": 9,
+         "ease": "snap"
+        }
+       ]
+      },
+      {
+       "who": "gal2",
+       "x": 980,
+       "pose": "crouch",
+       "face": {
+        "eyes": "wide",
+        "mouth": "o",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "nod",
+         "at": 6
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "calm",
+     "on": "second",
+     "nudge": -4,
+     "kind": "wide",
+     "set": "street",
+     "cx": 640,
+     "z": 1.18,
+     "action": "a hat lifts off a passing man and lands back on his head, and he never looks up",
+     "pill": {
+      "text": "WEEK TWO",
+      "x": 1490,
+      "y": 190,
+      "at": 6
+     },
+     "cast": [
+      {
+       "who": "guy",
+       "x": 180,
+       "pose": "stand",
+       "face": {
+        "eyes": "dot",
+        "mouth": "flat",
+        "look": 0.5
+       },
+       "walks": [
+        {
+         "from": 0,
+         "to": 400,
+         "x0": 0,
+         "x1": 4000
+        }
+       ]
+      },
+      {
+       "who": "gal",
+       "x": 1220,
+       "dir": -1,
+       "face": {
+        "eyes": "dot",
+        "mouth": "flat",
+        "look": 0.5
+       },
+       "walks": [
+        {
+         "from": 0,
+         "to": 400,
+         "x0": 0,
+         "x1": -3200
+        }
+       ]
+      },
+      {
+       "who": "extra",
+       "x": 860,
+       "pose": "relaxed",
+       "acts": [
+        {
+         "a": "phoneEar",
+         "at": 10,
+         "dur": 7
+        }
+       ]
+      }
+     ],
+     "props": [
+      {
+       "p": "hat",
+       "x": 185,
+       "y": 408,
+       "moves": [
+        {
+         "at": 3,
+         "dur": 13,
+         "x": 330,
+         "y": 270
+        },
+        {
+         "at": 17,
+         "dur": 8,
+         "x": 440,
+         "y": 408,
+         "ease": "gravity"
+        },
+        {
+         "at": 25,
+         "dur": 12,
+         "x": 560
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "paper",
+     "on": "looking",
+     "kind": "close",
+     "set": "street",
+     "cx": 640,
+     "cy": 470,
+     "light": [
+      1400,
+      20
+     ],
+     "action": "his newspaper floats up, and his eyes follow it down again",
+     "cast": [
+      {
+       "who": "reader",
+       "face": {
+        "eyes": "half",
+        "mouth": "flat",
+        "look": 0.1,
+        "lookY": 0.9
+       },
+       "acts": [
+        {
+         "a": "face",
+         "at": 10,
+         "lookY": 0.3,
+         "fade": 3
+        },
+        {
+         "a": "face",
+         "at": 28,
+         "lookY": 0.9,
+         "fade": 3
+        }
+       ]
+      }
+     ],
+     "props": [
+      {
+       "p": "newspaper",
+       "x": 980,
+       "y": 920,
+       "s": 3,
+       "moves": [
+        {
+         "at": 3,
+         "dur": 14,
+         "y": 790
+        },
+        {
+         "at": 24,
+         "dur": 9,
+         "y": 920,
+         "ease": "gravity"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "n08",
+   "who": "narrator",
+   "text": "You learn. At two fifty-nine, you put your fork down.",
+   "after": 0.9,
+   "shots": [
+    {
+     "id": "forkdown",
+     "kind": "top",
+     "action": "a hand lays the fork flat beside the plate",
+     "focus": [
+      960,
+      560
+     ],
+     "z": 1.35,
+     "props": [
+      {
+       "p": "plate",
+       "x": 520,
+       "y": 520,
+       "n": 1,
+       "r": -6,
+       "shadow": true
+      },
+      {
+       "p": "topMug",
+       "x": 1500,
+       "y": 300,
+       "s": 0.9,
+       "shadow": true
+      },
+      {
+       "p": "toast",
+       "x": 180,
+       "y": 200,
+       "r": 22,
+       "shadow": true
+      },
+      {
+       "p": "napkin",
+       "x": 1420,
+       "y": 880,
+       "r": -8,
+       "shadow": true
+      },
+      {
+       "p": "fork",
+       "x": 1000,
+       "y": 430,
+       "r": 32,
+       "s": 1.2,
+       "moves": [
+        {
+         "at": 5,
+         "dur": 8,
+         "x": 960,
+         "y": 560,
+         "r": 6,
+         "s": 1,
+         "ease": "out"
+        }
+       ]
+      },
+      {
+       "p": "hand",
+       "x": 1160,
+       "y": 860,
+       "r": -14,
+       "s": 1.25,
+       "c": "#3f6f76",
+       "moves": [
+        {
+         "at": 3,
+         "dur": 7,
+         "x": 1120,
+         "y": 940,
+         "ease": "out"
+        },
+        {
+         "at": 13,
+         "dur": 8,
+         "y": 1300
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "259",
+     "on": "two",
+     "kind": "insert",
+     "set": "diner",
+     "cx": 1800,
+     "cy": 300,
+     "action": "the clock reads two fifty-nine, and the label snaps on",
+     "pill": {
+      "text": "TWO FIFTY-NINE",
+      "x": 960,
+      "y": 930,
+      "at": 6
+     },
+     "props": [
+      {
+       "p": "clock",
+       "x": 960,
+       "y": 460,
+       "s": 1.9,
+       "h": 2,
+       "m": 59,
+       "n": 1,
+       "moves": [
+        {
+         "at": 4,
+         "dur": 10,
+         "s": 2
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "forks",
+     "on": "fork",
+     "kind": "wide",
+     "set": "diner",
+     "cx": 640,
+     "action": "one by one, every diner lays down a fork and braces on the table",
+     "cast": [
+      {
+       "who": "tess",
+       "x": 430,
+       "dir": 1,
+       "pose": "sitForkUp",
+       "face": {
+        "eyes": "dot",
+        "mouth": "flat",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "sitForkDown",
+         "at": 3,
+         "dur": 6
+        }
+       ]
+      },
+      {
+       "who": "guy",
+       "x": 730,
+       "dir": -1,
+       "pose": "sitForkUp",
+       "face": {
+        "eyes": "dot",
+        "mouth": "flat",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "sitForkDown",
+         "at": 8,
+         "dur": 6
+        }
+       ]
+      },
+      {
+       "who": "gal",
+       "x": -50,
+       "dir": 1,
+       "pose": "sitForkUp",
+       "face": {
+        "eyes": "dot",
+        "mouth": "flat",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "sitForkDown",
+         "at": 12,
+         "dur": 6
+        }
+       ]
+      },
+      {
+       "who": "reader",
+       "x": 250,
+       "dir": -1,
+       "pose": "sitForkUp",
+       "face": {
+        "eyes": "dot",
+        "mouth": "flat",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "sitForkDown",
+         "at": 5,
+         "dur": 6
+        }
+       ]
+      },
+      {
+       "who": "guy2",
+       "x": 910,
+       "dir": 1,
+       "pose": "sitForkUp",
+       "face": {
+        "eyes": "dot",
+        "mouth": "flat",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "sitForkDown",
+         "at": 15,
+         "dur": 6
+        }
+       ]
+      },
+      {
+       "who": "gal2",
+       "x": 1210,
+       "dir": -1,
+       "pose": "sitForkUp",
+       "face": {
+        "eyes": "dot",
+        "mouth": "flat",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "sitForkDown",
+         "at": 10,
+         "dur": 6
+        }
+       ]
+      },
+      {
+       "who": "extra",
+       "x": 1500,
+       "walks": [
+        {
+         "from": 0,
+         "to": 400,
+         "x0": 0,
+         "x1": -4000
+        }
+       ]
+      }
+     ],
+     "props": [
+      {
+       "p": "mug",
+       "x": 520,
+       "y": 718,
+       "s": 0.8,
+       "layer": "back"
+      },
+      {
+       "p": "mug",
+       "x": 650,
+       "y": 718,
+       "s": 0.8,
+       "layer": "back"
+      },
+      {
+       "p": "mug",
+       "x": 1000,
+       "y": 718,
+       "s": 0.8,
+       "layer": "back"
+      },
+      {
+       "p": "mug",
+       "x": 1130,
+       "y": 718,
+       "s": 0.8,
+       "layer": "back"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "n09",
+   "who": "narrator",
+   "text": "Cooks grab the soup. Barbers lift the razor.",
+   "after": 0.8,
+   "shots": [
+    {
+     "id": "soup",
+     "kind": "medium",
+     "set": "diner",
+     "cx": 1910,
+     "cy": 520,
+     "z": 1.75,
+     "action": "the cook slaps a lid on the pot and hangs on",
+     "cast": [
+      {
+       "who": "cook",
+       "x": 1790,
+       "pose": "stand",
+       "behind": true,
+       "face": {
+        "eyes": "dot",
+        "brow": "cross",
+        "mouth": "flat",
+        "look": 0.5
+       },
+       "acts": [
+        {
+         "a": "grab",
+         "at": 5,
+         "ease": "snap"
+        }
+       ]
+      }
+     ],
+     "props": [
+      {
+       "p": "soupPot",
+       "x": 2010,
+       "y": 680
+      },
+      {
+       "p": "potLid",
+       "x": 2010,
+       "y": 520,
+       "moves": [
+        {
+         "at": 5,
+         "dur": 5,
+         "y": 584,
+         "ease": "gravity"
+        }
+       ]
+      }
+     ],
+     "sfx": [
+      {
+       "s": "click",
+       "at": 10,
+       "v": 0.6
+      }
+     ]
+    },
+    {
+     "id": "razor",
+     "on": "Barbers",
+     "kind": "medium",
+     "set": "street",
+     "cx": 1090,
+     "cy": 520,
+     "z": 1.7,
+     "action": "the barber snaps the razor up over his head",
+     "cast": [
+      {
+       "who": "reader",
+       "x": 1230,
+       "dir": -1,
+       "pose": "sitDown",
+       "face": {
+        "eyes": "closed",
+        "mouth": "flat"
+       }
+      },
+      {
+       "who": "barber",
+       "x": 940,
+       "pose": "point",
+       "face": {
+        "eyes": "dot",
+        "mouth": "flat",
+        "look": 0.5
+       },
+       "hold": {
+        "p": "razor",
+        "x": 4,
+        "y": 0,
+        "s": 0.9
+       },
+       "acts": [
+        {
+         "a": "raiseHand",
+         "at": 5,
+         "ease": "snap",
+         "eyes": "wide"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "n10",
+   "who": "narrator",
+   "text": "And nobody, ever, stays on a ladder.",
+   "after": 1.6,
+   "shots": [
+    {
+     "id": "ladder",
+     "on": "nobody",
+     "kind": "wide",
+     "set": "street",
+     "cx": 2240,
+     "z": 1.05,
+     "action": "the painter looks at the sky and slides down the ladder fast",
+     "cast": [
+      {
+       "who": "painter",
+       "x": 2230,
+       "pose": "grab",
+       "face": {
+        "eyes": "dot",
+        "mouth": "flat",
+        "look": 0.4
+       },
+       "acts": [
+        {
+         "a": "rise",
+         "at": 0,
+         "h": 250,
+         "dur": 1
+        },
+        {
+         "a": "lookUp",
+         "at": 6
+        },
+        {
+         "a": "snapFace",
+         "at": 26,
+         "eyes": "wide",
+         "mouth": "o"
+        },
+        {
+         "a": "fall",
+         "at": 32,
+         "dur": 13
+        },
+        {
+         "a": "stand",
+         "at": 44
+        }
+       ]
+      },
+      {
+       "who": "extra",
+       "x": 1880,
+       "walks": [
+        {
+         "from": 0,
+         "to": 400,
+         "x0": 0,
+         "x1": 3600
+        }
+       ]
+      }
+     ],
+     "props": [
+      {
+       "p": "ladder",
+       "x": 2290,
+       "y": 880,
+       "h": 520,
+       "layer": "back"
+      },
+      {
+       "p": "bucket",
+       "x": 2200,
+       "y": 880,
+       "layer": "back"
+      }
+     ],
+     "develops": true,
+     "cy": 470
+    }
+   ]
+  },
+  {
+   "id": "n11",
+   "who": "narrator",
+   "text": "So when Tess carries a wedding cake across Main Street, she's got a plan.",
+   "after": 0.4,
+   "shots": [
+    {
+     "id": "carry",
+     "trans": "torn",
+     "kind": "wide",
+     "set": "street",
+     "cx": 700,
+     "to": 1450,
+     "z": 1.15,
+     "action": "tracked walk: Tess crosses the street with the cake held out",
+     "cast": [
+      {
+       "who": "tess",
+       "x": 620,
+       "pose": "carry",
+       "face": {
+        "eyes": "dot",
+        "mouth": "smile",
+        "look": 0.5
+       },
+       "hold": {
+        "p": "cake",
+        "x": 30,
+        "y": -6
+       },
+       "walks": [
+        {
+         "from": 0,
+         "to": 400,
+         "x0": 0,
+         "x1": 4400,
+         "keepArms": true
+        }
+       ]
+      },
+      {
+       "who": "extra",
+       "x": 1860,
+       "dir": -1,
+       "walks": [
+        {
+         "from": 0,
+         "to": 400,
+         "x0": 0,
+         "x1": -3600
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "boast",
+     "kind": "medium",
+     "set": "street",
+     "cx": 1420,
+     "cy": 520,
+     "z": 1.8,
+     "action": "walking on, Tess lifts the cake a little to show how easy this is",
+     "cast": [
+      {
+       "who": "tess",
+       "x": 1330,
+       "pose": "carry",
+       "face": {
+        "eyes": "dot",
+        "mouth": "smile",
+        "look": 0.5
+       },
+       "hold": {
+        "p": "cake",
+        "x": 30,
+        "y": -6
+       },
+       "walks": [
+        {
+         "from": 0,
+         "to": 400,
+         "x0": 0,
+         "x1": 2400,
+         "keepArms": true
+        }
+       ],
+       "acts": [
+        {
+         "a": "nod",
+         "at": 6
+        }
+       ]
+      }
+     ],
+     "on": "plan",
+     "nudge": -3,
+     "to": 1980
+    }
+   ]
+  },
+  {
+   "id": "n12",
+   "who": "tess",
+   "text": "Eleven minutes. Plenty of time.",
+   "after": 0.7,
+   "shots": [
+    {
+     "id": "plenty",
+     "on": "Plenty",
+     "kind": "close",
+     "set": "street",
+     "cx": 1500,
+     "cy": 470,
+     "light": [
+      1400,
+      20
+     ],
+     "action": "Tess smiles to herself and gives a small nod",
+     "cast": [
+      {
+       "who": "tess",
+       "face": {
+        "eyes": "happy",
+        "mouth": "smile",
+        "look": 0.3
+       },
+       "acts": [
+        {
+         "a": "nod",
+         "at": 6
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "n13",
+   "who": "narrator",
+   "text": "She looks up at the town clock.",
+   "after": 1.0,
+   "shots": [
+    {
+     "id": "upward",
+     "kind": "medium",
+     "set": "street",
+     "cx": 1600,
+     "cy": 520,
+     "z": 1.7,
+     "action": "mid-stride, Tess stops and tips her head back",
+     "pill": {
+      "text": "PLAN: ELEVEN MINUTES",
+      "x": 1330,
+      "y": 220,
+      "at": 4
+     },
+     "cast": [
+      {
+       "who": "tess",
+       "x": 1500,
+       "pose": "carry",
+       "face": {
+        "eyes": "dot",
+        "mouth": "smile",
+        "look": 0.5
+       },
+       "hold": {
+        "p": "cake",
+        "x": 30,
+        "y": -6
+       },
+       "acts": [
+        {
+         "a": "lookUp",
+         "at": 5,
+         "look": 0.4
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "n14",
+   "who": "narrator",
+   "text": "It stopped an hour ago.",
+   "after": 0.6,
+   "shots": [
+    {
+     "id": "tower",
+     "nudge": -10,
+     "kind": "insert",
+     "set": "street",
+     "cx": 1600,
+     "cy": 100,
+     "action": "the lens steps back from a dead clock face and a pigeon hops off its ledge",
+     "focus": [
+      960,
+      460
+     ],
+     "z": 1.35,
+     "step": {
+      "at": 12,
+      "to": 0.66,
+      "dur": 12
+     },
+     "props": [
+      {
+       "p": "tower",
+       "x": 960,
+       "y": 470
+      },
+      {
+       "p": "pigeon",
+       "x": 1140,
+       "y": 750,
+       "s": 2,
+       "moves": [
+        {
+         "at": 6,
+         "dur": 3,
+         "y": 700
+        },
+        {
+         "at": 9,
+         "dur": 4,
+         "x": 1230,
+         "y": 742
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "oh",
+     "on": "hour",
+     "kind": "close",
+     "set": "street",
+     "cx": 1500,
+     "cy": 470,
+     "light": [
+      1400,
+      20
+     ],
+     "action": "Tess's smile drops on one frame",
+     "cast": [
+      {
+       "who": "tess",
+       "face": {
+        "eyes": "dot",
+        "mouth": "smile",
+        "look": 0.3,
+        "lookY": -0.8
+       },
+       "acts": [
+        {
+         "a": "snapFace",
+         "at": 8,
+         "eyes": "wide",
+         "brow": "worry",
+         "mouth": "flat",
+         "lookY": -0.8
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "silence": 3.4,
+   "shots": [
+    {
+     "id": "liftoff",
+     "kind": "wide",
+     "set": "street",
+     "cx": 1720,
+     "z": 1.1,
+     "action": "the cake rises out of her hands while the whole street already hangs on to something",
+     "sfx": [
+      {
+       "s": "rumble",
+       "at": 0,
+       "v": 0.18,
+       "len": 60
+      }
+     ],
+     "cast": [
+      {
+       "who": "guy",
+       "x": 1440,
+       "pose": "grab",
+       "face": {
+        "eyes": "closed",
+        "mouth": "flat"
+       },
+       "acts": [
+        {
+         "a": "rise",
+         "at": 6,
+         "h": 40,
+         "dur": 10
+        }
+       ]
+      },
+      {
+       "who": "extra",
+       "x": 1250,
+       "pose": "grab",
+       "acts": [
+        {
+         "a": "rise",
+         "at": 8,
+         "h": 36,
+         "dur": 10
+        }
+       ]
+      },
+      {
+       "who": "gal",
+       "x": 1570,
+       "dir": -1,
+       "pose": "grab",
+       "face": {
+        "eyes": "closed",
+        "mouth": "flat"
+       },
+       "acts": [
+        {
+         "a": "rise",
+         "at": 7,
+         "h": 44,
+         "dur": 10
+        }
+       ]
+      },
+      {
+       "who": "tess",
+       "x": 1950,
+       "pose": "carry",
+       "face": {
+        "eyes": "wide",
+        "brow": "worry",
+        "mouth": "flat",
+        "look": 0.5,
+        "lookY": -0.4
+       },
+       "hold": {
+        "p": "cake",
+        "x": 30,
+        "y": -6,
+        "until": 5
+       },
+       "acts": [
+        {
+         "a": "rise",
+         "at": 8,
+         "h": 58,
+         "dur": 12
+        },
+        {
+         "a": "snapFace",
+         "at": 32,
+         "mouth": "o",
+         "lookY": -1
+        },
+        {
+         "a": "raiseHand",
+         "at": 34,
+         "ease": "snap"
+        }
+       ]
+      }
+     ],
+     "develops": true,
+     "pill": {
+      "text": "THREE O'CLOCK",
+      "x": 560,
+      "y": 190,
+      "at": 10
+     },
+     "props": [
+      {
+       "p": "cake",
+       "x": 2120,
+       "y": 573,
+       "o": 0,
+       "drift": 6,
+       "moves": [
+        {
+         "at": 5,
+         "dur": 0,
+         "o": 1
+        },
+        {
+         "at": 5,
+         "dur": 30,
+         "y": 250,
+         "r": 14,
+         "ease": "io"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

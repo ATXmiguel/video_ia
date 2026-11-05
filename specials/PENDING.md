@@ -20,7 +20,7 @@ Only on the 19 s clip, judged from frames. Nobody has watched it at speed or lis
 
 ## Still different from the reference
 
-1. **A film-scale builder.** The biggest blocker now. The reference runs 2.27 s per shot; `make_special.py` ties each shot to its lines, which forces about 5 s. It needs voice laid out first, several shots per line, and shots as data instead of hand-written components.
+1. **A film-scale builder: built, tested only on 60 s.** `scripts/make_film.py` lays out voice first, places several shots per line and reads shots from data (guide section 17). The test scene `specials/gravity-off/` runs 2.33 s per shot. Still open: nobody has watched or heard it, no film longer than 60 s has been made, and 130 shots of hand-written JSON is real work. Its bed is also still too loud (voice 6.1 dB above it, against 11.6 dB).
 2. **Acting quality.** The rig can do it, but each shot needs its own specific action. The clip's gestures are still stiffer than the reference.
 3. **Set detail.** The new lobby is denser, but it is one room, and its props are simpler than the reference's. Every other set still needs this treatment, and they need day versions: ours run darker overall (median luma 51 against 75).
 4. **Top-down shots.** Larger hand with separate fingers, but it still reads as a glove. Overlapping fingers, phones and UI remain.
