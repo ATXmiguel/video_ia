@@ -4,6 +4,7 @@ import {Avatar, Banner} from './Branding';
 import {TerminalReplay} from './TerminalReplay';
 import {Episode, FPS, totalFrames} from './Episode';
 import {Special, SPECIAL_FPS, specialFrames, type SpecialBuild} from './special/Special';
+import {Proof, PROOF_FRAMES, type ProofBuild} from './special/Proof';
 import type {Build} from './types';
 import latest from './latest.json';
 
@@ -39,6 +40,15 @@ export const RemotionRoot: React.FC = () => (
     durationInFrames={240}
     defaultProps={{shots: [], pad: '', tension: ''} as SpecialBuild}
     calculateMetadata={({props}) => ({durationInFrames: Math.max(1, specialFrames(props))})}
+  />
+  <Composition
+    id="SpecialProof"
+    component={Proof}
+    width={1920}
+    height={1080}
+    fps={SPECIAL_FPS}
+    durationInFrames={PROOF_FRAMES}
+    defaultProps={{lines: {}, bed: '', room: ''} as unknown as ProofBuild}
   />
   </>
 );

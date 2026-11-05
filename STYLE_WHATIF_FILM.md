@@ -4,6 +4,8 @@ Separate from `STYLE_NOTES.md`, which covers the vertical choice reels. This one
 short film. Studied 2026-11-04 from "What If You Had 500 IQ?" (Ifverse, https://www.youtube.com/watch?v=4kHPfx6Gy00):
 the full transcript plus one frame every 3 s across all 8:56 (178 frames).
 
+Measured rules are in `docs/whatif/REPLICATION_GUIDE.md`, and they override this file where they differ, above all on pace (2.27 s per shot, not 4.1 s) and blur.
+
 Learn the craft below. Don't reuse its story, characters, names, jokes, hero design or lines.
 
 What was not checked: voice and music were not listened to, so anything about sound comes from the transcript and
