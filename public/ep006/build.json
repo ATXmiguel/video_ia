@@ -1,0 +1,1559 @@
+{
+  "series": "Shift Happens",
+  "episode": 6,
+  "hook": "YOU HIJACKED HIS LIVE.",
+  "hookAccent": "THE BOSS IS IN ON IT?!",
+  "choice": {
+    "question": "WHAT DO YOU DO?",
+    "options": [
+      {
+        "key": "A",
+        "word": "FANS",
+        "label": "Tell his fans",
+        "teaser": "Gloria fires you",
+        "icon": "gloria",
+        "pose": "point",
+        "face": "angry"
+      },
+      {
+        "key": "B",
+        "word": "SAFE",
+        "label": "Crack her safe",
+        "teaser": "Lily breaks in",
+        "icon": "lily",
+        "pose": "cheer",
+        "face": "happy"
+      }
+    ]
+  },
+  "arc": {
+    "number": 2,
+    "part": 2,
+    "name": "Starlite Cinema"
+  },
+  "goal": {
+    "countdown": "SHIFTS LEFT",
+    "progress": "SOLD OUT"
+  },
+  "topComment": {
+    "user": "@MaoMbappeKy",
+    "text": "STREAM",
+    "likes": 1,
+    "picked": "STREAM"
+  },
+  "scenes": [
+    {
+      "set": "blackout",
+      "cast": [
+        {
+          "who": "you",
+          "x": 540,
+          "pose": "shock",
+          "face": "shock"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "ON THIN ICE",
+        "left": 4,
+        "progress": 0
+      },
+      "kind": "story",
+      "duration": 5.108,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "You have four shifts left to save this cinema, and your own coworker just killed the screen.",
+          "audio": "ep006/s0_l0.mp3",
+          "start": 0.05,
+          "duration": 4.608,
+          "words": [
+            {
+              "text": "You",
+              "start": 0.089,
+              "end": 0.201
+            },
+            {
+              "text": "have",
+              "start": 0.212,
+              "end": 0.391
+            },
+            {
+              "text": "four",
+              "start": 0.402,
+              "end": 0.636
+            },
+            {
+              "text": "shifts",
+              "start": 0.647,
+              "end": 0.993
+            },
+            {
+              "text": "left",
+              "start": 1.004,
+              "end": 1.272
+            },
+            {
+              "text": "to",
+              "start": 1.284,
+              "end": 1.35
+            },
+            {
+              "text": "save",
+              "start": 1.362,
+              "end": 1.674
+            },
+            {
+              "text": "this",
+              "start": 1.685,
+              "end": 1.819
+            },
+            {
+              "text": "cinema",
+              "start": 1.83,
+              "end": 2.199
+            },
+            {
+              "text": "and",
+              "start": 2.522,
+              "end": 2.578
+            },
+            {
+              "text": "your",
+              "start": 2.589,
+              "end": 2.712
+            },
+            {
+              "text": "own",
+              "start": 2.723,
+              "end": 2.846
+            },
+            {
+              "text": "coworker",
+              "start": 2.857,
+              "end": 3.337
+            },
+            {
+              "text": "just",
+              "start": 3.449,
+              "end": 3.616
+            },
+            {
+              "text": "killed",
+              "start": 3.627,
+              "end": 3.85
+            },
+            {
+              "text": "the",
+              "start": 3.862,
+              "end": 3.906
+            },
+            {
+              "text": "screen",
+              "start": 3.917,
+              "end": 4.275
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "blackout",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "point",
+          "face": "angry"
+        },
+        {
+          "who": "chad",
+          "x": 760,
+          "pose": "shock",
+          "face": "shock",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "PHONE THIEF",
+        "left": 4,
+        "progress": 0
+      },
+      "stamp": {
+        "text": "HIJACKED",
+        "color": "green",
+        "line": 0
+      },
+      "fx": "flash",
+      "kind": "story",
+      "duration": 7.09,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "You snatch Chad's phone, mid-live, and flip the camera.",
+          "audio": "ep006/s1_l0.mp3",
+          "start": 0.25,
+          "duration": 3.216,
+          "words": [
+            {
+              "text": "You",
+              "start": 0.089,
+              "end": 0.167
+            },
+            {
+              "text": "snatch",
+              "start": 0.179,
+              "end": 0.469
+            },
+            {
+              "text": "Chad's",
+              "start": 0.48,
+              "end": 0.792
+            },
+            {
+              "text": "phone",
+              "start": 0.804,
+              "end": 1.116
+            },
+            {
+              "text": "mid-live",
+              "start": 1.451,
+              "end": 1.864
+            },
+            {
+              "text": "and",
+              "start": 2.121,
+              "end": 2.176
+            },
+            {
+              "text": "flip",
+              "start": 2.188,
+              "end": 2.411
+            },
+            {
+              "text": "the",
+              "start": 2.422,
+              "end": 2.489
+            },
+            {
+              "text": "camera",
+              "start": 2.5,
+              "end": 2.868
+            }
+          ]
+        },
+        {
+          "who": "chad",
+          "text": "Hey! That's my content!",
+          "audio": "ep006/s1_l1.mp3",
+          "start": 3.616,
+          "duration": 3.024,
+          "words": [
+            {
+              "text": "Hey",
+              "start": 0.095,
+              "end": 0.586
+            },
+            {
+              "text": "That's",
+              "start": 1.152,
+              "end": 1.431
+            },
+            {
+              "text": "my",
+              "start": 1.442,
+              "end": 1.587
+            },
+            {
+              "text": "content",
+              "start": 1.598,
+              "end": 2.234
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "phone",
+      "cast": [],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "PHONE THIEF",
+        "left": 4,
+        "progress": 0
+      },
+      "phone": {
+        "contact": "CHAD VLOGS - LIVE",
+        "messages": [
+          {
+            "from": "them",
+            "text": "wait, that's his hand",
+            "line": 0
+          },
+          {
+            "from": "them",
+            "text": "CHAD KILLED THE SCREEN??",
+            "line": 1
+          },
+          {
+            "from": "them",
+            "text": "unfollowed. bye Chad",
+            "line": 2
+          }
+        ]
+      },
+      "kind": "story",
+      "duration": 8.224,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "Thirty thousand fans see the hand on the switch.",
+          "audio": "ep006/s2_l0.mp3",
+          "start": 0.25,
+          "duration": 2.64,
+          "words": [
+            {
+              "text": "Thirty",
+              "start": 0.145,
+              "end": 0.346
+            },
+            {
+              "text": "thousand",
+              "start": 0.357,
+              "end": 0.748
+            },
+            {
+              "text": "fans",
+              "start": 0.759,
+              "end": 1.071
+            },
+            {
+              "text": "see",
+              "start": 1.083,
+              "end": 1.283
+            },
+            {
+              "text": "the",
+              "start": 1.295,
+              "end": 1.373
+            },
+            {
+              "text": "hand",
+              "start": 1.384,
+              "end": 1.685
+            },
+            {
+              "text": "on",
+              "start": 1.696,
+              "end": 1.763
+            },
+            {
+              "text": "the",
+              "start": 1.775,
+              "end": 1.83
+            },
+            {
+              "text": "switch",
+              "start": 1.841,
+              "end": 2.299
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "The chat turns on him.",
+          "audio": "ep006/s2_l1.mp3",
+          "start": 3.04,
+          "duration": 1.872,
+          "words": [
+            {
+              "text": "The",
+              "start": 0.1,
+              "end": 0.145
+            },
+            {
+              "text": "chat",
+              "start": 0.156,
+              "end": 0.391
+            },
+            {
+              "text": "turns",
+              "start": 0.402,
+              "end": 0.636
+            },
+            {
+              "text": "on",
+              "start": 0.647,
+              "end": 0.759
+            },
+            {
+              "text": "him",
+              "start": 0.77,
+              "end": 0.915
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Two million followers. One very bad minute.",
+          "audio": "ep006/s2_l2.mp3",
+          "start": 5.062,
+          "duration": 2.712,
+          "words": [
+            {
+              "text": "Two",
+              "start": 0.1,
+              "end": 0.234
+            },
+            {
+              "text": "million",
+              "start": 0.246,
+              "end": 0.525
+            },
+            {
+              "text": "followers",
+              "start": 0.536,
+              "end": 1.116
+            },
+            {
+              "text": "One",
+              "start": 1.496,
+              "end": 1.652
+            },
+            {
+              "text": "very",
+              "start": 1.663,
+              "end": 1.864
+            },
+            {
+              "text": "bad",
+              "start": 1.875,
+              "end": 2.087
+            },
+            {
+              "text": "minute",
+              "start": 2.098,
+              "end": 2.377
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "auditorium",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "cheer",
+          "face": "happy"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "cheer",
+          "face": "love",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "SHIFT SAVED",
+        "left": 4,
+        "progress": 20
+      },
+      "stamp": {
+        "text": "SCREEN BACK",
+        "color": "green",
+        "line": 0
+      },
+      "fx": "flash",
+      "kind": "story",
+      "duration": 6.178,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "Chad flips the switch back. Zombies roar across the screen.",
+          "audio": "ep006/s3_l0.mp3",
+          "start": 0.25,
+          "duration": 3.456,
+          "words": [
+            {
+              "text": "Chad",
+              "start": 0.089,
+              "end": 0.29
+            },
+            {
+              "text": "flips",
+              "start": 0.301,
+              "end": 0.536
+            },
+            {
+              "text": "the",
+              "start": 0.547,
+              "end": 0.625
+            },
+            {
+              "text": "switch",
+              "start": 0.636,
+              "end": 0.859
+            },
+            {
+              "text": "back",
+              "start": 0.871,
+              "end": 1.217
+            },
+            {
+              "text": "Zombies",
+              "start": 1.585,
+              "end": 2.042
+            },
+            {
+              "text": "roar",
+              "start": 2.054,
+              "end": 2.288
+            },
+            {
+              "text": "across",
+              "start": 2.299,
+              "end": 2.634
+            },
+            {
+              "text": "the",
+              "start": 2.645,
+              "end": 2.712
+            },
+            {
+              "text": "screen",
+              "start": 2.723,
+              "end": 3.125
+            }
+          ]
+        },
+        {
+          "who": "lily",
+          "text": "You just saved the whole shift!",
+          "audio": "ep006/s3_l1.mp3",
+          "start": 3.856,
+          "duration": 1.872,
+          "words": [
+            {
+              "text": "You",
+              "start": 0.08,
+              "end": 0.182
+            },
+            {
+              "text": "just",
+              "start": 0.193,
+              "end": 0.42
+            },
+            {
+              "text": "saved",
+              "start": 0.432,
+              "end": 0.659
+            },
+            {
+              "text": "the",
+              "start": 0.67,
+              "end": 0.739
+            },
+            {
+              "text": "whole",
+              "start": 0.75,
+              "end": 0.943
+            },
+            {
+              "text": "shift",
+              "start": 0.955,
+              "end": 1.477
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "marquee",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "cheer",
+          "face": "happy"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "point",
+          "face": "happy",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "VIRAL HERO",
+        "left": 4,
+        "progress": 40
+      },
+      "stamp": {
+        "text": "40% SOLD",
+        "color": "yellow",
+        "line": 0
+      },
+      "kind": "story",
+      "duration": 7.522,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "By morning, your clip has a million views. There's a line around the block.",
+          "audio": "ep006/s4_l0.mp3",
+          "start": 0.25,
+          "duration": 4.176,
+          "words": [
+            {
+              "text": "By",
+              "start": 0.1,
+              "end": 0.179
+            },
+            {
+              "text": "morning",
+              "start": 0.19,
+              "end": 0.525
+            },
+            {
+              "text": "your",
+              "start": 0.859,
+              "end": 0.949
+            },
+            {
+              "text": "clip",
+              "start": 0.96,
+              "end": 1.194
+            },
+            {
+              "text": "has",
+              "start": 1.205,
+              "end": 1.406
+            },
+            {
+              "text": "a",
+              "start": 1.417,
+              "end": 1.451
+            },
+            {
+              "text": "million",
+              "start": 1.462,
+              "end": 1.875
+            },
+            {
+              "text": "views",
+              "start": 1.886,
+              "end": 2.31
+            },
+            {
+              "text": "There's",
+              "start": 2.679,
+              "end": 2.779
+            },
+            {
+              "text": "a",
+              "start": 2.79,
+              "end": 2.835
+            },
+            {
+              "text": "line",
+              "start": 2.846,
+              "end": 3.147
+            },
+            {
+              "text": "around",
+              "start": 3.159,
+              "end": 3.382
+            },
+            {
+              "text": "the",
+              "start": 3.393,
+              "end": 3.449
+            },
+            {
+              "text": "block",
+              "start": 3.46,
+              "end": 3.839
+            }
+          ]
+        },
+        {
+          "who": "lily",
+          "text": "Forty percent! In one night!",
+          "audio": "ep006/s4_l1.mp3",
+          "start": 4.576,
+          "duration": 2.496,
+          "words": [
+            {
+              "text": "Forty",
+              "start": 0.068,
+              "end": 0.364
+            },
+            {
+              "text": "percent",
+              "start": 0.375,
+              "end": 0.989
+            },
+            {
+              "text": "In",
+              "start": 1.352,
+              "end": 1.5
+            },
+            {
+              "text": "one",
+              "start": 1.511,
+              "end": 1.716
+            },
+            {
+              "text": "night",
+              "start": 1.727,
+              "end": 2.159
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "lobby",
+      "cast": [
+        {
+          "who": "chad",
+          "x": 760,
+          "pose": "sad",
+          "face": "sad",
+          "flip": true
+        },
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "shrug",
+          "face": "smug"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "VIRAL HERO",
+        "left": 4,
+        "progress": 40
+      },
+      "zoom": "chad",
+      "kind": "story",
+      "duration": 7.834,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "You hand Chad his phone back. He doesn't look angry. He looks scared.",
+          "audio": "ep006/s5_l0.mp3",
+          "start": 0.25,
+          "duration": 3.744,
+          "words": [
+            {
+              "text": "You",
+              "start": 0.089,
+              "end": 0.179
+            },
+            {
+              "text": "hand",
+              "start": 0.19,
+              "end": 0.402
+            },
+            {
+              "text": "Chad",
+              "start": 0.413,
+              "end": 0.603
+            },
+            {
+              "text": "his",
+              "start": 0.614,
+              "end": 0.725
+            },
+            {
+              "text": "phone",
+              "start": 0.737,
+              "end": 0.926
+            },
+            {
+              "text": "back",
+              "start": 0.938,
+              "end": 1.272
+            },
+            {
+              "text": "He",
+              "start": 1.652,
+              "end": 1.696
+            },
+            {
+              "text": "doesn't",
+              "start": 1.708,
+              "end": 1.908
+            },
+            {
+              "text": "look",
+              "start": 1.92,
+              "end": 2.054
+            },
+            {
+              "text": "angry",
+              "start": 2.065,
+              "end": 2.4
+            },
+            {
+              "text": "He",
+              "start": 2.779,
+              "end": 2.835
+            },
+            {
+              "text": "looks",
+              "start": 2.846,
+              "end": 3.025
+            },
+            {
+              "text": "scared",
+              "start": 3.036,
+              "end": 3.415
+            }
+          ]
+        },
+        {
+          "who": "chad",
+          "text": "You don't get it. She's gonna kill me.",
+          "audio": "ep006/s5_l1.mp3",
+          "start": 4.144,
+          "duration": 3.24,
+          "words": [
+            {
+              "text": "You",
+              "start": 0.095,
+              "end": 0.217
+            },
+            {
+              "text": "don't",
+              "start": 0.229,
+              "end": 0.441
+            },
+            {
+              "text": "get",
+              "start": 0.452,
+              "end": 0.63
+            },
+            {
+              "text": "it",
+              "start": 0.641,
+              "end": 0.809
+            },
+            {
+              "text": "She's",
+              "start": 1.386,
+              "end": 1.665
+            },
+            {
+              "text": "gonna",
+              "start": 1.676,
+              "end": 1.944
+            },
+            {
+              "text": "kill",
+              "start": 1.955,
+              "end": 2.19
+            },
+            {
+              "text": "me",
+              "start": 2.201,
+              "end": 2.446
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "phone",
+      "cast": [],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "VIRAL HERO",
+        "left": 4,
+        "progress": 40
+      },
+      "phone": {
+        "contact": "GLORIA",
+        "messages": [
+          {
+            "from": "them",
+            "text": "Why is my cinema FULL?",
+            "line": 0
+          },
+          {
+            "from": "them",
+            "text": "I paid you to keep it dark until Friday",
+            "line": 1
+          },
+          {
+            "from": "them",
+            "text": "The parking lot only pays me if we fail",
+            "line": 2
+          }
+        ]
+      },
+      "kind": "story",
+      "duration": 7.336,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "His phone buzzes. It's Gloria.",
+          "audio": "ep006/s6_l0.mp3",
+          "start": 0.25,
+          "duration": 2.112,
+          "words": [
+            {
+              "text": "His",
+              "start": 0.1,
+              "end": 0.201
+            },
+            {
+              "text": "phone",
+              "start": 0.212,
+              "end": 0.402
+            },
+            {
+              "text": "buzzes",
+              "start": 0.413,
+              "end": 0.848
+            },
+            {
+              "text": "It's",
+              "start": 1.216,
+              "end": 1.328
+            },
+            {
+              "text": "Gloria",
+              "start": 1.339,
+              "end": 1.763
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "She paid him to kill the screen.",
+          "audio": "ep006/s6_l1.mp3",
+          "start": 2.512,
+          "duration": 1.56,
+          "words": [
+            {
+              "text": "She",
+              "start": 0.1,
+              "end": 0.212
+            },
+            {
+              "text": "paid",
+              "start": 0.223,
+              "end": 0.402
+            },
+            {
+              "text": "him",
+              "start": 0.413,
+              "end": 0.491
+            },
+            {
+              "text": "to",
+              "start": 0.502,
+              "end": 0.58
+            },
+            {
+              "text": "kill",
+              "start": 0.592,
+              "end": 0.77
+            },
+            {
+              "text": "the",
+              "start": 0.781,
+              "end": 0.848
+            },
+            {
+              "text": "screen",
+              "start": 0.859,
+              "end": 1.228
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "The parking lot deal only pays her if you lose.",
+          "audio": "ep006/s6_l2.mp3",
+          "start": 4.222,
+          "duration": 2.664,
+          "words": [
+            {
+              "text": "The",
+              "start": 0.1,
+              "end": 0.145
+            },
+            {
+              "text": "parking",
+              "start": 0.156,
+              "end": 0.469
+            },
+            {
+              "text": "lot",
+              "start": 0.48,
+              "end": 0.692
+            },
+            {
+              "text": "deal",
+              "start": 0.703,
+              "end": 0.96
+            },
+            {
+              "text": "only",
+              "start": 1.06,
+              "end": 1.272
+            },
+            {
+              "text": "pays",
+              "start": 1.284,
+              "end": 1.574
+            },
+            {
+              "text": "her",
+              "start": 1.585,
+              "end": 1.708
+            },
+            {
+              "text": "if",
+              "start": 1.719,
+              "end": 1.808
+            },
+            {
+              "text": "you",
+              "start": 1.819,
+              "end": 1.908
+            },
+            {
+              "text": "lose",
+              "start": 1.92,
+              "end": 2.321
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "lobby",
+      "cast": [
+        {
+          "who": "gloria",
+          "x": 760,
+          "pose": "point",
+          "face": "smug",
+          "flip": true
+        },
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "shock",
+          "face": "shock"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "MARKED",
+        "left": 4,
+        "progress": 40
+      },
+      "stamp": {
+        "text": "BOSS IS IN ON IT",
+        "color": "red",
+        "line": 0
+      },
+      "fx": "shake",
+      "kind": "story",
+      "duration": 8.242,
+      "lines": [
+        {
+          "who": "gloria",
+          "text": "Still smiling? Enjoy it. Four shifts go by fast.",
+          "audio": "ep006/s7_l0.mp3",
+          "start": 0.25,
+          "duration": 5.688,
+          "words": [
+            {
+              "text": "Still",
+              "start": 0.097,
+              "end": 0.451
+            },
+            {
+              "text": "smiling",
+              "start": 0.463,
+              "end": 0.958
+            },
+            {
+              "text": "Enjoy",
+              "start": 1.769,
+              "end": 2.205
+            },
+            {
+              "text": "it",
+              "start": 2.217,
+              "end": 2.5
+            },
+            {
+              "text": "Four",
+              "start": 3.314,
+              "end": 3.549
+            },
+            {
+              "text": "shifts",
+              "start": 3.561,
+              "end": 3.939
+            },
+            {
+              "text": "go",
+              "start": 3.95,
+              "end": 4.104
+            },
+            {
+              "text": "by",
+              "start": 4.116,
+              "end": 4.281
+            },
+            {
+              "text": "fast",
+              "start": 4.292,
+              "end": 4.858
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Your own boss wants you to fail.",
+          "audio": "ep006/s7_l1.mp3",
+          "start": 6.088,
+          "duration": 1.704,
+          "words": [
+            {
+              "text": "Your",
+              "start": 0.089,
+              "end": 0.212
+            },
+            {
+              "text": "own",
+              "start": 0.223,
+              "end": 0.368
+            },
+            {
+              "text": "boss",
+              "start": 0.379,
+              "end": 0.647
+            },
+            {
+              "text": "wants",
+              "start": 0.658,
+              "end": 0.871
+            },
+            {
+              "text": "you",
+              "start": 0.882,
+              "end": 0.949
+            },
+            {
+              "text": "to",
+              "start": 0.96,
+              "end": 1.016
+            },
+            {
+              "text": "fail",
+              "start": 1.027,
+              "end": 1.373
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "lobby",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "shrug",
+          "face": "neutral"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "point",
+          "face": "neutral",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "MARKED",
+        "left": 4,
+        "progress": 40
+      },
+      "kind": "story",
+      "duration": 8.338,
+      "lines": [
+        {
+          "who": "lily",
+          "text": "The deal's in her office safe. I can crack it, but we'd have to break in.",
+          "audio": "ep006/s8_l0.mp3",
+          "start": 0.25,
+          "duration": 4.08,
+          "words": [
+            {
+              "text": "The",
+              "start": 0.08,
+              "end": 0.17
+            },
+            {
+              "text": "deal's",
+              "start": 0.182,
+              "end": 0.489
+            },
+            {
+              "text": "in",
+              "start": 0.5,
+              "end": 0.58
+            },
+            {
+              "text": "her",
+              "start": 0.591,
+              "end": 0.795
+            },
+            {
+              "text": "office",
+              "start": 0.807,
+              "end": 1.114
+            },
+            {
+              "text": "safe",
+              "start": 1.125,
+              "end": 1.511
+            },
+            {
+              "text": "I",
+              "start": 1.841,
+              "end": 1.886
+            },
+            {
+              "text": "can",
+              "start": 1.898,
+              "end": 2.023
+            },
+            {
+              "text": "crack",
+              "start": 2.034,
+              "end": 2.352
+            },
+            {
+              "text": "it",
+              "start": 2.364,
+              "end": 2.523
+            },
+            {
+              "text": "but",
+              "start": 2.545,
+              "end": 2.67
+            },
+            {
+              "text": "we'd",
+              "start": 2.682,
+              "end": 2.818
+            },
+            {
+              "text": "have",
+              "start": 2.83,
+              "end": 3.011
+            },
+            {
+              "text": "to",
+              "start": 3.023,
+              "end": 3.136
+            },
+            {
+              "text": "break",
+              "start": 3.148,
+              "end": 3.443
+            },
+            {
+              "text": "in",
+              "start": 3.455,
+              "end": 3.739
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Or you tell Chad's fans right now. She'd fire you in seconds.",
+          "audio": "ep006/s8_l1.mp3",
+          "start": 4.48,
+          "duration": 3.408,
+          "words": [
+            {
+              "text": "Or",
+              "start": 0.089,
+              "end": 0.179
+            },
+            {
+              "text": "you",
+              "start": 0.19,
+              "end": 0.257
+            },
+            {
+              "text": "tell",
+              "start": 0.268,
+              "end": 0.446
+            },
+            {
+              "text": "Chad's",
+              "start": 0.458,
+              "end": 0.748
+            },
+            {
+              "text": "fans",
+              "start": 0.759,
+              "end": 0.993
+            },
+            {
+              "text": "right",
+              "start": 1.004,
+              "end": 1.161
+            },
+            {
+              "text": "now",
+              "start": 1.172,
+              "end": 1.44
+            },
+            {
+              "text": "She'd",
+              "start": 1.808,
+              "end": 1.998
+            },
+            {
+              "text": "fire",
+              "start": 2.009,
+              "end": 2.31
+            },
+            {
+              "text": "you",
+              "start": 2.321,
+              "end": 2.455
+            },
+            {
+              "text": "in",
+              "start": 2.466,
+              "end": 2.545
+            },
+            {
+              "text": "seconds",
+              "start": 2.556,
+              "end": 3.08
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "lobby",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "shrug",
+          "face": "neutral"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "point",
+          "face": "neutral",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "MARKED",
+        "left": 4,
+        "progress": 40
+      },
+      "kind": "choice",
+      "duration": 12.938,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "What do you do?",
+          "audio": "ep006/s9_l0.mp3",
+          "start": 0.25,
+          "duration": 0.84,
+          "words": [
+            {
+              "text": "What",
+              "start": 0.089,
+              "end": 0.145
+            },
+            {
+              "text": "do",
+              "start": 0.156,
+              "end": 0.19
+            },
+            {
+              "text": "you",
+              "start": 0.201,
+              "end": 0.268
+            },
+            {
+              "text": "do",
+              "start": 0.279,
+              "end": 0.502
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "FANS: Tell his fans.",
+          "audio": "ep006/s9_l1.mp3",
+          "start": 1.24,
+          "duration": 1.848,
+          "words": [
+            {
+              "text": "FANS",
+              "start": 0.123,
+              "end": 0.491
+            },
+            {
+              "text": "Tell",
+              "start": 0.792,
+              "end": 0.926
+            },
+            {
+              "text": "his",
+              "start": 0.938,
+              "end": 1.049
+            },
+            {
+              "text": "fans",
+              "start": 1.06,
+              "end": 1.507
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Or SAFE: Crack her safe.",
+          "audio": "ep006/s9_l2.mp3",
+          "start": 3.238,
+          "duration": 1.968,
+          "words": [
+            {
+              "text": "Or",
+              "start": 0.089,
+              "end": 0.19
+            },
+            {
+              "text": "SAFE",
+              "start": 0.201,
+              "end": 0.58
+            },
+            {
+              "text": "Crack",
+              "start": 0.926,
+              "end": 1.138
+            },
+            {
+              "text": "her",
+              "start": 1.15,
+              "end": 1.25
+            },
+            {
+              "text": "safe",
+              "start": 1.261,
+              "end": 1.629
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Comment one word: FANS or SAFE. The most-liked one decides part 3.",
+          "audio": "ep006/s9_l3.mp3",
+          "start": 5.356,
+          "duration": 4.632,
+          "words": [
+            {
+              "text": "Comment",
+              "start": 0.089,
+              "end": 0.368
+            },
+            {
+              "text": "one",
+              "start": 0.379,
+              "end": 0.558
+            },
+            {
+              "text": "word",
+              "start": 0.569,
+              "end": 0.848
+            },
+            {
+              "text": "FANS",
+              "start": 1.172,
+              "end": 1.618
+            },
+            {
+              "text": "or",
+              "start": 1.674,
+              "end": 1.786
+            },
+            {
+              "text": "SAFE",
+              "start": 1.797,
+              "end": 2.199
+            },
+            {
+              "text": "The",
+              "start": 2.578,
+              "end": 2.634
+            },
+            {
+              "text": "most-liked",
+              "start": 2.645,
+              "end": 3.17
+            },
+            {
+              "text": "one",
+              "start": 3.181,
+              "end": 3.371
+            },
+            {
+              "text": "decides",
+              "start": 3.382,
+              "end": 3.75
+            },
+            {
+              "text": "part 3",
+              "start": 3.761,
+              "end": 4.286
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "music": "ep006/music.mp3",
+  "coldOpen": true
+}

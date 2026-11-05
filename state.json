@@ -133,6 +133,44 @@
           "ep4": 364
         }
       }
+    },
+    {
+      "episode": 6,
+      "file": "episodes/ep006.json",
+      "url": "https://youtube.com/shorts/NefIRGxeabI",
+      "instagram": null,
+      "tiktok": null,
+      "published": "2026-11-05",
+      "options": {
+        "A": "FANS",
+        "B": "SAFE"
+      },
+      "pinned": false,
+      "topComment": {
+        "user": "@MaoMbappeKy",
+        "text": "STREAM",
+        "likes": 1,
+        "platform": "youtube"
+      },
+      "winner": "B",
+      "arc": 2,
+      "part": 2,
+      "uploaded_via": "api",
+      "views_at_check": {
+        "youtube": {
+          "ep1": 1126,
+          "ep2": 700,
+          "ep3": 450,
+          "ep4": 457,
+          "ep5": 147
+        },
+        "instagram": {
+          "ep1": 269,
+          "ep2": 262,
+          "ep3": 270,
+          "ep4": 249
+        }
+      }
     }
   ],
   "arcs": [
@@ -154,14 +192,25 @@
     }
   ],
   "cloud_check": {
-    "date": "2026-11-04",
-    "audit": "Google email 2026-11-03: compliance review completed, no further action required",
+    "date": "2026-11-05",
+    "audit": "no new email since Google 2026-11-03: compliance review completed, no further action required",
     "gh_cli": "not installed (prerequisite 1 missing)"
   },
   "backfilled": {
     "instagram": true,
     "tiktok": false
   },
-  "tiktok_note": "2026-11-04: tiktok.com/upload loads again, but this run had no read access to the project folder (session started without it, moving needs a person's approval). TikTok backfill Parts 1-4 + Part 5 episode pending.",
-  "instagram_note": "2026-11-04: ep005 not posted to Instagram for the same reason; no comments posted there."
+  "tiktok_note": "2026-11-05: file_upload refused the project folder because the scheduled session starts outside it and moving needs a person's approval. Same cause as 2026-11-04. TikTok backfill Parts 1-4 and Parts 5-6 pending; profile still has 0 videos.",
+  "instagram_note": "2026-11-05: file_upload refused the project folder because the scheduled session starts outside it and moving needs a person's approval. Same cause as 2026-11-04. Parts 5-6 pending on Instagram; no comments posted there.",
+  "opening_test": {
+    "baseline_kept_watching_pct": 42,
+    "episodes": [
+      {
+        "episode": 6,
+        "published": "2026-11-05",
+        "kept_watching_pct": null,
+        "note": "published today; retention takes up to 2 days to appear"
+      }
+    ]
+  }
 }

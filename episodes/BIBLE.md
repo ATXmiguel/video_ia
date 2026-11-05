@@ -90,3 +90,7 @@ usher, blond swoop, purple shirt, 2M followers, films everything), lily came alo
   out Friday or it's a parking lot. You sell a car-sized popcorn bucket (15%). The screen goes black mid-movie, refunds, back to 0%.
   Twist: Chad's live stream shows his own hand on the power switch. Gloria: ten minutes or you're both fired.
   Choice: PROJECTOR (Lily fixes it, breaks rule two) / STREAM (hijack Chad's live, show his fans the truth).
+- Ep 6 (story 2 part 2) "You hijacked his live. The boss is in on it?!" — vote STREAM won (@MaoMbappeKy, 1 like). You grab Chad's phone mid-live and
+  show 30k fans his hand on the switch; the screen comes back (20%). Your clip hits a million views, line around the block (40%, 4 shifts left, badge VIRAL HERO).
+  Twist: Gloria texts Chad: she paid him to keep it dark, because **the parking lot deal only pays her if the cinema fails**. Chad is scared of her.
+  Choice: FANS (tell Chad's fans now, she fires you) / SAFE (Lily cracks Gloria's office safe to get the deal).

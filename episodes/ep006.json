@@ -1,0 +1,355 @@
+{
+  "series": "Shift Happens",
+  "episode": 6,
+  "arc": {
+    "number": 2,
+    "part": 2,
+    "name": "Starlite Cinema"
+  },
+  "goal": {
+    "countdown": "SHIFTS LEFT",
+    "progress": "SOLD OUT"
+  },
+  "hook": "YOU HIJACKED HIS LIVE.",
+  "hookAccent": "THE BOSS IS IN ON IT?!",
+  "topComment": {
+    "user": "@MaoMbappeKy",
+    "text": "STREAM",
+    "likes": 1
+  },
+  "topCommentPicked": "STREAM",
+  "coldOpen": {
+    "set": "blackout",
+    "cast": [
+      {
+        "who": "you",
+        "x": 540,
+        "pose": "shock",
+        "face": "shock"
+      }
+    ],
+    "hud": {
+      "tips": 0,
+      "rage": 0,
+      "badge": "ON THIN ICE",
+      "left": 4,
+      "progress": 0
+    },
+    "lines": [
+      "You have four shifts left to save this cinema, and your own coworker just killed the screen."
+    ]
+  },
+  "scenes": [
+    {
+      "set": "blackout",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "point",
+          "face": "angry"
+        },
+        {
+          "who": "chad",
+          "x": 760,
+          "pose": "shock",
+          "face": "shock",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "PHONE THIEF",
+        "left": 4,
+        "progress": 0
+      },
+      "stamp": {
+        "text": "HIJACKED",
+        "color": "green",
+        "line": 0
+      },
+      "fx": "flash",
+      "lines": [
+        "You snatch Chad's phone, mid-live, and flip the camera.",
+        {
+          "who": "chad",
+          "text": "Hey! That's my content!"
+        }
+      ]
+    },
+    {
+      "set": "phone",
+      "cast": [],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "PHONE THIEF",
+        "left": 4,
+        "progress": 0
+      },
+      "phone": {
+        "contact": "CHAD VLOGS - LIVE",
+        "messages": [
+          {
+            "from": "them",
+            "text": "wait, that's his hand",
+            "line": 0
+          },
+          {
+            "from": "them",
+            "text": "CHAD KILLED THE SCREEN??",
+            "line": 1
+          },
+          {
+            "from": "them",
+            "text": "unfollowed. bye Chad",
+            "line": 2
+          }
+        ]
+      },
+      "lines": [
+        "Thirty thousand fans see the hand on the switch.",
+        "The chat turns on him.",
+        "Two million followers. One very bad minute."
+      ]
+    },
+    {
+      "set": "auditorium",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "cheer",
+          "face": "happy"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "cheer",
+          "face": "love",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "SHIFT SAVED",
+        "left": 4,
+        "progress": 20
+      },
+      "stamp": {
+        "text": "SCREEN BACK",
+        "color": "green",
+        "line": 0
+      },
+      "fx": "flash",
+      "lines": [
+        "Chad flips the switch back. Zombies roar across the screen.",
+        {
+          "who": "lily",
+          "text": "You just saved the whole shift!"
+        }
+      ]
+    },
+    {
+      "set": "marquee",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "cheer",
+          "face": "happy"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "point",
+          "face": "happy",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "VIRAL HERO",
+        "left": 4,
+        "progress": 40
+      },
+      "stamp": {
+        "text": "40% SOLD",
+        "color": "yellow",
+        "line": 0
+      },
+      "lines": [
+        "By morning, your clip has a million views. There's a line around the block.",
+        {
+          "who": "lily",
+          "text": "Forty percent! In one night!"
+        }
+      ]
+    },
+    {
+      "set": "lobby",
+      "cast": [
+        {
+          "who": "chad",
+          "x": 760,
+          "pose": "sad",
+          "face": "sad",
+          "flip": true
+        },
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "shrug",
+          "face": "smug"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "VIRAL HERO",
+        "left": 4,
+        "progress": 40
+      },
+      "zoom": "chad",
+      "lines": [
+        "You hand Chad his phone back. He doesn't look angry. He looks scared.",
+        {
+          "who": "chad",
+          "text": "You don't get it. She's gonna kill me."
+        }
+      ]
+    },
+    {
+      "set": "phone",
+      "cast": [],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "VIRAL HERO",
+        "left": 4,
+        "progress": 40
+      },
+      "phone": {
+        "contact": "GLORIA",
+        "messages": [
+          {
+            "from": "them",
+            "text": "Why is my cinema FULL?",
+            "line": 0
+          },
+          {
+            "from": "them",
+            "text": "I paid you to keep it dark until Friday",
+            "line": 1
+          },
+          {
+            "from": "them",
+            "text": "The parking lot only pays me if we fail",
+            "line": 2
+          }
+        ]
+      },
+      "lines": [
+        "His phone buzzes. It's Gloria.",
+        "She paid him to kill the screen.",
+        "The parking lot deal only pays her if you lose."
+      ]
+    },
+    {
+      "set": "lobby",
+      "cast": [
+        {
+          "who": "gloria",
+          "x": 760,
+          "pose": "point",
+          "face": "smug",
+          "flip": true
+        },
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "shock",
+          "face": "shock"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "MARKED",
+        "left": 4,
+        "progress": 40
+      },
+      "stamp": {
+        "text": "BOSS IS IN ON IT",
+        "color": "red",
+        "line": 0
+      },
+      "fx": "shake",
+      "lines": [
+        {
+          "who": "gloria",
+          "text": "Still smiling? Enjoy it. Four shifts go by fast."
+        },
+        "Your own boss wants you to fail."
+      ]
+    },
+    {
+      "set": "lobby",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "shrug",
+          "face": "neutral"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "point",
+          "face": "neutral",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "MARKED",
+        "left": 4,
+        "progress": 40
+      },
+      "lines": [
+        {
+          "who": "lily",
+          "text": "The deal's in her office safe. I can crack it, but we'd have to break in."
+        },
+        "Or you tell Chad's fans right now. She'd fire you in seconds."
+      ]
+    }
+  ],
+  "choice": {
+    "question": "WHAT DO YOU DO?",
+    "options": [
+      {
+        "key": "A",
+        "word": "FANS",
+        "label": "Tell his fans",
+        "teaser": "Gloria fires you",
+        "icon": "gloria",
+        "pose": "point",
+        "face": "angry"
+      },
+      {
+        "key": "B",
+        "word": "SAFE",
+        "label": "Crack her safe",
+        "teaser": "Lily breaks in",
+        "icon": "lily",
+        "pose": "cheer",
+        "face": "happy"
+      }
+    ]
+  }
+}
