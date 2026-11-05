@@ -73,7 +73,8 @@ export type Build = {
   goal?: Goal;
   hook: string;
   hookAccent: string;
-  topComment: {user: string; text: string; likes: number} | null;
+  topComment: {user: string; text: string; likes: number; picked?: string} | null;
+  coldOpen?: boolean; // voice from the first moment; the winning comment becomes a small badge on the next scene
   scenes: BuiltScene[];
   choice: {question: string; options: Option[]};
   music: string;

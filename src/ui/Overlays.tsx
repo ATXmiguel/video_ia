@@ -4,7 +4,7 @@ import {INK, RED, YELLOW} from '../palette';
 import {BODY, DISPLAY} from './fonts';
 
 // Title card over the opening seconds. Fully visible on frame 0 so it doubles as the thumbnail.
-export const Cover: React.FC<{hook: string; accent: string; tag: string; frames: number}> = ({hook, accent, tag, frames}) => {
+export const Cover: React.FC<{hook: string; accent: string; tag: string; frames: number; tagBottom?: number}> = ({hook, accent, tag, frames, tagBottom = 300}) => {
   const frame = useCurrentFrame();
   const out = interpolate(frame, [frames - 8, frames], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const wobble = Math.sin(frame * 0.2) * 1.2;
@@ -30,7 +30,7 @@ export const Cover: React.FC<{hook: string; accent: string; tag: string; frames:
       <div
         style={{
           position: 'absolute',
-          bottom: 300,
+          bottom: tagBottom,
           background: '#7b3fe4',
           color: '#fff',
           border: `6px solid ${INK}`,
@@ -43,6 +43,39 @@ export const Cover: React.FC<{hook: string; accent: string; tag: string; frames:
         }}
       >
         {tag.toUpperCase()}
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+// With a cold open the community still gets its credit, without holding up the story: a badge that slides in, unspoken.
+export const CommentBadge: React.FC<{user: string; text: string; likes: number; picked?: string; frames: number}> = ({user, text, likes, picked, frames}) => {
+  const frame = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const inn = spring({frame, fps, config: {damping: 14}});
+  const out = interpolate(frame, [frames - 8, frames], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const said = text.length > 34 ? `${text.slice(0, 32)}...` : text;
+  return (
+    <AbsoluteFill style={{alignItems: 'center', opacity: out}}>
+      <div
+        style={{
+          position: 'absolute',
+          top: 330,
+          width: 860,
+          background: '#fff',
+          border: `6px solid ${INK}`,
+          borderRadius: 26,
+          padding: '14px 24px',
+          transform: `translateY(${(1 - inn) * -60}px) rotate(-1deg)`,
+          boxShadow: '0 8px 0 rgba(0,0,0,0.3)',
+        }}
+      >
+        <div style={{fontFamily: BODY, fontWeight: 800, fontSize: 28, color: '#666'}}>
+          {picked ? `TOP COMMENT CHOSE ${picked.toUpperCase()}` : 'TOP COMMENT'} · <span style={{color: RED}}>♥</span> {likes.toLocaleString('en-US')}
+        </div>
+        <div style={{fontFamily: BODY, fontWeight: 800, fontSize: 36, color: INK, lineHeight: 1.15}}>
+          {user}: {said}
+        </div>
       </div>
     </AbsoluteFill>
   );

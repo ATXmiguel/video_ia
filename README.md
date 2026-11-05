@@ -36,7 +36,9 @@ Check frames with `npx remotion bundle src/index.ts --out-dir=build` then
 | `hudLabels` | `{money, meter}` — HUD texts for this story's job (default TIPS / MANAGER RAGE) |
 | `goal` | optional finish line, replaces the tips/rage HUD: `{countdown: "SHIFTS LEFT", progress: "PROMOTION"}`; scenes then set `hud.left` and `hud.progress` (0–100) |
 | `topComment` | `null` for ep 1, else `{user, text, likes}` of last episode's winning comment |
-| `recap` | optional scene spec shown in gray behind the top comment (copy last episode's final scene) |
+| `recap` | optional scene spec shown in gray behind the top comment (copy last episode's final scene). Ignored with `coldOpen` |
+| `coldOpen` | a scene spec with 1–2 `lines` that plays first, voice from the first moment. Used from ep006 on. The winning comment then shows as a small unspoken badge on the next scene |
+| `topCommentPicked` | with `coldOpen`: the winning `word`, shown on the badge |
 | `scenes[]` | 6–8 scenes, 1–2 short lines each |
 | `choice` | `question` + 2 `options` (`key`, `word` = the ONE word viewers comment, `label` ≤ 4 words, `teaser` ≤ 4 words, `icon` = cast member, `pose`/`face` = how YOU is drawn doing it on the split-screen card) |
 
@@ -57,6 +59,9 @@ New sets go in `src/art/Sets.tsx`, new characters in `src/palette.ts` (look) + `
 ## Writing rules
 
 - Second person, present tense, short punchy sentences — they become 1–2 word captions.
+- `coldOpen` (from ep006): the first spoken words state the stakes for someone who has never seen the series, with no
+  "last time" and no names they'd need to know, in under 4 seconds. Example: "You have four shifts left to save this
+  cinema, and your own coworker just killed the screen." Pick a set and pose showing that danger.
 - Part 1 of a story opens with a world in one line: "Imagine…", "In this job…", "You have five shifts to…".
 - Use at least one `phone` scene when the plot has a text, a video, a schedule or a bank balance.
 - Episode 2+: the first story scene resolves the winning choice immediately.

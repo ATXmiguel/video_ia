@@ -8,22 +8,25 @@ import {Captions} from './ui/Captions';
 import {ChoiceCard} from './ui/ChoiceCard';
 import {Hud} from './ui/Hud';
 import {PhoneScreen} from './ui/PhoneScreen';
-import {Cover, TopComment} from './ui/Overlays';
+import {CommentBadge, Cover, TopComment} from './ui/Overlays';
 import {Stamp} from './ui/Stamp';
 
 export const FPS = 30;
 export const COVER_FRAMES = Math.round(2.2 * FPS);
+const COLD_COVER_FRAMES = Math.round(1.1 * FPS); // over the voice, so it can be short: it's there for the thumbnail
+const BADGE_FRAMES = Math.round(3.4 * FPS);
 export const sceneFrames = (s: BuiltScene) => Math.round(s.duration * FPS);
 export const totalFrames = (b: Build) => b.scenes.reduce((n, s) => n + sceneFrames(s), 0);
 
 const sfx = (name: string) => staticFile(`sfx/${name}.mp3`);
 
-const SceneBlock: React.FC<{scene: BuiltScene; prevHud: HudT; first: boolean; dur: number; build: Build}> = ({
+const SceneBlock: React.FC<{scene: BuiltScene; prevHud: HudT; first: boolean; dur: number; build: Build; badge: boolean}> = ({
   scene,
   prevHud,
   first,
   dur,
   build,
+  badge,
 }) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
@@ -44,7 +47,7 @@ const SceneBlock: React.FC<{scene: BuiltScene; prevHud: HudT; first: boolean; du
   const speaking = scene.lines.find((l) => t >= l.start && t < l.start + l.duration)?.who;
   const isChoice = scene.kind === 'choice';
   const isRecap = scene.kind === 'recap';
-  const hudFrom = first ? COVER_FRAMES : 0;
+  const hudFrom = first ? (build.coldOpen ? COLD_COVER_FRAMES : COVER_FRAMES) : 0;
   // The recap turns gray only after the title card: the first frames are what the Shorts feed shows, keep them in color.
   const gray = isRecap ? interpolate(frame, [COVER_FRAMES - 6, COVER_FRAMES + 6], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}) : 0;
 
@@ -78,6 +81,11 @@ const SceneBlock: React.FC<{scene: BuiltScene; prevHud: HudT; first: boolean; du
       {isRecap && build.topComment && (
         <Sequence from={hudFrom} layout="none">
           <TopComment {...build.topComment} part={build.arc?.part ?? build.episode} />
+        </Sequence>
+      )}
+      {badge && build.topComment && (
+        <Sequence from={Math.round(0.5 * FPS)} durationInFrames={BADGE_FRAMES} layout="none">
+          <CommentBadge {...build.topComment} frames={BADGE_FRAMES} />
         </Sequence>
       )}
       {scene.stamp && stampFrame >= 0 && (
@@ -119,7 +127,7 @@ export const Episode: React.FC<Build> = (build) => {
       <Series>
         {build.scenes.map((s, i) => (
           <Series.Sequence key={i} durationInFrames={sceneFrames(s)}>
-            <SceneBlock scene={s} prevHud={build.scenes[Math.max(0, i - 1)].hud} first={i === 0} dur={sceneFrames(s)} build={build} />
+            <SceneBlock scene={s} prevHud={build.scenes[Math.max(0, i - 1)].hud} first={i === 0} dur={sceneFrames(s)} build={build} badge={!!build.coldOpen && i === 1} />
           </Series.Sequence>
         ))}
       </Series>
@@ -127,7 +135,8 @@ export const Episode: React.FC<Build> = (build) => {
         hook={build.hook}
         accent={build.hookAccent}
         tag={build.arc ? `${build.series} · STORY ${build.arc.number} · PART ${build.arc.part}` : `${build.series} · EP ${build.episode}`}
-        frames={COVER_FRAMES}
+        frames={build.coldOpen ? COLD_COVER_FRAMES : COVER_FRAMES}
+        tagBottom={build.coldOpen ? 90 : 300}
       />
     </AbsoluteFill>
   );

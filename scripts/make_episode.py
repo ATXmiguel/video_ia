@@ -25,6 +25,7 @@ LEAD_IN = 0.25
 GAP = 0.15
 TAIL = 0.45
 CHOICE_HOLD = 2.5
+COLD_LEAD = 0.05  # with a cold open the voice starts at once; the title card just sits over it briefly
 
 # who -> (voice, rate, pitch). Keep stable: viewers learn the voices.
 VOICES = {
@@ -168,7 +169,13 @@ async def main(ep_path: Path, render: bool) -> None:
 
     scenes = []
     top = ep.get("topComment")
-    if top:
+    cold = ep.get("coldOpen")
+    if cold:
+        # Voice from the first moment, on a line that makes sense to someone who never saw the series.
+        print("cold open")
+        spec = {k: v for k, v in cold.items() if k != "lines"}
+        scenes.append(await build_scene(spec, cold["lines"], "story", slug, 0, lead=COLD_LEAD))
+    elif top:
         # Gray recap of how last episode ended, with the winning comment read out.
         recap = {k: v for k, v in (ep.get("recap") or ep["scenes"][0]).items() if k != "lines"}
         print("recap")
@@ -192,7 +199,9 @@ async def main(ep_path: Path, render: bool) -> None:
     make_music(PUBLIC / slug / "music.mp3", total + 1)
 
     build = {k: ep[k] for k in ("series", "episode", "hook", "hookAccent", "choice", "arc", "hudLabels", "goal") if k in ep}
-    build.update(topComment=top, scenes=scenes, music=f"{slug}/music.mp3")
+    build.update(topComment=top, scenes=scenes, music=f"{slug}/music.mp3", coldOpen=bool(cold))
+    if cold and top:
+        build["topComment"] = {**top, "picked": ep.get("topCommentPicked")}
     build_path = PUBLIC / slug / "build.json"
     build_path.write_text(json.dumps(build, indent=2), encoding="utf-8")
     (ROOT / "src" / "latest.json").write_text(json.dumps(build, indent=2), encoding="utf-8")

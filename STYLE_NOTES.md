@@ -1,3 +1,16 @@
+# Test: cold open (from ep006, started 2026-11-04)
+
+**Problem.** Ep1–4: 58% of Shorts viewers skipped, 42% kept watching, average view 0:27 of 1:00 on Ep1. Parts 2+ opened
+with ~2.6 s of silence under the title card, then "Top comment said…" over a gray recap, so the story began around 5 s.
+Every part also lost views to the one before it, and viewers were almost all new, so the opening has to work for strangers.
+
+**Change.** Voice from the first moment on a line that states the stakes for a newcomer; title card only 1.1 s, over the
+voice; no gray recap; the winning comment becomes a small unspoken badge on the scene that resolves the vote.
+
+**How to judge it.** Compare "Continuaram assistindo" for ep006 onward against the 42% baseline, over at least 3 episodes with
+a couple of days of data each. Retention matters more than raw views here, since views also depend on the feed and age.
+Small numbers, so treat a few points' difference as noise. Keep it if it clearly rises; otherwise go back to look at the hook itself.
+
 # Study 2 (2026-11-02): five Instagram channels, frame by frame
 
 Reels sampled with screenshots every few seconds, plus captions and top comments.

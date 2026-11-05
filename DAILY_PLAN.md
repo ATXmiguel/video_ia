@@ -26,7 +26,8 @@ If the app is closed at 13:30, the run happens when it's next opened. One episod
    A new story needs its own set(s) in `src/art/Sets.tsx` and cast in `src/palette.ts` + `VOICES` — build them
    first, check them with stills, and update the Stories log and canon in the bible.
 3. **Write the next episode** (`episodes/epNNN.json`) following `README.md` writing rules and `STYLE_NOTES.md`:
-   `topComment` = the winner, `recap` = last episode's final scene, first scene resolves the choice,
+   `topComment` = the winner, `topCommentPicked` = the winning word, `coldOpen` = a scene whose first words state the
+   stakes for a total newcomer (README writing rules; no `recap`), first scene after it resolves the choice,
    twist ~40 s, new dilemma with a one-word `word` per option. Add sets/characters in code only when the story
    needs them.
    Update the canon in `episodes/BIBLE.md`.
@@ -81,6 +82,10 @@ If the app is closed at 13:30, the run happens when it's next opened. One episod
 7. **Save** — update `state.json` (episode, URL, date), `git add -A && git commit`, `git push` if a remote exists.
 8. **Report** — a short message: winner (user + likes + platform), the three links, views per platform for the
    last 3 parts (YouTube via `stats`, Instagram/TikTok from the profile grid), anything that failed or was skipped.
+   **Opening test** (see `STYLE_NOTES.md`, from ep006 until the user ends it): also report "Continuaram assistindo" from Studio
+   (Analytics > Conteúdo > Shorts > Engajamento, and per video in its Engajamento tab) for the last published episodes
+   next to the 42% baseline, and save it in `state.json` under `opening_test`. Retention takes up to 2 days to appear:
+   say so instead of guessing. Chrome may be on another channel: check it is Shift Happens first, and only read here.
 
 ## Limits
 
