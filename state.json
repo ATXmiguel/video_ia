@@ -234,7 +234,7 @@
     "tiktok": false
   },
   "tiktok_note": "2026-11-06: Claude in Chrome was not connected in the scheduled run (3 checks), so nothing could be posted or read here. TikTok backfill Parts 1-4 and Parts 5-7 pending; profile still has 0 videos as of the last look.",
-  "instagram_note": "2026-11-06: Claude in Chrome was not connected in the scheduled run (3 checks), so nothing could be posted or read here. Parts 5-7 pending on Instagram; no comments posted there.",
+  "instagram_note": "2026-11-06: the owner removed Instagram from this series; the account goes to E Se De Repente. Do not post or read votes there. The instagram links on older episodes are history only.",
   "opening_test": {
     "baseline_kept_watching_pct": 42,
     "episodes": [
