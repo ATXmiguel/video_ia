@@ -1,0 +1,1192 @@
+{
+"title": "E se, de repente, o Pix parasse?",
+"format": "short",
+"lead": 0.2,
+"tail": 0.5,
+"fade": 12,
+"bedVolume": 0.72,
+"roomVolume": 0.05,
+"sections": {
+"h1": [
+[
+110.0,
+164.8,
+220.0
+],
+-2
+],
+"d1": [
+[
+98.0,
+146.8,
+246.9
+],
+-1
+],
+"e1": [
+[
+87.3,
+130.8,
+220.0
+],
+-1
+],
+"n1": [
+[
+110.0,
+164.8,
+246.9
+],
+0
+]
+},
+"looks": {
+"caio": {
+"torso": "#2e6f92",
+"sleeve": "#27607f",
+"legs": "#2b3138"
+},
+"neide": {
+"torso": "#7a3f4a",
+"item": "bun",
+"legs": "#3f3540"
+},
+"bia": {
+"torso": "#4f9a8e",
+"sleeve": "#438679",
+"legs": "#3f7f75",
+"item": "bob"
+},
+"cliente": {
+"torso": "#a0782f",
+"item": "curls"
+},
+"gui": {
+"torso": "#5c6a6e",
+"item": "slick"
+},
+"guy2": {
+"torso": "#54605a"
+},
+"gal": {
+"torso": "#6f5a66",
+"item": "bun"
+},
+"gal2": {
+"torso": "#6a5f4c",
+"item": "bob"
+}
+},
+"voices": {
+"narrator": [
+"pt-BR-ThalitaMultilingualNeural",
+"+4%",
+"+0Hz"
+],
+"neide": [
+"pt-BR-FranciscaNeural",
+"-6%",
+"-2Hz"
+],
+"bia": [
+"pt-BR-FranciscaNeural",
+"+0%",
+"+2Hz"
+],
+"cliente": [
+"pt-BR-FranciscaNeural",
+"+2%",
+"+0Hz"
+],
+"caio": [
+"pt-BR-AntonioNeural",
+"+2%",
+"+0Hz"
+],
+"gui": [
+"pt-BR-AntonioNeural",
+"-4%",
+"-3Hz"
+]
+},
+"script": [
+{
+"id": "h1",
+"who": "narrator",
+"text": "Terça-feira, oito da manhã. Você vai pagar o café no Pix.",
+"shots": [
+{
+"kind": "insert",
+"action": "O ponteiro do relógio do mercadinho chega às oito",
+"set": "mercado",
+"props": [
+{
+"p": "clock",
+"x": 960,
+"y": 480,
+"s": 1.7,
+"h": 7,
+"m": 59,
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"m": 60
+}
+]
+}
+],
+"cx": 1000,
+"sfx": [
+{
+"s": "click",
+"at": 4,
+"v": 0.5
+}
+]
+},
+{
+"kind": "top",
+"action": "O polegar toca o botão de pagar no celular",
+"props": [
+{
+"p": "phone",
+"x": 960,
+"y": 480,
+"s": 1.0,
+"r": -4,
+"text": "pix",
+"t2": "R$ 9,50",
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 466
+}
+]
+},
+{
+"p": "hand",
+"x": 1200,
+"y": 960,
+"r": -22,
+"s": 1.0,
+"c": "#2e6f92",
+"point": true,
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"x": 1090,
+"y": 760
+}
+]
+}
+],
+"motes": true,
+"on": "Você",
+"sfx": [
+{
+"s": "click",
+"at": 12,
+"v": 0.5
+}
+]
+}
+],
+"after": 0.1
+},
+{
+"id": "h2",
+"who": "narrator",
+"text": "Carregando. Carregando.",
+"shots": [
+{
+"kind": "close",
+"action": "Caio olha para a tela e espera",
+"set": "mercado",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "lookDown",
+"at": 4
+},
+{
+"a": "face",
+"at": 22,
+"eyes": "half",
+"brow": "flat"
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+}
+}
+],
+"cx": 1000
+}
+],
+"after": 0.05
+},
+{
+"id": "h3",
+"who": "narrator",
+"text": "Falha na conexão.",
+"shots": [
+{
+"kind": "data",
+"action": "A maquininha acende o erro em vermelho",
+"props": [
+{
+"p": "maquininha",
+"x": 960,
+"y": 480,
+"s": 1.3,
+"n": 8,
+"moves": [
+{
+"at": 8,
+"dur": 3,
+"x": 948
+},
+{
+"at": 11,
+"dur": 3,
+"x": 972
+},
+{
+"at": 14,
+"dur": 3,
+"x": 960
+}
+]
+}
+],
+"z": 1.0,
+"sfx": [
+{
+"s": "buzz",
+"at": 8,
+"v": 0.35
+}
+]
+}
+],
+"after": 0.1
+},
+{
+"id": "h4",
+"who": "narrator",
+"text": "Atrás de você, a fila inteira olha para o celular.",
+"shots": [
+{
+"kind": "wide",
+"action": "A fila do mercadinho olha para os celulares ao mesmo tempo",
+"set": "mercado",
+"cast": [
+{
+"who": "caio",
+"x": 860,
+"acts": [
+{
+"a": "turn",
+"at": 4,
+"to": 0.6
+}
+],
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+},
+"key": {
+"pose": "phoneUp"
+}
+},
+{
+"who": "cliente",
+"x": 1000,
+"acts": [
+{
+"a": "lookDown",
+"at": 6
+}
+],
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+},
+"key": {
+"pose": "phoneUp"
+}
+},
+{
+"who": "gui",
+"x": 1130,
+"acts": [
+{
+"a": "lookDown",
+"at": 10
+}
+],
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+},
+"key": {
+"pose": "phoneUp"
+}
+}
+],
+"cx": 1000,
+"z": 0.95
+}
+],
+"after": 0.15
+},
+{
+"id": "h5",
+"who": "narrator",
+"text": "E se, de repente, o Pix parasse por um dia inteiro?",
+"shots": [
+{
+"kind": "data",
+"action": "O título acende sobre o escuro",
+"props": [
+{
+"p": "big",
+"x": 960,
+"y": 348,
+"text": "E SE, DE",
+"w": 118,
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 330
+}
+],
+"c": "#ffc857"
+},
+{
+"p": "big",
+"x": 960,
+"y": 468,
+"text": "REPENTE...",
+"w": 118,
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 450
+}
+],
+"c": "#ffc857"
+},
+{
+"p": "big",
+"x": 960,
+"y": 638,
+"text": "O PIX",
+"w": 150,
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 620
+}
+]
+},
+{
+"p": "big",
+"x": 960,
+"y": 788,
+"text": "PARASSE?",
+"w": 118,
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 770
+}
+]
+}
+],
+"sfx": [
+{
+"s": "boom",
+"at": 0,
+"v": 0.3,
+"len": 60
+}
+],
+"trans": "torn"
+}
+],
+"after": 0.2
+},
+{
+"id": "d1",
+"who": "narrator",
+"text": "Em dezembro de 2025, o Brasil fez trezentos e treze milhões de Pix em um único dia.",
+"shots": [
+{
+"kind": "data",
+"action": "O contador sobe até 313 milhões",
+"props": [
+{
+"p": "counter",
+"x": 960,
+"y": 460,
+"h": 313,
+"n": 40,
+"m": 0,
+"t3": "",
+"t4": " MI",
+"w": 560,
+"moves": [
+{
+"at": 0,
+"dur": 6,
+"y": 456
+}
+],
+"t2": "PIX EM UM SÓ DIA"
+}
+]
+},
+{
+"kind": "wide",
+"action": "A rua inteira paga com o celular, cada um na sua barraca",
+"set": "rua",
+"cast": [
+{
+"who": "caio",
+"x": 960,
+"acts": [
+{
+"a": "phoneUp",
+"at": 4
+}
+],
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+}
+},
+{
+"who": "gal",
+"x": 1100,
+"acts": [
+{
+"a": "phoneUp",
+"at": 10
+}
+],
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+}
+}
+],
+"cx": 1030,
+"z": 1.0,
+"on": "Brasil"
+}
+],
+"after": 0.1
+},
+{
+"id": "d2",
+"who": "narrator",
+"text": "Agora tira isso.",
+"shots": [
+{
+"kind": "data",
+"action": "O número despenca para zero",
+"props": [
+{
+"p": "big",
+"x": 960,
+"y": 480,
+"text": "0",
+"w": 300,
+"c": "#e0523f",
+"moves": [
+{
+"at": 0,
+"dur": 6,
+"s": 1.12
+},
+{
+"at": 6,
+"dur": 8,
+"s": 1
+}
+]
+}
+],
+"sfx": [
+{
+"s": "boom",
+"at": 0,
+"v": 0.35,
+"len": 48
+}
+],
+"trans": "torn"
+}
+],
+"after": 0.15
+},
+{
+"id": "e1",
+"who": "narrator",
+"text": "Na primeira hora, provavelmente vira piada.",
+"shots": [
+{
+"kind": "close",
+"action": "Caio ri de lado, mostrando o celular",
+"set": "rua",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "snapFace",
+"at": 6,
+"eyes": "dot",
+"mouth": "smile",
+"brow": "high"
+},
+{
+"a": "nod",
+"at": 20
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+}
+}
+],
+"cx": 960
+}
+],
+"after": 0.05
+},
+{
+"id": "e2",
+"who": "narrator",
+"text": "Na hora do almoço, a piada acaba.",
+"shots": [
+{
+"kind": "medium",
+"action": "A dona do mercadinho cruza os braços e balança a cabeça",
+"set": "mercado",
+"cast": [
+{
+"who": "neide",
+"x": 960,
+"acts": [
+{
+"a": "face",
+"at": 4,
+"eyes": "half",
+"brow": "flat"
+},
+{
+"a": "turn",
+"at": 14,
+"to": -0.3
+},
+{
+"a": "turn",
+"at": 28,
+"to": 0.3
+}
+],
+"behind": true
+}
+],
+"cx": 960,
+"z": 1.3
+}
+],
+"after": 0.05
+},
+{
+"id": "e3",
+"who": "narrator",
+"text": "Quem está sem dinheiro vivo volta para casa com fome.",
+"shots": [
+{
+"kind": "wide",
+"action": "Caio deixa a bandeja e caminha para fora do mercadinho",
+"set": "mercadoVazio",
+"cast": [
+{
+"who": "caio",
+"x": 980,
+"face": {
+"eyes": "half",
+"mouth": "flat",
+"brow": "worry"
+},
+"walks": [
+{
+"from": 4,
+"to": 60,
+"x0": 0,
+"x1": -180
+}
+],
+"dir": -1
+}
+],
+"cx": 880,
+"z": 1.1
+},
+{
+"kind": "close",
+"action": "Caio olha para baixo, sem saber o que fazer",
+"set": "rua",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "lookDown",
+"at": 4
+},
+{
+"a": "sigh",
+"at": 14
+}
+],
+"face": {
+"eyes": "sad",
+"mouth": "flat",
+"brow": "worry"
+}
+}
+],
+"cx": 1100,
+"on": "volta"
+}
+],
+"after": 0.05
+},
+{
+"id": "e4",
+"who": "narrator",
+"text": "A fila do caixa eletrônico deve dobrar a esquina.",
+"shots": [
+{
+"kind": "wide",
+"action": "A fila para o caixa eletrônico cresce pela calçada",
+"set": "ruaFechada",
+"cast": [
+{
+"who": "guy2",
+"x": 800,
+"acts": [
+{
+"a": "sigh",
+"at": 8
+}
+]
+},
+{
+"who": "gal",
+"x": 920,
+"acts": [
+{
+"a": "lookUp",
+"at": 6
+}
+]
+},
+{
+"who": "caio",
+"x": 1040,
+"acts": [
+{
+"a": "turn",
+"at": 4,
+"to": -0.4
+}
+]
+},
+{
+"who": "gal2",
+"x": 1160,
+"walks": [
+{
+"from": 3,
+"to": 44,
+"x0": 180,
+"x1": 0
+}
+],
+"dir": -1
+}
+],
+"props": [
+{
+"p": "atm",
+"x": 680,
+"y": 720,
+"s": 0.9
+}
+],
+"cx": 980,
+"z": 0.9
+}
+],
+"after": 0.1
+},
+{
+"id": "c1",
+"who": "narrator",
+"text": "No Canadá, em 2022, uma pane derrubou uma operadora com mais de doze milhões de clientes.",
+"shots": [
+{
+"kind": "data",
+"action": "A palavra Canadá e o ano aparecem sobre o escuro",
+"props": [
+{
+"p": "big",
+"x": 960,
+"y": 438,
+"text": "CANADÁ",
+"w": 130,
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 420
+}
+]
+},
+{
+"p": "big",
+"x": 960,
+"y": 598,
+"text": "2022",
+"w": 110,
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 580
+}
+],
+"c": "#ffc857"
+}
+],
+"trans": "torn"
+},
+{
+"kind": "close",
+"action": "Caio ergue o celular e procura sinal",
+"set": "ruaFechada",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "lookUp",
+"at": 4
+},
+{
+"a": "face",
+"at": 16,
+"eyes": "wide",
+"brow": "high",
+"mouth": "o"
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+}
+}
+],
+"cx": 980,
+"on": "pane"
+},
+{
+"kind": "data",
+"action": "O contador de clientes sobe até 12 milhões",
+"props": [
+{
+"p": "counter",
+"x": 960,
+"y": 460,
+"h": 12,
+"n": 30,
+"m": 0,
+"t3": "",
+"t4": " MI",
+"w": 560,
+"moves": [
+{
+"at": 0,
+"dur": 6,
+"y": 456
+}
+],
+"t2": "CLIENTES FORA DO AR",
+"c": "#e0523f"
+}
+],
+"on": "mais"
+}
+],
+"after": 0.05
+},
+{
+"id": "c2",
+"who": "narrator",
+"text": "E até o débito parou de passar.",
+"shots": [
+{
+"kind": "top",
+"action": "O cartão desliza na maquininha e nada acontece",
+"props": [
+{
+"p": "maquininha",
+"x": 960,
+"y": 470,
+"s": 1.1,
+"n": 10,
+"moves": [
+{
+"at": 0,
+"dur": 8,
+"y": 462
+}
+]
+},
+{
+"p": "hand",
+"x": 1180,
+"y": 900,
+"r": -20,
+"s": 1.0,
+"c": "#2e6f92",
+"point": true,
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"x": 1080,
+"y": 760
+}
+]
+}
+],
+"motes": true,
+"sfx": [
+{
+"s": "buzz",
+"at": 10,
+"v": 0.3
+}
+]
+}
+],
+"after": 0.15
+},
+{
+"id": "n1",
+"who": "narrator",
+"text": "E a dona Neide? Não fecha. Ela abre um caderno.",
+"shots": [
+{
+"kind": "close",
+"action": "Dona Neide ergue as sobrancelhas, tranquila",
+"set": "mercado",
+"cast": [
+{
+"who": "neide",
+"acts": [
+{
+"a": "face",
+"at": 4,
+"eyes": "dot",
+"brow": "high",
+"mouth": "smile"
+},
+{
+"a": "nod",
+"at": 20
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+}
+}
+],
+"cx": 1000
+},
+{
+"kind": "top",
+"action": "O caderno de fiado abre em cima do balcão",
+"props": [
+{
+"p": "caderno",
+"x": 960,
+"y": 480,
+"s": 0.95,
+"n": 4,
+"lines": [
+"Caio: R$ 18,00",
+"Bia: R$ 9,90"
+],
+"moves": [
+{
+"at": 0,
+"dur": 8,
+"y": 470
+}
+]
+}
+],
+"on": "Ela",
+"sfx": [
+{
+"s": "click",
+"at": 4,
+"v": 0.4
+}
+]
+}
+],
+"after": 0.1
+},
+{
+"id": "n3",
+"who": "narrator",
+"text": "No dia seguinte, o Pix volta. Mas muita gente provavelmente guarda uma nota na carteira.",
+"shots": [
+{
+"kind": "top",
+"action": "O celular mostra o pagamento confirmado",
+"props": [
+{
+"p": "phone",
+"x": 960,
+"y": 480,
+"s": 1.0,
+"r": 3,
+"text": "pix",
+"t2": "R$ 18,00",
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 466
+}
+]
+},
+{
+"p": "hand",
+"x": 1190,
+"y": 950,
+"r": -20,
+"s": 1.0,
+"c": "#2e6f92",
+"point": true,
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"x": 1100,
+"y": 790
+}
+]
+}
+],
+"motes": true,
+"sfx": [
+{
+"s": "ding",
+"at": 8,
+"v": 0.35
+}
+]
+},
+{
+"kind": "insert",
+"action": "Uma nota amassada entra dobrada na carteira",
+"set": "sala",
+"props": [
+{
+"p": "nota",
+"x": 960,
+"y": 480,
+"s": 1.3,
+"text": "20",
+"moves": [
+{
+"at": 2,
+"dur": 12,
+"y": 440,
+"r": -6
+}
+]
+}
+],
+"cx": 960,
+"on": "Mas"
+},
+{
+"kind": "close",
+"action": "Caio guarda a carteira e sorri de canto",
+"set": "sala",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "nod",
+"at": 8
+},
+{
+"a": "snapFace",
+"at": 18,
+"mouth": "smile"
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+}
+}
+],
+"cx": 700,
+"on": "guarda"
+}
+],
+"after": 0.15
+},
+{
+"id": "q1",
+"who": "narrator",
+"text": "E você? Tem dinheiro vivo aí agora? Conta nos comentários.",
+"shots": [
+{
+"kind": "data",
+"action": "A pergunta acende sobre o escuro",
+"props": [
+{
+"p": "big",
+"x": 960,
+"y": 438,
+"text": "E VOCÊ?",
+"w": 140,
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 420
+}
+],
+"c": "#ffc857"
+},
+{
+"p": "qmark",
+"x": 960,
+"y": 680,
+"s": 0.8,
+"moves": [
+{
+"at": 0,
+"dur": 8,
+"y": 668
+}
+]
+}
+]
+},
+{
+"kind": "close",
+"action": "Caio abre a carteira e olha para o espectador",
+"set": "sala",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "snapFace",
+"at": 4,
+"eyes": "wide",
+"brow": "high",
+"mouth": "o"
+},
+{
+"a": "turn",
+"at": 12,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+}
+}
+],
+"cx": 700,
+"on": "Tem"
+},
+{
+"kind": "data",
+"action": "O convite para comentar aparece",
+"props": [
+{
+"p": "big",
+"x": 960,
+"y": 458,
+"text": "CONTA AÍ",
+"w": 130,
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 440
+}
+]
+},
+{
+"p": "big",
+"x": 960,
+"y": 608,
+"text": "NOS COMENTÁRIOS",
+"w": 66,
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 590
+}
+],
+"c": "#ffc857"
+}
+],
+"on": "Conta"
+}
+],
+"after": 0.1
+}
+]
+}

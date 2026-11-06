@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, random} from 'remotion';
+import {AbsoluteFill, random, useVideoConfig} from 'remotion';
 
 // Reusable pieces from the study: a room with real detail density, a top-down desk with large hands, the torn wipe,
 // pop labels and dust. Numbers come from docs/whatif/REPLICATION_GUIDE.md.
@@ -340,7 +340,7 @@ export const LobbyDesk: React.FC = () => (
 
 export const Fore: React.FC<{d: string; c?: string; blur?: number; dx?: number}> = ({d, c = '#090c0e', blur = 16, dx = 0}) => (
   <AbsoluteFill style={{filter: `blur(${blur}px)`, transform: `translateX(${dx}px) scale(1.05)`}}>
-    <svg viewBox="0 0 1920 1080" width="100%" height="100%">
+    <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
       <path d={d} fill={c} />
     </svg>
   </AbsoluteFill>
@@ -452,14 +452,18 @@ const TORN: [number, number][] = [[0, 0], [38, 90], [-6, 170], [30, 275], [-18, 
 
 // The torn-edge wipe: the tear accelerates across in five or six frames, and the new shot is already there behind it.
 export const TornWipe: React.FC<{from: React.ReactNode; to: React.ReactNode; p: number; hold?: number}> = ({from, to, p, hold}) => {
+  const {width, height} = useVideoConfig();
   const q = hold !== undefined ? hold : easeInCubic(Math.min(1, Math.max(0, p)));
   const x = -80 + q * 2080;
-  const pts = TORN.map(([dx, y]) => `${x + dx}px ${y}px`).join(',');
+  // The tear is drawn on a 1920x1080 grid and stretched to the frame, so it also crosses a vertical one.
+  const sx = width / 1920;
+  const sy = height / 1080;
+  const pts = TORN.map(([dx, y]) => `${(x + dx) * sx}px ${y * sy}px`).join(',');
   return (
     <AbsoluteFill>
       <AbsoluteFill>{from}</AbsoluteFill>
-      <AbsoluteFill style={{clipPath: `polygon(0 0, ${pts}, 0 1080px)`}}>{to}</AbsoluteFill>
-      <svg viewBox="0 0 1920 1080" width="100%" height="100%" style={{position: 'absolute', inset: 0}}>
+      <AbsoluteFill style={{clipPath: `polygon(0 0, ${pts}, 0 ${height}px)`}}>{to}</AbsoluteFill>
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="none" width="100%" height="100%" style={{position: 'absolute', inset: 0}}>
         <polyline points={TORN.map(([dx, y]) => `${x + dx},${y}`).join(' ')} fill="none" stroke="#050507" strokeWidth={11} />
       </svg>
     </AbsoluteFill>

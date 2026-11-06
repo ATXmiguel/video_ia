@@ -61,5 +61,15 @@ export const RemotionRoot: React.FC = () => (
     defaultProps={{frames: 240, shots: [], lines: [], looks: {}} as unknown as FilmBuild}
     calculateMetadata={({props}) => ({durationInFrames: Math.max(1, filmFrames(props))})}
   />
+  <Composition
+    id="ShortFilm"
+    component={Film}
+    width={1080}
+    height={1920}
+    fps={SPECIAL_FPS}
+    durationInFrames={240}
+    defaultProps={{frames: 240, shots: [], lines: [], looks: {}} as unknown as FilmBuild}
+    calculateMetadata={({props}) => ({durationInFrames: Math.max(1, filmFrames(props))})}
+  />
   </>
 );

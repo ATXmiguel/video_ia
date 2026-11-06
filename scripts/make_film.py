@@ -10,6 +10,10 @@ Usage: python scripts/make_film.py <slug> [--check] [--preview] [--no-render]
   --preview    half size, muted, for reading frames
   --no-render  write build.json but do not render
   --keep-bed   reuse the bed already built
+
+A film with "format": "short" renders 1080x1920 ("ShortFilm") and is linted against the part of the stage a phone shows.
+A film with "voiceEngine": "elevenlabs" tries ElevenLabs and falls back to edge-tts for the whole film (see voice_engine.py);
+out/film/<slug>/voice_status.json says which one was used.
 """
 import asyncio
 import csv
@@ -25,12 +29,17 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).parent))
+import voice_engine  # noqa: E402
 from make_proof import visemes  # noqa: E402
 from make_special import VOICES, edge_tts, probe_duration, run_ffmpeg  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 FPS = 24
 LINE_GAP = 0.25  # default silence after a line, in seconds
+SHORT_SECONDS = (50, 60)
+# A 1080x1920 frame shows the middle 607.5 of the 1920-wide stage. Keep what matters clear of its edges and of the Shorts UI.
+STAGE_X = (690, 1230)
+STAGE_Y = (90, 830)
 TARGETS = {"mean": (1.8, 2.6), "median": (1.5, 2.3), "same_kind": (0, 0.35), "no_words": (0.1, 0.4)}  # from the reference
 
 
@@ -64,9 +73,10 @@ async def speak(text: str, voice: list, dest: Path, words_path: Path) -> list:
     return []
 
 
-async def lay_out_voice(film: dict, build_dir: Path, slug: str) -> list:
+async def lay_out_voice(film: dict, build_dir: Path, slug: str, engine: str = "edge") -> list:
     """Step 1. Every item of the script gets its place on the clock, before any shot is considered."""
     voices = {**{k: list(v) for k, v in VOICES.items()}, **film.get("voices", {})}
+    config = voice_engine.load_config() if engine == "elevenlabs" else {}
     t = float(film.get("lead", 0.3))
     items = []
     for raw in film["script"]:
@@ -74,16 +84,41 @@ async def lay_out_voice(film: dict, build_dir: Path, slug: str) -> list:
         if "silence" in raw:
             item.update(kind="silence", dur=float(raw["silence"]), words=[])
         else:
-            voice = voices[raw["who"]]
+            voice = voice_engine.voice_for(raw["who"], film, config) if engine == "elevenlabs" else voices[raw["who"]]
             key = hashlib.sha1(json.dumps([raw["text"], voice]).encode()).hexdigest()[:10]
             dest = build_dir / f"{raw['id']}_{key}.mp3"
-            words = await speak(raw["text"], voice, dest, dest.with_suffix(".json"))
+            if engine == "elevenlabs":
+                words = await asyncio.to_thread(voice_engine.speak, raw["text"], voice, dest, dest.with_suffix(".json"))
+            else:
+                words = await speak(raw["text"], voice, dest, dest.with_suffix(".json"))
             # edge-tts leaves a tail of silence on each file: the clock follows the last spoken word, not the file.
             spoken = min(probe_duration(dest), words[-1]["e"] + 0.08) if words else probe_duration(dest)
             item.update(kind="line", who=raw["who"], text=raw["text"], audio=f"special/{slug}/{dest.name}", path=dest, dur=spoken, words=words)
         t += item["dur"] + float(raw.get("after", LINE_GAP if item["kind"] == "line" else 0))
         item["next"] = t
         items.append(item)
+    return items
+
+
+async def voice_the_film(film: dict, build_dir: Path, out: Path, slug: str) -> list:
+    """ElevenLabs for every line, or edge-tts for every line. Once a film has fallen back it stays there, so a rebuild
+    neither switches its voice halfway through the work nor warns twice."""
+    status_path = out / "voice_status.json"
+    previous = json.loads(status_path.read_text(encoding="utf-8")) if status_path.exists() else {}
+    if film.get("voiceEngine") != "elevenlabs" or previous.get("fallback"):
+        status = previous if previous.get("fallback") else {"wanted": "edge", "used": "edge", "fallback": False}
+        status_path.write_text(json.dumps(status, ensure_ascii=False, indent=1), encoding="utf-8")
+        return await lay_out_voice(film, build_dir, slug, "edge")
+    try:
+        chars = sum(len(i["text"]) for i in film["script"] if "text" in i)
+        status = {"wanted": "elevenlabs", "used": "elevenlabs", "fallback": False, **voice_engine.preflight(chars)}
+        items = await lay_out_voice(film, build_dir, slug, "elevenlabs")
+    except voice_engine.Unavailable as e:
+        status = {"wanted": "elevenlabs", "used": "edge", "fallback": True, "reason": e.kind, "detail": e.detail}
+        status_path.write_text(json.dumps(status, ensure_ascii=False, indent=1), encoding="utf-8")
+        voice_engine.alert("E Se De Repente: voz grátis no Short", f"{voice_engine.REASONS[e.kind]} ({e.detail}). \"{film.get('title', slug)}\" foi gravado com a voz grátis (edge-tts).")
+        return await lay_out_voice(film, build_dir, slug, "edge")
+    status_path.write_text(json.dumps(status, ensure_ascii=False, indent=1), encoding="utf-8")
     return items
 
 
@@ -157,7 +192,7 @@ def first_motion(shot: dict) -> int | None:
     return min(ats) if ats else None
 
 
-def lint(shots: list, items: list, total: int) -> tuple[list, dict]:
+def lint(shots: list, items: list, total: int, short: bool = False) -> tuple[list, dict]:
     """Step 3. Compare the plan with the numbers measured on the reference, before spending a render on it."""
     problems = []
     lens = np.array([s["dur"] / FPS for s in shots])
@@ -185,11 +220,46 @@ def lint(shots: list, items: list, total: int) -> tuple[list, dict]:
         "speech_share": round(speech, 2), "kinds": {k: sum(1 for s in shots if s["kind"] == k) for k in sorted({s["kind"] for s in shots})},
     }
     for key, (lo, hi) in TARGETS.items():
+        if short and key == "no_words":  # a one-minute Short is narrated wall to wall
+            continue
         if not lo <= stats[key] <= hi:
             problems.append(f"{key} = {stats[key]}, target {lo} to {hi}")
     for s, w in zip(shots, per):
         s["_words"] = w
     return problems, stats
+
+
+def lint_short(shots: list, total: int) -> list:
+    """What a phone frame cuts off. Reads positions from the data, so it can miss what a prop draws far from its anchor."""
+    problems = []
+    secs = total / FPS
+    if not SHORT_SECONDS[0] <= secs <= SHORT_SECONDS[1]:
+        problems.append(f"length {secs:.1f} s, target {SHORT_SECONDS[0]} to {SHORT_SECONDS[1]} s")
+    for s in shots:
+        name = f"{s['id']} ({s['kind']})"
+        kind = s["kind"]
+        z = s.get("z", {"wide": 1.12, "medium": 1.7, "close": 1.25, "rack": 1.2}.get(kind, 1.25 if kind in ("top", "insert") else 1.0))
+        focus = s.get("focus", [960, 540])
+        for c in s.get("cast", []):
+            x = c.get("x", 980 if kind == "close" else 960)
+            sx = x if kind in ("close", "rack") else 960 + (x - s.get("cx", 960)) * z
+            if not 600 <= sx <= 1320:
+                problems.append(f"{name}: {c['who']} stands off the phone frame (stage x {sx:.0f})")
+        if kind in ("top", "insert", "data"):
+            for q in s.get("props", []):
+                sx = 960 + (q["x"] - focus[0]) * z
+                if not 600 <= sx <= 1320:
+                    problems.append(f"{name}: prop {q['p']} is off the phone frame (stage x {sx:.0f})")
+                if q["p"] == "big" and q.get("text"):
+                    w = len(q["text"]) * q.get("w", 150) * 0.47 * z * q.get("s", 1)
+                    if w > STAGE_X[1] - STAGE_X[0] + 20:
+                        problems.append(f"{name}: big text {q['text']!r} is about {w:.0f} wide, more than the frame's {STAGE_X[1] - STAGE_X[0]}")
+        pill = s.get("pill")
+        if pill:
+            half = (len(pill["text"]) * 25 + 76) / 2
+            if pill["x"] - half < STAGE_X[0] - 20 or pill["x"] + half > STAGE_X[1] + 20 or not STAGE_Y[0] <= pill["y"] <= STAGE_Y[1]:
+                problems.append(f"{name}: pill {pill['text']!r} leaves the safe area")
+    return problems
 
 
 def make_bed(build_dir: Path, seconds: float, sections: list | None = None) -> None:
@@ -280,10 +350,14 @@ async def main() -> None:
     build_dir.mkdir(parents=True, exist_ok=True)
     out.mkdir(parents=True, exist_ok=True)
 
-    items = await lay_out_voice(film, build_dir, slug)
+    items = await voice_the_film(film, build_dir, out, slug)
     shots = place_shots(film, items)
     total = shots[-1]["start"] + shots[-1]["dur"]
-    problems, stats = lint(shots, items, total)
+    short = film.get("format") == "short"
+    problems, stats = lint(shots, items, total, short)
+    if short:
+        problems += lint_short(shots, total)
+    composition = "ShortFilm" if short else "SpecialFilm"
 
     with open(out / "timeline.csv", "w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh)
@@ -306,17 +380,17 @@ async def main() -> None:
     sections = [(t_of[k], v[0], v[1]) for k, v in film["sections"].items()] if film.get("sections") else None
     if "--keep-bed" not in flags or not (build_dir / "bed.mp3").exists():
         make_bed(build_dir, total / FPS, sections)
-    build = {"frames": total, "fade": film.get("fade", 0), "looks": film.get("looks", {}), "lines": lines, "shots": shots,
+    build = {"format": film.get("format", "film"), "frames": total, "fade": film.get("fade", 0), "looks": film.get("looks", {}), "lines": lines, "shots": shots,
              "bed": f"special/{slug}/bed.mp3", "room": f"special/{slug}/room.mp3", "bedVolume": film.get("bedVolume", 0.5), "roomVolume": film.get("roomVolume", 0.2)}
     path = build_dir / "build.json"
     path.write_text(json.dumps(build), encoding="utf-8")
     if "--no-render" in flags:
         return
     if "--preview" in flags:
-        subprocess.run(f'npx remotion render src/index.ts SpecialFilm "{out / "preview.mp4"}" --props="{path}" --scale=0.5 --muted --concurrency=75% --log=error', shell=True, check=True, cwd=ROOT)
+        subprocess.run(f'npx remotion render src/index.ts {composition} "{out / "preview.mp4"}" --props="{path}" --scale=0.5 --muted --concurrency=75% --log=error', shell=True, check=True, cwd=ROOT)
         return
     raw = out / "raw.mp4"
-    subprocess.run(f'npx remotion render src/index.ts SpecialFilm "{raw}" --props="{path}" --concurrency=75% --log=error', shell=True, check=True, cwd=ROOT)
+    subprocess.run(f'npx remotion render src/index.ts {composition} "{raw}" --props="{path}" --concurrency=75% --log=error', shell=True, check=True, cwd=ROOT)
     normalize(raw, out / f"{slug}.mp4")
     print("rendered", out / f"{slug}.mp4")
 

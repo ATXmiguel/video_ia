@@ -13,7 +13,7 @@ fs.mkdirSync(outDir, {recursive: true});
 const inputProps = JSON.parse(fs.readFileSync(buildPath, 'utf8'));
 const serveUrl = await bundle({entryPoint: path.resolve('src/index.ts'), publicDir: path.resolve('public')});
 const browser = await openBrowser('chrome');
-const composition = await selectComposition({serveUrl, id: 'SpecialFilm', inputProps, puppeteerInstance: browser});
+const composition = await selectComposition({serveUrl, id: inputProps.format === 'short' ? 'ShortFilm' : 'SpecialFilm', inputProps, puppeteerInstance: browser});
 let next = 0;
 const worker = async () => {
   while (next < frames.length) {

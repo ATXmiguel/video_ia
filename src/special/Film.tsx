@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, Html5Audio, random, Sequence, staticFile, useCurrentFrame} from 'remotion';
+import {AbsoluteFill, Html5Audio, random, Sequence, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import '../ui/fonts';
 import type {Look} from './Sil';
 import {Puppet, RigDefs, type FaceKey, type Key, type Mouth, type Walk} from './rig';
@@ -95,7 +95,7 @@ const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
 
 const SvgLayer: React.FC<{children: React.ReactNode; blur?: number; style?: React.CSSProperties}> = ({children, blur = 0, style}) => (
   <AbsoluteFill style={{filter: blur > 0.2 ? `blur(${blur}px)` : undefined, ...style}}>
-    <svg viewBox="0 0 1920 1080" width="100%" height="100%" style={{position: 'absolute', inset: 0}}>
+    <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" style={{position: 'absolute', inset: 0}}>
       <WorldDefs />
       <RigDefs />
       <BR_DEFS />
@@ -147,11 +147,13 @@ const SetBack: React.FC<{s: Shot; f: number; z: number; cx: number; cy: number}>
 
 const Grade: React.FC<{s: Shot; z: number; cx: number}> = ({s, z, cx}) => {
   const set = SETS[s.set ?? ''];
+  const {width, height} = useVideoConfig();
+  const seen = (1080 * width) / height; // how much of the 1920-wide stage this frame shows
   const l = s.light ?? set.light;
   // Close and rack shots stand in screen space, so their light stays where the shot put it.
   const lx = s.kind === 'close' || s.kind === 'rack' ? l[0] : 960 + (l[0] - cx) * z;
   const ly = Math.max(-200, Math.min(1000, l[1]));
-  const pos = `${(lx / 1920) * 100}% ${(ly / 1080) * 100}%`;
+  const pos = `${((lx - (1920 - seen) / 2) / seen) * 100}% ${(ly / 1080) * 100}%`;
   return (
     <>
       <AbsoluteFill style={{background: `radial-gradient(ellipse 80% 95% at ${pos}, #ffffff 0%, #fbf7ee 30%, ${set.grade.edge} 100%)`, mixBlendMode: 'multiply'}} />
@@ -327,13 +329,16 @@ const ShotView: React.FC<{s: Shot; f: number; b: FilmBuild; global: number}> = (
   );
 };
 
-const Finish: React.FC<{frame: number}> = ({frame}) => (
-  <>
-    <AbsoluteFill style={{backgroundImage: `url(${staticFile('sfx/grain.png')})`, backgroundPosition: `${Math.floor(random(`gx${frame}`) * 640)}px ${Math.floor(random(`gy${frame}`) * 640)}px`, mixBlendMode: 'overlay', opacity: 0.06}} />
-    <div style={{position: 'absolute', top: 0, left: 0, right: 0, height: 60, background: '#000'}} />
-    <div style={{position: 'absolute', bottom: 0, left: 0, right: 0, height: 60, background: '#000'}} />
-  </>
-);
+const Finish: React.FC<{frame: number}> = ({frame}) => {
+  const {width, height} = useVideoConfig();
+  return (
+    <>
+      <AbsoluteFill style={{backgroundImage: `url(${staticFile('sfx/grain.png')})`, backgroundPosition: `${Math.floor(random(`gx${frame}`) * 640)}px ${Math.floor(random(`gy${frame}`) * 640)}px`, mixBlendMode: 'overlay', opacity: 0.06}} />
+      {width > height && <div style={{position: 'absolute', top: 0, left: 0, right: 0, height: 60, background: '#000'}} />}
+      {width > height && <div style={{position: 'absolute', bottom: 0, left: 0, right: 0, height: 60, background: '#000'}} />}
+    </>
+  );
+};
 
 export const Film: React.FC<FilmBuild> = (b) => {
   const frame = useCurrentFrame();

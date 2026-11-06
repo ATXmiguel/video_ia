@@ -80,6 +80,12 @@ const Phone: React.FC<{d: PropDef; f: number}> = ({d, f}) => {
             <text x={0} y={-120} textAnchor="middle" fontFamily={ANTON} fontSize={66} fill={CREAM}>{line || 'R$ 23,50'}</text>
             {f < (d.n ?? 24) ? (
               <g transform="translate(0 20)"><Spinner f={f} r={44} /></g>
+            ) : t3 === 'ok' ? (
+              <g>
+                <circle cx={0} cy={10} r={52} fill="#2f8a56" />
+                <path d="M-24 10 L -6 30 L 26 -10" fill="none" stroke="#fff" strokeWidth={11} strokeLinecap="round" strokeLinejoin="round" />
+                <text x={0} y={108} textAnchor="middle" fontFamily={INTER} fontWeight={800} fontSize={25} fill={CREAM}>Pagamento concluído</text>
+              </g>
             ) : (
               <g>
                 <circle cx={0} cy={10} r={52} fill={RED} />
