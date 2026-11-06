@@ -4,6 +4,17 @@ Vídeos verticais de cerca de 1 minuto no visual do filme "E se, de repente, a i
 
 O modelo é `specials/short-pix-parou/`: copie a pasta e troque roteiro, cenas, fontes e metadados. `specials/shorts_log.json` lista o que já saiu.
 
+## Temas
+
+Alterne os tipos e não repita o mesmo tipo dois dias seguidos. Olhe os títulos em `specials/shorts_log.json` para saber qual saiu por último.
+
+- **Algo some ou para:** "E se o Pix parasse?", "E se a gravidade sumisse por cinco segundos?".
+- **Você ganha um poder:** "E se você ficasse invisível?", "E se você ouvisse o pensamento dos outros?". O vídeo mostra o lado bom e depois o preço, sempre com uma cena específica, não uma descrição.
+- **Sua vida muda de repente:** "E se você ganhasse na loteria?", "E se você acordasse sem nenhuma memória?".
+- **O mundo muda de regra:** "E se ninguém mais conseguisse mentir?", "E se todo mundo vivesse duzentos anos?".
+
+A premissa pode ser impossível. O que precisa ser verdade é o fato real que ancora o vídeo, como um número ou um estudo. As consequências são raciocínio e precisam soar assim.
+
 ## Formato
 
 - **Quadro:** 1080x1920, 24 fps, de 50 a 60 s. O palco continua 1920x1080, mas o celular mostra só o meio dele.
