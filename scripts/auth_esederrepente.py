@@ -16,7 +16,7 @@ dest = secrets / "token_esederrepente.json"
 if dest.exists():
     raise SystemExit(f"STOP: {dest} already exists")
 flow = InstalledAppFlow.from_client_config(json.loads((secrets / "client_secret.json").read_text()), SCOPES)
-creds = flow.run_local_server(port=8765, open_browser=False, prompt="consent", access_type="offline", authorization_prompt_message="Open this URL to authorize:\n{url}\n")
+creds = flow.run_local_server(port=8765, open_browser=False, prompt="consent", authorization_prompt_message="Open this URL to authorize:\n{url}\n")
 items = build("youtube", "v3", credentials=creds, cache_discovery=False).channels().list(part="id,snippet", mine=True).execute().get("items", [])
 ids = [i["id"] for i in items]
 if ids != [CHANNEL]:
