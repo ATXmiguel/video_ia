@@ -1,0 +1,175 @@
+{
+  "series": "Shift Happens",
+  "episode": 7,
+  "arc": {
+    "number": 2,
+    "part": 3,
+    "name": "Starlite Cinema"
+  },
+  "goal": {
+    "countdown": "SHIFTS LEFT",
+    "progress": "SOLD OUT"
+  },
+  "hook": "YOU TOLD HIS FANS.",
+  "hookAccent": "LOOK WHO'S BUYING IT?!",
+  "topComment": {
+    "user": "@SpaghettiGorebox",
+    "text": "at this point just fans and get a new job as a teacher or something cause what do you mean your bosses keep trying to make you fail",
+    "likes": 1
+  },
+  "topCommentPicked": "FANS",
+  "coldOpen": {
+    "set": "lobby",
+    "cast": [
+      { "who": "gloria", "x": 760, "pose": "point", "face": "smug", "flip": true },
+      { "who": "you", "x": 300, "pose": "shock", "face": "shock" }
+    ],
+    "hud": { "tips": 0, "rage": 0, "badge": "MARKED", "left": 3, "progress": 40 },
+    "lines": [
+      "You have three shifts left to save this cinema, and your own boss is getting paid to make you lose."
+    ]
+  },
+  "scenes": [
+    {
+      "set": "lobby",
+      "cast": [
+        { "who": "you", "x": 320, "pose": "point", "face": "angry" },
+        { "who": "chad", "x": 760, "pose": "shrug", "face": "sad", "flip": true }
+      ],
+      "hud": { "tips": 0, "rage": 0, "badge": "TRUTH TELLER", "left": 3, "progress": 40 },
+      "stamp": { "text": "GOING LIVE", "color": "green", "line": 0 },
+      "fx": "flash",
+      "lines": [
+        "You grab Chad's phone and go live to two million fans.",
+        { "who": "chad", "text": "Do it. I'm done being scared." }
+      ]
+    },
+    {
+      "set": "phone",
+      "cast": [],
+      "hud": { "tips": 0, "rage": 0, "badge": "TRUTH TELLER", "left": 3, "progress": 40 },
+      "phone": {
+        "contact": "CHAD VLOGS - LIVE",
+        "messages": [
+          { "from": "them", "text": "SHE PAID HIM??", "line": 0 },
+          { "from": "them", "text": "a PARKING LOT?", "line": 1 },
+          { "from": "them", "text": "buying 4 tickets just to annoy her", "line": 2 }
+        ]
+      },
+      "lines": [
+        "You read Gloria's text out loud.",
+        "The chat explodes.",
+        "And then people start buying tickets, out of pure spite."
+      ]
+    },
+    {
+      "set": "marquee",
+      "cast": [
+        { "who": "you", "x": 320, "pose": "cheer", "face": "happy" },
+        { "who": "lily", "x": 740, "pose": "cheer", "face": "love", "flip": true }
+      ],
+      "hud": { "tips": 0, "rage": 0, "badge": "TRUTH TELLER", "left": 3, "progress": 65 },
+      "stamp": { "text": "65% SOLD", "color": "yellow", "line": 0 },
+      "fx": "flash",
+      "lines": [
+        "By noon, the line wraps around the block twice.",
+        { "who": "lily", "text": "Sixty-five percent! They hate her so much!" }
+      ]
+    },
+    {
+      "set": "lobby",
+      "cast": [
+        { "who": "gloria", "x": 760, "pose": "angry", "face": "angry", "flip": true },
+        { "who": "you", "x": 300, "pose": "shock", "face": "shock" }
+      ],
+      "hud": { "tips": 0, "rage": 0, "badge": "FIRED", "left": 3, "progress": 65 },
+      "stamp": { "text": "FIRED", "color": "red", "line": 0 },
+      "fx": "shake",
+      "zoom": "gloria",
+      "lines": [
+        { "who": "gloria", "text": "You're fired. Both of you. Go be a teacher or something." },
+        "She takes your keys and locks the doors."
+      ]
+    },
+    {
+      "set": "marquee",
+      "cast": [
+        { "who": "you", "x": 320, "pose": "sad", "face": "sad" },
+        { "who": "lily", "x": 740, "pose": "sad", "face": "sad", "flip": true }
+      ],
+      "hud": { "tips": 0, "rage": 0, "badge": "FIRED", "left": 3, "progress": 65 },
+      "lines": [
+        "You sit on the curb. No job, and a cinema you can't even walk into.",
+        { "who": "lily", "text": "At least it can't get worse." }
+      ]
+    },
+    {
+      "set": "marquee",
+      "cast": [
+        { "who": "brenda", "x": 760, "pose": "point", "face": "smug", "flip": true, "toX": 680 },
+        { "who": "you", "x": 300, "pose": "shock", "face": "shock" }
+      ],
+      "hud": { "tips": 0, "rage": 0, "badge": "FIRED", "left": 3, "progress": 65 },
+      "stamp": { "text": "THE BUYER", "color": "red", "line": 0 },
+      "fx": "shake",
+      "zoom": "brenda",
+      "lines": [
+        { "who": "brenda", "text": "Surprise, sweetie. Guess who's buying this dump?" },
+        "Brenda. The woman whose burger place blew up on your watch."
+      ]
+    },
+    {
+      "set": "phone",
+      "cast": [],
+      "hud": { "tips": 0, "rage": 0, "badge": "FIRED", "left": 3, "progress": 65 },
+      "phone": {
+        "contact": "BRENDA",
+        "messages": [
+          { "from": "them", "text": "Parking lot? No, honey", "line": 0 },
+          { "from": "them", "text": "BIG BUN'S 2. Drive-thru. Twelve fryers", "line": 1 },
+          { "from": "them", "text": "I need a manager. YOU", "line": 2 }
+        ]
+      },
+      "lines": [
+        "She shows you the plans.",
+        "It was never a parking lot.",
+        "And she wants you to run it."
+      ]
+    },
+    {
+      "set": "marquee",
+      "cast": [
+        { "who": "you", "x": 320, "pose": "shrug", "face": "neutral" },
+        { "who": "chad", "x": 760, "pose": "point", "face": "neutral", "flip": true }
+      ],
+      "hud": { "tips": 0, "rage": 0, "badge": "FIRED", "left": 3, "progress": 65 },
+      "lines": [
+        { "who": "chad", "text": "Psst. Master key. Gloria doesn't know I copied it." },
+        "Sneak back in, and if she catches you, she calls the cops. Or take Brenda's deal. You get a big job tonight, and the cinema dies."
+      ]
+    }
+  ],
+  "choice": {
+    "question": "WHAT DO YOU DO?",
+    "options": [
+      {
+        "key": "A",
+        "word": "KEY",
+        "label": "Sneak back in",
+        "teaser": "Gloria calls the cops",
+        "icon": "chad",
+        "pose": "point",
+        "face": "smug"
+      },
+      {
+        "key": "B",
+        "word": "BRENDA",
+        "label": "Take her deal",
+        "teaser": "The cinema dies",
+        "icon": "brenda",
+        "pose": "cheer",
+        "face": "happy"
+      }
+    ]
+  }
+}

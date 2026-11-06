@@ -1,0 +1,1619 @@
+{
+  "series": "Shift Happens",
+  "episode": 7,
+  "hook": "YOU TOLD HIS FANS.",
+  "hookAccent": "LOOK WHO'S BUYING IT?!",
+  "choice": {
+    "question": "WHAT DO YOU DO?",
+    "options": [
+      {
+        "key": "A",
+        "word": "KEY",
+        "label": "Sneak back in",
+        "teaser": "Gloria calls the cops",
+        "icon": "chad",
+        "pose": "point",
+        "face": "smug"
+      },
+      {
+        "key": "B",
+        "word": "BRENDA",
+        "label": "Take her deal",
+        "teaser": "The cinema dies",
+        "icon": "brenda",
+        "pose": "cheer",
+        "face": "happy"
+      }
+    ]
+  },
+  "arc": {
+    "number": 2,
+    "part": 3,
+    "name": "Starlite Cinema"
+  },
+  "goal": {
+    "countdown": "SHIFTS LEFT",
+    "progress": "SOLD OUT"
+  },
+  "topComment": {
+    "user": "@SpaghettiGorebox",
+    "text": "at this point just fans and get a new job as a teacher or something cause what do you mean your bosses keep trying to make you fail",
+    "likes": 1,
+    "picked": "FANS"
+  },
+  "scenes": [
+    {
+      "set": "lobby",
+      "cast": [
+        {
+          "who": "gloria",
+          "x": 760,
+          "pose": "point",
+          "face": "smug",
+          "flip": true
+        },
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "shock",
+          "face": "shock"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "MARKED",
+        "left": 3,
+        "progress": 40
+      },
+      "kind": "story",
+      "duration": 5.732,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "You have three shifts left to save this cinema, and your own boss is getting paid to make you lose.",
+          "audio": "ep007/s0_l0.mp3",
+          "start": 0.05,
+          "duration": 5.232,
+          "words": [
+            {
+              "text": "You",
+              "start": 0.089,
+              "end": 0.19
+            },
+            {
+              "text": "have",
+              "start": 0.201,
+              "end": 0.391
+            },
+            {
+              "text": "three",
+              "start": 0.402,
+              "end": 0.681
+            },
+            {
+              "text": "shifts",
+              "start": 0.692,
+              "end": 1.049
+            },
+            {
+              "text": "left",
+              "start": 1.06,
+              "end": 1.317
+            },
+            {
+              "text": "to",
+              "start": 1.328,
+              "end": 1.384
+            },
+            {
+              "text": "save",
+              "start": 1.395,
+              "end": 1.719
+            },
+            {
+              "text": "this",
+              "start": 1.73,
+              "end": 1.864
+            },
+            {
+              "text": "cinema",
+              "start": 1.875,
+              "end": 2.243
+            },
+            {
+              "text": "and",
+              "start": 2.567,
+              "end": 2.645
+            },
+            {
+              "text": "your",
+              "start": 2.656,
+              "end": 2.801
+            },
+            {
+              "text": "own",
+              "start": 2.812,
+              "end": 2.969
+            },
+            {
+              "text": "boss",
+              "start": 2.98,
+              "end": 3.337
+            },
+            {
+              "text": "is",
+              "start": 3.404,
+              "end": 3.504
+            },
+            {
+              "text": "getting",
+              "start": 3.516,
+              "end": 3.728
+            },
+            {
+              "text": "paid",
+              "start": 3.739,
+              "end": 4.062
+            },
+            {
+              "text": "to",
+              "start": 4.074,
+              "end": 4.152
+            },
+            {
+              "text": "make",
+              "start": 4.163,
+              "end": 4.353
+            },
+            {
+              "text": "you",
+              "start": 4.364,
+              "end": 4.464
+            },
+            {
+              "text": "lose",
+              "start": 4.475,
+              "end": 4.888
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "lobby",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "point",
+          "face": "angry"
+        },
+        {
+          "who": "chad",
+          "x": 760,
+          "pose": "shrug",
+          "face": "sad",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "TRUTH TELLER",
+        "left": 3,
+        "progress": 40
+      },
+      "stamp": {
+        "text": "GOING LIVE",
+        "color": "green",
+        "line": 0
+      },
+      "fx": "flash",
+      "kind": "story",
+      "duration": 7.33,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "You grab Chad's phone and go live to two million fans.",
+          "audio": "ep007/s1_l0.mp3",
+          "start": 0.25,
+          "duration": 3.384,
+          "words": [
+            {
+              "text": "You",
+              "start": 0.089,
+              "end": 0.19
+            },
+            {
+              "text": "grab",
+              "start": 0.201,
+              "end": 0.435
+            },
+            {
+              "text": "Chad's",
+              "start": 0.446,
+              "end": 0.725
+            },
+            {
+              "text": "phone",
+              "start": 0.737,
+              "end": 1.06
+            },
+            {
+              "text": "and",
+              "start": 1.239,
+              "end": 1.317
+            },
+            {
+              "text": "go",
+              "start": 1.328,
+              "end": 1.518
+            },
+            {
+              "text": "live",
+              "start": 1.529,
+              "end": 1.931
+            },
+            {
+              "text": "to",
+              "start": 1.942,
+              "end": 2.02
+            },
+            {
+              "text": "two",
+              "start": 2.031,
+              "end": 2.232
+            },
+            {
+              "text": "million",
+              "start": 2.243,
+              "end": 2.545
+            },
+            {
+              "text": "fans",
+              "start": 2.556,
+              "end": 3.036
+            }
+          ]
+        },
+        {
+          "who": "chad",
+          "text": "Do it. I'm done being scared.",
+          "audio": "ep007/s1_l1.mp3",
+          "start": 3.784,
+          "duration": 3.096,
+          "words": [
+            {
+              "text": "Do",
+              "start": 0.095,
+              "end": 0.284
+            },
+            {
+              "text": "it",
+              "start": 0.296,
+              "end": 0.496
+            },
+            {
+              "text": "I'm",
+              "start": 1.074,
+              "end": 1.286
+            },
+            {
+              "text": "done",
+              "start": 1.297,
+              "end": 1.554
+            },
+            {
+              "text": "being",
+              "start": 1.565,
+              "end": 1.833
+            },
+            {
+              "text": "scared",
+              "start": 1.844,
+              "end": 2.312
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "phone",
+      "cast": [],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "TRUTH TELLER",
+        "left": 3,
+        "progress": 40
+      },
+      "phone": {
+        "contact": "CHAD VLOGS - LIVE",
+        "messages": [
+          {
+            "from": "them",
+            "text": "SHE PAID HIM??",
+            "line": 0
+          },
+          {
+            "from": "them",
+            "text": "a PARKING LOT?",
+            "line": 1
+          },
+          {
+            "from": "them",
+            "text": "buying 4 tickets just to annoy her",
+            "line": 2
+          }
+        ]
+      },
+      "kind": "story",
+      "duration": 7.216,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "You read Gloria's text out loud.",
+          "audio": "ep007/s2_l0.mp3",
+          "start": 0.25,
+          "duration": 1.92,
+          "words": [
+            {
+              "text": "You",
+              "start": 0.089,
+              "end": 0.19
+            },
+            {
+              "text": "read",
+              "start": 0.201,
+              "end": 0.368
+            },
+            {
+              "text": "Gloria's",
+              "start": 0.379,
+              "end": 0.826
+            },
+            {
+              "text": "text",
+              "start": 0.837,
+              "end": 1.127
+            },
+            {
+              "text": "out",
+              "start": 1.138,
+              "end": 1.272
+            },
+            {
+              "text": "loud",
+              "start": 1.284,
+              "end": 1.585
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "The chat explodes.",
+          "audio": "ep007/s2_l1.mp3",
+          "start": 2.32,
+          "duration": 1.32,
+          "words": [
+            {
+              "text": "The",
+              "start": 0.1,
+              "end": 0.145
+            },
+            {
+              "text": "chat",
+              "start": 0.156,
+              "end": 0.357
+            },
+            {
+              "text": "explodes",
+              "start": 0.368,
+              "end": 0.971
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "And then people start buying tickets, out of pure spite.",
+          "audio": "ep007/s2_l2.mp3",
+          "start": 3.79,
+          "duration": 2.976,
+          "words": [
+            {
+              "text": "And",
+              "start": 0.089,
+              "end": 0.156
+            },
+            {
+              "text": "then",
+              "start": 0.167,
+              "end": 0.301
+            },
+            {
+              "text": "people",
+              "start": 0.312,
+              "end": 0.569
+            },
+            {
+              "text": "start",
+              "start": 0.58,
+              "end": 0.826
+            },
+            {
+              "text": "buying",
+              "start": 0.837,
+              "end": 1.06
+            },
+            {
+              "text": "tickets",
+              "start": 1.071,
+              "end": 1.518
+            },
+            {
+              "text": "out",
+              "start": 1.763,
+              "end": 1.886
+            },
+            {
+              "text": "of",
+              "start": 1.897,
+              "end": 1.975
+            },
+            {
+              "text": "pure",
+              "start": 1.987,
+              "end": 2.188
+            },
+            {
+              "text": "spite",
+              "start": 2.199,
+              "end": 2.634
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "marquee",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "cheer",
+          "face": "happy"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "cheer",
+          "face": "love",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "TRUTH TELLER",
+        "left": 3,
+        "progress": 65
+      },
+      "stamp": {
+        "text": "65% SOLD",
+        "color": "yellow",
+        "line": 0
+      },
+      "fx": "flash",
+      "kind": "story",
+      "duration": 6.898,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "By noon, the line wraps around the block twice.",
+          "audio": "ep007/s3_l0.mp3",
+          "start": 0.25,
+          "duration": 2.976,
+          "words": [
+            {
+              "text": "By",
+              "start": 0.089,
+              "end": 0.156
+            },
+            {
+              "text": "noon",
+              "start": 0.167,
+              "end": 0.469
+            },
+            {
+              "text": "the",
+              "start": 0.792,
+              "end": 0.882
+            },
+            {
+              "text": "line",
+              "start": 0.893,
+              "end": 1.161
+            },
+            {
+              "text": "wraps",
+              "start": 1.172,
+              "end": 1.451
+            },
+            {
+              "text": "around",
+              "start": 1.462,
+              "end": 1.708
+            },
+            {
+              "text": "the",
+              "start": 1.719,
+              "end": 1.775
+            },
+            {
+              "text": "block",
+              "start": 1.786,
+              "end": 2.054
+            },
+            {
+              "text": "twice",
+              "start": 2.065,
+              "end": 2.634
+            }
+          ]
+        },
+        {
+          "who": "lily",
+          "text": "Sixty-five percent! They hate her so much!",
+          "audio": "ep007/s3_l1.mp3",
+          "start": 3.376,
+          "duration": 3.072,
+          "words": [
+            {
+              "text": "Sixty-five",
+              "start": 0.08,
+              "end": 0.716
+            },
+            {
+              "text": "percent",
+              "start": 0.727,
+              "end": 1.273
+            },
+            {
+              "text": "They",
+              "start": 1.636,
+              "end": 1.716
+            },
+            {
+              "text": "hate",
+              "start": 1.727,
+              "end": 1.932
+            },
+            {
+              "text": "her",
+              "start": 1.943,
+              "end": 2.091
+            },
+            {
+              "text": "so",
+              "start": 2.102,
+              "end": 2.284
+            },
+            {
+              "text": "much",
+              "start": 2.295,
+              "end": 2.727
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "lobby",
+      "cast": [
+        {
+          "who": "gloria",
+          "x": 760,
+          "pose": "angry",
+          "face": "angry",
+          "flip": true
+        },
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "shock",
+          "face": "shock"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "FIRED",
+        "left": 3,
+        "progress": 65
+      },
+      "stamp": {
+        "text": "FIRED",
+        "color": "red",
+        "line": 0
+      },
+      "fx": "shake",
+      "zoom": "gloria",
+      "kind": "story",
+      "duration": 8.626,
+      "lines": [
+        {
+          "who": "gloria",
+          "text": "You're fired. Both of you. Go be a teacher or something.",
+          "audio": "ep007/s4_l0.mp3",
+          "start": 0.25,
+          "duration": 5.448,
+          "words": [
+            {
+              "text": "You're",
+              "start": 0.097,
+              "end": 0.309
+            },
+            {
+              "text": "fired",
+              "start": 0.321,
+              "end": 0.84
+            },
+            {
+              "text": "Both",
+              "start": 1.651,
+              "end": 1.934
+            },
+            {
+              "text": "of",
+              "start": 1.946,
+              "end": 2.017
+            },
+            {
+              "text": "you",
+              "start": 2.028,
+              "end": 2.347
+            },
+            {
+              "text": "Go",
+              "start": 3.172,
+              "end": 3.384
+            },
+            {
+              "text": "be",
+              "start": 3.396,
+              "end": 3.549
+            },
+            {
+              "text": "a",
+              "start": 3.561,
+              "end": 3.62
+            },
+            {
+              "text": "teacher",
+              "start": 3.632,
+              "end": 4.009
+            },
+            {
+              "text": "or",
+              "start": 4.021,
+              "end": 4.127
+            },
+            {
+              "text": "something",
+              "start": 4.139,
+              "end": 4.634
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "She takes your keys and locks the doors.",
+          "audio": "ep007/s4_l1.mp3",
+          "start": 5.848,
+          "duration": 2.328,
+          "words": [
+            {
+              "text": "She",
+              "start": 0.1,
+              "end": 0.223
+            },
+            {
+              "text": "takes",
+              "start": 0.234,
+              "end": 0.446
+            },
+            {
+              "text": "your",
+              "start": 0.458,
+              "end": 0.558
+            },
+            {
+              "text": "keys",
+              "start": 0.569,
+              "end": 0.993
+            },
+            {
+              "text": "and",
+              "start": 1.116,
+              "end": 1.217
+            },
+            {
+              "text": "locks",
+              "start": 1.228,
+              "end": 1.484
+            },
+            {
+              "text": "the",
+              "start": 1.496,
+              "end": 1.574
+            },
+            {
+              "text": "doors",
+              "start": 1.585,
+              "end": 1.987
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "marquee",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "sad",
+          "face": "sad"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "sad",
+          "face": "sad",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "FIRED",
+        "left": 3,
+        "progress": 65
+      },
+      "kind": "story",
+      "duration": 6.658,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "You sit on the curb. No job, and a cinema you can't even walk into.",
+          "audio": "ep007/s5_l0.mp3",
+          "start": 0.25,
+          "duration": 4.008,
+          "words": [
+            {
+              "text": "You",
+              "start": 0.089,
+              "end": 0.156
+            },
+            {
+              "text": "sit",
+              "start": 0.167,
+              "end": 0.312
+            },
+            {
+              "text": "on",
+              "start": 0.324,
+              "end": 0.391
+            },
+            {
+              "text": "the",
+              "start": 0.402,
+              "end": 0.469
+            },
+            {
+              "text": "curb",
+              "start": 0.48,
+              "end": 0.815
+            },
+            {
+              "text": "No",
+              "start": 1.183,
+              "end": 1.306
+            },
+            {
+              "text": "job",
+              "start": 1.317,
+              "end": 1.696
+            },
+            {
+              "text": "and",
+              "start": 2.076,
+              "end": 2.132
+            },
+            {
+              "text": "a",
+              "start": 2.143,
+              "end": 2.176
+            },
+            {
+              "text": "cinema",
+              "start": 2.188,
+              "end": 2.534
+            },
+            {
+              "text": "you",
+              "start": 2.545,
+              "end": 2.656
+            },
+            {
+              "text": "can't",
+              "start": 2.667,
+              "end": 2.879
+            },
+            {
+              "text": "even",
+              "start": 2.891,
+              "end": 3.058
+            },
+            {
+              "text": "walk",
+              "start": 3.069,
+              "end": 3.337
+            },
+            {
+              "text": "into",
+              "start": 3.348,
+              "end": 3.683
+            }
+          ]
+        },
+        {
+          "who": "lily",
+          "text": "At least it can't get worse.",
+          "audio": "ep007/s5_l1.mp3",
+          "start": 4.408,
+          "duration": 1.8,
+          "words": [
+            {
+              "text": "At",
+              "start": 0.057,
+              "end": 0.148
+            },
+            {
+              "text": "least",
+              "start": 0.159,
+              "end": 0.409
+            },
+            {
+              "text": "it",
+              "start": 0.42,
+              "end": 0.5
+            },
+            {
+              "text": "can't",
+              "start": 0.511,
+              "end": 0.75
+            },
+            {
+              "text": "get",
+              "start": 0.761,
+              "end": 0.955
+            },
+            {
+              "text": "worse",
+              "start": 0.966,
+              "end": 1.455
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "marquee",
+      "cast": [
+        {
+          "who": "brenda",
+          "x": 760,
+          "pose": "point",
+          "face": "smug",
+          "flip": true,
+          "toX": 680
+        },
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "shock",
+          "face": "shock"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "FIRED",
+        "left": 3,
+        "progress": 65
+      },
+      "stamp": {
+        "text": "THE BUYER",
+        "color": "red",
+        "line": 0
+      },
+      "fx": "shake",
+      "zoom": "brenda",
+      "kind": "story",
+      "duration": 8.41,
+      "lines": [
+        {
+          "who": "brenda",
+          "text": "Surprise, sweetie. Guess who's buying this dump?",
+          "audio": "ep007/s6_l0.mp3",
+          "start": 0.25,
+          "duration": 4.224,
+          "words": [
+            {
+              "text": "Surprise",
+              "start": 0.094,
+              "end": 0.763
+            },
+            {
+              "text": "sweetie",
+              "start": 0.938,
+              "end": 1.421
+            },
+            {
+              "text": "Guess",
+              "start": 2.182,
+              "end": 2.445
+            },
+            {
+              "text": "who's",
+              "start": 2.456,
+              "end": 2.664
+            },
+            {
+              "text": "buying",
+              "start": 2.675,
+              "end": 2.95
+            },
+            {
+              "text": "this",
+              "start": 2.961,
+              "end": 3.114
+            },
+            {
+              "text": "dump",
+              "start": 3.125,
+              "end": 3.454
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Brenda. The woman whose burger place blew up on your watch.",
+          "audio": "ep007/s6_l1.mp3",
+          "start": 4.624,
+          "duration": 3.336,
+          "words": [
+            {
+              "text": "Brenda",
+              "start": 0.1,
+              "end": 0.391
+            },
+            {
+              "text": "The",
+              "start": 0.77,
+              "end": 0.826
+            },
+            {
+              "text": "woman",
+              "start": 0.837,
+              "end": 1.083
+            },
+            {
+              "text": "whose",
+              "start": 1.094,
+              "end": 1.306
+            },
+            {
+              "text": "burger",
+              "start": 1.362,
+              "end": 1.674
+            },
+            {
+              "text": "place",
+              "start": 1.685,
+              "end": 1.931
+            },
+            {
+              "text": "blew",
+              "start": 1.942,
+              "end": 2.221
+            },
+            {
+              "text": "up",
+              "start": 2.232,
+              "end": 2.377
+            },
+            {
+              "text": "on",
+              "start": 2.388,
+              "end": 2.478
+            },
+            {
+              "text": "your",
+              "start": 2.489,
+              "end": 2.589
+            },
+            {
+              "text": "watch",
+              "start": 2.6,
+              "end": 2.991
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "phone",
+      "cast": [],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "FIRED",
+        "left": 3,
+        "progress": 65
+      },
+      "phone": {
+        "contact": "BRENDA",
+        "messages": [
+          {
+            "from": "them",
+            "text": "Parking lot? No, honey",
+            "line": 0
+          },
+          {
+            "from": "them",
+            "text": "BIG BUN'S 2. Drive-thru. Twelve fryers",
+            "line": 1
+          },
+          {
+            "from": "them",
+            "text": "I need a manager. YOU",
+            "line": 2
+          }
+        ]
+      },
+      "kind": "story",
+      "duration": 5.584,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "She shows you the plans.",
+          "audio": "ep007/s7_l0.mp3",
+          "start": 0.25,
+          "duration": 1.392,
+          "words": [
+            {
+              "text": "She",
+              "start": 0.089,
+              "end": 0.19
+            },
+            {
+              "text": "shows",
+              "start": 0.201,
+              "end": 0.413
+            },
+            {
+              "text": "you",
+              "start": 0.424,
+              "end": 0.48
+            },
+            {
+              "text": "the",
+              "start": 0.491,
+              "end": 0.569
+            },
+            {
+              "text": "plans",
+              "start": 0.58,
+              "end": 1.06
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "It was never a parking lot.",
+          "audio": "ep007/s7_l1.mp3",
+          "start": 1.792,
+          "duration": 1.872,
+          "words": [
+            {
+              "text": "It",
+              "start": 0.089,
+              "end": 0.145
+            },
+            {
+              "text": "was",
+              "start": 0.156,
+              "end": 0.257
+            },
+            {
+              "text": "never",
+              "start": 0.268,
+              "end": 0.458
+            },
+            {
+              "text": "a",
+              "start": 0.469,
+              "end": 0.502
+            },
+            {
+              "text": "parking",
+              "start": 0.513,
+              "end": 0.837
+            },
+            {
+              "text": "lot",
+              "start": 0.848,
+              "end": 1.116
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "And she wants you to run it.",
+          "audio": "ep007/s7_l2.mp3",
+          "start": 3.814,
+          "duration": 1.32,
+          "words": [
+            {
+              "text": "And",
+              "start": 0.089,
+              "end": 0.134
+            },
+            {
+              "text": "she",
+              "start": 0.145,
+              "end": 0.279
+            },
+            {
+              "text": "wants",
+              "start": 0.29,
+              "end": 0.48
+            },
+            {
+              "text": "you",
+              "start": 0.491,
+              "end": 0.547
+            },
+            {
+              "text": "to",
+              "start": 0.558,
+              "end": 0.625
+            },
+            {
+              "text": "run",
+              "start": 0.636,
+              "end": 0.848
+            },
+            {
+              "text": "it",
+              "start": 0.859,
+              "end": 0.993
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "marquee",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "shrug",
+          "face": "neutral"
+        },
+        {
+          "who": "chad",
+          "x": 760,
+          "pose": "point",
+          "face": "neutral",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "FIRED",
+        "left": 3,
+        "progress": 65
+      },
+      "kind": "story",
+      "duration": 12.682,
+      "lines": [
+        {
+          "who": "chad",
+          "text": "Psst. Master key. Gloria doesn't know I copied it.",
+          "audio": "ep007/s8_l0.mp3",
+          "start": 0.25,
+          "duration": 4.392,
+          "words": [
+            {
+              "text": "Psst",
+              "start": 0.095,
+              "end": 0.407
+            },
+            {
+              "text": "Master",
+              "start": 0.641,
+              "end": 1.099
+            },
+            {
+              "text": "key",
+              "start": 1.11,
+              "end": 1.467
+            },
+            {
+              "text": "Gloria",
+              "start": 2.056,
+              "end": 2.491
+            },
+            {
+              "text": "doesn't",
+              "start": 2.502,
+              "end": 2.804
+            },
+            {
+              "text": "know",
+              "start": 2.815,
+              "end": 2.96
+            },
+            {
+              "text": "I",
+              "start": 2.971,
+              "end": 3.071
+            },
+            {
+              "text": "copied",
+              "start": 3.083,
+              "end": 3.473
+            },
+            {
+              "text": "it",
+              "start": 3.484,
+              "end": 3.618
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Sneak back in, and if she catches you, she calls the cops. Or take Brenda's deal. You get a big job tonight, and the cinema dies.",
+          "audio": "ep007/s8_l1.mp3",
+          "start": 4.792,
+          "duration": 7.44,
+          "words": [
+            {
+              "text": "Sneak",
+              "start": 0.089,
+              "end": 0.324
+            },
+            {
+              "text": "back",
+              "start": 0.335,
+              "end": 0.569
+            },
+            {
+              "text": "in",
+              "start": 0.58,
+              "end": 0.748
+            },
+            {
+              "text": "and",
+              "start": 1.138,
+              "end": 1.194
+            },
+            {
+              "text": "if",
+              "start": 1.205,
+              "end": 1.284
+            },
+            {
+              "text": "she",
+              "start": 1.295,
+              "end": 1.406
+            },
+            {
+              "text": "catches",
+              "start": 1.417,
+              "end": 1.797
+            },
+            {
+              "text": "you",
+              "start": 1.808,
+              "end": 1.964
+            },
+            {
+              "text": "she",
+              "start": 2.299,
+              "end": 2.411
+            },
+            {
+              "text": "calls",
+              "start": 2.422,
+              "end": 2.645
+            },
+            {
+              "text": "the",
+              "start": 2.656,
+              "end": 2.734
+            },
+            {
+              "text": "cops",
+              "start": 2.746,
+              "end": 3.181
+            },
+            {
+              "text": "Or",
+              "start": 3.56,
+              "end": 3.616
+            },
+            {
+              "text": "take",
+              "start": 3.627,
+              "end": 3.85
+            },
+            {
+              "text": "Brenda's",
+              "start": 3.862,
+              "end": 4.152
+            },
+            {
+              "text": "deal",
+              "start": 4.163,
+              "end": 4.464
+            },
+            {
+              "text": "You",
+              "start": 4.833,
+              "end": 4.888
+            },
+            {
+              "text": "get",
+              "start": 4.9,
+              "end": 5.011
+            },
+            {
+              "text": "a",
+              "start": 5.022,
+              "end": 5.078
+            },
+            {
+              "text": "big",
+              "start": 5.089,
+              "end": 5.279
+            },
+            {
+              "text": "job",
+              "start": 5.29,
+              "end": 5.547
+            },
+            {
+              "text": "tonight",
+              "start": 5.558,
+              "end": 5.904
+            },
+            {
+              "text": "and",
+              "start": 6.183,
+              "end": 6.239
+            },
+            {
+              "text": "the",
+              "start": 6.25,
+              "end": 6.306
+            },
+            {
+              "text": "cinema",
+              "start": 6.317,
+              "end": 6.629
+            },
+            {
+              "text": "dies",
+              "start": 6.641,
+              "end": 7.098
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "marquee",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "shrug",
+          "face": "neutral"
+        },
+        {
+          "who": "chad",
+          "x": 760,
+          "pose": "point",
+          "face": "neutral",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "FIRED",
+        "left": 3,
+        "progress": 65
+      },
+      "kind": "choice",
+      "duration": 12.698,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "What do you do?",
+          "audio": "ep007/s9_l0.mp3",
+          "start": 0.25,
+          "duration": 0.84,
+          "words": [
+            {
+              "text": "What",
+              "start": 0.089,
+              "end": 0.145
+            },
+            {
+              "text": "do",
+              "start": 0.156,
+              "end": 0.19
+            },
+            {
+              "text": "you",
+              "start": 0.201,
+              "end": 0.268
+            },
+            {
+              "text": "do",
+              "start": 0.279,
+              "end": 0.502
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "KEY: Sneak back in.",
+          "audio": "ep007/s9_l1.mp3",
+          "start": 1.24,
+          "duration": 1.872,
+          "words": [
+            {
+              "text": "KEY",
+              "start": 0.089,
+              "end": 0.268
+            },
+            {
+              "text": "Sneak",
+              "start": 0.614,
+              "end": 0.871
+            },
+            {
+              "text": "back",
+              "start": 0.882,
+              "end": 1.116
+            },
+            {
+              "text": "in",
+              "start": 1.127,
+              "end": 1.261
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Or BRENDA: Take her deal.",
+          "audio": "ep007/s9_l2.mp3",
+          "start": 3.262,
+          "duration": 1.8,
+          "words": [
+            {
+              "text": "Or",
+              "start": 0.1,
+              "end": 0.19
+            },
+            {
+              "text": "BRENDA",
+              "start": 0.201,
+              "end": 0.547
+            },
+            {
+              "text": "Take",
+              "start": 0.904,
+              "end": 1.06
+            },
+            {
+              "text": "her",
+              "start": 1.071,
+              "end": 1.161
+            },
+            {
+              "text": "deal",
+              "start": 1.172,
+              "end": 1.473
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Comment one word: KEY or BRENDA. The most-liked one decides part 4.",
+          "audio": "ep007/s9_l3.mp3",
+          "start": 5.212,
+          "duration": 4.536,
+          "words": [
+            {
+              "text": "Comment",
+              "start": 0.089,
+              "end": 0.379
+            },
+            {
+              "text": "one",
+              "start": 0.391,
+              "end": 0.592
+            },
+            {
+              "text": "word",
+              "start": 0.603,
+              "end": 0.893
+            },
+            {
+              "text": "KEY",
+              "start": 1.228,
+              "end": 1.551
+            },
+            {
+              "text": "or",
+              "start": 1.629,
+              "end": 1.73
+            },
+            {
+              "text": "BRENDA",
+              "start": 1.741,
+              "end": 2.132
+            },
+            {
+              "text": "The",
+              "start": 2.511,
+              "end": 2.567
+            },
+            {
+              "text": "most-liked",
+              "start": 2.578,
+              "end": 3.091
+            },
+            {
+              "text": "one",
+              "start": 3.103,
+              "end": 3.292
+            },
+            {
+              "text": "decides",
+              "start": 3.304,
+              "end": 3.661
+            },
+            {
+              "text": "part 4",
+              "start": 3.672,
+              "end": 4.196
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "music": "ep007/music.mp3",
+  "coldOpen": true
+}

@@ -94,3 +94,6 @@ usher, blond swoop, purple shirt, 2M followers, films everything), lily came alo
   show 30k fans his hand on the switch; the screen comes back (20%). Your clip hits a million views, line around the block (40%, 4 shifts left, badge VIRAL HERO).
   Twist: Gloria texts Chad: she paid him to keep it dark, because **the parking lot deal only pays her if the cinema fails**. Chad is scared of her.
   Choice: FANS (tell Chad's fans now, she fires you) / SAFE (Lily cracks Gloria's office safe to get the deal).
+- Ep 7 (story 2 part 3) "You told his fans. Look who's buying it?!" — vote FANS won (@SpaghettiGorebox, 1 like; Gloria's "go be a teacher or something" nods at the comment). Chad joins in, you go live to 2M fans and read Gloria's text; people buy tickets out of spite (65%, 3 shifts left). Gloria fires you and Lily and locks the doors (badge FIRED).
+  Twist: **Brenda is the buyer**; it was never a parking lot but a Big Bun's 2 drive-thru with twelve fryers, and she wants YOU as manager. Chad slips you a master key he secretly copied.
+  Choice: KEY (sneak back in, Gloria calls the cops) / BRENDA (take her deal, the cinema dies).

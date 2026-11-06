@@ -171,6 +171,39 @@
           "ep4": 249
         }
       }
+    },
+    {
+      "episode": 7,
+      "file": "episodes/ep007.json",
+      "url": "https://youtube.com/shorts/fAjyZ6okcL8",
+      "instagram": null,
+      "tiktok": null,
+      "published": "2026-11-06",
+      "options": {
+        "A": "KEY",
+        "B": "BRENDA"
+      },
+      "pinned": false,
+      "topComment": {
+        "user": "@SpaghettiGorebox",
+        "text": "at this point just fans and get a new job as a teacher or something cause what do you mean your bosses keep trying to make you fail",
+        "likes": 1,
+        "platform": "youtube"
+      },
+      "winner": "A",
+      "arc": 2,
+      "part": 3,
+      "uploaded_via": "api",
+      "views_at_check": {
+        "youtube": {
+          "ep1": 1133,
+          "ep2": 707,
+          "ep3": 454,
+          "ep4": 489,
+          "ep5": 176,
+          "ep6": 177
+        }
+      }
     }
   ],
   "arcs": [
@@ -192,7 +225,7 @@
     }
   ],
   "cloud_check": {
-    "date": "2026-11-05",
+    "date": "2026-11-06",
     "audit": "no new email since Google 2026-11-03: compliance review completed, no further action required",
     "gh_cli": "not installed (prerequisite 1 missing)"
   },
@@ -200,14 +233,20 @@
     "instagram": true,
     "tiktok": false
   },
-  "tiktok_note": "2026-11-05: file_upload refused the project folder because the scheduled session starts outside it and moving needs a person's approval. Same cause as 2026-11-04. TikTok backfill Parts 1-4 and Parts 5-6 pending; profile still has 0 videos.",
-  "instagram_note": "2026-11-05: file_upload refused the project folder because the scheduled session starts outside it and moving needs a person's approval. Same cause as 2026-11-04. Parts 5-6 pending on Instagram; no comments posted there.",
+  "tiktok_note": "2026-11-06: Claude in Chrome was not connected in the scheduled run (3 checks), so nothing could be posted or read here. TikTok backfill Parts 1-4 and Parts 5-7 pending; profile still has 0 videos as of the last look.",
+  "instagram_note": "2026-11-06: Claude in Chrome was not connected in the scheduled run (3 checks), so nothing could be posted or read here. Parts 5-7 pending on Instagram; no comments posted there.",
   "opening_test": {
     "baseline_kept_watching_pct": 42,
     "episodes": [
       {
         "episode": 6,
         "published": "2026-11-05",
+        "kept_watching_pct": null,
+        "note": "2026-11-06: not read, Chrome extension not connected (Studio only)"
+      },
+      {
+        "episode": 7,
+        "published": "2026-11-06",
         "kept_watching_pct": null,
         "note": "published today; retention takes up to 2 days to appear"
       }
