@@ -1,0 +1,11601 @@
+{
+"title": "E se, de repente, a internet acabasse?",
+"lead": 0.25,
+"tail": 0.5,
+"fade": 18,
+"bedVolume": 0.72,
+"roomVolume": 0.05,
+"sections": {
+"h1": [
+[
+110.0,
+164.8,
+220.0
+],
+-2
+],
+"m0": [
+[
+98.0,
+146.8,
+246.9
+],
+-2
+],
+"o0": [
+[
+87.3,
+130.8,
+220.0
+],
+-1
+],
+"d0": [
+[
+110.0,
+130.8,
+196.0
+],
+0
+],
+"s0": [
+[
+98.0,
+116.5,
+174.6
+],
+0
+],
+"e0": [
+[
+87.3,
+130.8,
+174.6
+],
+-3
+],
+"e7": [
+[
+82.4,
+123.5,
+196.0
+],
+-9
+],
+"y0": [
+[
+87.3,
+130.8,
+220.0
+],
+-5
+],
+"y8": [
+[
+98.0,
+146.8,
+220.0
+],
+-3
+],
+"y13": [
+[
+110.0,
+164.8,
+246.9
+],
+1
+]
+},
+"looks": {
+"caio": {
+"torso": "#2e6f92",
+"sleeve": "#27607f",
+"legs": "#2b3138"
+},
+"neide": {
+"torso": "#7a3f4a",
+"item": "bun",
+"legs": "#3f3540"
+},
+"bia": {
+"torso": "#4f9a8e",
+"sleeve": "#438679",
+"legs": "#3f7f75",
+"item": "bob"
+},
+"cliente": {
+"torso": "#a0782f",
+"item": "curls"
+},
+"gui": {
+"torso": "#5c6a6e",
+"item": "slick"
+},
+"guy2": {
+"torso": "#54605a"
+},
+"gal": {
+"torso": "#6f5a66",
+"item": "bun"
+},
+"gal2": {
+"torso": "#6a5f4c",
+"item": "bob"
+}
+},
+"voices": {
+"narrator": [
+"pt-BR-AntonioNeural",
+"+4%",
+"-1Hz"
+],
+"neide": [
+"pt-BR-FranciscaNeural",
+"-6%",
+"-2Hz"
+],
+"bia": [
+"pt-BR-ThalitaMultilingualNeural",
+"-4%",
+"+0Hz"
+],
+"cliente": [
+"pt-BR-ThalitaMultilingualNeural",
+"-2%",
+"+0Hz"
+],
+"lena": [
+"pt-BR-ThalitaMultilingualNeural",
+"-10%",
+"-2Hz"
+]
+},
+"script": [
+{
+"id": "h1",
+"who": "narrator",
+"text": "São nove e catorze da manhã.",
+"shots": [
+{
+"kind": "insert",
+"action": "O ponteiro do relógio da sala chega às 9:14",
+"set": "sala",
+"props": [
+{
+"p": "clock",
+"x": 960,
+"y": 540,
+"s": 2.6,
+"h": 9,
+"m": 13,
+"moves": [
+{
+"at": 6,
+"dur": 8,
+"m": 14
+}
+]
+}
+],
+"cx": 1200,
+"sfx": [
+{
+"s": "click",
+"at": 6,
+"v": 0.5
+}
+]
+}
+],
+"after": 0.2
+},
+{
+"id": "h2",
+"who": "narrator",
+"text": "Você manda uma mensagem.",
+"shots": [
+{
+"kind": "top",
+"action": "O polegar toca o botão de enviar no celular em cima da mesa",
+"props": [
+{
+"p": "phone",
+"x": 900,
+"y": 530,
+"s": 1.0,
+"r": -6,
+"text": "chat",
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 516
+}
+]
+},
+{
+"p": "hand",
+"x": 1330,
+"y": 1040,
+"r": -24,
+"s": 1.0,
+"c": "#2e6f92",
+"point": true,
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"x": 1100,
+"y": 770
+}
+]
+},
+{
+"p": "topMug",
+"x": 1520,
+"y": 240,
+"s": 0.9,
+"moves": [
+{
+"at": 0,
+"dur": 40,
+"r": 4
+}
+]
+}
+],
+"motes": true,
+"sfx": [
+{
+"s": "click",
+"at": 12,
+"v": 0.5
+}
+]
+}
+],
+"after": 0.15
+},
+{
+"id": "h3",
+"who": "narrator",
+"text": "Um risquinho. Só um.",
+"shots": [
+{
+"kind": "data",
+"action": "O risquinho único da mensagem aparece grande na tela",
+"props": [
+{
+"p": "phone",
+"x": 960,
+"y": 560,
+"s": 1.5,
+"r": 0,
+"text": "chat",
+"t3": "Chego já, mãe",
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 546
+}
+]
+}
+],
+"focus": [
+1040,
+500
+],
+"z": 1.5,
+"develops": true,
+"motes": true
+}
+],
+"after": 0.2
+},
+{
+"id": "h4",
+"who": "narrator",
+"text": "Você desliga o wi-fi e liga de novo. Nada.",
+"shots": [
+{
+"kind": "wide",
+"action": "Caio estica o braço até o roteador na prateleira",
+"set": "sala",
+"cast": [
+{
+"who": "caio",
+"x": 1180,
+"acts": [
+{
+"a": "knock",
+"at": 6
+},
+{
+"a": "face",
+"at": 8,
+"eyes": "half",
+"brow": "flat"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"dir": 1
+}
+],
+"cx": 1270,
+"z": 1.3
+},
+{
+"kind": "close",
+"action": "Caio olha para o roteador e pisca, sem resposta",
+"set": "sala",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "lookUp",
+"at": 4
+},
+{
+"a": "snapFace",
+"at": 24,
+"eyes": "half",
+"brow": "flat",
+"mouth": "flat"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+}
+}
+],
+"cx": 1300
+}
+],
+"after": 0.1
+},
+{
+"id": "h5",
+"who": "narrator",
+"text": "Você olha pela janela. O vizinho tá fazendo a mesma coisa.",
+"shots": [
+{
+"kind": "wide",
+"action": "Caio caminha até a janela da sala",
+"set": "sala",
+"cast": [
+{
+"who": "caio",
+"x": 860,
+"face": {
+"eyes": "dot",
+"mouth": "flat",
+"look": -0.5
+},
+"walks": [
+{
+"from": 2,
+"to": 40,
+"x0": 0,
+"x1": -360
+}
+],
+"dir": -1
+}
+],
+"cx": 620
+},
+{
+"kind": "medium",
+"action": "Na janela da frente, o vizinho levanta o celular procurando sinal",
+"set": "rua",
+"cast": [
+{
+"who": "gui",
+"x": 1280,
+"acts": [
+{
+"a": "phoneUp",
+"at": 6
+},
+{
+"a": "wave",
+"at": 24,
+"n": 1
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "wide",
+"mouth": "o",
+"brow": "high"
+},
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+},
+"y": 880
+}
+],
+"cx": 1280,
+"z": 1.5
+},
+{
+"kind": "close",
+"action": "Caio franze a testa: é o mesmo problema",
+"set": "sala",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "face",
+"at": 6,
+"eyes": "wide",
+"brow": "high",
+"mouth": "o",
+"look": 0.3
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat",
+"look": 0.3
+}
+}
+],
+"cx": 500
+},
+{
+"kind": "medium",
+"action": "Caio franze a testa: é o mesmo problema (pausa)",
+"set": "sala",
+"cast": [
+{
+"who": "caio",
+"x": 500,
+"face": {
+"eyes": "dot",
+"mouth": "flat",
+"look": 0.3
+},
+"acts": [
+{
+"a": "turn",
+"at": 4,
+"to": -0.5
+},
+{
+"a": "nod",
+"at": 18
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+]
+}
+],
+"cx": 500,
+"z": 1.5,
+"ff": 70,
+"tail": 0.12
+}
+],
+"after": 1.21
+},
+{
+"id": "h6",
+"who": "narrator",
+"text": "E se, de repente, a internet acabasse?",
+"shots": [
+{
+"kind": "data",
+"action": "A rede mundial de pontos acesos no globo começa a apagar",
+"props": [
+{
+"p": "globe",
+"x": 960,
+"y": 540,
+"n": 10,
+"moves": [
+{
+"at": 0,
+"dur": 90,
+"s": 1.05
+}
+]
+}
+],
+"sfx": [
+{
+"s": "rumble",
+"at": 4,
+"v": 0.28,
+"len": 96
+}
+],
+"develops": true,
+"motes": true
+}
+],
+"after": 0.2
+},
+{
+"id": "h7",
+"who": "narrator",
+"text": "Não no seu bairro. No mundo inteiro. Tudo de uma vez.",
+"shots": [
+{
+"kind": "wide",
+"action": "O céu sobre a cidade continua igual enquanto as janelas seguem acesas",
+"set": "cidade",
+"props": [
+{
+"p": "aviao",
+"x": 300,
+"y": 200,
+"s": 0.4,
+"moves": [
+{
+"at": 0,
+"dur": 200,
+"x": 1600,
+"ease": "linear"
+}
+]
+}
+],
+"cx": 1100
+},
+{
+"kind": "data",
+"action": "Os últimos pontos do globo somem",
+"props": [
+{
+"p": "globe",
+"x": 960,
+"y": 540,
+"n": 0,
+"s": 1.12,
+"moves": [
+{
+"at": 0,
+"dur": 60,
+"s": 1.2
+}
+]
+}
+],
+"focus": [
+960,
+540
+],
+"develops": true,
+"motes": true
+}
+],
+"after": 0.28
+},
+{
+"id": "t0",
+"silence": 2.4,
+"shots": [
+{
+"kind": "data",
+"action": "O título acende sobre o escuro com o ponto de interrogação ao lado",
+"props": [
+{
+"p": "big",
+"x": 960,
+"y": 518,
+"text": "E SE, DE REPENTE...",
+"w": 170,
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 500
+}
+],
+"c": "#ffc857"
+},
+{
+"p": "big",
+"x": 960,
+"y": 680,
+"text": "A INTERNET ACABASSE?",
+"w": 118,
+"moves": [
+{
+"at": 0,
+"dur": 12,
+"y": 650
+}
+]
+},
+{
+"p": "qmark",
+"x": 1660,
+"y": 300,
+"s": 0.9,
+"moves": [
+{
+"at": 0,
+"dur": 8,
+"y": 288
+}
+]
+}
+],
+"sfx": [
+{
+"s": "boom",
+"at": 0,
+"v": 0.3,
+"len": 60
+}
+],
+"trans": "torn",
+"develops": true,
+"motes": true
+}
+]
+},
+{
+"id": "r1",
+"who": "narrator",
+"text": "Calma. Na vida real, isso é quase impossível.",
+"shots": [
+{
+"kind": "close",
+"action": "Caio solta o ar, aliviado",
+"set": "rua",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "sigh",
+"at": 4
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "smile"
+}
+}
+],
+"props": [
+{
+"p": "qmark",
+"x": 1320,
+"y": 300,
+"s": 0.7,
+"moves": [
+{
+"at": 0,
+"dur": 8,
+"y": 288
+}
+]
+}
+],
+"cx": 1000
+},
+{
+"kind": "data",
+"action": "Uma rede de nós pulsa sem nenhum centro",
+"props": [
+{
+"p": "rede",
+"x": 960,
+"y": 540,
+"moves": [
+{
+"at": 0,
+"dur": 50,
+"s": 1.02
+}
+]
+}
+],
+"develops": true,
+"motes": true
+}
+],
+"after": 0.1
+},
+{
+"id": "r2",
+"who": "narrator",
+"text": "A internet não tem um botão de desligar. São mais de setenta mil redes independentes, ligadas umas nas outras.",
+"shots": [
+{
+"kind": "data",
+"action": "Um botão vermelho grande aparece riscado",
+"props": [
+{
+"p": "big",
+"x": 960,
+"y": 520,
+"text": "DESLIGAR",
+"w": 130,
+"c": "#e2553f",
+"t2": "esse botão não existe",
+"moves": [
+{
+"at": 0,
+"dur": 8,
+"y": 500,
+"r": -3
+}
+]
+}
+],
+"develops": true,
+"motes": true
+},
+{
+"kind": "data",
+"action": "A rede cresce e os nós se multiplicam",
+"props": [
+{
+"p": "rede",
+"x": 960,
+"y": 540,
+"m": 46,
+"s": 1.0,
+"moves": [
+{
+"at": 0,
+"dur": 14,
+"s": 1.3
+}
+]
+},
+{
+"p": "counter",
+"x": 960,
+"y": 170,
+"h": 70000,
+"m": 0,
+"t3": "+",
+"t4": "",
+"w": 720,
+"n": 30,
+"moves": [
+{
+"at": 0,
+"dur": 4,
+"y": 170
+}
+],
+"t2": "REDES INDEPENDENTES"
+}
+],
+"on": "setenta",
+"develops": true,
+"motes": true
+},
+{
+"kind": "data",
+"action": "Os pulsos atravessam as conexões",
+"props": [
+{
+"p": "rede",
+"x": 960,
+"y": 540,
+"m": 46,
+"s": 1.42,
+"moves": [
+{
+"at": 0,
+"dur": 60,
+"s": 1.5
+}
+]
+}
+],
+"on": "ligadas",
+"develops": true,
+"motes": true
+}
+],
+"after": 0.21
+},
+{
+"id": "r3",
+"who": "narrator",
+"text": "Mas vamos fingir. A luz continua. Os cabos continuam. Só que, de repente, essas redes param de se entender.",
+"shots": [
+{
+"kind": "wide",
+"action": "Caio acende e apaga a luz da sala: a luz funciona",
+"set": "salaNoite",
+"cast": [
+{
+"who": "caio",
+"x": 1900,
+"acts": [
+{
+"a": "knock",
+"at": 6
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+]
+}
+],
+"cx": 1760,
+"z": 1.25,
+"on": "fingir"
+},
+{
+"kind": "wide",
+"action": "Um poste cheio de fios na rua, com tudo intacto",
+"set": "rua",
+"cast": [
+{
+"who": "gal",
+"x": 780,
+"acts": [
+{
+"a": "lookUp",
+"at": 6
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat",
+"look": -0.4
+}
+}
+],
+"cx": 620,
+"z": 1.2,
+"on": "cabos"
+},
+{
+"kind": "data",
+"action": "As conexões apagam uma a uma, sem nada quebrar",
+"props": [
+{
+"p": "rede",
+"x": 960,
+"y": 540,
+"n": 4,
+"moves": [
+{
+"at": 0,
+"dur": 50,
+"s": 1.03
+}
+]
+}
+],
+"on": "essas",
+"develops": true,
+"motes": true
+},
+{
+"kind": "data",
+"action": "As conexões apagam uma a uma, sem nada quebrar (pausa)",
+"props": [
+{
+"p": "rede",
+"x": 960,
+"y": 540,
+"n": 4,
+"moves": [
+{
+"at": 0,
+"dur": 50,
+"s": 1.03
+}
+]
+}
+],
+"z": 1.14,
+"ff": 70,
+"step": {
+"at": 3,
+"to": 1.07,
+"dur": 14
+},
+"tail": 0.12,
+"develops": true,
+"motes": true
+}
+],
+"after": 1.28
+},
+{
+"id": "c1",
+"who": "narrator",
+"text": "Pra não ficar na teoria, vamos acompanhar três pessoas inventadas.",
+"shots": [
+{
+"kind": "wide",
+"action": "Caio desce a rua empurrando a moto",
+"set": "rua",
+"cast": [
+{
+"who": "caio",
+"x": 900,
+"walks": [
+{
+"from": 0,
+"to": 70,
+"x0": 0,
+"x1": 300
+}
+]
+}
+],
+"props": [
+{
+"p": "moto",
+"x": 1040,
+"y": 880,
+"moves": [
+{
+"at": 0,
+"dur": 70,
+"x": 1340,
+"ease": "linear"
+}
+]
+}
+],
+"cx": 1150
+},
+{
+"kind": "close",
+"action": "Caio vira para a câmera e levanta a sobrancelha",
+"set": "rua",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "turn",
+"at": 6,
+"to": 0
+},
+{
+"a": "face",
+"at": 12,
+"brow": "high",
+"mouth": "smirk"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat",
+"look": 0.5
+}
+}
+],
+"props": [
+{
+"p": "qmark",
+"x": 1340,
+"y": 280,
+"s": 0.8,
+"moves": [
+{
+"at": 0,
+"dur": 8,
+"y": 268
+}
+]
+}
+],
+"cx": 1200,
+"on": "inventadas"
+}
+],
+"after": 0.15
+},
+{
+"id": "c2",
+"who": "narrator",
+"text": "Esse é o Caio. Vinte e seis anos, entregador de aplicativo, em Campinas.",
+"shots": [
+{
+"kind": "medium",
+"action": "Caio põe o capacete embaixo do braço e acena",
+"set": "rua",
+"cast": [
+{
+"who": "caio",
+"x": 1120,
+"acts": [
+{
+"a": "raiseHand",
+"at": 8,
+"eyes": "happy",
+"mouth": "smile"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+]
+}
+],
+"cx": 1140,
+"z": 1.5,
+"pill": {
+"text": "CAIO, 26",
+"x": 1460,
+"y": 300,
+"at": 10,
+"to": [
+1200,
+400
+]
+}
+},
+{
+"kind": "top",
+"action": "O celular do Caio no suporte, com o aplicativo de entregas aberto",
+"props": [
+{
+"p": "phone",
+"x": 960,
+"y": 520,
+"s": 1.2,
+"r": 0,
+"text": "load",
+"t2": "ENTREGAS",
+"t3": "3 corridas hoje",
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 506
+}
+]
+},
+{
+"p": "nota",
+"x": 300,
+"y": 260,
+"s": 0.8,
+"r": 14,
+"text": "20",
+"moves": [
+{
+"at": 0,
+"dur": 40,
+"r": 16
+}
+]
+},
+{
+"p": "topMug",
+"x": 1600,
+"y": 820,
+"s": 0.9
+}
+],
+"on": "entregador",
+"motes": true
+}
+],
+"after": 0.15
+},
+{
+"id": "c3",
+"who": "narrator",
+"text": "A mãe dele, a dona Neide, tem um mercadinho a duas quadras de casa.",
+"shots": [
+{
+"kind": "wide",
+"action": "Dona Neide empilha latas na prateleira do mercadinho",
+"set": "mercado",
+"cast": [
+{
+"who": "neide",
+"x": 1110,
+"acts": [
+{
+"a": "reach",
+"at": 6
+},
+{
+"a": "stand",
+"at": 26
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "happy",
+"mouth": "smile"
+},
+"dir": -1
+}
+],
+"cx": 860,
+"z": 1.2
+},
+{
+"kind": "wide",
+"action": "Uma cliente entra e dona Neide acena do balcão",
+"set": "mercado",
+"cast": [
+{
+"who": "neide",
+"x": 1560,
+"acts": [
+{
+"a": "raiseHand",
+"at": 6,
+"mouth": "smile"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"behind": true,
+"dir": -1
+},
+{
+"who": "gal2",
+"x": 900,
+"walks": [
+{
+"from": 0,
+"to": 34,
+"x0": 0,
+"x1": 180
+}
+]
+}
+],
+"cx": 1320,
+"on": "mercadinho",
+"pill": {
+"text": "DONA NEIDE",
+"x": 1560,
+"y": 180,
+"at": 8,
+"to": [
+1560,
+370
+]
+}
+}
+],
+"after": 0.15
+},
+{
+"id": "c4",
+"who": "neide",
+"text": "Caio, leva o guarda-chuva!",
+"shots": [
+{
+"kind": "medium",
+"action": "Dona Neide grita da porta apontando o céu",
+"set": "rua",
+"cast": [
+{
+"who": "neide",
+"x": 1160,
+"acts": [
+{
+"a": "point",
+"at": 4,
+"eyes": "wide",
+"brow": "high"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+]
+}
+],
+"cx": 1160,
+"z": 1.6
+}
+],
+"after": 0.15
+},
+{
+"id": "c5",
+"who": "narrator",
+"text": "E a vizinha, a Bia, é enfermeira.",
+"shots": [
+{
+"kind": "wide",
+"action": "Bia atravessa a enfermaria com uma prancheta",
+"set": "hospital",
+"cast": [
+{
+"who": "bia",
+"x": 1080,
+"walks": [
+{
+"from": 0,
+"to": 60,
+"x0": 0,
+"x1": 340
+}
+],
+"hold": {
+"p": "newspaper",
+"x": 0,
+"y": 0,
+"s": 0.34
+}
+}
+],
+"cx": 1340,
+"pill": {
+"text": "BIA",
+"x": 1480,
+"y": 200,
+"at": 8,
+"to": [
+1420,
+340
+]
+}
+}
+],
+"after": 0.2
+},
+{
+"id": "c6",
+"who": "narrator",
+"text": "Numa pesquisa de 2025, brasileiros disseram passar nove horas e treze minutos por dia conectados.",
+"shots": [
+{
+"kind": "medium",
+"action": "Caio no sofá rola o celular sem levantar os olhos",
+"set": "sala",
+"cast": [
+{
+"who": "caio",
+"x": 600,
+"acts": [
+{
+"a": "sitPhone",
+"at": 4
+},
+{
+"a": "nod",
+"at": 16
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat",
+"lookY": 0.9
+},
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+}
+}
+],
+"cx": 620,
+"z": 1.5
+},
+{
+"kind": "data",
+"action": "O contador sobe até 9 horas e 13 minutos",
+"props": [
+{
+"p": "big",
+"x": 960,
+"y": 560,
+"text": "9h13",
+"w": 280,
+"c": "#ffc857",
+"t2": "POR DIA, CONECTADOS (BAIN, 2025)",
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 530
+}
+]
+}
+],
+"on": "nove",
+"develops": true,
+"motes": true
+},
+{
+"kind": "data",
+"action": "O contador sobe até 9 horas e 13 minutos (pausa)",
+"props": [
+{
+"p": "big",
+"x": 960,
+"y": 560,
+"text": "9h13",
+"w": 280,
+"c": "#ffc857",
+"t2": "POR DIA, CONECTADOS (BAIN, 2025)",
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 530
+}
+]
+}
+],
+"z": 1.14,
+"ff": 70,
+"step": {
+"at": 3,
+"to": 1.07,
+"dur": 14
+},
+"tail": 0.12,
+"develops": true,
+"motes": true
+}
+],
+"after": 1.35
+},
+{
+"id": "m0",
+"silence": 1.6,
+"shots": [
+{
+"kind": "data",
+"action": "O relógio do capítulo dá um pequeno passo",
+"props": [
+{
+"p": "chapter",
+"x": 960,
+"y": 560,
+"text": "PRIMEIRO MINUTO",
+"t2": "9:14 DA MANHÃ",
+"h": 6,
+"moves": [
+{
+"at": 0,
+"dur": 12,
+"y": 540
+}
+]
+}
+],
+"sfx": [
+{
+"s": "click",
+"at": 2,
+"v": 0.5
+}
+],
+"trans": "torn",
+"develops": true,
+"motes": true
+}
+]
+},
+{
+"id": "m1",
+"who": "narrator",
+"text": "No primeiro minuto, não acontece nada.",
+"shots": [
+{
+"kind": "wide",
+"action": "A rua segue normal: gente passa, ninguém olha pra cima",
+"set": "rua",
+"cast": [
+{
+"who": "gui",
+"x": 300,
+"walks": [
+{
+"from": 0,
+"to": 70,
+"x0": 0,
+"x1": 420
+}
+]
+},
+{
+"who": "gal",
+"x": 1800,
+"walks": [
+{
+"from": 6,
+"to": 70,
+"x0": 0,
+"x1": -300
+}
+],
+"dir": -1
+},
+{
+"who": "caio",
+"x": 1140,
+"acts": [
+{
+"a": "checkPhone",
+"at": 10
+},
+{
+"a": "nod",
+"at": 40
+},
+{
+"a": "turn",
+"at": 52,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 68
+},
+{
+"a": "turn",
+"at": 88,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat",
+"lookY": 0.9
+},
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+}
+}
+],
+"cx": 1040
+}
+],
+"after": 0.1
+},
+{
+"id": "m2",
+"who": "narrator",
+"text": "A luz tá acesa. A bateria tá boa. O sinal tá ali, cheio.",
+"shots": [
+{
+"kind": "top",
+"action": "O dedo aponta as barrinhas cheias de sinal no celular",
+"props": [
+{
+"p": "phone",
+"x": 900,
+"y": 500,
+"s": 1.3,
+"r": 0,
+"text": "home",
+"n": 999,
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 486
+}
+]
+},
+{
+"p": "hand",
+"x": 1380,
+"y": 1000,
+"r": -30,
+"s": 1.0,
+"c": "#2e6f92",
+"point": true,
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"x": 1160,
+"y": 620
+}
+]
+}
+],
+"focus": [
+880,
+400
+],
+"z": 1.6,
+"motes": true
+},
+{
+"kind": "top",
+"action": "O dedo aponta as barrinhas cheias de sinal no celular (outro ângulo)",
+"props": [
+{
+"p": "phone",
+"x": 900,
+"y": 500,
+"s": 1.3,
+"r": 0,
+"text": "home",
+"n": 999,
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 486
+}
+]
+},
+{
+"p": "hand",
+"x": 1380,
+"y": 1000,
+"r": -30,
+"s": 1.0,
+"c": "#2e6f92",
+"point": true,
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"x": 1160,
+"y": 620
+}
+]
+}
+],
+"focus": [
+880,
+400
+],
+"z": 1.8239999999999998,
+"ff": 70,
+"step": {
+"at": 3,
+"to": 1.07,
+"dur": 14
+},
+"motes": true
+},
+{
+"kind": "close",
+"action": "Caio observa a tela, satisfeito",
+"set": "rua",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "lookDown",
+"at": 4
+},
+{
+"a": "snapFace",
+"at": 26,
+"mouth": "smirk"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat",
+"lookY": 0.6
+}
+}
+],
+"cx": 800,
+"on": "sinal"
+}
+],
+"after": 0.1
+},
+{
+"id": "m3",
+"who": "narrator",
+"text": "Só que o aplicativo fica rodando, rodando.",
+"shots": [
+{
+"kind": "data",
+"action": "A bolinha do carregamento gira sem parar",
+"props": [
+{
+"p": "phone",
+"x": 960,
+"y": 540,
+"s": 1.4,
+"r": 0,
+"text": "load",
+"t2": "ENTREGAS",
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 526
+}
+]
+}
+],
+"sfx": [
+{
+"s": "click",
+"at": 18,
+"v": 0.25
+}
+],
+"develops": true,
+"motes": true
+},
+{
+"kind": "close",
+"action": "O rosto do Caio acompanha a bolinha",
+"set": "rua",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "turn",
+"at": 4,
+"to": 0.5
+},
+{
+"a": "turn",
+"at": 18,
+"to": -0.5
+},
+{
+"a": "turn",
+"at": 34,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat",
+"brow": "flat",
+"lookY": 0.5
+}
+}
+],
+"cx": 800,
+"on": "rodando"
+}
+],
+"after": 0.1
+},
+{
+"id": "m4",
+"who": "narrator",
+"text": "Ele faz o que todo mundo faz. Reinicia.",
+"shots": [
+{
+"kind": "wide",
+"action": "Caio sacode o celular no ar",
+"set": "rua",
+"cast": [
+{
+"who": "caio",
+"x": 1140,
+"acts": [
+{
+"a": "phoneShake",
+"at": 4
+},
+{
+"a": "phoneUp",
+"at": 18
+},
+{
+"a": "phoneShake",
+"at": 30
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "angry",
+"mouth": "flat",
+"brow": "cross"
+},
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+}
+}
+],
+"cx": 1100,
+"z": 1.4
+},
+{
+"kind": "top",
+"action": "A tela do celular fica preta e reinicia",
+"props": [
+{
+"p": "phone",
+"x": 960,
+"y": 500,
+"s": 1.3,
+"r": 0,
+"text": "off",
+"moves": [
+{
+"at": 4,
+"dur": 3,
+"x": 948
+},
+{
+"at": 7,
+"dur": 3,
+"x": 972
+},
+{
+"at": 10,
+"dur": 3,
+"x": 952
+},
+{
+"at": 13,
+"dur": 3,
+"x": 960
+}
+]
+},
+{
+"p": "nota",
+"x": 1560,
+"y": 860,
+"s": 0.9,
+"r": -12,
+"text": "50",
+"c": "#6e8fb0"
+}
+],
+"on": "Reinicia",
+"sfx": [
+{
+"s": "ding",
+"at": 6,
+"v": 0.35
+}
+],
+"motes": true
+}
+],
+"after": 0.1
+},
+{
+"id": "m5",
+"who": "narrator",
+"text": "Em outubro de 2021, Facebook, Instagram e WhatsApp saíram do ar por umas seis horas, no mundo todo.",
+"shots": [
+{
+"kind": "data",
+"action": "A placa de 2021 entra e três ícones sem marca se apagam",
+"props": [
+{
+"p": "fact",
+"x": 960,
+"y": 170,
+"text": "2021",
+"moves": [
+{
+"at": 0,
+"dur": 4,
+"y": 170
+}
+]
+},
+{
+"p": "big",
+"x": 960,
+"y": 620,
+"text": "6 HORAS",
+"w": 210,
+"t2": "TRÊS APLICATIVOS FORA DO AR",
+"moves": [
+{
+"at": 4,
+"dur": 10,
+"y": 590
+}
+]
+}
+],
+"develops": true,
+"motes": true
+},
+{
+"kind": "data",
+"action": "A placa de 2021 entra e três ícones sem marca se apagam (outro ângulo)",
+"props": [
+{
+"p": "big",
+"x": 960,
+"y": 620,
+"text": "6 HORAS",
+"w": 210,
+"t2": "TRÊS APLICATIVOS FORA DO AR",
+"moves": [
+{
+"at": 4,
+"dur": 10,
+"y": 590
+}
+]
+}
+],
+"z": 1.14,
+"ff": 70,
+"step": {
+"at": 3,
+"to": 1.07,
+"dur": 14
+},
+"develops": true,
+"motes": true
+},
+{
+"kind": "wide",
+"action": "Pessoas numa praça olham os celulares, sem entender",
+"set": "praca",
+"cast": [
+{
+"who": "gui",
+"x": 700,
+"acts": [
+{
+"a": "checkPhone",
+"at": 4
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat",
+"lookY": 0.8
+},
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+}
+},
+{
+"who": "gal",
+"x": 980,
+"acts": [
+{
+"a": "phoneUp",
+"at": 10
+},
+{
+"a": "nod",
+"at": 31
+},
+{
+"a": "turn",
+"at": 45,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 63
+},
+{
+"a": "turn",
+"at": 81,
+"to": -0.2
+}
+],
+"face": {
+"eyes": "wide",
+"mouth": "o"
+},
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+}
+},
+{
+"who": "gal2",
+"x": 1320,
+"acts": [
+{
+"a": "shrug",
+"at": 18
+},
+{
+"a": "nod",
+"at": 40
+},
+{
+"a": "turn",
+"at": 52,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 68
+},
+{
+"a": "turn",
+"at": 88,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "frown"
+}
+}
+],
+"cx": 1000,
+"on": "seis"
+}
+],
+"after": 0.1
+},
+{
+"id": "m6",
+"who": "narrator",
+"text": "Eram três bilhões e meio de pessoas nesses aplicativos.",
+"shots": [
+{
+"kind": "data",
+"action": "O contador sobe até 3,5 bilhões",
+"props": [
+{
+"p": "counter",
+"x": 960,
+"y": 500,
+"h": 3.5,
+"m": 1,
+"t3": "",
+"t4": " BILHÕES",
+"w": 1100,
+"n": 28,
+"moves": [
+{
+"at": 0,
+"dur": 4,
+"y": 500
+}
+],
+"t2": "DE USUÁRIOS POR MÊS, EM 2021"
+}
+],
+"develops": true,
+"motes": true
+}
+],
+"after": 0.1
+},
+{
+"id": "m7",
+"who": "narrator",
+"text": "Naquele dia, ainda sobrava o resto da internet pra reclamar.",
+"shots": [
+{
+"kind": "medium",
+"action": "Caio sorri de canto, digitando reclamação",
+"set": "sala",
+"cast": [
+{
+"who": "caio",
+"x": 600,
+"acts": [
+{
+"a": "sitPhone",
+"at": 4
+},
+{
+"a": "snapFace",
+"at": 24,
+"eyes": "happy",
+"mouth": "smile"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "smirk",
+"lookY": 0.8
+},
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+}
+}
+],
+"cx": 620,
+"z": 1.45
+}
+],
+"after": 0.1
+},
+{
+"id": "m8",
+"who": "narrator",
+"text": "Hoje, não sobrou nada.",
+"shots": [
+{
+"kind": "close",
+"action": "Caio olha fixo para o nada e o sorriso some",
+"set": "salaNoite",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "snapFace",
+"at": 8,
+"eyes": "dot",
+"mouth": "flat",
+"brow": "flat",
+"look": 0,
+"lookY": 0
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "happy",
+"mouth": "smile"
+}
+}
+],
+"cx": 800,
+"sfx": [
+{
+"s": "buzz",
+"at": 8,
+"v": 0.18,
+"len": 30
+}
+]
+},
+{
+"kind": "medium",
+"action": "Caio olha fixo para o nada e o sorriso some (pausa)",
+"set": "salaNoite",
+"cast": [
+{
+"who": "caio",
+"x": 800,
+"face": {
+"eyes": "happy",
+"mouth": "smile"
+},
+"acts": [
+{
+"a": "turn",
+"at": 4,
+"to": -0.5
+},
+{
+"a": "nod",
+"at": 18
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+]
+}
+],
+"cx": 800,
+"z": 1.5,
+"ff": 70,
+"tail": 0.12
+}
+],
+"after": 1.32
+},
+{
+"id": "o0",
+"silence": 1.6,
+"shots": [
+{
+"kind": "data",
+"action": "O ponteiro do relógio sobe até uma hora depois",
+"props": [
+{
+"p": "chapter",
+"x": 960,
+"y": 560,
+"text": "PRIMEIRA HORA",
+"t2": "10:14",
+"h": 90,
+"moves": [
+{
+"at": 0,
+"dur": 12,
+"y": 540
+}
+]
+}
+],
+"sfx": [
+{
+"s": "click",
+"at": 2,
+"v": 0.5
+}
+],
+"trans": "torn",
+"develops": true,
+"motes": true
+}
+]
+},
+{
+"id": "o1",
+"who": "narrator",
+"text": "Na primeira hora, as pessoas param de culpar a operadora.",
+"shots": [
+{
+"kind": "wide",
+"action": "Na porta da loja de conserto, três pessoas mostram o celular ao mesmo tempo",
+"set": "rua",
+"cast": [
+{
+"who": "gui",
+"x": 2280,
+"acts": [
+{
+"a": "give",
+"at": 4
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+},
+"dir": 1
+},
+{
+"who": "gal",
+"x": 2500,
+"acts": [
+{
+"a": "give",
+"at": 12
+},
+{
+"a": "nod",
+"at": 31
+},
+{
+"a": "turn",
+"at": 45,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 63
+},
+{
+"a": "turn",
+"at": 81,
+"to": -0.2
+}
+],
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+},
+"dir": -1
+},
+{
+"who": "guy2",
+"x": 2640,
+"acts": [
+{
+"a": "handsHead",
+"at": 22
+},
+{
+"a": "nod",
+"at": 40
+},
+{
+"a": "turn",
+"at": 52,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 68
+},
+{
+"a": "turn",
+"at": 88,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "wide",
+"mouth": "ah"
+},
+"dir": -1
+}
+],
+"cx": 2400
+}
+],
+"after": 0.1
+},
+{
+"id": "o2",
+"who": "narrator",
+"text": "O Caio tá no meio de uma entrega. O mapa congelou.",
+"shots": [
+{
+"kind": "wide",
+"action": "Caio pilota a moto pela rua, olhando para o suporte do celular",
+"set": "rua",
+"cast": [
+{
+"who": "caio",
+"x": 420,
+"acts": [
+{
+"a": "lookDown",
+"at": 12
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat",
+"lookY": 0.8
+},
+"key": {
+"pose": "ride"
+},
+"slide": {
+"from": 0,
+"to": 80,
+"x0": 0,
+"x1": 620
+}
+}
+],
+"props": [
+{
+"p": "moto",
+"x": 450,
+"y": 880,
+"moves": [
+{
+"at": 0,
+"dur": 80,
+"x": 1070,
+"ease": "linear"
+}
+]
+}
+],
+"cx": 420,
+"to": 1040,
+"sfx": [
+{
+"s": "rumble",
+"at": 0,
+"v": 0.16,
+"len": 60
+}
+]
+},
+{
+"kind": "data",
+"action": "O mapa no celular trava em 'reconectando'",
+"props": [
+{
+"p": "phone",
+"x": 960,
+"y": 540,
+"s": 1.45,
+"r": 0,
+"text": "mapa",
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 526
+}
+]
+}
+],
+"on": "mapa",
+"develops": true,
+"motes": true
+}
+],
+"after": 0.1
+},
+{
+"id": "o3",
+"who": "narrator",
+"text": "Não tem nome do cliente. Não tem número do apartamento. Ele para, e faz uma coisa que não fazia há anos.",
+"shots": [
+{
+"kind": "close",
+"action": "Caio olha da tela para a rua, perdido",
+"set": "rua",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "turn",
+"at": 4,
+"to": -0.6
+},
+{
+"a": "turn",
+"at": 22,
+"to": 0.6
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "wide",
+"mouth": "wave",
+"brow": "worry",
+"look": 0
+}
+}
+],
+"cx": 1700
+},
+{
+"kind": "data",
+"action": "O pacote com a etiqueta em branco",
+"props": [
+{
+"p": "big",
+"x": 960,
+"y": 540,
+"text": "APTO ???",
+"w": 170,
+"t2": "CLIENTE: ???",
+"c": "#e2553f",
+"moves": [
+{
+"at": 0,
+"dur": 8,
+"r": -2,
+"y": 530
+}
+]
+}
+],
+"on": "número",
+"develops": true,
+"motes": true
+},
+{
+"kind": "wide",
+"action": "Caio para a moto e desce devagar",
+"set": "rua",
+"cast": [
+{
+"who": "caio",
+"x": 1420,
+"acts": [
+{
+"a": "stand",
+"at": 6
+},
+{
+"a": "lookUp",
+"at": 24
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat",
+"look": 0.3
+}
+}
+],
+"props": [
+{
+"p": "moto",
+"x": 1260,
+"y": 880
+}
+],
+"cx": 1500,
+"z": 1.3,
+"on": "para"
+}
+],
+"after": 0.1
+},
+{
+"id": "o4",
+"who": "narrator",
+"text": "Pergunta pra uma pessoa.",
+"shots": [
+{
+"kind": "medium",
+"action": "Caio bate palmas no portão e chama",
+"set": "ruaFechada",
+"cast": [
+{
+"who": "caio",
+"x": 1540,
+"acts": [
+{
+"a": "knock",
+"at": 4
+},
+{
+"a": "stand",
+"at": 14
+},
+{
+"a": "knock",
+"at": 22
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "ah"
+}
+},
+{
+"who": "gal2",
+"x": 1790,
+"acts": [
+{
+"a": "turn",
+"at": 20,
+"to": -0.5
+},
+{
+"a": "nod",
+"at": 31
+},
+{
+"a": "turn",
+"at": 45,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 63
+},
+{
+"a": "turn",
+"at": 81,
+"to": -0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+},
+"dir": -1
+}
+],
+"cx": 1660,
+"z": 1.6,
+"sfx": [
+{
+"s": "knock",
+"at": 4,
+"v": 0.4
+},
+{
+"s": "knock",
+"at": 22,
+"v": 0.4
+}
+]
+},
+{
+"kind": "close",
+"action": "Caio bate palmas no portão e chama (pausa)",
+"set": "ruaFechada",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "turn",
+"at": 4,
+"to": 0.5
+},
+{
+"a": "face",
+"at": 22,
+"look": -0.3
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "ah"
+}
+}
+],
+"cx": 1580,
+"tail": 0.12
+}
+],
+"after": 1.21
+},
+{
+"id": "o5",
+"who": "narrator",
+"text": "No mercadinho, uma cliente tenta pagar com Pix.",
+"shots": [
+{
+"kind": "wide",
+"action": "A cliente levanta o celular para o balcão",
+"set": "mercado",
+"cast": [
+{
+"who": "neide",
+"x": 1570,
+"face": {
+"eyes": "dot",
+"mouth": "smile"
+},
+"behind": true,
+"dir": -1,
+"acts": [
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+]
+},
+{
+"who": "gal2",
+"x": 1280,
+"acts": [
+{
+"a": "give",
+"at": 6
+},
+{
+"a": "nod",
+"at": 31
+},
+{
+"a": "turn",
+"at": 45,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 63
+},
+{
+"a": "turn",
+"at": 81,
+"to": -0.2
+}
+],
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+},
+"dir": 1
+}
+],
+"cx": 1400,
+"z": 1.3
+},
+{
+"kind": "top",
+"action": "A tela do Pix gira e dá erro",
+"props": [
+{
+"p": "phone",
+"x": 960,
+"y": 500,
+"s": 1.25,
+"r": 0,
+"text": "pix",
+"n": 28,
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 486
+}
+]
+},
+{
+"p": "nota",
+"x": 300,
+"y": 240,
+"s": 0.7,
+"r": 12,
+"text": "10",
+"c": "#a15f6c"
+},
+{
+"p": "topMug",
+"x": 1600,
+"y": 240
+}
+],
+"on": "Pix",
+"sfx": [
+{
+"s": "buzz",
+"at": 28,
+"v": 0.22,
+"len": 20
+}
+],
+"motes": true
+}
+],
+"after": 0.15
+},
+{
+"id": "o6",
+"who": "neide",
+"text": "Foi?",
+"shots": [
+{
+"kind": "close",
+"action": "Dona Neide pergunta, por cima dos óculos",
+"set": "mercado",
+"cast": [
+{
+"who": "neide",
+"acts": [
+{
+"a": "face",
+"at": 4,
+"brow": "high",
+"look": 0.4
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat",
+"look": 0.4
+}
+}
+],
+"cx": 1500
+}
+],
+"after": 0.05
+},
+{
+"id": "o7",
+"who": "cliente",
+"text": "Não foi.",
+"shots": [
+{
+"kind": "close",
+"action": "A cliente mostra a tela, sem graça",
+"set": "mercado",
+"cast": [
+{
+"who": "cliente",
+"acts": [
+{
+"a": "flinch",
+"at": 3,
+"eyes": "sad",
+"brow": "worry",
+"mouth": "flat"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat",
+"look": -0.4
+}
+}
+],
+"cx": 1300
+},
+{
+"kind": "medium",
+"action": "A cliente mostra a tela, sem graça (pausa)",
+"set": "mercado",
+"cast": [
+{
+"who": "cliente",
+"x": 1300,
+"face": {
+"eyes": "dot",
+"mouth": "flat",
+"look": -0.4
+},
+"acts": [
+{
+"a": "turn",
+"at": 4,
+"to": -0.5
+},
+{
+"a": "nod",
+"at": 18
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+]
+}
+],
+"cx": 1300,
+"z": 1.5,
+"ff": 70,
+"tail": 0.12
+}
+],
+"after": 1.25
+},
+{
+"id": "o8",
+"who": "narrator",
+"text": "Em dezembro de 2025, o Brasil fez trezentos e treze milhões de Pix num único dia.",
+"shots": [
+{
+"kind": "data",
+"action": "O contador de Pix corre até 313 milhões",
+"props": [
+{
+"p": "counter",
+"x": 960,
+"y": 500,
+"h": 313,
+"m": 0,
+"t3": "",
+"t4": " MILHÕES",
+"w": 1120,
+"n": 34,
+"moves": [
+{
+"at": 0,
+"dur": 4,
+"y": 500
+}
+],
+"t2": "DE PIX EM UM SÓ DIA (DEZ. 2025)"
+}
+],
+"motes": true,
+"develops": true
+},
+{
+"kind": "wide",
+"action": "Filas de gente no centro, todos com o celular na mão",
+"set": "rua",
+"cast": [
+{
+"who": "gui",
+"x": 560,
+"acts": [
+{
+"a": "checkPhone",
+"at": 2
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat",
+"lookY": 0.8
+},
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+}
+},
+{
+"who": "gal",
+"x": 760,
+"acts": [
+{
+"a": "checkPhone",
+"at": 8
+},
+{
+"a": "nod",
+"at": 31
+},
+{
+"a": "turn",
+"at": 45,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 63
+},
+{
+"a": "turn",
+"at": 81,
+"to": -0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat",
+"lookY": 0.8
+},
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+}
+},
+{
+"who": "guy2",
+"x": 960,
+"acts": [
+{
+"a": "checkPhone",
+"at": 14
+},
+{
+"a": "nod",
+"at": 40
+},
+{
+"a": "turn",
+"at": 52,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 68
+},
+{
+"a": "turn",
+"at": 88,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat",
+"lookY": 0.8
+},
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+}
+},
+{
+"who": "gal2",
+"x": 1160,
+"acts": [
+{
+"a": "checkPhone",
+"at": 20
+},
+{
+"a": "nod",
+"at": 49
+},
+{
+"a": "turn",
+"at": 59,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 73
+},
+{
+"a": "turn",
+"at": 95,
+"to": -0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat",
+"lookY": 0.8
+},
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+}
+},
+{
+"who": "gui",
+"x": 1360,
+"acts": [
+{
+"a": "checkPhone",
+"at": 26
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 66,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 78
+},
+{
+"a": "turn",
+"at": 102,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat",
+"lookY": 0.8
+},
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+}
+}
+],
+"cx": 960,
+"on": "milhões"
+}
+],
+"after": 0.1
+},
+{
+"id": "o9",
+"who": "narrator",
+"text": "Entre os bancos, ele roda numa rede própria. Mas o aplicativo, no seu celular, chega ao banco pela internet.",
+"shots": [
+{
+"kind": "data",
+"action": "Dois prédios de banco ligados por um cabo que continua aceso",
+"props": [
+{
+"p": "rede",
+"x": 960,
+"y": 540,
+"m": 10,
+"s": 1.2,
+"moves": [
+{
+"at": 0,
+"dur": 60,
+"s": 1.26
+}
+]
+},
+{
+"p": "big",
+"x": 960,
+"y": 190,
+"text": "ENTRE BANCOS: REDE PRÓPRIA",
+"w": 70,
+"c": "#ffc857",
+"moves": [
+{
+"at": 0,
+"dur": 6,
+"y": 175
+}
+]
+}
+],
+"develops": true,
+"motes": true
+},
+{
+"kind": "data",
+"action": "A ligação entre o celular e o banco se corta",
+"props": [
+{
+"p": "phone",
+"x": 480,
+"y": 540,
+"s": 1.1,
+"r": 0,
+"text": "erro",
+"t2": "SEM INTERNET",
+"t3": "Pix indisponível",
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 526
+}
+]
+},
+{
+"p": "big",
+"x": 1300,
+"y": 560,
+"text": "✕",
+"w": 320,
+"c": "#e2553f",
+"moves": [
+{
+"at": 0,
+"dur": 4,
+"y": 530,
+"r": 4
+}
+]
+},
+{
+"p": "big",
+"x": 1300,
+"y": 780,
+"text": "CELULAR ATÉ O BANCO",
+"w": 56
+}
+],
+"on": "aplicativo",
+"develops": true,
+"motes": true
+}
+],
+"after": 0.15
+},
+{
+"id": "o10",
+"who": "narrator",
+"text": "A maquininha também desiste.",
+"shots": [
+{
+"kind": "insert",
+"action": "A maquininha mostra falha na conexão",
+"set": "mercado",
+"props": [
+{
+"p": "maquininha",
+"x": 960,
+"y": 560,
+"s": 1.7,
+"n": 16
+}
+],
+"cx": 1500,
+"sfx": [
+{
+"s": "buzz",
+"at": 16,
+"v": 0.22,
+"len": 20
+}
+],
+"step": {
+"at": 4,
+"to": 1.03,
+"dur": 60
+}
+}
+],
+"after": 0.1
+},
+{
+"id": "o11",
+"who": "narrator",
+"text": "Em 2022, a falha de uma única operadora no Canadá atingiu mais de doze milhões de clientes e derrubou o débito no país inteiro.",
+"shots": [
+{
+"kind": "data",
+"action": "A placa de 2022 entra sobre o contador de 12 milhões",
+"props": [
+{
+"p": "fact",
+"x": 960,
+"y": 170,
+"text": "2022",
+"moves": [
+{
+"at": 0,
+"dur": 4,
+"y": 170
+}
+]
+},
+{
+"p": "counter",
+"x": 960,
+"y": 620,
+"h": 12,
+"m": 0,
+"t3": "+",
+"t4": " MILHÕES",
+"w": 1040,
+"n": 28,
+"moves": [
+{
+"at": 0,
+"dur": 4,
+"y": 620
+}
+],
+"t2": "DE CLIENTES SEM REDE, CANADÁ"
+}
+],
+"develops": true,
+"motes": true
+},
+{
+"kind": "data",
+"action": "A placa de 2022 entra sobre o contador de 12 milhões (outro ângulo)",
+"props": [
+{
+"p": "counter",
+"x": 960,
+"y": 620,
+"h": 12,
+"m": 0,
+"t3": "+",
+"t4": " MILHÕES",
+"w": 1040,
+"n": 28,
+"moves": [
+{
+"at": 0,
+"dur": 4,
+"y": 620
+}
+],
+"t2": "DE CLIENTES SEM REDE, CANADÁ"
+}
+],
+"z": 1.14,
+"ff": 70,
+"step": {
+"at": 3,
+"to": 1.07,
+"dur": 14
+},
+"develops": true,
+"motes": true
+},
+{
+"kind": "wide",
+"action": "Num caixa, a fila cresce e uma pessoa levanta o cartão",
+"set": "mercado",
+"cast": [
+{
+"who": "neide",
+"x": 1570,
+"acts": [
+{
+"a": "shrug",
+"at": 6
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "frown"
+},
+"behind": true,
+"dir": -1
+},
+{
+"who": "gui",
+"x": 1310,
+"acts": [
+{
+"a": "give",
+"at": 8
+},
+{
+"a": "nod",
+"at": 31
+},
+{
+"a": "turn",
+"at": 45,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 63
+},
+{
+"a": "turn",
+"at": 81,
+"to": -0.2
+}
+]
+},
+{
+"who": "gal",
+"x": 1140,
+"acts": [
+{
+"a": "nod",
+"at": 40
+},
+{
+"a": "turn",
+"at": 52,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 68
+},
+{
+"a": "turn",
+"at": 88,
+"to": 0.2
+}
+]
+},
+{
+"who": "guy2",
+"x": 970,
+"acts": [
+{
+"a": "nod",
+"at": 49
+},
+{
+"a": "turn",
+"at": 59,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 73
+},
+{
+"a": "turn",
+"at": 95,
+"to": -0.2
+}
+]
+},
+{
+"who": "gal2",
+"x": 800,
+"acts": [
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 66,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 78
+},
+{
+"a": "turn",
+"at": 102,
+"to": 0.2
+}
+]
+}
+],
+"cx": 1200,
+"on": "clientes"
+},
+{
+"kind": "data",
+"action": "Um cartão de débito balança, sem funcionar",
+"props": [
+{
+"p": "maquininha",
+"x": 560,
+"y": 560,
+"s": 1.4,
+"n": 2
+},
+{
+"p": "big",
+"x": 1270,
+"y": 560,
+"text": "DÉBITO",
+"w": 170,
+"t2": "FORA DO AR",
+"c": "#e2553f",
+"moves": [
+{
+"at": 4,
+"dur": 6,
+"y": 530
+}
+]
+}
+],
+"on": "débito",
+"develops": true,
+"motes": true
+}
+],
+"after": 0.1
+},
+{
+"id": "o12",
+"who": "narrator",
+"text": "Em vários lugares, nem o número de emergência atendia.",
+"shots": [
+{
+"kind": "data",
+"action": "O número de emergência chama sem ninguém atender",
+"props": [
+{
+"p": "big",
+"x": 960,
+"y": 500,
+"text": "911",
+"w": 260,
+"c": "#c4ced3",
+"moves": [
+{
+"at": 0,
+"dur": 8,
+"y": 480
+}
+]
+},
+{
+"p": "big",
+"x": 960,
+"y": 700,
+"text": "NO CANADÁ, A EMERGÊNCIA TAMBÉM FALHOU",
+"w": 62,
+"c": "#e2553f",
+"moves": [
+{
+"at": 6,
+"dur": 8,
+"y": 680
+}
+]
+}
+],
+"sfx": [
+{
+"s": "siren",
+"at": 0,
+"v": 0.08,
+"len": 42
+}
+],
+"develops": true,
+"motes": true
+}
+],
+"after": 0.25
+},
+{
+"id": "o13",
+"who": "narrator",
+"text": "No hospital da Bia, a tela do prontuário tá parada.",
+"shots": [
+{
+"kind": "wide",
+"action": "Bia digita no monitor e nada muda",
+"set": "hospital",
+"cast": [
+{
+"who": "bia",
+"x": 1830,
+"acts": [
+{
+"a": "deskReady",
+"at": 4
+},
+{
+"a": "face",
+"at": 20,
+"brow": "flat",
+"mouth": "flat"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+},
+"behind": true,
+"dir": 1
+}
+],
+"cx": 1900,
+"z": 1.3
+},
+{
+"kind": "close",
+"action": "Bia morde o lábio e olha para o lado",
+"set": "hospital",
+"cast": [
+{
+"who": "bia",
+"acts": [
+{
+"a": "turn",
+"at": 8,
+"to": -0.5,
+"eyes": "half",
+"brow": "worry"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+}
+}
+],
+"cx": 1900
+}
+],
+"after": 0.1
+},
+{
+"id": "o14",
+"who": "narrator",
+"text": "Em 2024, uma atualização com defeito travou oito milhões e meio de computadores. Menos de um por cento dos Windows do mundo.",
+"shots": [
+{
+"kind": "data",
+"action": "A placa de 2024 e a tela de erro azul",
+"props": [
+{
+"p": "fact",
+"x": 960,
+"y": 170,
+"text": "2024",
+"moves": [
+{
+"at": 0,
+"dur": 4,
+"y": 170
+}
+]
+},
+{
+"p": "counter",
+"x": 960,
+"y": 560,
+"h": 8.5,
+"m": 1,
+"t3": "",
+"t4": " MILHÕES",
+"w": 1040,
+"n": 26,
+"moves": [
+{
+"at": 0,
+"dur": 4,
+"y": 560
+}
+],
+"t2": "DE COMPUTADORES TRAVADOS"
+}
+],
+"develops": true,
+"motes": true
+},
+{
+"kind": "data",
+"action": "A placa de 2024 e a tela de erro azul (outro ângulo)",
+"props": [
+{
+"p": "counter",
+"x": 960,
+"y": 560,
+"h": 8.5,
+"m": 1,
+"t3": "",
+"t4": " MILHÕES",
+"w": 1040,
+"n": 26,
+"moves": [
+{
+"at": 0,
+"dur": 4,
+"y": 560
+}
+],
+"t2": "DE COMPUTADORES TRAVADOS"
+}
+],
+"z": 1.14,
+"ff": 70,
+"step": {
+"at": 3,
+"to": 1.07,
+"dur": 14
+},
+"develops": true,
+"motes": true
+},
+{
+"kind": "data",
+"action": "Uma barra enche só um pedacinho",
+"props": [
+{
+"p": "big",
+"x": 960,
+"y": 440,
+"text": "MENOS DE 1%",
+"w": 170,
+"c": "#ffc857",
+"moves": [
+{
+"at": 0,
+"dur": 8,
+"y": 420
+}
+]
+},
+{
+"p": "big",
+"x": 960,
+"y": 640,
+"text": "DOS WINDOWS DO MUNDO",
+"w": 70
+}
+],
+"on": "Menos",
+"develops": true,
+"motes": true
+}
+],
+"after": 0.1
+},
+{
+"id": "o15",
+"who": "narrator",
+"text": "E já foi o bastante pra cancelar milhares de voos e mandar hospitais de volta pro papel.",
+"shots": [
+{
+"kind": "wide",
+"action": "O avião fica parado sob o céu da cidade",
+"set": "cidade",
+"props": [
+{
+"p": "aviao",
+"x": 960,
+"y": 620,
+"s": 1.0,
+"moves": [
+{
+"at": 0,
+"dur": 100,
+"s": 1.04
+}
+]
+}
+],
+"cx": 1000
+},
+{
+"kind": "top",
+"action": "A mão de Bia preenche uma ficha de papel com caneta",
+"props": [
+{
+"p": "caderno",
+"x": 960,
+"y": 520,
+"s": 0.95,
+"t2": "PACIENTES",
+"lines": [
+"Leito 3: pressão 12/8",
+"Leito 5: febre, 38 °C",
+"Leito 7: medicação 14h"
+],
+"n": 4
+},
+{
+"p": "hand",
+"x": 1420,
+"y": 900,
+"r": -30,
+"s": 1.0,
+"c": "#4f9a8e",
+"point": true,
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"x": 1270,
+"y": 700
+}
+]
+}
+],
+"on": "hospitais",
+"motes": true
+}
+],
+"after": 0.1
+},
+{
+"id": "o16",
+"who": "narrator",
+"text": "E tem o que você nem lembrava que era internet.",
+"shots": [
+{
+"kind": "close",
+"action": "Caio coça a cabeça, lembrando de algo",
+"set": "salaNoite",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "listen",
+"at": 6
+},
+{
+"a": "face",
+"at": 14,
+"look": -0.5,
+"lookY": -0.6,
+"brow": "high"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+}
+}
+],
+"props": [
+{
+"p": "qmark",
+"x": 1350,
+"y": 270,
+"s": 0.7,
+"moves": [
+{
+"at": 0,
+"dur": 8,
+"y": 258
+}
+]
+}
+],
+"cx": 620
+}
+],
+"after": 0.1
+},
+{
+"id": "o17",
+"who": "narrator",
+"text": "Em outubro de 2025, uma falha num provedor de nuvem deixou donos de camas inteligentes com o colchão preso no calor.",
+"shots": [
+{
+"kind": "data",
+"action": "A placa de 2025 e o colchão esquenta",
+"props": [
+{
+"p": "fact",
+"x": 960,
+"y": 170,
+"text": "OUT. 2025",
+"moves": [
+{
+"at": 0,
+"dur": 4,
+"y": 170
+}
+]
+},
+{
+"p": "cama",
+"x": 960,
+"y": 860,
+"s": 1.15,
+"moves": [
+{
+"at": 0,
+"dur": 80,
+"s": 1.17
+}
+]
+}
+],
+"develops": true,
+"motes": true
+},
+{
+"kind": "medium",
+"action": "Um homem de pijama, suando, sentado na beirada da cama",
+"set": "salaNoite",
+"cast": [
+{
+"who": "guy2",
+"x": 960,
+"acts": [
+{
+"a": "sitOnly",
+"at": 2
+},
+{
+"a": "sigh",
+"at": 10
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "wave",
+"brow": "worry"
+}
+}
+],
+"cx": 980,
+"z": 1.5,
+"on": "donos"
+}
+],
+"after": 0.15
+},
+{
+"id": "o18",
+"who": "narrator",
+"text": "A cama.",
+"shots": [
+{
+"kind": "close",
+"action": "Caio fica olhando, sem acreditar",
+"set": "salaNoite",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "snapFace",
+"at": 10,
+"eyes": "wide",
+"brow": "high",
+"mouth": "flat"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+}
+}
+],
+"cx": 620
+},
+{
+"kind": "medium",
+"action": "Caio fica olhando, sem acreditar (pausa)",
+"set": "salaNoite",
+"cast": [
+{
+"who": "caio",
+"x": 620,
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+},
+"acts": [
+{
+"a": "turn",
+"at": 4,
+"to": -0.5
+},
+{
+"a": "nod",
+"at": 18
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+]
+}
+],
+"cx": 620,
+"z": 1.5,
+"ff": 70,
+"tail": 0.12
+}
+],
+"after": 1.35
+},
+{
+"id": "d0",
+"silence": 1.6,
+"shots": [
+{
+"kind": "data",
+"action": "O relógio chega à noite do primeiro dia",
+"props": [
+{
+"p": "chapter",
+"x": 960,
+"y": 560,
+"text": "PRIMEIRO DIA",
+"t2": "21:00",
+"h": 270,
+"moves": [
+{
+"at": 0,
+"dur": 12,
+"y": 540
+}
+]
+}
+],
+"sfx": [
+{
+"s": "click",
+"at": 2,
+"v": 0.5
+}
+],
+"trans": "torn",
+"develops": true,
+"motes": true
+}
+]
+},
+{
+"id": "d1",
+"who": "narrator",
+"text": "No fim do primeiro dia, a ficha cai. Ninguém sabe o tamanho da coisa, porque a internet era o jeito de descobrir.",
+"shots": [
+{
+"kind": "wide",
+"action": "O céu escurece sobre a cidade e janelas se acendem",
+"set": "cidadeNoite",
+"cx": 1100,
+"step": {
+"at": 4,
+"to": 1.03,
+"dur": 60
+}
+},
+{
+"kind": "close",
+"action": "Caio, sentado, sem ter o que rolar",
+"set": "salaNoite",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "face",
+"at": 8,
+"eyes": "half",
+"brow": "worry",
+"mouth": "flat",
+"look": -0.4
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+}
+}
+],
+"cx": 500,
+"on": "ficha"
+},
+{
+"kind": "data",
+"action": "Um ponto de interrogação cresce sobre o globo",
+"props": [
+{
+"p": "globe",
+"x": 960,
+"y": 540,
+"n": 0,
+"s": 0.9
+},
+{
+"p": "qmark",
+"x": 960,
+"y": 500,
+"s": 1.6,
+"moves": [
+{
+"at": 0,
+"dur": 8,
+"y": 488
+}
+]
+}
+],
+"on": "porque",
+"develops": true,
+"motes": true
+}
+],
+"after": 0.2
+},
+{
+"id": "d2",
+"who": "narrator",
+"text": "Em abril de 2025, um apagão parou Espanha e Portugal. Rádios a pilha sumiram das prateleiras.",
+"shots": [
+{
+"kind": "data",
+"action": "A placa de abril de 2025 e o mapa da península escurece",
+"props": [
+{
+"p": "fact",
+"x": 960,
+"y": 170,
+"text": "ABR. 2025",
+"moves": [
+{
+"at": 0,
+"dur": 4,
+"y": 170
+}
+]
+},
+{
+"p": "big",
+"x": 960,
+"y": 600,
+"text": "ESPANHA E PORTUGAL",
+"w": 120,
+"t2": "APAGÃO",
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 570
+}
+]
+}
+],
+"develops": true,
+"motes": true
+},
+{
+"kind": "insert",
+"action": "Um rádio a pilha some da prateleira",
+"set": "mercado",
+"props": [
+{
+"p": "radio",
+"x": 960,
+"y": 620,
+"s": 1.8,
+"n": 999,
+"moves": [
+{
+"at": 6,
+"dur": 10,
+"y": 1300,
+"r": 8,
+"ease": "in"
+}
+]
+}
+],
+"cx": 700,
+"on": "Rádios"
+}
+],
+"after": 0.1
+},
+{
+"id": "d3",
+"who": "narrator",
+"text": "E estranhos dividiam notícia na calçada.",
+"shots": [
+{
+"kind": "wide",
+"action": "Vizinhos conversam em roda na calçada",
+"set": "ruaNoite",
+"cast": [
+{
+"who": "gui",
+"x": 840,
+"acts": [
+{
+"a": "point",
+"at": 8
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "ah"
+},
+"dir": 1
+},
+{
+"who": "gal",
+"x": 1080,
+"acts": [
+{
+"a": "nod",
+"at": 14
+},
+{
+"a": "nod",
+"at": 31
+},
+{
+"a": "turn",
+"at": 45,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 63
+},
+{
+"a": "turn",
+"at": 81,
+"to": -0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "o"
+},
+"dir": -1
+},
+{
+"who": "guy2",
+"x": 1290,
+"acts": [
+{
+"a": "armsFold",
+"at": 22
+},
+{
+"a": "nod",
+"at": 40
+},
+{
+"a": "turn",
+"at": 52,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 68
+},
+{
+"a": "turn",
+"at": 88,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat"
+},
+"dir": -1
+}
+],
+"cx": 1060
+},
+{
+"kind": "close",
+"action": "Vizinhos conversam em roda na calçada (pausa)",
+"set": "ruaNoite",
+"cast": [
+{
+"who": "gui",
+"acts": [
+{
+"a": "turn",
+"at": 4,
+"to": 0.5
+},
+{
+"a": "face",
+"at": 22,
+"look": -0.3
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "ah"
+}
+}
+],
+"cx": 880,
+"tail": 0.12
+}
+],
+"after": 1.2
+},
+{
+"id": "d4",
+"who": "narrator",
+"text": "O Caio acha no armário o rádio velho do avô.",
+"shots": [
+{
+"kind": "wide",
+"action": "Caio tira o rádio de cima da estante",
+"set": "salaNoite",
+"cast": [
+{
+"who": "caio",
+"x": 1590,
+"acts": [
+{
+"a": "reach",
+"at": 4
+},
+{
+"a": "carry",
+"at": 26
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "wide",
+"mouth": "smile",
+"brow": "high"
+},
+"dir": 1
+}
+],
+"props": [
+{
+"p": "radio",
+"x": 1830,
+"y": 460,
+"s": 0.5,
+"moves": [
+{
+"at": 26,
+"dur": 10,
+"x": 1720,
+"y": 590
+}
+]
+}
+],
+"cx": 1640,
+"z": 1.4
+},
+{
+"kind": "top",
+"action": "A mão gira o botão do rádio e o ponteiro se move",
+"props": [
+{
+"p": "radio",
+"x": 960,
+"y": 560,
+"s": 2.0,
+"n": 14
+},
+{
+"p": "hand",
+"x": 1440,
+"y": 1040,
+"r": -24,
+"s": 1.0,
+"c": "#2e6f92",
+"point": true,
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"x": 1290,
+"y": 800
+}
+]
+}
+],
+"on": "rádio",
+"sfx": [
+{
+"s": "click",
+"at": 8,
+"v": 0.45
+}
+],
+"motes": true
+}
+],
+"after": 0.2
+},
+{
+"id": "d5",
+"who": "narrator",
+"text": "No centro, provavelmente tem fila em todo caixa eletrônico que ainda funciona.",
+"shots": [
+{
+"kind": "wide",
+"action": "Uma fila longa diante do banco",
+"set": "rua",
+"cast": [
+{
+"who": "gui",
+"x": 900,
+"acts": [
+{
+"a": "checkPhone",
+"at": 0
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat"
+},
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+},
+"dir": 1
+},
+{
+"who": "gal",
+"x": 1050,
+"acts": [
+{
+"a": "checkPhone",
+"at": 5
+},
+{
+"a": "nod",
+"at": 31
+},
+{
+"a": "turn",
+"at": 45,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 63
+},
+{
+"a": "turn",
+"at": 81,
+"to": -0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat"
+},
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+},
+"dir": 1
+},
+{
+"who": "guy2",
+"x": 1200,
+"acts": [
+{
+"a": "checkPhone",
+"at": 10
+},
+{
+"a": "nod",
+"at": 40
+},
+{
+"a": "turn",
+"at": 52,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 68
+},
+{
+"a": "turn",
+"at": 88,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat"
+},
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+},
+"dir": 1
+},
+{
+"who": "gal2",
+"x": 1350,
+"acts": [
+{
+"a": "checkPhone",
+"at": 15
+},
+{
+"a": "nod",
+"at": 49
+},
+{
+"a": "turn",
+"at": 59,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 73
+},
+{
+"a": "turn",
+"at": 95,
+"to": -0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat"
+},
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+},
+"dir": 1
+},
+{
+"who": "gui",
+"x": 1500,
+"acts": [
+{
+"a": "checkPhone",
+"at": 1
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 66,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 78
+},
+{
+"a": "turn",
+"at": 102,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat"
+},
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+},
+"dir": 1
+},
+{
+"who": "caio",
+"x": 1640,
+"acts": [
+{
+"a": "handsHead",
+"at": 18
+},
+{
+"a": "nod",
+"at": 67
+},
+{
+"a": "turn",
+"at": 73,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 83
+},
+{
+"a": "turn",
+"at": 109,
+"to": -0.2
+}
+],
+"face": {
+"eyes": "sad",
+"mouth": "frown",
+"brow": "worry"
+},
+"dir": 1
+}
+],
+"props": [
+{
+"p": "atm",
+"x": 1800,
+"y": 880,
+"layer": "back",
+"s": 1.05
+}
+],
+"cx": 1400
+},
+{
+"kind": "insert",
+"action": "A tela do caixa eletrônico apaga para 'fora de serviço'",
+"set": "rua",
+"props": [
+{
+"p": "atm",
+"x": 960,
+"y": 1000,
+"s": 1.9,
+"n": 1,
+"moves": [
+{
+"at": 0,
+"dur": 40,
+"s": 1.95
+}
+]
+}
+],
+"cx": 1800,
+"on": "caixa",
+"sfx": [
+{
+"s": "buzz",
+"at": 6,
+"v": 0.22,
+"len": 16
+}
+]
+}
+],
+"after": 0.1
+},
+{
+"id": "d6",
+"who": "narrator",
+"text": "Em 2021, um ataque a um fornecedor de software fechou quase oitocentos supermercados na Suécia.",
+"shots": [
+{
+"kind": "data",
+"action": "A placa de 2021 e o contador de 800 lojas",
+"props": [
+{
+"p": "fact",
+"x": 960,
+"y": 170,
+"text": "2021",
+"moves": [
+{
+"at": 0,
+"dur": 4,
+"y": 170
+}
+]
+},
+{
+"p": "counter",
+"x": 960,
+"y": 580,
+"h": 800,
+"m": 0,
+"t3": "~",
+"t4": "",
+"w": 1100,
+"n": 26,
+"moves": [
+{
+"at": 0,
+"dur": 4,
+"y": 580
+}
+],
+"t2": "SUPERMERCADOS FECHADOS NA SUÉCIA"
+}
+],
+"develops": true,
+"motes": true
+},
+{
+"kind": "wide",
+"action": "Uma porta de ferro desce numa loja",
+"set": "ruaFechada",
+"cast": [
+{
+"who": "gal",
+"x": 1650,
+"face": {
+"eyes": "dot",
+"mouth": "frown"
+},
+"walks": [
+{
+"from": 8,
+"to": 50,
+"x0": 0,
+"x1": 240
+}
+]
+}
+],
+"props": [
+{
+"p": "big",
+"x": 1810,
+"y": 590,
+"text": "FECHADO",
+"w": 110,
+"c": "#ffdd8a",
+"moves": [
+{
+"at": 6,
+"dur": 6,
+"r": -4
+}
+]
+}
+],
+"cx": 1780,
+"on": "fechou",
+"sfx": [
+{
+"s": "rumble",
+"at": 4,
+"v": 0.2,
+"len": 40
+}
+]
+}
+],
+"after": 0.1
+},
+{
+"id": "d7",
+"who": "narrator",
+"text": "Os caixas simplesmente não funcionavam. Tinha comida na prateleira, e ninguém conseguia vender.",
+"shots": [
+{
+"kind": "wide",
+"action": "Prateleiras cheias, ninguém no caixa",
+"set": "mercado",
+"cast": [
+{
+"who": "gal2",
+"x": 500,
+"acts": [
+{
+"a": "reach",
+"at": 6
+},
+{
+"a": "stand",
+"at": 24
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"dir": -1
+}
+],
+"cx": 720
+},
+{
+"kind": "medium",
+"action": "Dona Neide cruza os braços atrás do balcão e olha a registradora",
+"set": "mercado",
+"cast": [
+{
+"who": "neide",
+"x": 1610,
+"acts": [
+{
+"a": "armsFold",
+"at": 8
+},
+{
+"a": "turn",
+"at": 18,
+"to": 0.5
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat",
+"brow": "flat"
+},
+"behind": true
+}
+],
+"cx": 1660,
+"z": 1.6,
+"on": "comida"
+}
+],
+"after": 0.15
+},
+{
+"id": "d8",
+"who": "narrator",
+"text": "A dona Neide não fecha. Ela abre um caderno.",
+"shots": [
+{
+"kind": "close",
+"action": "Dona Neide decide, olhos estreitos",
+"set": "mercado",
+"cast": [
+{
+"who": "neide",
+"acts": [
+{
+"a": "snapFace",
+"at": 8,
+"eyes": "angry",
+"brow": "cross",
+"mouth": "smirk"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+}
+}
+],
+"cx": 1600
+},
+{
+"kind": "top",
+"action": "A mão abre o caderno de fiado sobre o balcão",
+"props": [
+{
+"p": "caderno",
+"x": 960,
+"y": 540,
+"s": 0.95,
+"n": 999,
+"t2": "FIADO",
+"moves": [
+{
+"at": 0,
+"dur": 8,
+"y": 520
+}
+]
+},
+{
+"p": "hand",
+"x": 1500,
+"y": 1040,
+"r": -26,
+"s": 1.0,
+"c": "#7a3f4a",
+"point": true,
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"x": 1340,
+"y": 860
+}
+]
+},
+{
+"p": "nota",
+"x": 300,
+"y": 860,
+"s": 0.9,
+"r": -10,
+"text": "20"
+}
+],
+"on": "abre",
+"sfx": [
+{
+"s": "knock",
+"at": 4,
+"v": 0.2
+}
+],
+"motes": true
+}
+],
+"after": 0.1
+},
+{
+"id": "d9",
+"who": "neide",
+"text": "Fiado, né? Mas eu anoto tudo.",
+"shots": [
+{
+"kind": "medium",
+"action": "Dona Neide aponta a caneta para a placa de fiado",
+"set": "mercado",
+"cast": [
+{
+"who": "neide",
+"x": 2030,
+"acts": [
+{
+"a": "point",
+"at": 6,
+"mouth": "smirk",
+"eyes": "happy"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"dir": 1
+}
+],
+"cx": 2220,
+"z": 1.35
+}
+],
+"after": 0.1
+},
+{
+"id": "d10",
+"who": "narrator",
+"text": "O mercadinho tem uma tecnologia que o supermercado grande não tem: ela sabe o nome de todo mundo.",
+"shots": [
+{
+"kind": "top",
+"action": "O nome das pessoas vai surgindo escrito no caderno",
+"props": [
+{
+"p": "caderno",
+"x": 960,
+"y": 530,
+"s": 0.95
+},
+{
+"p": "hand",
+"x": 1420,
+"y": 960,
+"r": -26,
+"s": 1.0,
+"c": "#7a3f4a",
+"point": true,
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"x": 1290,
+"y": 780
+}
+]
+}
+],
+"z": 1.25,
+"motes": true
+},
+{
+"kind": "top",
+"action": "O nome das pessoas vai surgindo escrito no caderno (outro ângulo)",
+"props": [
+{
+"p": "caderno",
+"x": 960,
+"y": 530,
+"s": 0.95
+},
+{
+"p": "hand",
+"x": 1420,
+"y": 960,
+"r": -26,
+"s": 1.0,
+"c": "#7a3f4a",
+"point": true,
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"x": 1290,
+"y": 780
+}
+]
+}
+],
+"z": 1.35,
+"ff": 70,
+"focus": [
+960,
+400
+],
+"step": {
+"at": 3,
+"to": 1.07,
+"dur": 14
+},
+"motes": true
+},
+{
+"kind": "wide",
+"action": "Clientes conversam com dona Neide e levam sacolas",
+"set": "mercado",
+"cast": [
+{
+"who": "neide",
+"x": 1570,
+"acts": [
+{
+"a": "give",
+"at": 8
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "happy",
+"mouth": "smile"
+},
+"behind": true,
+"dir": -1
+},
+{
+"who": "gui",
+"x": 1300,
+"acts": [
+{
+"a": "nod",
+"at": 20
+},
+{
+"a": "nod",
+"at": 31
+},
+{
+"a": "turn",
+"at": 45,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 63
+},
+{
+"a": "turn",
+"at": 81,
+"to": -0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "smile"
+}
+},
+{
+"who": "gal",
+"x": 1090,
+"face": {
+"eyes": "dot",
+"mouth": "smile"
+},
+"walks": [
+{
+"from": 4,
+"to": 40,
+"x0": 0,
+"x1": -320
+}
+],
+"dir": -1
+}
+],
+"cx": 1300,
+"on": "nome"
+}
+],
+"after": 0.1
+},
+{
+"id": "d11",
+"who": "narrator",
+"text": "No mundo, dá pra imaginar bolsas suspensas, voos cancelados, empresas fechando as portas.",
+"shots": [
+{
+"kind": "data",
+"action": "Um gráfico da bolsa para de se mexer",
+"props": [
+{
+"p": "big",
+"x": 960,
+"y": 500,
+"text": "NEGOCIAÇÃO SUSPENSA",
+"w": 118,
+"c": "#e2553f",
+"t2": "provavelmente",
+"moves": [
+{
+"at": 0,
+"dur": 8,
+"y": 480
+}
+]
+}
+],
+"develops": true,
+"motes": true
+},
+{
+"kind": "wide",
+"action": "Avião parado e o céu vazio à tarde",
+"set": "cidade",
+"props": [
+{
+"p": "aviao",
+"x": 1400,
+"y": 700,
+"s": 0.7,
+"moves": [
+{
+"at": 0,
+"dur": 50,
+"r": -0.6
+}
+]
+}
+],
+"cx": 1400,
+"on": "voos"
+},
+{
+"kind": "wide",
+"action": "Empregados saem de um prédio em fila, sem pressa",
+"set": "rua",
+"cast": [
+{
+"who": "gui",
+"x": 1100,
+"walks": [
+{
+"from": 0,
+"to": 70,
+"x0": 0,
+"x1": 280
+}
+]
+},
+{
+"who": "gal",
+"x": 960,
+"walks": [
+{
+"from": 4,
+"to": 70,
+"x0": 0,
+"x1": 280
+}
+]
+},
+{
+"who": "guy2",
+"x": 810,
+"walks": [
+{
+"from": 8,
+"to": 70,
+"x0": 0,
+"x1": 280
+}
+]
+},
+{
+"who": "gal2",
+"x": 670,
+"walks": [
+{
+"from": 12,
+"to": 70,
+"x0": 0,
+"x1": 280
+}
+]
+}
+],
+"cx": 1180,
+"on": "empresas"
+}
+],
+"after": 0.25
+},
+{
+"id": "d12",
+"who": "narrator",
+"text": "De noite, a rua tá cheia. Gente na calçada, perguntando. Ninguém tem nada pra rolar.",
+"shots": [
+{
+"kind": "wide",
+"action": "Toda a calçada iluminada, com vizinhos em cadeiras",
+"set": "ruaNoite",
+"cast": [
+{
+"who": "gui",
+"x": 340,
+"acts": [
+{
+"a": "sitOnly",
+"at": 2
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "smile"
+}
+},
+{
+"who": "gal",
+"x": 620,
+"acts": [
+{
+"a": "nod",
+"at": 12
+},
+{
+"a": "nod",
+"at": 31
+},
+{
+"a": "turn",
+"at": 45,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 63
+},
+{
+"a": "turn",
+"at": 81,
+"to": -0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "ah"
+}
+},
+{
+"who": "caio",
+"x": 980,
+"acts": [
+{
+"a": "listen",
+"at": 10
+},
+{
+"a": "nod",
+"at": 40
+},
+{
+"a": "turn",
+"at": 52,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 68
+},
+{
+"a": "turn",
+"at": 88,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+},
+"hold": {
+"p": "radio",
+"x": 40,
+"y": -40,
+"s": 0.28
+}
+},
+{
+"who": "gal2",
+"x": 1260,
+"acts": [
+{
+"a": "point",
+"at": 24
+},
+{
+"a": "nod",
+"at": 49
+},
+{
+"a": "turn",
+"at": 59,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 73
+},
+{
+"a": "turn",
+"at": 95,
+"to": -0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "o"
+},
+"dir": -1
+},
+{
+"who": "guy2",
+"x": 1500,
+"acts": [
+{
+"a": "armsFold",
+"at": 8
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 66,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 78
+},
+{
+"a": "turn",
+"at": 102,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat"
+},
+"dir": -1
+}
+],
+"cx": 920
+},
+{
+"kind": "close",
+"action": "Toda a calçada iluminada, com vizinhos em cadeiras (outro ângulo)",
+"set": "ruaNoite",
+"cast": [
+{
+"who": "gui",
+"acts": [
+{
+"a": "turn",
+"at": 4,
+"to": -0.5
+},
+{
+"a": "nod",
+"at": 18
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "smile"
+}
+}
+],
+"cx": 380
+},
+{
+"kind": "close",
+"action": "Uma senhora ri alto no escuro",
+"set": "ruaNoite",
+"cast": [
+{
+"who": "gal",
+"acts": [
+{
+"a": "snapFace",
+"at": 8,
+"eyes": "happy",
+"mouth": "ah"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "smile"
+}
+}
+],
+"cx": 1400,
+"on": "perguntando"
+},
+{
+"kind": "medium",
+"action": "Caio escuta o rádio, cercado de gente",
+"set": "ruaNoite",
+"cast": [
+{
+"who": "caio",
+"x": 1040,
+"acts": [
+{
+"a": "listen",
+"at": 4
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat"
+},
+"hold": {
+"p": "radio",
+"x": 40,
+"y": -40,
+"s": 0.28
+}
+},
+{
+"who": "gui",
+"x": 840,
+"acts": [
+{
+"a": "lean",
+"at": 12
+},
+{
+"a": "nod",
+"at": 31
+},
+{
+"a": "turn",
+"at": 45,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 63
+},
+{
+"a": "turn",
+"at": 81,
+"to": -0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "o"
+},
+"dir": 1
+},
+{
+"who": "gal",
+"x": 1250,
+"acts": [
+{
+"a": "lean",
+"at": 18
+},
+{
+"a": "nod",
+"at": 40
+},
+{
+"a": "turn",
+"at": 52,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 68
+},
+{
+"a": "turn",
+"at": 88,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "o"
+},
+"dir": -1
+}
+],
+"cx": 1040,
+"z": 1.6,
+"on": "nada"
+},
+{
+"kind": "close",
+"action": "Caio escuta o rádio, cercado de gente (pausa)",
+"set": "ruaNoite",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "turn",
+"at": 4,
+"to": 0.5
+},
+{
+"a": "face",
+"at": 22,
+"look": -0.3
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat"
+}
+}
+],
+"cx": 1080,
+"tail": 0.12
+}
+],
+"after": 1.35
+},
+{
+"id": "s0",
+"silence": 1.6,
+"shots": [
+{
+"kind": "data",
+"action": "As folhas do calendário passam até o sétimo dia",
+"props": [
+{
+"p": "chapter",
+"x": 960,
+"y": 560,
+"text": "PRIMEIRA SEMANA",
+"t2": "DIA 7",
+"h": 720,
+"moves": [
+{
+"at": 0,
+"dur": 12,
+"y": 540
+}
+]
+}
+],
+"sfx": [
+{
+"s": "whoosh",
+"at": 2,
+"v": 0.22
+}
+],
+"trans": "torn",
+"develops": true,
+"motes": true
+}
+]
+},
+{
+"id": "s1",
+"who": "narrator",
+"text": "E aqui começa a parte séria.",
+"shots": [
+{
+"kind": "wide",
+"action": "O mercadinho amanhece com menos coisas na prateleira",
+"set": "mercadoVazio",
+"cast": [
+{
+"who": "neide",
+"x": 1110,
+"acts": [
+{
+"a": "reach",
+"at": 6
+},
+{
+"a": "lookUp",
+"at": 24
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat",
+"brow": "worry"
+},
+"dir": -1
+}
+],
+"cx": 860,
+"z": 1.15
+}
+],
+"after": 0.1
+},
+{
+"id": "s2",
+"who": "narrator",
+"text": "Hoje, muita loja faz pedido pelo sistema. O caminhão recebe a rota pelo sistema.",
+"shots": [
+{
+"kind": "data",
+"action": "Uma linha de pedidos passa da loja ao armazém",
+"props": [
+{
+"p": "rede",
+"x": 960,
+"y": 540,
+"m": 14,
+"s": 1.05,
+"moves": [
+{
+"at": 0,
+"dur": 40,
+"s": 1.1
+}
+]
+},
+{
+"p": "big",
+"x": 960,
+"y": 200,
+"text": "PEDIDO: ERRO DE REDE",
+"w": 80,
+"c": "#e2553f",
+"moves": [
+{
+"at": 0,
+"dur": 6,
+"y": 180
+}
+]
+}
+],
+"develops": true,
+"motes": true
+},
+{
+"kind": "wide",
+"action": "Um caminhão espera parado na rua, motorista olhando o celular",
+"set": "ruaFechada",
+"cast": [
+{
+"who": "guy2",
+"x": 1260,
+"acts": [
+{
+"a": "phoneUp",
+"at": 6
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "frown"
+},
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+},
+"dir": 1
+}
+],
+"props": [
+{
+"p": "truck",
+"x": 780,
+"y": 900,
+"moves": [
+{
+"at": 0,
+"dur": 90,
+"x": 786
+}
+]
+}
+],
+"cx": 880,
+"z": 1.05,
+"on": "caminhão"
+}
+],
+"after": 0.1
+},
+{
+"id": "s3",
+"who": "narrator",
+"text": "Em 2018, a greve dos caminhoneiros durou cerca de dez dias. Faltou combustível. Faltou comida fresca.",
+"shots": [
+{
+"kind": "data",
+"action": "A placa de 2018 e dez folhas de calendário",
+"props": [
+{
+"p": "fact",
+"x": 960,
+"y": 170,
+"text": "2018",
+"moves": [
+{
+"at": 0,
+"dur": 4,
+"y": 170
+}
+]
+},
+{
+"p": "counter",
+"x": 960,
+"y": 560,
+"h": 10,
+"m": 0,
+"t3": "~",
+"t4": "",
+"w": 560,
+"n": 20,
+"moves": [
+{
+"at": 0,
+"dur": 4,
+"y": 560
+}
+],
+"t2": "DIAS DE GREVE"
+}
+],
+"develops": true,
+"motes": true
+},
+{
+"kind": "wide",
+"action": "Uma fila enorme de motos e pessoas com galões",
+"set": "rua",
+"cast": [
+{
+"who": "caio",
+"x": 1020,
+"acts": [
+{
+"a": "carry",
+"at": 6
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "frown"
+},
+"walks": [
+{
+"from": 4,
+"to": 44,
+"x0": 0,
+"x1": 140
+}
+]
+},
+{
+"who": "gui",
+"x": 800,
+"acts": [
+{
+"a": "handsHead",
+"at": 14
+},
+{
+"a": "nod",
+"at": 31
+},
+{
+"a": "turn",
+"at": 45,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 63
+},
+{
+"a": "turn",
+"at": 81,
+"to": -0.2
+}
+]
+},
+{
+"who": "gal",
+"x": 610,
+"face": {
+"eyes": "dot",
+"mouth": "frown"
+},
+"acts": [
+{
+"a": "nod",
+"at": 40
+},
+{
+"a": "turn",
+"at": 52,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 68
+},
+{
+"a": "turn",
+"at": 88,
+"to": 0.2
+}
+]
+}
+],
+"cx": 900,
+"on": "Faltou"
+},
+{
+"kind": "insert",
+"action": "Uma caixa de frutas vazia sobre o balcão",
+"set": "mercadoVazio",
+"props": [
+{
+"p": "big",
+"x": 960,
+"y": 540,
+"text": "ACABOU",
+"w": 210,
+"c": "#ffc857",
+"t2": "volta sem data",
+"moves": [
+{
+"at": 4,
+"dur": 6,
+"r": -3,
+"y": 520
+}
+]
+}
+],
+"cx": 500,
+"on": "comida"
+}
+],
+"after": 0.1
+},
+{
+"id": "s4",
+"who": "narrator",
+"text": "Ali, os sistemas funcionavam. O que faltava era caminhão.",
+"shots": [
+{
+"kind": "medium",
+"action": "Um motorista olha para a estrada, de braços cruzados",
+"set": "ruaFechada",
+"cast": [
+{
+"who": "guy2",
+"x": 1200,
+"acts": [
+{
+"a": "armsFold",
+"at": 8
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat",
+"brow": "flat"
+}
+}
+],
+"cx": 1160,
+"z": 1.5
+},
+{
+"kind": "close",
+"action": "Um motorista olha para a estrada, de braços cruzados (outro ângulo)",
+"set": "ruaFechada",
+"cast": [
+{
+"who": "guy2",
+"acts": [
+{
+"a": "turn",
+"at": 4,
+"to": -0.5
+},
+{
+"a": "nod",
+"at": 18
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat",
+"brow": "flat"
+}
+}
+],
+"cx": 1240
+},
+{
+"kind": "close",
+"action": "Um motorista olha para a estrada, de braços cruzados (pausa)",
+"set": "ruaFechada",
+"cast": [
+{
+"who": "guy2",
+"acts": [
+{
+"a": "turn",
+"at": 4,
+"to": 0.5
+},
+{
+"a": "face",
+"at": 22,
+"look": -0.3
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat",
+"brow": "flat"
+}
+}
+],
+"cx": 1240,
+"tail": 0.12
+}
+],
+"after": 1.1
+},
+{
+"id": "s5",
+"who": "narrator",
+"text": "Agora, provavelmente seria o contrário: tem caminhão, mas ninguém sabe quem precisa de quê.",
+"shots": [
+{
+"kind": "wide",
+"action": "O caminhão cruza a rua vazia à procura",
+"set": "ruaFechada",
+"props": [
+{
+"p": "truck",
+"x": 500,
+"y": 900,
+"moves": [
+{
+"at": 0,
+"dur": 120,
+"x": 2100,
+"ease": "linear"
+}
+]
+}
+],
+"cx": 940,
+"to": 1440,
+"sfx": [
+{
+"s": "rumble",
+"at": 0,
+"v": 0.16,
+"len": 60
+}
+]
+},
+{
+"kind": "wide",
+"action": "O caminhão cruza a rua vazia à procura (outro ângulo)",
+"set": "ruaFechada",
+"props": [
+{
+"p": "truck",
+"x": 500,
+"y": 900,
+"moves": [
+{
+"at": 0,
+"dur": 120,
+"x": 2100,
+"ease": "linear"
+}
+]
+}
+],
+"cx": 1200,
+"z": 1.3216,
+"step": {
+"at": 3,
+"to": 1.05,
+"dur": 18
+},
+"ff": 70
+},
+{
+"kind": "top",
+"action": "Um dedo passa por uma lista de pedidos em papel, cheia de rasuras",
+"props": [
+{
+"p": "caderno",
+"x": 960,
+"y": 530,
+"s": 0.95,
+"t2": "PEDIDOS",
+"lines": [
+"Arroz: ?",
+"Feijão: ?",
+"Café: 20 cx?",
+"Quem pediu?"
+],
+"n": 2
+},
+{
+"p": "hand",
+"x": 1460,
+"y": 980,
+"r": -24,
+"s": 1.0,
+"c": "#2e6f92",
+"point": true,
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"x": 1270,
+"y": 720
+}
+]
+}
+],
+"on": "ninguém",
+"motes": true
+}
+],
+"after": 0.1
+},
+{
+"id": "s6",
+"who": "narrator",
+"text": "Não é fim do mundo. É lentidão. Telefone, papel, e gente indo até lá.",
+"shots": [
+{
+"kind": "close",
+"action": "Dona Neide fala ao telefone fixo do mercadinho, com caneta em punho",
+"set": "mercadoVazio",
+"cast": [
+{
+"who": "neide",
+"acts": [
+{
+"a": "phoneEar",
+"at": 6
+},
+{
+"a": "nod",
+"at": 26
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat",
+"look": 0.4
+}
+}
+],
+"cx": 1660
+},
+{
+"kind": "medium",
+"action": "Dona Neide fala ao telefone fixo do mercadinho, com caneta em punho (outro ângulo)",
+"set": "mercadoVazio",
+"cast": [
+{
+"who": "neide",
+"x": 1660,
+"face": {
+"eyes": "dot",
+"mouth": "flat",
+"look": 0.4
+},
+"acts": [
+{
+"a": "lookUp",
+"at": 4
+},
+{
+"a": "turn",
+"at": 20,
+"to": 0.4
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+]
+}
+],
+"cx": 1660,
+"z": 1.5,
+"ff": 70
+},
+{
+"kind": "top",
+"action": "O bilhete de pedido sendo dobrado",
+"props": [
+{
+"p": "bilhete",
+"x": 900,
+"y": 520,
+"s": 1.4,
+"lines": [
+"Dona Neide pede:",
+"arroz, feijão, café.",
+"Pago na volta!"
+],
+"moves": [
+{
+"at": 8,
+"dur": 8,
+"r": -6,
+"s": 1.34
+}
+]
+},
+{
+"p": "hand",
+"x": 1420,
+"y": 980,
+"r": -30,
+"s": 1.0,
+"c": "#2e6f92",
+"point": true,
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"x": 1270,
+"y": 780
+}
+]
+}
+],
+"on": "papel",
+"motes": true
+}
+],
+"after": 0.21
+},
+{
+"id": "s7",
+"who": "narrator",
+"text": "O aplicativo do Caio morreu. Sem aplicativo, sem corrida. Sem corrida, sem dinheiro.",
+"shots": [
+{
+"kind": "data",
+"action": "O ícone de entregas apaga na tela",
+"props": [
+{
+"p": "phone",
+"x": 960,
+"y": 540,
+"s": 1.4,
+"r": 0,
+"text": "erro",
+"t2": "SEM CORRIDAS",
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 526
+}
+]
+}
+],
+"develops": true,
+"motes": true
+},
+{
+"kind": "close",
+"action": "Caio esvazia o bolso: só umas moedas",
+"set": "sala",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "lookDown",
+"at": 4
+},
+{
+"a": "sigh",
+"at": 14
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "frown",
+"brow": "worry"
+}
+}
+],
+"cx": 900,
+"on": "corrida"
+},
+{
+"kind": "top",
+"action": "Duas notas sobre a mesa e nenhuma outra",
+"props": [
+{
+"p": "nota",
+"x": 830,
+"y": 540,
+"s": 1.25,
+"r": -8,
+"text": "10",
+"c": "#a15f6c",
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"r": -5
+}
+]
+},
+{
+"p": "nota",
+"x": 1160,
+"y": 590,
+"s": 1.25,
+"r": 8,
+"text": "5",
+"c": "#6e8fb0"
+}
+],
+"on": "dinheiro",
+"motes": true
+}
+],
+"after": 0.1
+},
+{
+"id": "s8",
+"who": "narrator",
+"text": "Só que ele tem uma moto. E na primeira semana, uma moto vale ouro.",
+"shots": [
+{
+"kind": "wide",
+"action": "Caio olha a moto parada na calçada, ideia chegando",
+"set": "rua",
+"cast": [
+{
+"who": "caio",
+"x": 800,
+"acts": [
+{
+"a": "turn",
+"at": 6,
+"to": 0.6
+},
+{
+"a": "snapFace",
+"at": 22,
+"eyes": "wide",
+"brow": "high",
+"mouth": "smirk"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat"
+}
+}
+],
+"props": [
+{
+"p": "moto",
+"x": 1060,
+"y": 880
+}
+],
+"cx": 960,
+"z": 1.3
+},
+{
+"kind": "close",
+"action": "Caio olha a moto parada na calçada, ideia chegando (outro ângulo)",
+"set": "rua",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "turn",
+"at": 4,
+"to": -0.5
+},
+{
+"a": "nod",
+"at": 18
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat"
+}
+}
+],
+"cx": 840
+},
+{
+"kind": "close",
+"action": "Caio sorri e a interrogação acende",
+"set": "rua",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "snapFace",
+"at": 4,
+"eyes": "happy",
+"mouth": "smile",
+"look": 0.2
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+}
+}
+],
+"props": [
+{
+"p": "qmark",
+"x": 1340,
+"y": 270,
+"s": 0.8,
+"o": 0,
+"moves": [
+{
+"at": 4,
+"dur": 6,
+"o": 1
+}
+]
+}
+],
+"cx": 1100,
+"on": "ouro",
+"sfx": [
+{
+"s": "ding",
+"at": 4,
+"v": 0.28
+}
+]
+}
+],
+"after": 0.1
+},
+{
+"id": "s9",
+"who": "narrator",
+"text": "Ele começa a levar bilhete. Remédio. Recado de um bairro pro outro.",
+"shots": [
+{
+"kind": "wide",
+"action": "Caio passa de moto com o baú cheio",
+"set": "rua",
+"cast": [
+{
+"who": "caio",
+"x": 1520,
+"face": {
+"eyes": "dot",
+"mouth": "smile"
+},
+"key": {
+"pose": "ride"
+},
+"slide": {
+"from": 0,
+"to": 80,
+"x0": 0,
+"x1": 700
+}
+}
+],
+"props": [
+{
+"p": "moto",
+"x": 1550,
+"y": 880,
+"moves": [
+{
+"at": 0,
+"dur": 80,
+"x": 2250,
+"ease": "linear"
+}
+]
+}
+],
+"cx": 1500,
+"to": 2150,
+"sfx": [
+{
+"s": "rumble",
+"at": 0,
+"v": 0.16,
+"len": 60
+}
+]
+},
+{
+"kind": "top",
+"action": "A mão pega um bilhete dobrado de outra mão",
+"props": [
+{
+"p": "bilhete",
+"x": 960,
+"y": 480,
+"s": 1.15,
+"r": -6,
+"lines": [
+"Mãe: tô bem.",
+"Chego sábado."
+],
+"moves": [
+{
+"at": 4,
+"dur": 14,
+"x": 1100,
+"y": 620
+}
+]
+},
+{
+"p": "hand",
+"x": 420,
+"y": 1000,
+"r": 20,
+"s": 1.0,
+"c": "#6e6058",
+"point": true,
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"x": 560,
+"y": 760
+}
+]
+},
+{
+"p": "hand",
+"x": 1560,
+"y": 1040,
+"r": -26,
+"s": 1.0,
+"c": "#2e6f92",
+"point": true,
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"x": 1360,
+"y": 880
+}
+]
+}
+],
+"on": "Remédio",
+"motes": true
+},
+{
+"kind": "medium",
+"action": "Uma senhora abre o portão e recebe uma sacola da farmácia",
+"set": "rua",
+"cast": [
+{
+"who": "caio",
+"x": 760,
+"acts": [
+{
+"a": "give",
+"at": 4
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"hold": {
+"p": "bucket",
+"x": 0,
+"y": 30,
+"s": 0.6,
+"until": 30
+}
+},
+{
+"who": "gal2",
+"x": 980,
+"acts": [
+{
+"a": "handToMouth",
+"at": 14
+},
+{
+"a": "nod",
+"at": 31
+},
+{
+"a": "turn",
+"at": 45,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 63
+},
+{
+"a": "turn",
+"at": 81,
+"to": -0.2
+}
+],
+"face": {
+"eyes": "happy",
+"mouth": "smile"
+},
+"dir": -1
+}
+],
+"cx": 880,
+"z": 1.5,
+"on": "Recado"
+}
+],
+"after": 0.1
+},
+{
+"id": "s10",
+"who": "narrator",
+"text": "Cinco reais por bilhete.",
+"shots": [
+{
+"kind": "data",
+"action": "O preço surge rabiscado no escuro",
+"props": [
+{
+"p": "big",
+"x": 960,
+"y": 540,
+"text": "R$ 5",
+"w": 320,
+"c": "#ffc857",
+"t2": "POR BILHETE",
+"moves": [
+{
+"at": 0,
+"dur": 6,
+"r": -4,
+"y": 520
+}
+]
+}
+],
+"sfx": [
+{
+"s": "ding",
+"at": 2,
+"v": 0.25
+}
+],
+"develops": true,
+"motes": true
+}
+],
+"after": 0.1
+},
+{
+"id": "s11",
+"who": "narrator",
+"text": "O Caio virou a internet.",
+"shots": [
+{
+"kind": "close",
+"action": "Caio, de capacete torto, satisfeito",
+"set": "rua",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "nod",
+"at": 6
+},
+{
+"a": "snapFace",
+"at": 18,
+"eyes": "happy",
+"mouth": "smile"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "smirk"
+}
+}
+],
+"props": [
+{
+"p": "qmark",
+"x": 1340,
+"y": 270,
+"s": 0.7,
+"moves": [
+{
+"at": 0,
+"dur": 8,
+"y": 258
+}
+]
+}
+],
+"cx": 1600
+},
+{
+"kind": "medium",
+"action": "Caio, de capacete torto, satisfeito (pausa)",
+"set": "rua",
+"cast": [
+{
+"who": "caio",
+"x": 1600,
+"face": {
+"eyes": "dot",
+"mouth": "smirk"
+},
+"acts": [
+{
+"a": "turn",
+"at": 4,
+"to": -0.5
+},
+{
+"a": "nod",
+"at": 18
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+]
+}
+],
+"cx": 1600,
+"z": 1.5,
+"ff": 70,
+"tail": 0.12
+}
+],
+"after": 1.28
+},
+{
+"id": "s12",
+"who": "narrator",
+"text": "Agora, a escala. Em 2011, o Egito desligou a internet por cinco dias. A Ó Cê Dê É estimou uns noventa milhões de dólares de prejuízo.",
+"shots": [
+{
+"kind": "data",
+"action": "O globo gira lentamente até o Egito",
+"props": [
+{
+"p": "globe",
+"x": 960,
+"y": 540,
+"s": 1.0,
+"moves": [
+{
+"at": 0,
+"dur": 50,
+"x": 900
+}
+]
+}
+],
+"develops": true,
+"motes": true
+},
+{
+"kind": "data",
+"action": "A placa de 2011 e o contador de dinheiro",
+"props": [
+{
+"p": "fact",
+"x": 960,
+"y": 170,
+"text": "2011",
+"moves": [
+{
+"at": 0,
+"dur": 4,
+"y": 170
+}
+]
+},
+{
+"p": "counter",
+"x": 960,
+"y": 580,
+"h": 90,
+"m": 0,
+"t3": "US$ ",
+"t4": " MILHÕES",
+"w": 1180,
+"n": 30,
+"moves": [
+{
+"at": 0,
+"dur": 4,
+"y": 580
+}
+],
+"t2": "DE DÓLARES, 5 DIAS, EGITO (OCDE)"
+}
+],
+"on": "Egito",
+"develops": true,
+"motes": true
+},
+{
+"kind": "data",
+"action": "A placa de 2011 e o contador de dinheiro (outro ângulo)",
+"props": [
+{
+"p": "counter",
+"x": 960,
+"y": 580,
+"h": 90,
+"m": 0,
+"t3": "US$ ",
+"t4": " MILHÕES",
+"w": 1180,
+"n": 30,
+"moves": [
+{
+"at": 0,
+"dur": 4,
+"y": 580
+}
+],
+"t2": "DE DÓLARES, 5 DIAS, EGITO (OCDE)"
+}
+],
+"z": 1.14,
+"ff": 70,
+"step": {
+"at": 3,
+"to": 1.07,
+"dur": 14
+},
+"develops": true,
+"motes": true
+},
+{
+"kind": "data",
+"action": "Um número fica muito menor do que o globo inteiro",
+"props": [
+{
+"p": "big",
+"x": 960,
+"y": 540,
+"text": "UM PAÍS SÓ.",
+"w": 170,
+"t2": "estimativa preliminar",
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"y": 520
+}
+]
+}
+],
+"on": "prejuízo",
+"develops": true,
+"motes": true
+}
+],
+"after": 0.1
+},
+{
+"id": "s13",
+"who": "narrator",
+"text": "Um país só. Quinze anos atrás.",
+"shots": [
+{
+"kind": "wide",
+"action": "O céu da cidade cheio de janelas, olhando de longe",
+"set": "cidade",
+"cx": 1500,
+"to": 1560,
+"step": {
+"at": 4,
+"to": 1.03,
+"dur": 60
+}
+}
+],
+"after": 0.2
+},
+{
+"id": "s14",
+"who": "narrator",
+"text": "Em 2022, um vulcão rompeu os cabos submarinos de Tonga. O país ficou trinta e oito dias sem a conexão normal.",
+"shots": [
+{
+"kind": "data",
+"action": "O vulcão explode e rompe o cabo no fundo do mar",
+"props": [
+{
+"p": "vulcao",
+"x": 960,
+"y": 660,
+"s": 0.78,
+"moves": [
+{
+"at": 0,
+"dur": 40,
+"s": 0.8
+}
+]
+}
+],
+"sfx": [
+{
+"s": "boom",
+"at": 6,
+"v": 0.35,
+"len": 48
+}
+],
+"develops": true,
+"motes": true
+},
+{
+"kind": "data",
+"action": "O vulcão explode e rompe o cabo no fundo do mar (outro ângulo)",
+"props": [
+{
+"p": "vulcao",
+"x": 960,
+"y": 660,
+"s": 0.78,
+"moves": [
+{
+"at": 0,
+"dur": 40,
+"s": 0.8
+}
+]
+}
+],
+"z": 1.1,
+"ff": 70,
+"focus": [
+960,
+620
+],
+"step": {
+"at": 3,
+"to": 1.07,
+"dur": 14
+},
+"develops": true,
+"motes": true
+},
+{
+"kind": "data",
+"action": "A placa de 2022 e 38 dias",
+"props": [
+{
+"p": "fact",
+"x": 960,
+"y": 170,
+"text": "2022",
+"moves": [
+{
+"at": 0,
+"dur": 4,
+"y": 170
+}
+]
+},
+{
+"p": "counter",
+"x": 960,
+"y": 580,
+"h": 38,
+"m": 0,
+"t3": "",
+"t4": "",
+"w": 1000,
+"n": 24,
+"moves": [
+{
+"at": 0,
+"dur": 4,
+"y": 580
+}
+],
+"t2": "DIAS SEM CONEXÃO NORMAL, TONGA"
+}
+],
+"on": "trinta",
+"develops": true,
+"motes": true
+}
+],
+"after": 0.1
+},
+{
+"id": "s15",
+"who": "narrator",
+"text": "Caixas eletrônicos pararam. Os bancos não conseguiam ver o saldo dos clientes.",
+"shots": [
+{
+"kind": "insert",
+"action": "O caixa eletrônico piscando fora de serviço",
+"set": "ruaFechada",
+"props": [
+{
+"p": "atm",
+"x": 960,
+"y": 1000,
+"s": 1.9,
+"n": 1,
+"moves": [
+{
+"at": 0,
+"dur": 40,
+"s": 1.96
+}
+]
+}
+],
+"cx": 1800
+},
+{
+"kind": "insert",
+"action": "O caixa eletrônico piscando fora de serviço (outro ângulo)",
+"set": "ruaFechada",
+"props": [
+{
+"p": "atm",
+"x": 960,
+"y": 1000,
+"s": 1.9,
+"n": 1,
+"moves": [
+{
+"at": 0,
+"dur": 40,
+"s": 1.96
+}
+]
+}
+],
+"cx": 1800,
+"z": 1.4249999999999998,
+"ff": 70,
+"step": {
+"at": 3,
+"to": 1.07,
+"dur": 14
+}
+},
+{
+"kind": "medium",
+"action": "Uma funcionária de banco abre as mãos para uma fila",
+"set": "ruaFechada",
+"cast": [
+{
+"who": "gal",
+"x": 1500,
+"acts": [
+{
+"a": "shrug",
+"at": 6
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "frown",
+"brow": "worry"
+},
+"dir": 1
+},
+{
+"who": "gui",
+"x": 1740,
+"acts": [
+{
+"a": "handsHead",
+"at": 16
+},
+{
+"a": "nod",
+"at": 31
+},
+{
+"a": "turn",
+"at": 45,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 63
+},
+{
+"a": "turn",
+"at": 81,
+"to": -0.2
+}
+],
+"dir": -1
+},
+{
+"who": "guy2",
+"x": 1950,
+"face": {
+"eyes": "half",
+"mouth": "flat"
+},
+"dir": -1,
+"acts": [
+{
+"a": "nod",
+"at": 40
+},
+{
+"a": "turn",
+"at": 52,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 68
+},
+{
+"a": "turn",
+"at": 88,
+"to": 0.2
+}
+]
+}
+],
+"cx": 1700,
+"z": 1.45,
+"on": "saldo"
+},
+{
+"kind": "close",
+"action": "Uma funcionária de banco abre as mãos para uma fila (pausa)",
+"set": "ruaFechada",
+"cast": [
+{
+"who": "gal",
+"acts": [
+{
+"a": "turn",
+"at": 4,
+"to": 0.5
+},
+{
+"a": "face",
+"at": 22,
+"look": -0.3
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "frown",
+"brow": "worry"
+}
+}
+],
+"cx": 1540,
+"tail": 0.12
+}
+],
+"after": 1.35
+},
+{
+"id": "e0",
+"silence": 1.6,
+"shots": [
+{
+"kind": "data",
+"action": "O ponteiro dá muitas voltas até o primeiro mês",
+"props": [
+{
+"p": "chapter",
+"x": 960,
+"y": 560,
+"text": "PRIMEIRO MÊS",
+"t2": "DIA 30",
+"h": 1080,
+"moves": [
+{
+"at": 0,
+"dur": 12,
+"y": 540
+}
+]
+}
+],
+"sfx": [
+{
+"s": "whoosh",
+"at": 2,
+"v": 0.22
+}
+],
+"trans": "torn",
+"develops": true,
+"motes": true
+}
+]
+},
+{
+"id": "e1",
+"who": "narrator",
+"text": "No primeiro mês, o susto vira rotina.",
+"shots": [
+{
+"kind": "wide",
+"action": "Manhã na praça: gente passa devagar com sacolas",
+"set": "praca",
+"cast": [
+{
+"who": "gui",
+"x": 480,
+"walks": [
+{
+"from": 0,
+"to": 70,
+"x0": 0,
+"x1": 360
+}
+]
+},
+{
+"who": "gal2",
+"x": 1500,
+"walks": [
+{
+"from": 6,
+"to": 70,
+"x0": 0,
+"x1": -280
+}
+],
+"dir": -1
+}
+],
+"cx": 1000
+}
+],
+"after": 0.1
+},
+{
+"id": "e2",
+"who": "narrator",
+"text": "Na praça, surge um mural. Procura-se. Vende-se. Aula de violão na garagem.",
+"shots": [
+{
+"kind": "medium",
+"action": "Caio prega um papel no mural",
+"set": "praca",
+"cast": [
+{
+"who": "caio",
+"x": 780,
+"acts": [
+{
+"a": "knock",
+"at": 4
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"dir": 1
+}
+],
+"props": [
+{
+"p": "mural",
+"x": 1190,
+"y": 610,
+"s": 0.8,
+"n": 3
+}
+],
+"cx": 960,
+"z": 1.3,
+"sfx": [
+{
+"s": "knock",
+"at": 6,
+"v": 0.3
+}
+]
+},
+{
+"kind": "insert",
+"action": "Os papéis vão enchendo o mural",
+"set": "praca",
+"props": [
+{
+"p": "mural",
+"x": 960,
+"y": 610,
+"s": 0.98
+}
+],
+"cx": 1150,
+"on": "Procura-se",
+"step": {
+"at": 4,
+"to": 1.03,
+"dur": 60
+}
+},
+{
+"kind": "insert",
+"action": "Os papéis vão enchendo o mural (outro ângulo)",
+"set": "praca",
+"props": [
+{
+"p": "mural",
+"x": 960,
+"y": 610,
+"s": 0.98
+}
+],
+"cx": 1150,
+"z": 1.4249999999999998,
+"ff": 70,
+"step": {
+"at": 3,
+"to": 1.07,
+"dur": 14
+}
+},
+{
+"kind": "wide",
+"action": "Vizinhos param e leem o mural de perto",
+"set": "praca",
+"cast": [
+{
+"who": "gal",
+"x": 760,
+"acts": [
+{
+"a": "handToMouth",
+"at": 4
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"dir": 1
+},
+{
+"who": "gui",
+"x": 560,
+"acts": [
+{
+"a": "lean",
+"at": 10
+},
+{
+"a": "nod",
+"at": 31
+},
+{
+"a": "turn",
+"at": 45,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 63
+},
+{
+"a": "turn",
+"at": 81,
+"to": -0.2
+}
+],
+"dir": 1
+},
+{
+"who": "gal2",
+"x": 1520,
+"acts": [
+{
+"a": "point",
+"at": 18
+},
+{
+"a": "nod",
+"at": 40
+},
+{
+"a": "turn",
+"at": 52,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 68
+},
+{
+"a": "turn",
+"at": 88,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "smile"
+},
+"dir": -1
+}
+],
+"props": [
+{
+"p": "mural",
+"x": 1130,
+"y": 620,
+"s": 0.62,
+"layer": "back"
+}
+],
+"cx": 1050,
+"on": "garagem"
+}
+],
+"after": 0.15
+},
+{
+"id": "e3",
+"who": "narrator",
+"text": "Os bancos voltam a atender no balcão. Governos provavelmente ligam primeiro as redes privadas.",
+"shots": [
+{
+"kind": "wide",
+"action": "A fila anda no banco de portas abertas, com uma atendente",
+"set": "rua",
+"cast": [
+{
+"who": "gal",
+"x": 1800,
+"acts": [
+{
+"a": "writing",
+"at": 4
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"dir": -1
+},
+{
+"who": "gui",
+"x": 1590,
+"acts": [
+{
+"a": "give",
+"at": 8
+},
+{
+"a": "nod",
+"at": 31
+},
+{
+"a": "turn",
+"at": 45,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 63
+},
+{
+"a": "turn",
+"at": 81,
+"to": -0.2
+}
+]
+},
+{
+"who": "guy2",
+"x": 1420,
+"acts": [
+{
+"a": "nod",
+"at": 40
+},
+{
+"a": "turn",
+"at": 52,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 68
+},
+{
+"a": "turn",
+"at": 88,
+"to": 0.2
+}
+]
+},
+{
+"who": "caio",
+"x": 1270,
+"acts": [
+{
+"a": "nod",
+"at": 20
+},
+{
+"a": "nod",
+"at": 49
+},
+{
+"a": "turn",
+"at": 59,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 73
+},
+{
+"a": "turn",
+"at": 95,
+"to": -0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+}
+}
+],
+"cx": 1560
+},
+{
+"kind": "data",
+"action": "Um pequeno grupo de nós volta a acender",
+"props": [
+{
+"p": "rede",
+"x": 960,
+"y": 540,
+"m": 6,
+"s": 1.4,
+"moves": [
+{
+"at": 0,
+"dur": 20,
+"s": 1.5
+}
+]
+},
+{
+"p": "big",
+"x": 960,
+"y": 170,
+"text": "SÓ REDES PRIVADAS",
+"w": 80,
+"c": "#ffc857",
+"t2": "provavelmente",
+"moves": [
+{
+"at": 0,
+"dur": 6,
+"y": 150
+}
+]
+}
+],
+"on": "provavelmente",
+"develops": true,
+"motes": true
+}
+],
+"after": 0.2
+},
+{
+"id": "e4",
+"who": "narrator",
+"text": "Tem um lado bom? Talvez. Em 2025, um estudo bloqueou a internet do celular de centenas de pessoas por duas semanas.",
+"shots": [
+{
+"kind": "close",
+"action": "Caio coça o queixo, pensando",
+"set": "praca",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "face",
+"at": 6,
+"look": 0.6,
+"lookY": -0.4,
+"brow": "high"
+},
+{
+"a": "nod",
+"at": 24
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+}
+}
+],
+"props": [
+{
+"p": "qmark",
+"x": 1340,
+"y": 270,
+"s": 0.7,
+"moves": [
+{
+"at": 0,
+"dur": 8,
+"y": 258
+}
+]
+}
+],
+"cx": 800
+},
+{
+"kind": "medium",
+"action": "Caio coça o queixo, pensando (outro ângulo)",
+"set": "praca",
+"cast": [
+{
+"who": "caio",
+"x": 800,
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+},
+"acts": [
+{
+"a": "lookUp",
+"at": 4
+},
+{
+"a": "turn",
+"at": 20,
+"to": 0.4
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+]
+}
+],
+"cx": 800,
+"z": 1.5,
+"ff": 70
+},
+{
+"kind": "data",
+"action": "A placa de 2025 entra com a palavra estudo",
+"props": [
+{
+"p": "fact",
+"x": 960,
+"y": 170,
+"text": "2025",
+"moves": [
+{
+"at": 0,
+"dur": 4,
+"y": 170
+}
+]
+},
+{
+"p": "big",
+"x": 960,
+"y": 620,
+"text": "2 SEMANAS",
+"w": 210,
+"t2": "SEM INTERNET NO CELULAR",
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"y": 590
+}
+]
+}
+],
+"on": "estudo",
+"develops": true,
+"motes": true
+}
+],
+"after": 0.1
+},
+{
+"id": "e5",
+"who": "narrator",
+"text": "O tempo de tela caiu quase pela metade. A atenção e o humor melhoraram.",
+"shots": [
+{
+"kind": "data",
+"action": "As barras caem de 314 para 161 minutos",
+"props": [
+{
+"p": "bars",
+"x": 960,
+"y": 800,
+"h": 314,
+"m": 161
+}
+],
+"develops": true,
+"motes": true,
+"step": {
+"at": 4,
+"to": 1.03,
+"dur": 60
+}
+},
+{
+"kind": "wide",
+"action": "Caio lê um livro no banco da praça",
+"set": "pracaTarde",
+"cast": [
+{
+"who": "caio",
+"x": 590,
+"acts": [
+{
+"a": "sitRead",
+"at": 4
+},
+{
+"a": "face",
+"at": 14,
+"eyes": "half",
+"mouth": "smile"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"hold": {
+"p": "newspaper",
+"x": 8,
+"y": 10,
+"s": 0.34
+},
+"dir": 1
+}
+],
+"cx": 720,
+"z": 1.35,
+"on": "atenção"
+}
+],
+"after": 0.1
+},
+{
+"id": "e6",
+"who": "narrator",
+"text": "Mas foi uma escolha. E muita gente nem conseguiu ir até o fim.",
+"shots": [
+{
+"kind": "medium",
+"action": "Uma pessoa pega o celular escondido, e devolve",
+"set": "pracaTarde",
+"cast": [
+{
+"who": "gui",
+"x": 980,
+"acts": [
+{
+"a": "checkPhone",
+"at": 6
+},
+{
+"a": "stand",
+"at": 30
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "wave"
+},
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+}
+}
+],
+"cx": 980,
+"z": 1.6
+},
+{
+"kind": "close",
+"action": "Uma pessoa pega o celular escondido, e devolve (outro ângulo)",
+"set": "pracaTarde",
+"cast": [
+{
+"who": "gui",
+"acts": [
+{
+"a": "turn",
+"at": 4,
+"to": -0.5
+},
+{
+"a": "nod",
+"at": 18
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "wave"
+}
+}
+],
+"cx": 1020
+},
+{
+"kind": "close",
+"action": "Uma pessoa pega o celular escondido, e devolve (pausa)",
+"set": "pracaTarde",
+"cast": [
+{
+"who": "gui",
+"acts": [
+{
+"a": "turn",
+"at": 4,
+"to": 0.5
+},
+{
+"a": "face",
+"at": 22,
+"look": -0.3
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "wave"
+}
+}
+],
+"cx": 1020,
+"tail": 0.12
+}
+],
+"after": 1.32
+},
+{
+"id": "e7",
+"who": "narrator",
+"text": "E o que ninguém escolheu?",
+"shots": [
+{
+"kind": "close",
+"action": "Dona Neide para com a caneta no ar, olhando para o porta-retrato",
+"set": "salaNoite",
+"cast": [
+{
+"who": "neide",
+"acts": [
+{
+"a": "lookDown",
+"at": 8
+},
+{
+"a": "face",
+"at": 26,
+"eyes": "sad",
+"brow": "worry"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+}
+}
+],
+"cx": 1100
+}
+],
+"after": 0.49
+},
+{
+"id": "e8",
+"who": "narrator",
+"text": "A irmã do Caio, a Lena, mora em Lisboa.",
+"shots": [
+{
+"kind": "insert",
+"action": "Um porta-retrato na parede: as duas, abraçadas",
+"set": "salaNoite",
+"props": [
+{
+"p": "big",
+"x": 960,
+"y": 540,
+"text": "LENA",
+"w": 210,
+"c": "#f3ead6",
+"t2": "LISBOA",
+"moves": [
+{
+"at": 4,
+"dur": 12,
+"y": 520
+}
+]
+}
+],
+"cx": 950
+}
+],
+"after": 0.21
+},
+{
+"id": "e9",
+"who": "narrator",
+"text": "Todo domingo, vídeo. Mãe e filha. De graça.",
+"shots": [
+{
+"kind": "top",
+"action": "O celular apoiado na lata de açúcar mostra o rosto da Lena",
+"props": [
+{
+"p": "phone",
+"x": 960,
+"y": 500,
+"s": 1.2,
+"r": 0,
+"text": "call",
+"t4": "11:02",
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 486
+}
+]
+},
+{
+"p": "topMug",
+"x": 1500,
+"y": 720,
+"s": 0.9
+},
+{
+"p": "hand",
+"x": 390,
+"y": 1060,
+"r": 22,
+"s": 1.0,
+"c": "#7a3f4a",
+"point": true,
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"x": 500,
+"y": 900
+}
+]
+}
+],
+"motes": true
+},
+{
+"kind": "close",
+"action": "Dona Neide sorri, lembrando",
+"set": "salaNoite",
+"cast": [
+{
+"who": "neide",
+"acts": [
+{
+"a": "snapFace",
+"at": 6,
+"eyes": "happy",
+"mouth": "smile"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+}
+}
+],
+"cx": 500,
+"on": "Mãe"
+},
+{
+"kind": "medium",
+"action": "Dona Neide sorri, lembrando (pausa)",
+"set": "salaNoite",
+"cast": [
+{
+"who": "neide",
+"x": 500,
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+},
+"acts": [
+{
+"a": "turn",
+"at": 4,
+"to": -0.5
+},
+{
+"a": "nod",
+"at": 18
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+]
+}
+],
+"cx": 500,
+"z": 1.5,
+"ff": 70,
+"tail": 0.12
+}
+],
+"after": 1.35
+},
+{
+"id": "e10",
+"who": "narrator",
+"text": "Quase todo o tráfego internacional passa por cabos no fundo do mar. Sem ele, Lisboa fica muito longe.",
+"shots": [
+{
+"kind": "data",
+"action": "O cabo atravessa o oceano escuro",
+"props": [
+{
+"p": "globe",
+"x": 960,
+"y": 540,
+"s": 1.0,
+"n": 0,
+"moves": [
+{
+"at": 0,
+"dur": 80,
+"s": 1.08
+}
+]
+}
+],
+"develops": true,
+"motes": true
+},
+{
+"kind": "data",
+"action": "O cabo atravessa o oceano escuro (outro ângulo)",
+"props": [
+{
+"p": "globe",
+"x": 960,
+"y": 540,
+"s": 1.0,
+"n": 0,
+"moves": [
+{
+"at": 0,
+"dur": 80,
+"s": 1.08
+}
+]
+}
+],
+"z": 1.14,
+"ff": 70,
+"step": {
+"at": 3,
+"to": 1.07,
+"dur": 14
+},
+"develops": true,
+"motes": true
+},
+{
+"kind": "data",
+"action": "A palavra Lisboa fica pequena no escuro",
+"props": [
+{
+"p": "big",
+"x": 960,
+"y": 540,
+"text": "LISBOA",
+"w": 170,
+"c": "#c4ced3",
+"s": 1.0,
+"moves": [
+{
+"at": 4,
+"dur": 90,
+"s": 0.45
+}
+]
+}
+],
+"on": "Lisboa",
+"develops": true,
+"motes": true
+}
+],
+"after": 0.32
+},
+{
+"id": "e11",
+"who": "narrator",
+"text": "Em Tonga, muita gente teve que pegar a estrada, ou o barco, pra descobrir qualquer coisa.",
+"shots": [
+{
+"kind": "wide",
+"action": "Alguém olha o mar de longe, parado",
+"set": "pracaTarde",
+"cast": [
+{
+"who": "gal2",
+"x": 1520,
+"acts": [
+{
+"a": "lookUp",
+"at": 8
+},
+{
+"a": "sigh",
+"at": 34
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat",
+"brow": "worry"
+},
+"dir": 1
+}
+],
+"cx": 1600,
+"z": 1.25
+},
+{
+"kind": "close",
+"action": "Alguém olha o mar de longe, parado (outro ângulo)",
+"set": "pracaTarde",
+"cast": [
+{
+"who": "gal2",
+"acts": [
+{
+"a": "turn",
+"at": 4,
+"to": -0.5
+},
+{
+"a": "nod",
+"at": 18
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat",
+"brow": "worry"
+}
+}
+],
+"cx": 1560
+}
+],
+"after": 0.42
+},
+{
+"id": "e12",
+"silence": 1.5,
+"shots": [
+{
+"kind": "medium",
+"action": "Dona Neide senta à mesa com uma folha em branco",
+"set": "salaNoite",
+"cast": [
+{
+"who": "neide",
+"x": 1100,
+"acts": [
+{
+"a": "sitDesk",
+"at": 8
+},
+{
+"a": "face",
+"at": 20,
+"eyes": "sad",
+"brow": "worry"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat",
+"lookY": 0.7
+},
+"wallShadow": true
+}
+],
+"cx": 1100,
+"z": 1.5
+}
+]
+},
+{
+"id": "e13",
+"who": "narrator",
+"text": "A dona Neide escreve uma carta. A primeira desde 1994.",
+"shots": [
+{
+"kind": "top",
+"action": "A mão dela escreve devagar",
+"props": [
+{
+"p": "carta",
+"x": 960,
+"y": 560,
+"s": 0.86,
+"n": 3,
+"lines": [
+"Filha,"
+]
+},
+{
+"p": "hand",
+"x": 1420,
+"y": 1000,
+"r": -26,
+"s": 1.0,
+"c": "#7a3f4a",
+"point": true,
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"x": 1240,
+"y": 680
+}
+]
+}
+],
+"motes": true
+},
+{
+"kind": "top",
+"action": "A mão dela escreve devagar (outro ângulo)",
+"props": [
+{
+"p": "carta",
+"x": 960,
+"y": 560,
+"s": 0.86,
+"n": 3,
+"lines": [
+"Filha,"
+]
+},
+{
+"p": "hand",
+"x": 1420,
+"y": 1000,
+"r": -26,
+"s": 1.0,
+"c": "#7a3f4a",
+"point": true,
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"x": 1240,
+"y": 680
+}
+]
+}
+],
+"motes": true,
+"z": 1.35,
+"ff": 70,
+"focus": [
+960,
+400
+],
+"step": {
+"at": 3,
+"to": 1.07,
+"dur": 14
+}
+}
+],
+"after": 0.28
+},
+{
+"id": "e14",
+"who": "neide",
+"text": "Filha, aqui tá todo mundo bem. Me escreve.",
+"shots": [
+{
+"kind": "top",
+"action": "As palavras vão surgindo no papel",
+"props": [
+{
+"p": "carta",
+"x": 960,
+"y": 560,
+"s": 0.86,
+"n": 0,
+"lines": [
+"Filha,",
+"aqui tá todo mundo bem.",
+"Me escreve."
+]
+},
+{
+"p": "hand",
+"x": 1520,
+"y": 1040,
+"r": -26,
+"s": 1.0,
+"c": "#7a3f4a",
+"point": true,
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"x": 1400,
+"y": 880
+}
+]
+}
+],
+"focus": [
+960,
+440
+],
+"z": 1.3,
+"motes": true
+},
+{
+"kind": "top",
+"action": "As palavras vão surgindo no papel (outro ângulo)",
+"props": [
+{
+"p": "carta",
+"x": 960,
+"y": 560,
+"s": 0.86,
+"n": 0,
+"lines": [
+"Filha,",
+"aqui tá todo mundo bem.",
+"Me escreve."
+]
+},
+{
+"p": "hand",
+"x": 1520,
+"y": 1040,
+"r": -26,
+"s": 1.0,
+"c": "#7a3f4a",
+"point": true,
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"x": 1400,
+"y": 880
+}
+]
+}
+],
+"focus": [
+960,
+400
+],
+"z": 1.4040000000000001,
+"ff": 70,
+"step": {
+"at": 3,
+"to": 1.07,
+"dur": 14
+},
+"motes": true
+}
+],
+"after": 0.56
+},
+{
+"id": "e15",
+"silence": 1.8,
+"shots": [
+{
+"kind": "wide",
+"action": "Caio coloca o envelope na caixa de correio",
+"set": "pracaTarde",
+"cast": [
+{
+"who": "caio",
+"x": 1180,
+"acts": [
+{
+"a": "give",
+"at": 8
+},
+{
+"a": "stand",
+"at": 32
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat",
+"brow": "worry"
+},
+"dir": 1
+}
+],
+"props": [
+{
+"p": "caixaCorreio",
+"x": 1480,
+"y": 880,
+"s": 1.0,
+"layer": "back"
+},
+{
+"p": "envelope",
+"x": 1400,
+"y": 620,
+"s": 0.26,
+"moves": [
+{
+"at": 22,
+"dur": 8,
+"x": 1480,
+"y": 610,
+"o": 0
+}
+]
+}
+],
+"cx": 1280,
+"z": 1.45
+}
+]
+},
+{
+"id": "e16",
+"who": "narrator",
+"text": "A carta vai por navio ou avião, quando tiver. Pode levar semanas.",
+"shots": [
+{
+"kind": "wide",
+"action": "O avião some ao longe, pequeno",
+"set": "cidadeNoite",
+"props": [
+{
+"p": "aviao",
+"x": 200,
+"y": 280,
+"s": 0.3,
+"moves": [
+{
+"at": 0,
+"dur": 90,
+"x": 1500,
+"y": 190,
+"ease": "linear"
+}
+]
+}
+],
+"cx": 900
+},
+{
+"kind": "wide",
+"action": "O avião some ao longe, pequeno (outro ângulo)",
+"set": "cidadeNoite",
+"props": [
+{
+"p": "aviao",
+"x": 200,
+"y": 280,
+"s": 0.3,
+"moves": [
+{
+"at": 0,
+"dur": 90,
+"x": 1500,
+"y": 190,
+"ease": "linear"
+}
+]
+}
+],
+"cx": 1160,
+"z": 1.3216,
+"step": {
+"at": 3,
+"to": 1.05,
+"dur": 18
+},
+"ff": 70
+},
+{
+"kind": "wide",
+"action": "O avião some ao longe, pequeno (pausa)",
+"set": "cidadeNoite",
+"props": [
+{
+"p": "aviao",
+"x": 200,
+"y": 280,
+"s": 0.3,
+"moves": [
+{
+"at": 0,
+"dur": 90,
+"x": 1500,
+"y": 190,
+"ease": "linear"
+}
+]
+}
+],
+"cx": 1160,
+"z": 1.3216,
+"step": {
+"at": 3,
+"to": 1.05,
+"dur": 18
+},
+"ff": 70,
+"tail": 0.12
+}
+],
+"after": 1.42
+},
+{
+"id": "e17",
+"who": "narrator",
+"text": "O domingo ficou muito comprido.",
+"shots": [
+{
+"kind": "wide",
+"action": "Dona Neide sozinha no sofá, o celular apagado no colo",
+"set": "salaNoite",
+"cast": [
+{
+"who": "neide",
+"x": 420,
+"acts": [
+{
+"a": "sitOnly",
+"at": 2
+},
+{
+"a": "sigh",
+"at": 26
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "half",
+"mouth": "flat",
+"brow": "worry",
+"lookY": 0.8
+},
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+}
+}
+],
+"cx": 620,
+"z": 1.25
+}
+],
+"after": 0.7
+},
+{
+"id": "e18",
+"silence": 2.0,
+"shots": [
+{
+"kind": "close",
+"action": "O rosto de Caio, em silêncio, olhando a mãe da porta",
+"set": "salaNoite",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "face",
+"at": 10,
+"eyes": "sad",
+"brow": "worry",
+"look": -0.5
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat",
+"look": -0.5
+}
+}
+],
+"cx": 2100
+}
+]
+},
+{
+"id": "y0",
+"silence": 1.8,
+"shots": [
+{
+"kind": "data",
+"action": "O relógio dá a volta inteira",
+"props": [
+{
+"p": "chapter",
+"x": 960,
+"y": 560,
+"text": "UM ANO DEPOIS",
+"t2": "12 MESES",
+"h": 4320,
+"moves": [
+{
+"at": 0,
+"dur": 12,
+"y": 540
+}
+]
+}
+],
+"sfx": [
+{
+"s": "whoosh",
+"at": 2,
+"v": 0.24
+}
+],
+"trans": "torn",
+"develops": true,
+"motes": true
+}
+]
+},
+{
+"id": "y1",
+"who": "narrator",
+"text": "Um ano depois, o mundo provavelmente não acabou. Ficou mais lento. E mais perto de casa.",
+"shots": [
+{
+"kind": "wide",
+"action": "A rua de manhã, reabastecida, cheia de gente",
+"set": "rua",
+"cast": [
+{
+"who": "gui",
+"x": 500,
+"face": {
+"eyes": "dot",
+"mouth": "smile"
+},
+"walks": [
+{
+"from": 0,
+"to": 70,
+"x0": 0,
+"x1": 320
+}
+]
+},
+{
+"who": "gal",
+"x": 1120,
+"acts": [
+{
+"a": "wave",
+"at": 8,
+"n": 2
+},
+{
+"a": "nod",
+"at": 31
+},
+{
+"a": "turn",
+"at": 45,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 63
+},
+{
+"a": "turn",
+"at": 81,
+"to": -0.2
+}
+],
+"face": {
+"eyes": "happy",
+"mouth": "smile"
+}
+},
+{
+"who": "caio",
+"x": 1520,
+"face": {
+"eyes": "dot",
+"mouth": "smile"
+},
+"walks": [
+{
+"from": 4,
+"to": 70,
+"x0": 0,
+"x1": -260
+}
+],
+"dir": -1
+}
+],
+"cx": 1000
+},
+{
+"kind": "close",
+"action": "A rua de manhã, reabastecida, cheia de gente (outro ângulo)",
+"set": "rua",
+"cast": [
+{
+"who": "gal",
+"acts": [
+{
+"a": "turn",
+"at": 4,
+"to": -0.5
+},
+{
+"a": "nod",
+"at": 18
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "happy",
+"mouth": "smile"
+}
+}
+],
+"cx": 1160
+},
+{
+"kind": "wide",
+"action": "O mercadinho reabastecido, dona Neide no caderno",
+"set": "mercado",
+"cast": [
+{
+"who": "neide",
+"x": 1570,
+"acts": [
+{
+"a": "writing",
+"at": 6
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "smirk"
+},
+"behind": true,
+"dir": -1
+},
+{
+"who": "gal2",
+"x": 1290,
+"acts": [
+{
+"a": "nod",
+"at": 18
+},
+{
+"a": "nod",
+"at": 31
+},
+{
+"a": "turn",
+"at": 45,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 63
+},
+{
+"a": "turn",
+"at": 81,
+"to": -0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "smile"
+}
+}
+],
+"cx": 1400,
+"z": 1.25,
+"on": "lento"
+},
+{
+"kind": "close",
+"action": "O mercadinho reabastecido, dona Neide no caderno (pausa)",
+"set": "mercado",
+"cast": [
+{
+"who": "neide",
+"acts": [
+{
+"a": "turn",
+"at": 4,
+"to": 0.5
+},
+{
+"a": "face",
+"at": 22,
+"look": -0.3
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "smirk"
+}
+}
+],
+"cx": 1610,
+"tail": 0.12
+}
+],
+"after": 1.15
+},
+{
+"id": "y2",
+"who": "narrator",
+"text": "Cuba já ensaiou uma coisa assim. Com pouco acesso à rede, os cubanos criaram o Paquete Semanal.",
+"shots": [
+{
+"kind": "data",
+"action": "A palavra Cuba e um HD aparecem no escuro",
+"props": [
+{
+"p": "big",
+"x": 960,
+"y": 300,
+"text": "CUBA",
+"w": 170,
+"c": "#ffc857",
+"moves": [
+{
+"at": 0,
+"dur": 8,
+"y": 280
+}
+]
+},
+{
+"p": "hd",
+"x": 960,
+"y": 720,
+"s": 0.8,
+"text": "PAQUETE",
+"t2": "SEMANAL",
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"y": 700
+}
+]
+}
+],
+"develops": true,
+"motes": true
+},
+{
+"kind": "data",
+"action": "Um HD passa de mão em mão",
+"props": [
+{
+"p": "hd",
+"x": 620,
+"y": 520,
+"s": 1.1,
+"text": "PAQUETE",
+"t2": "SEMANAL",
+"moves": [
+{
+"at": 4,
+"dur": 34,
+"x": 1300,
+"r": 8
+}
+]
+},
+{
+"p": "hand",
+"x": 260,
+"y": 1030,
+"r": 18,
+"s": 1.0,
+"c": "#b9607b",
+"point": true,
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"x": 420,
+"y": 880
+}
+]
+},
+{
+"p": "hand",
+"x": 1680,
+"y": 1030,
+"r": -18,
+"s": 1.0,
+"c": "#3f6b70",
+"point": true,
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"x": 1520,
+"y": 880
+}
+]
+}
+],
+"on": "criaram",
+"develops": true,
+"motes": true
+}
+],
+"after": 0.1
+},
+{
+"id": "y3",
+"who": "narrator",
+"text": "Cerca de um terabyte de filme, música e aplicativo, passado de mão em mão toda semana.",
+"shots": [
+{
+"kind": "data",
+"action": "O contador de 1 terabyte",
+"props": [
+{
+"p": "counter",
+"x": 960,
+"y": 500,
+"h": 1,
+"m": 0,
+"t3": "~",
+"t4": " TERABYTE",
+"w": 860,
+"n": 18,
+"moves": [
+{
+"at": 0,
+"dur": 4,
+"y": 500
+}
+],
+"t2": "POR SEMANA, NUM HD"
+}
+],
+"develops": true,
+"motes": true
+},
+{
+"kind": "top",
+"action": "Mãos conectam um HD num notebook sobre a mesa",
+"props": [
+{
+"p": "hd",
+"x": 700,
+"y": 520,
+"s": 1.1,
+"r": -10,
+"moves": [
+{
+"at": 4,
+"dur": 12,
+"x": 820
+}
+]
+},
+{
+"p": "phone",
+"x": 1320,
+"y": 520,
+"s": 0.9,
+"r": 6,
+"text": "load",
+"t2": "COPIANDO",
+"t3": "42%"
+},
+{
+"p": "hand",
+"x": 330,
+"y": 1040,
+"r": 18,
+"s": 1.0,
+"c": "#2e6f92",
+"point": true,
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"x": 470,
+"y": 830
+}
+]
+}
+],
+"on": "música",
+"motes": true
+}
+],
+"after": 0.1
+},
+{
+"id": "y4",
+"who": "narrator",
+"text": "É bem o que o Caio faz agora. Toda sexta, o HD da semana.",
+"shots": [
+{
+"kind": "wide",
+"action": "Caio passa de moto com o baú da semana",
+"set": "rua",
+"cast": [
+{
+"who": "caio",
+"x": 420,
+"face": {
+"eyes": "happy",
+"mouth": "smile"
+},
+"key": {
+"pose": "ride"
+},
+"slide": {
+"from": 0,
+"to": 72,
+"x0": 0,
+"x1": 620
+}
+}
+],
+"props": [
+{
+"p": "moto",
+"x": 450,
+"y": 880,
+"moves": [
+{
+"at": 0,
+"dur": 72,
+"x": 1070,
+"ease": "linear"
+}
+]
+}
+],
+"cx": 420,
+"to": 1040,
+"sfx": [
+{
+"s": "rumble",
+"at": 0,
+"v": 0.14,
+"len": 60
+}
+]
+},
+{
+"kind": "insert",
+"action": "O HD da semana passa para outras mãos",
+"set": "praca",
+"props": [
+{
+"p": "hd",
+"x": 960,
+"y": 560,
+"s": 1.6,
+"moves": [
+{
+"at": 4,
+"dur": 10,
+"r": -6,
+"y": 530
+}
+]
+}
+],
+"cx": 800,
+"on": "sexta"
+}
+],
+"after": 0.1
+},
+{
+"id": "y5",
+"who": "narrator",
+"text": "E alguém quase certamente religa. O que sumiu foi a conexão, não o conhecimento.",
+"shots": [
+{
+"kind": "close",
+"action": "Bia concorda devagar",
+"set": "hospital",
+"cast": [
+{
+"who": "bia",
+"acts": [
+{
+"a": "nod",
+"at": 8
+},
+{
+"a": "face",
+"at": 16,
+"mouth": "smile"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+}
+}
+],
+"cx": 1100
+},
+{
+"kind": "medium",
+"action": "Bia concorda devagar (outro ângulo)",
+"set": "hospital",
+"cast": [
+{
+"who": "bia",
+"x": 1100,
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+},
+"acts": [
+{
+"a": "lookUp",
+"at": 4
+},
+{
+"a": "turn",
+"at": 20,
+"to": 0.4
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+]
+}
+],
+"cx": 1100,
+"z": 1.5,
+"ff": 70
+},
+{
+"kind": "data",
+"action": "Dois nós se ligam, depois quatro",
+"props": [
+{
+"p": "rede",
+"x": 960,
+"y": 540,
+"m": 4,
+"s": 1.5,
+"moves": [
+{
+"at": 0,
+"dur": 20,
+"s": 1.55
+}
+]
+},
+{
+"p": "big",
+"x": 960,
+"y": 170,
+"text": "2 NÓS... 4 NÓS...",
+"w": 88,
+"c": "#ffc857",
+"moves": [
+{
+"at": 0,
+"dur": 6,
+"y": 150
+}
+]
+}
+],
+"on": "conexão",
+"develops": true,
+"motes": true
+}
+],
+"after": 0.1
+},
+{
+"id": "y6",
+"who": "narrator",
+"text": "Em 1969, a primeira mensagem da rede que virou a internet travou depois de duas letras.",
+"shots": [
+{
+"kind": "data",
+"action": "As letras L e O aparecem e o resto trava",
+"props": [
+{
+"p": "fact",
+"x": 960,
+"y": 170,
+"text": "1969",
+"moves": [
+{
+"at": 0,
+"dur": 4,
+"y": 170
+}
+]
+},
+{
+"p": "big",
+"x": 960,
+"y": 600,
+"text": "LO",
+"w": 360,
+"c": "#ffc857",
+"t2": "O SISTEMA TRAVOU",
+"moves": [
+{
+"at": 8,
+"dur": 6,
+"y": 570
+}
+]
+}
+],
+"sfx": [
+{
+"s": "click",
+"at": 8,
+"v": 0.35
+}
+],
+"develops": true,
+"motes": true
+},
+{
+"kind": "data",
+"action": "As letras L e O aparecem e o resto trava (outro ângulo)",
+"props": [
+{
+"p": "big",
+"x": 960,
+"y": 600,
+"text": "LO",
+"w": 360,
+"c": "#ffc857",
+"t2": "O SISTEMA TRAVOU",
+"moves": [
+{
+"at": 8,
+"dur": 6,
+"y": 570
+}
+]
+}
+],
+"z": 1.14,
+"ff": 70,
+"step": {
+"at": 3,
+"to": 1.07,
+"dur": 14
+},
+"develops": true,
+"motes": true
+}
+],
+"after": 0.1
+},
+{
+"id": "y7",
+"who": "narrator",
+"text": "Dá pra começar pequeno de novo. Bairro. Cidade. País. Mas global, barata e rápida como antes? Pode levar anos.",
+"shots": [
+{
+"kind": "wide",
+"action": "Antenas e fios: um homem liga um cabo no poste da rua",
+"set": "rua",
+"cast": [
+{
+"who": "gui",
+"x": 680,
+"acts": [
+{
+"a": "raiseHand",
+"at": 6
+},
+{
+"a": "stand",
+"at": 40
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat",
+"look": -0.4,
+"lookY": -0.8
+}
+}
+],
+"cx": 640,
+"z": 1.25
+},
+{
+"kind": "data",
+"action": "A rede cresce em camadas: bairro, cidade, país",
+"props": [
+{
+"p": "rede",
+"x": 960,
+"y": 540,
+"m": 12,
+"s": 1.3,
+"moves": [
+{
+"at": 0,
+"dur": 16,
+"s": 1.0
+}
+]
+},
+{
+"p": "big",
+"x": 400,
+"y": 200,
+"text": "BAIRRO",
+"w": 70,
+"c": "#ffc857"
+},
+{
+"p": "big",
+"x": 960,
+"y": 200,
+"text": "CIDADE",
+"w": 70,
+"c": "#ffc857",
+"o": 0,
+"moves": [
+{
+"at": 14,
+"dur": 4,
+"o": 1
+}
+]
+},
+{
+"p": "big",
+"x": 1520,
+"y": 200,
+"text": "PAÍS",
+"w": 70,
+"c": "#ffc857",
+"o": 0,
+"moves": [
+{
+"at": 28,
+"dur": 4,
+"o": 1
+}
+]
+}
+],
+"on": "Bairro",
+"develops": true,
+"motes": true
+},
+{
+"kind": "data",
+"action": "O globo escurecido com poucos pontos acesos",
+"props": [
+{
+"p": "globe",
+"x": 960,
+"y": 540,
+"n": 0,
+"s": 1.0,
+"moves": [
+{
+"at": 0,
+"dur": 60,
+"s": 1.04
+}
+]
+},
+{
+"p": "big",
+"x": 960,
+"y": 560,
+"text": "PODE LEVAR ANOS",
+"w": 120,
+"c": "#ffc857"
+}
+],
+"on": "global",
+"develops": true,
+"motes": true
+}
+],
+"after": 0.35
+},
+{
+"id": "y8",
+"who": "narrator",
+"text": "Um domingo, a rede da cidade consegue um link pra fora.",
+"shots": [
+{
+"kind": "wide",
+"action": "Domingo de manhã, Caio entra correndo pela porta com o celular erguido",
+"set": "sala",
+"cast": [
+{
+"who": "caio",
+"x": 2240,
+"acts": [
+{
+"a": "raiseHand",
+"at": 2
+}
+],
+"face": {
+"eyes": "wide",
+"mouth": "ah",
+"brow": "high"
+},
+"walks": [
+{
+"from": 2,
+"to": 28,
+"x0": 0,
+"x1": -720
+}
+],
+"dir": -1,
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+}
+}
+],
+"cx": 1500,
+"to": 1500,
+"sfx": [
+{
+"s": "knock",
+"at": 0,
+"v": 0.3
+}
+]
+}
+],
+"after": 0.21
+},
+{
+"id": "y9",
+"who": "narrator",
+"text": "A imagem chia. Trava. Volta.",
+"shots": [
+{
+"kind": "top",
+"action": "A tela chia até virar um rosto",
+"props": [
+{
+"p": "phone",
+"x": 960,
+"y": 500,
+"s": 1.25,
+"r": 0,
+"text": "call",
+"t4": "9:14",
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 486
+}
+]
+}
+],
+"motes": true,
+"sfx": [
+{
+"s": "buzz",
+"at": 0,
+"v": 0.1,
+"len": 30
+}
+]
+},
+{
+"kind": "data",
+"action": "A imagem trava na chamada de vídeo e volta",
+"props": [
+{
+"p": "phone",
+"x": 960,
+"y": 540,
+"s": 1.45,
+"r": 0,
+"text": "load",
+"t2": "LENA",
+"t3": "Reconectando…",
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 526
+}
+]
+}
+],
+"on": "Trava",
+"develops": true,
+"motes": true
+},
+{
+"kind": "data",
+"action": "A chamada volta com a Lena acenando",
+"props": [
+{
+"p": "phone",
+"x": 960,
+"y": 540,
+"s": 1.45,
+"r": 0,
+"text": "call",
+"t4": "9:14",
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 526
+}
+]
+}
+],
+"on": "Volta",
+"develops": true,
+"motes": true
+},
+{
+"kind": "data",
+"action": "A chamada volta com a Lena acenando (pausa)",
+"props": [
+{
+"p": "phone",
+"x": 960,
+"y": 540,
+"s": 1.45,
+"r": 0,
+"text": "call",
+"t4": "9:14",
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 526
+}
+]
+}
+],
+"z": 1.14,
+"ff": 70,
+"step": {
+"at": 3,
+"to": 1.07,
+"dur": 14
+},
+"tail": 0.12,
+"develops": true,
+"motes": true
+}
+],
+"after": 1.35
+},
+{
+"id": "y10",
+"who": "lena",
+"text": "Oi, mãe.",
+"shots": [
+{
+"kind": "top",
+"action": "A voz sai do celular, e a mão aperta o braço do sofá",
+"props": [
+{
+"p": "phone",
+"x": 960,
+"y": 500,
+"s": 1.35,
+"r": 0,
+"text": "call",
+"t4": "9:14",
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 486
+}
+]
+},
+{
+"p": "hand",
+"x": 1500,
+"y": 1000,
+"r": -26,
+"s": 1.0,
+"c": "#7a3f4a",
+"point": false,
+"curl": [
+0.3,
+0.2,
+0.2,
+0.3
+],
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"x": 1360,
+"y": 860
+}
+]
+}
+],
+"motes": true
+}
+],
+"after": 0.42
+},
+{
+"id": "y11",
+"who": "neide",
+"text": "Oi, filha.",
+"shots": [
+{
+"kind": "close",
+"action": "Dona Neide chora rindo",
+"set": "sala",
+"cast": [
+{
+"who": "neide",
+"acts": [
+{
+"a": "snapFace",
+"at": 4,
+"eyes": "happy",
+"mouth": "ah",
+"brow": "worry"
+},
+{
+"a": "nod",
+"at": 14
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "sad",
+"mouth": "wave",
+"brow": "worry"
+}
+}
+],
+"cx": 620
+}
+],
+"after": 0.7
+},
+{
+"id": "y12",
+"silence": 1.8,
+"shots": [
+{
+"kind": "wide",
+"action": "Na sala, mãe e filho juntos no sofá, o celular entre os dois",
+"set": "sala",
+"cast": [
+{
+"who": "neide",
+"x": 310,
+"acts": [
+{
+"a": "sitPhone",
+"at": 2
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "happy",
+"mouth": "smile"
+},
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+}
+},
+{
+"who": "caio",
+"x": 520,
+"acts": [
+{
+"a": "sitOnly",
+"at": 2
+},
+{
+"a": "turn",
+"at": 14,
+"to": -0.5
+},
+{
+"a": "nod",
+"at": 31
+},
+{
+"a": "turn",
+"at": 45,
+"to": 0.3
+},
+{
+"a": "nod",
+"at": 63
+},
+{
+"a": "turn",
+"at": 81,
+"to": -0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "smile"
+},
+"dir": -1
+}
+],
+"cx": 620,
+"z": 1.3
+}
+]
+},
+{
+"id": "y13",
+"who": "narrator",
+"text": "A internet não é o wi-fi. Não é o aplicativo. É a gente, falando com quem tá longe, sem pensar.",
+"shots": [
+{
+"kind": "data",
+"action": "A rede volta a acender, nó a nó",
+"props": [
+{
+"p": "rede",
+"x": 960,
+"y": 540,
+"moves": [
+{
+"at": 0,
+"dur": 60,
+"s": 1.05
+}
+]
+}
+],
+"develops": true,
+"motes": true
+},
+{
+"kind": "wide",
+"action": "A rua inteira à noite, janelas acesas e pessoas nas sacadas",
+"set": "ruaNoite",
+"cast": [
+{
+"who": "caio",
+"x": 960,
+"acts": [
+{
+"a": "lookUp",
+"at": 8
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "smile",
+"look": 0.2
+}
+}
+],
+"cx": 960,
+"on": "gente"
+},
+{
+"kind": "close",
+"action": "Caio olha o céu, em paz",
+"set": "pracaTarde",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "lookUp",
+"at": 6
+},
+{
+"a": "snapFace",
+"at": 26,
+"eyes": "happy",
+"mouth": "smile"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat"
+}
+}
+],
+"props": [
+{
+"p": "qmark",
+"x": 1340,
+"y": 270,
+"s": 0.7,
+"moves": [
+{
+"at": 0,
+"dur": 8,
+"y": 258
+}
+]
+}
+],
+"cx": 1600,
+"on": "longe"
+}
+],
+"after": 0.35
+},
+{
+"id": "y14",
+"who": "narrator",
+"text": "Se ela acabasse amanhã, quem você ia procurar primeiro? Conta aqui nos comentários.",
+"shots": [
+{
+"kind": "close",
+"action": "Caio olha direto para a câmera e levanta a sobrancelha",
+"set": "rua",
+"cast": [
+{
+"who": "caio",
+"acts": [
+{
+"a": "turn",
+"at": 4,
+"to": 0
+},
+{
+"a": "face",
+"at": 14,
+"brow": "high",
+"mouth": "smirk"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"face": {
+"eyes": "dot",
+"mouth": "flat",
+"look": 0.5
+}
+}
+],
+"props": [
+{
+"p": "qmark",
+"x": 1340,
+"y": 270,
+"s": 0.9,
+"o": 0,
+"moves": [
+{
+"at": 8,
+"dur": 6,
+"o": 1
+}
+]
+}
+],
+"cx": 1000,
+"sfx": [
+{
+"s": "ding",
+"at": 8,
+"v": 0.25
+}
+]
+},
+{
+"kind": "medium",
+"action": "Caio olha direto para a câmera e levanta a sobrancelha (outro ângulo)",
+"set": "rua",
+"cast": [
+{
+"who": "caio",
+"x": 1000,
+"face": {
+"eyes": "dot",
+"mouth": "flat",
+"look": 0.5
+},
+"acts": [
+{
+"a": "lookUp",
+"at": 4
+},
+{
+"a": "turn",
+"at": 20,
+"to": 0.4
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+]
+}
+],
+"cx": 1000,
+"z": 1.5,
+"ff": 70
+},
+{
+"kind": "data",
+"action": "A pergunta fica escrita no escuro",
+"props": [
+{
+"p": "big",
+"x": 960,
+"y": 470,
+"text": "QUEM VOCÊ IA",
+"w": 140,
+"c": "#f3ead6",
+"moves": [
+{
+"at": 0,
+"dur": 8,
+"y": 450
+}
+]
+},
+{
+"p": "big",
+"x": 960,
+"y": 640,
+"text": "PROCURAR PRIMEIRO?",
+"w": 140,
+"c": "#ffc857",
+"moves": [
+{
+"at": 4,
+"dur": 8,
+"y": 620
+}
+]
+}
+],
+"on": "Conta",
+"develops": true,
+"motes": true
+}
+],
+"after": 0.21
+},
+{
+"id": "y15",
+"who": "narrator",
+"text": "Enquanto ainda dá.",
+"shots": [
+{
+"kind": "medium",
+"action": "Caio dá uma piscadinha e o sinal do celular some",
+"set": "rua",
+"cast": [
+{
+"who": "caio",
+"x": 1000,
+"acts": [
+{
+"a": "checkPhone",
+"at": 4
+},
+{
+"a": "snapFace",
+"at": 18,
+"eyes": "half",
+"mouth": "smirk"
+},
+{
+"a": "nod",
+"at": 22
+},
+{
+"a": "turn",
+"at": 38,
+"to": -0.3
+},
+{
+"a": "nod",
+"at": 58
+},
+{
+"a": "turn",
+"at": 74,
+"to": 0.2
+}
+],
+"hold": {
+"p": "phoneHeld",
+"x": 0,
+"y": 0
+}
+}
+],
+"cx": 1000,
+"z": 1.55
+}
+],
+"after": 0.35
+},
+{
+"id": "end",
+"silence": 2.6,
+"shots": [
+{
+"kind": "data",
+"action": "O nome do canal acende ao lado da interrogação",
+"props": [
+{
+"p": "big",
+"x": 960,
+"y": 498,
+"text": "E SE DE REPENTE...",
+"w": 150,
+"moves": [
+{
+"at": 0,
+"dur": 10,
+"y": 480
+}
+],
+"c": "#ffc857"
+},
+{
+"p": "big",
+"x": 960,
+"y": 620,
+"text": "QUAL PERGUNTA VEM A SEGUIR?",
+"w": 66
+},
+{
+"p": "qmark",
+"x": 1640,
+"y": 280,
+"s": 0.8,
+"moves": [
+{
+"at": 0,
+"dur": 8,
+"y": 268
+}
+]
+}
+],
+"develops": true,
+"motes": true
+}
+]
+}
+]
+}

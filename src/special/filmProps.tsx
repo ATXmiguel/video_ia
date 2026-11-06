@@ -1,6 +1,7 @@
 import React from 'react';
 import {random} from 'remotion';
 import {TopHand} from './world';
+import {PROP_DRAW_BR} from './filmPropsBR';
 
 // Props for data-built films: a shot lists them by name, with a place and optional moves. Each is drawn around its own
 // origin, at a size that reads on a wide shot; `s` scales it for close work.
@@ -8,7 +9,7 @@ const CREAM = '#e6dec9';
 const STEEL = '#aeb4b4';
 const COFFEE = '#3f2415';
 
-export type PropMove = {at: number; dur?: number; x?: number; y?: number; r?: number; s?: number; o?: number; ease?: 'io' | 'in' | 'out' | 'gravity'};
+export type PropMove = {at: number; dur?: number; x?: number; y?: number; r?: number; s?: number; o?: number; ease?: 'io' | 'in' | 'out' | 'gravity' | 'linear'};
 export type PropDef = {
   p: string;
   x: number;
@@ -28,6 +29,10 @@ export type PropDef = {
   n?: number;
   curl?: number[];
   point?: boolean;
+  t2?: string;
+  t3?: string;
+  t4?: string;
+  lines?: string[];
 };
 
 const EASE: Record<NonNullable<PropMove['ease']>, (t: number) => number> = {
@@ -35,6 +40,7 @@ const EASE: Record<NonNullable<PropMove['ease']>, (t: number) => number> = {
   in: (t) => t ** 3,
   out: (t) => 1 - (1 - t) ** 4,
   gravity: (t) => t * t,
+  linear: (t) => t,
 };
 
 const stateAt = (d: PropDef, f: number) => {
@@ -318,6 +324,7 @@ export const PROP_DRAW: Record<string, (d: PropDef, f: number) => React.ReactNod
   pigeon: () => <Pigeon />,
   tower: (d, f) => <Tower h={d.h} m={d.m} f={f} />,
   hand: (d) => <TopHand x={0} y={0} cuff={d.c ?? '#b03f28'} curl={d.curl ?? [0.1, 0.05, 0.08, 0.14]} point={d.point} />,
+  ...PROP_DRAW_BR,
 };
 
 export const PropView: React.FC<{d: PropDef; f: number}> = ({d, f}) => {

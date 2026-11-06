@@ -1,6 +1,7 @@
 import React from 'react';
 import {random} from 'remotion';
 import {LobbyDesk, LobbyFloor, LobbyProps, LobbyWall} from './world';
+import {SETS_BR} from './filmSetsBR';
 
 // Sets for data-built films. A set is drawn once, side-on like a dollhouse, about 3,000 units wide, and shots show it
 // from different `cx` values. `wall` moves at `par` of the camera, so the floor plane slides past it.
@@ -395,6 +396,7 @@ const StreetProps: React.FC = () => (
 );
 
 export const SETS: Record<string, FilmSet> = {
+  ...SETS_BR,
   diner: {
     floor: FLOOR,
     par: 0.86,

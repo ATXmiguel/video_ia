@@ -9,6 +9,7 @@ Usage: python scripts/make_film.py <slug> [--check] [--preview] [--no-render]
   --check      voices and timeline only, then print the report
   --preview    half size, muted, for reading frames
   --no-render  write build.json but do not render
+  --keep-bed   reuse the bed already built
 """
 import asyncio
 import csv
@@ -18,6 +19,7 @@ import re
 import subprocess
 import sys
 import unicodedata
+import wave
 from pathlib import Path
 
 import numpy as np
@@ -76,7 +78,9 @@ async def lay_out_voice(film: dict, build_dir: Path, slug: str) -> list:
             key = hashlib.sha1(json.dumps([raw["text"], voice]).encode()).hexdigest()[:10]
             dest = build_dir / f"{raw['id']}_{key}.mp3"
             words = await speak(raw["text"], voice, dest, dest.with_suffix(".json"))
-            item.update(kind="line", who=raw["who"], text=raw["text"], audio=f"special/{slug}/{dest.name}", path=dest, dur=probe_duration(dest), words=words)
+            # edge-tts leaves a tail of silence on each file: the clock follows the last spoken word, not the file.
+            spoken = min(probe_duration(dest), words[-1]["e"] + 0.08) if words else probe_duration(dest)
+            item.update(kind="line", who=raw["who"], text=raw["text"], audio=f"special/{slug}/{dest.name}", path=dest, dur=spoken, words=words)
         t += item["dur"] + float(raw.get("after", LINE_GAP if item["kind"] == "line" else 0))
         item["next"] = t
         items.append(item)
@@ -188,21 +192,80 @@ def lint(shots: list, items: list, total: int) -> tuple[list, dict]:
     return problems, stats
 
 
-def make_bed(build_dir: Path, seconds: float) -> None:
-    """A low bed and room tone with stereo width kept down: the proof's -5 dB side level was far wider than the -19 measured."""
+def make_bed(build_dir: Path, seconds: float, sections: list | None = None) -> None:
+    """A low bed and room tone with stereo width kept down. With `sections` (time, chord, dB) the bed follows the acts:
+    the guide measured it moving by act, dropping 8 to 10 dB in the saddest minute and rising at the end."""
+    if sections:
+        sr = 44100
+        n = int((seconds + 1) * sr)
+        t = np.arange(n) / sr
+        left = np.zeros(n)
+        right = np.zeros(n)
+        gain = np.zeros(n)
+        times = [s[0] for s in sections] + [seconds + 1]
+        for k, (t0, chord, level) in enumerate(sections):
+            t1 = times[k + 1]
+            # Each section's chord fades in over 3 s and out over 3 s across the boundary.
+            env = np.clip((t - t0 + 1.5) / 3, 0, 1) * np.clip((t1 - t + 1.5) / 3, 0, 1)
+            for j, f in enumerate(chord):
+                swell = 0.72 + 0.28 * np.sin(2 * np.pi * t / (19 + j * 7) + j + k)
+                left += env * swell * np.sin(2 * np.pi * f * t + j) * (1 - 0.12 * j)
+                right += env * swell * np.sin(2 * np.pi * f * 1.0025 * t + j * 1.7) * (1 - 0.12 * j)
+                left += env * 0.22 * swell * np.sin(2 * np.pi * f / 2 * t)
+                right += env * 0.22 * swell * np.sin(2 * np.pi * f / 2 * t)
+            # Sparse soft plucks, so that it reads as music rather than a hum.
+            step = 3.2
+            for i, at in enumerate(np.arange(t0, t1, step)):
+                f = chord[i % len(chord)] * 2
+                a0, a1 = int(at * sr), min(n, int((at + 2.6) * sr))
+                if a0 >= n:
+                    break
+                tt = t[a0:a1] - at
+                pl = 0.34 * np.exp(-tt * 2.2) * (np.sin(2 * np.pi * f * tt) + 0.3 * np.sin(4 * np.pi * f * tt))
+                left[a0:a1] += pl * 0.9
+                right[a0:a1] += pl * 1.1
+            gain = np.where((t >= t0) & (t < t1), level, gain)
+        # Smooth the level steps over about 2.5 s.
+        win = int(2.5 * sr / 100)
+        g = np.convolve(np.repeat(gain[::100], 1), np.ones(win) / win, mode="same")
+        gain = np.interp(t, np.arange(len(g)) * 100 / sr, g)
+        amp = 10 ** (gain / 20)
+        mid, side = (left + right) / 2, (left - right) / 2
+        side *= 0.45
+        left, right = (mid + side) * amp, (mid - side) * amp
+        peak = max(np.abs(left).max(), np.abs(right).max())
+        pcm = (np.stack([left, right], 1) / peak * 0.18 * 32767).astype(np.int16)
+        wav = build_dir / "bed.wav"
+        with wave.open(str(wav), "wb") as w:
+            w.setnchannels(2)
+            w.setsampwidth(2)
+            w.setframerate(sr)
+            w.writeframes(pcm.tobytes())
+        run_ffmpeg("-i", str(wav), "-af", "lowpass=f=1500,afade=t=in:d=1", "-c:a", "libmp3lame", "-b:a", "160k", str(build_dir / "bed.mp3"))
+        wav.unlink()
+    else:
+        d = f"{seconds + 1:.2f}"
+
+        def chord(detune):
+            parts = []
+            for k, tones in enumerate([(110.0, 164.8, 220.0), (98.0, 146.8, 246.9), (87.3, 130.8, 220.0)]):
+                gate = f"(0.5+0.5*sin(2*PI*t/{d}*{2 + k}+{k}))"
+                parts += [f"0.15*sin(2*PI*{f * detune}*t)*{gate}" for f in tones]
+            return "+".join(parts)
+
+        run_ffmpeg("-f", "lavfi", "-i", f"aevalsrc='{chord(1.0)}|{chord(1.003)}':s=44100:d={d}", "-af", "lowpass=f=800,stereotools=slev=0.12,afade=t=in:d=0.3",
+                   "-c:a", "libmp3lame", "-b:a", "160k", str(build_dir / "bed.mp3"))
     d = f"{seconds + 1:.2f}"
-
-    def chord(detune):
-        parts = []
-        for k, tones in enumerate([(110.0, 164.8, 220.0), (98.0, 146.8, 246.9), (87.3, 130.8, 220.0)]):
-            gate = f"(0.5+0.5*sin(2*PI*t/{d}*{2 + k}+{k}))"
-            parts += [f"0.15*sin(2*PI*{f * detune}*t)*{gate}" for f in tones]
-        return "+".join(parts)
-
-    run_ffmpeg("-f", "lavfi", "-i", f"aevalsrc='{chord(1.0)}|{chord(1.003)}':s=44100:d={d}", "-af", "lowpass=f=800,stereotools=slev=0.12,afade=t=in:d=0.3",
-               "-c:a", "libmp3lame", "-b:a", "160k", str(build_dir / "bed.mp3"))
     run_ffmpeg("-f", "lavfi", "-i", f"anoisesrc=d={d}:c=brown:a=0.5", "-f", "lavfi", "-i", f"anoisesrc=d={d}:c=brown:a=0.5:s=7",
                "-filter_complex", "[0][1]join=inputs=2:channel_layout=stereo,lowpass=f=500,stereotools=slev=0.12", "-c:a", "libmp3lame", "-b:a", "128k", str(build_dir / "room.mp3"))
+
+
+def normalize(raw: Path, dest: Path, target: float = -15.0) -> None:
+    """A plain gain and a peak limiter. loudnorm's dynamic mode lifts the bed in every pause, which is the opposite of what the guide measured."""
+    probe = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", str(raw), "-af", "ebur128=peak=true", "-f", "null", "-"], capture_output=True, text=True).stderr
+    measured = float(re.findall(r"I:\s+(-?[\d.]+) LUFS", probe)[-1])
+    run_ffmpeg("-i", str(raw), "-c:v", "copy", "-af", f"volume={target - measured:.2f}dB,alimiter=limit=0.83:level=false", "-c:a", "aac", "-b:a", "192k", str(dest))
+    print(f"loudness: {measured} LUFS, gain {target - measured:.2f} dB")
 
 
 async def main() -> None:
@@ -239,7 +302,10 @@ async def main() -> None:
         return
 
     lines = [{"id": it["id"], "who": it["who"], "text": it["text"], "start": round(it["t"] * FPS), "frames": round(it["dur"] * FPS), "audio": it["audio"], "visemes": visemes(it["path"])} for it in items if it["kind"] == "line"]
-    make_bed(build_dir, total / FPS)
+    t_of = {it["id"]: it["t"] for it in items}
+    sections = [(t_of[k], v[0], v[1]) for k, v in film["sections"].items()] if film.get("sections") else None
+    if "--keep-bed" not in flags or not (build_dir / "bed.mp3").exists():
+        make_bed(build_dir, total / FPS, sections)
     build = {"frames": total, "fade": film.get("fade", 0), "looks": film.get("looks", {}), "lines": lines, "shots": shots,
              "bed": f"special/{slug}/bed.mp3", "room": f"special/{slug}/room.mp3", "bedVolume": film.get("bedVolume", 0.5), "roomVolume": film.get("roomVolume", 0.2)}
     path = build_dir / "build.json"
@@ -251,7 +317,7 @@ async def main() -> None:
         return
     raw = out / "raw.mp4"
     subprocess.run(f'npx remotion render src/index.ts SpecialFilm "{raw}" --props="{path}" --concurrency=75% --log=error', shell=True, check=True, cwd=ROOT)
-    run_ffmpeg("-i", str(raw), "-c:v", "copy", "-af", "loudnorm=I=-15:TP=-1.5:LRA=7", "-c:a", "aac", "-b:a", "192k", str(out / f"{slug}.mp4"))
+    normalize(raw, out / f"{slug}.mp4")
     print("rendered", out / f"{slug}.mp4")
 
 

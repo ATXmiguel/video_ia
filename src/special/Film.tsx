@@ -7,11 +7,12 @@ import {expandActs, liftAt, type Act} from './filmActs';
 import {PropView, type PropDef} from './filmProps';
 import {SETS} from './filmSets';
 import {Fore, Motes, PopPill, TornWipe, WoodDesk, WorldDefs} from './world';
+import {BR_DEFS} from './filmPropsBR';
 
 // A film built from data. scripts/make_film.py lays the voice out first, places each shot's cut against it and writes
 // the result as this component's props. Nothing here knows about any one film: a shot only says what kind it is, what
 // is in it and what its one action is. Camera defaults by kind are the measured ones (docs/whatif/REPLICATION_GUIDE.md).
-export type Kind = 'wide' | 'medium' | 'close' | 'rack' | 'top' | 'insert';
+export type Kind = 'wide' | 'medium' | 'close' | 'rack' | 'top' | 'insert' | 'data';
 
 export type CastEntry = {
   who: string;
@@ -24,6 +25,7 @@ export type CastEntry = {
   face?: Omit<FaceKey, 'at'>;
   acts?: Act[];
   walks?: Walk[];
+  slide?: {from: number; to: number; x0: number; x1: number}; // the whole body rides along, feet still: on a moto
   hold?: PropDef & {until?: number};
   behind?: boolean; // behind the set's front furniture (staff behind a counter)
   plane?: 'near' | 'far'; // for a rack shot
@@ -59,6 +61,7 @@ export type Shot = {
   trans?: 'cut' | 'torn' | 'dissolve' | 'fade';
   transLen?: number;
   sfx?: {s: string; at?: number; v?: number; len?: number}[];
+  ff?: number; // props run this many frames ahead: a second angle of something that has already played out
 };
 
 export type FilmLine = {id: string; who: string; text: string; start: number; frames: number; audio: string; visemes: [number, Mouth][]};
@@ -83,6 +86,7 @@ const KIND: Record<Kind, {z: number; push: number; blur: number; vignette: numbe
   rack: {z: 1.2, push: 0, blur: 9, vignette: 0.3},
   top: {z: 1.25, push: 1.3, blur: 0, vignette: 0.5},
   insert: {z: 1.25, push: 2.2, blur: 9, vignette: 0.42},
+  data: {z: 1, push: 0.15, blur: 0, vignette: 0.34},
 };
 
 const clamp01 = (t: number) => Math.max(0, Math.min(1, t));
@@ -94,6 +98,7 @@ const SvgLayer: React.FC<{children: React.ReactNode; blur?: number; style?: Reac
     <svg viewBox="0 0 1920 1080" width="100%" height="100%" style={{position: 'absolute', inset: 0}}>
       <WorldDefs />
       <RigDefs />
+      <BR_DEFS />
       {children}
     </svg>
   </AbsoluteFill>
@@ -168,12 +173,13 @@ const Performer: React.FC<{c: CastEntry; i: number; s: Shot; f: number; lines: F
   const line = lines.find((l) => l.who === c.who && global >= l.start && global < l.start + l.frames + 2);
   const visemes = line ? (line.visemes.map(([at, m]) => [at + line.start - s.start, m]) as [number, Mouth][]) : undefined;
   const hold = c.hold;
+  const slideX = c.slide ? lerp(c.slide.x0, c.slide.x1, clamp01((f - c.slide.from) / Math.max(1, c.slide.to - c.slide.from))) : 0;
   return (
     <Puppet
       id={`${s.id}${i}`}
       look={c.who}
       lookDef={looks[c.who]}
-      x={c.x ?? (s.kind === 'close' ? CLOSE_DEFAULT.x : 960)}
+      x={(c.x ?? (s.kind === 'close' ? CLOSE_DEFAULT.x : 960)) + slideX}
       y={c.y ?? (s.kind === 'close' ? CLOSE_DEFAULT.y : set.floor)}
       s={c.s ?? (s.kind === 'close' ? CLOSE_DEFAULT.s : 1)}
       frame={f}
@@ -208,7 +214,7 @@ const PillLayer: React.FC<{s: Shot; f: number}> = ({s, f}) =>
     </SvgLayer>
   ) : null;
 
-const props = (s: Shot, f: number, layer: 'back' | 'front') => (s.props ?? []).filter((p) => (p.layer ?? 'front') === layer).map((p, i) => <PropView key={`${layer}${i}`} d={p} f={f} />);
+const props = (s: Shot, f: number, layer: 'back' | 'front') => (s.props ?? []).filter((p) => (p.layer ?? 'front') === layer).map((p, i) => <PropView key={`${layer}${i}`} d={p} f={f + (s.ff ?? 0)} />);
 
 const WorldShot: React.FC<{s: Shot; f: number; b: FilmBuild; global: number}> = ({s, f, b, global}) => {
   const {z, cx, cy} = camOf(s, f);
@@ -289,9 +295,26 @@ const InsertShot: React.FC<{s: Shot; f: number}> = ({s, f}) => {
   );
 };
 
+// Dark data scenes and full-screen phones: a dark room of its own, with the idea drawn on top.
+const DataShot: React.FC<{s: Shot; f: number}> = ({s, f}) => {
+  const {z, focus} = camOf(s, f);
+  return (
+    <AbsoluteFill style={{background: 'radial-gradient(ellipse 75% 75% at 50% 45%, #18283a 0%, #0b121a 62%, #070b10 100%)'}}>
+      <SvgLayer>
+        <g transform={`translate(960 540) scale(${z}) translate(${-focus[0]} ${-focus[1]})`}>
+          {props(s, f, 'back')}
+          {props(s, f, 'front')}
+          {s.motes && <Motes frame={f * 2.5} seed={s.id} n={80} />}
+        </g>
+      </SvgLayer>
+    </AbsoluteFill>
+  );
+};
+
 const ShotView: React.FC<{s: Shot; f: number; b: FilmBuild; global: number}> = ({s, f, b, global}) => {
   let view: React.ReactNode;
-  if (s.kind === 'top') view = <TopShot s={s} f={f} />;
+  if (s.kind === 'data') view = <DataShot s={s} f={f} />;
+  else if (s.kind === 'top') view = <TopShot s={s} f={f} />;
   else if (s.kind === 'insert') view = <InsertShot s={s} f={f} />;
   else if (s.kind === 'close' || s.kind === 'rack') view = <CloseShot s={s} f={f} b={b} global={global} />;
   else view = <WorldShot s={s} f={f} b={b} global={global} />;
