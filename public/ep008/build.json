@@ -1,0 +1,1402 @@
+{
+  "series": "Shift Happens",
+  "episode": 8,
+  "hook": "YOU TOOK HER DEAL.",
+  "hookAccent": "WHO'S INSTALLING THE FRYERS?!",
+  "choice": {
+    "question": "WHAT DO YOU DO?",
+    "options": [
+      {
+        "key": "A",
+        "word": "REFUNDS",
+        "label": "Refund everyone",
+        "teaser": "Lily never forgives you",
+        "icon": "brenda",
+        "pose": "shrug",
+        "face": "neutral"
+      },
+      {
+        "key": "B",
+        "word": "PREMIERE",
+        "label": "Run it secretly",
+        "teaser": "Brenda fires you",
+        "icon": "lily",
+        "pose": "cheer",
+        "face": "happy"
+      }
+    ]
+  },
+  "arc": {
+    "number": 2,
+    "part": 4,
+    "name": "Starlite Cinema"
+  },
+  "goal": {
+    "countdown": "SHIFTS LEFT",
+    "progress": "SOLD OUT"
+  },
+  "topComment": {
+    "user": "@heitorfelix3482",
+    "text": "Brenda",
+    "likes": 1,
+    "picked": "BRENDA"
+  },
+  "scenes": [
+    {
+      "set": "marquee",
+      "cast": [
+        {
+          "who": "brenda",
+          "x": 760,
+          "pose": "point",
+          "face": "smug",
+          "flip": true
+        },
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "shrug",
+          "face": "neutral"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "FIRED",
+        "left": 2,
+        "progress": 65
+      },
+      "kind": "story",
+      "duration": 5.852,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "You have two shifts left to save this cinema, and you just shook hands with the woman who wants to tear it down.",
+          "audio": "ep008/s0_l0.mp3",
+          "start": 0.05,
+          "duration": 5.352,
+          "words": [
+            {
+              "text": "You",
+              "start": 0.089,
+              "end": 0.19
+            },
+            {
+              "text": "have",
+              "start": 0.201,
+              "end": 0.391
+            },
+            {
+              "text": "two",
+              "start": 0.402,
+              "end": 0.58
+            },
+            {
+              "text": "shifts",
+              "start": 0.592,
+              "end": 0.96
+            },
+            {
+              "text": "left",
+              "start": 0.971,
+              "end": 1.25
+            },
+            {
+              "text": "to",
+              "start": 1.261,
+              "end": 1.328
+            },
+            {
+              "text": "save",
+              "start": 1.339,
+              "end": 1.652
+            },
+            {
+              "text": "this",
+              "start": 1.663,
+              "end": 1.797
+            },
+            {
+              "text": "cinema",
+              "start": 1.808,
+              "end": 2.176
+            },
+            {
+              "text": "and",
+              "start": 2.5,
+              "end": 2.578
+            },
+            {
+              "text": "you",
+              "start": 2.589,
+              "end": 2.701
+            },
+            {
+              "text": "just",
+              "start": 2.712,
+              "end": 2.935
+            },
+            {
+              "text": "shook",
+              "start": 2.946,
+              "end": 3.214
+            },
+            {
+              "text": "hands",
+              "start": 3.225,
+              "end": 3.538
+            },
+            {
+              "text": "with",
+              "start": 3.549,
+              "end": 3.661
+            },
+            {
+              "text": "the",
+              "start": 3.672,
+              "end": 3.75
+            },
+            {
+              "text": "woman",
+              "start": 3.761,
+              "end": 4.051
+            },
+            {
+              "text": "who",
+              "start": 4.062,
+              "end": 4.152
+            },
+            {
+              "text": "wants",
+              "start": 4.163,
+              "end": 4.342
+            },
+            {
+              "text": "to",
+              "start": 4.353,
+              "end": 4.42
+            },
+            {
+              "text": "tear",
+              "start": 4.431,
+              "end": 4.621
+            },
+            {
+              "text": "it",
+              "start": 4.632,
+              "end": 4.699
+            },
+            {
+              "text": "down",
+              "start": 4.71,
+              "end": 5.022
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "marquee",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "cheer",
+          "face": "happy"
+        },
+        {
+          "who": "brenda",
+          "x": 740,
+          "pose": "cheer",
+          "face": "smug",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "MANAGER",
+        "left": 2,
+        "progress": 65
+      },
+      "stamp": {
+        "text": "DEAL SIGNED",
+        "color": "green",
+        "line": 0
+      },
+      "fx": "flash",
+      "kind": "story",
+      "duration": 8.458,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "You shake Brenda's hand. Just like that, you're a manager again.",
+          "audio": "ep008/s1_l0.mp3",
+          "start": 0.25,
+          "duration": 3.432,
+          "words": [
+            {
+              "text": "You",
+              "start": 0.089,
+              "end": 0.156
+            },
+            {
+              "text": "shake",
+              "start": 0.167,
+              "end": 0.402
+            },
+            {
+              "text": "Brenda's",
+              "start": 0.413,
+              "end": 0.692
+            },
+            {
+              "text": "hand",
+              "start": 0.703,
+              "end": 1.06
+            },
+            {
+              "text": "Just",
+              "start": 1.429,
+              "end": 1.574
+            },
+            {
+              "text": "like",
+              "start": 1.585,
+              "end": 1.73
+            },
+            {
+              "text": "that",
+              "start": 1.741,
+              "end": 2.009
+            },
+            {
+              "text": "you're",
+              "start": 2.277,
+              "end": 2.377
+            },
+            {
+              "text": "a",
+              "start": 2.388,
+              "end": 2.422
+            },
+            {
+              "text": "manager",
+              "start": 2.433,
+              "end": 2.835
+            },
+            {
+              "text": "again",
+              "start": 2.846,
+              "end": 3.092
+            }
+          ]
+        },
+        {
+          "who": "brenda",
+          "text": "Smart cookie. Big Bun's Two opens Saturday.",
+          "audio": "ep008/s1_l1.mp3",
+          "start": 3.832,
+          "duration": 4.176,
+          "words": [
+            {
+              "text": "Smart",
+              "start": 0.094,
+              "end": 0.467
+            },
+            {
+              "text": "cookie",
+              "start": 0.478,
+              "end": 0.916
+            },
+            {
+              "text": "Big",
+              "start": 1.678,
+              "end": 1.93
+            },
+            {
+              "text": "Bun's",
+              "start": 1.941,
+              "end": 2.281
+            },
+            {
+              "text": "Two",
+              "start": 2.292,
+              "end": 2.533
+            },
+            {
+              "text": "opens",
+              "start": 2.544,
+              "end": 2.873
+            },
+            {
+              "text": "Saturday",
+              "start": 2.884,
+              "end": 3.388
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "marquee",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "shrug",
+          "face": "sad"
+        },
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "angry",
+          "face": "angry",
+          "flip": true,
+          "toX": 960
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "SELLOUT",
+        "left": 2,
+        "progress": 65
+      },
+      "stamp": {
+        "text": "SELLOUT",
+        "color": "red",
+        "line": 0
+      },
+      "kind": "story",
+      "duration": 5.362,
+      "lines": [
+        {
+          "who": "lily",
+          "text": "You sold our cinema. For a burger job?",
+          "audio": "ep008/s2_l0.mp3",
+          "start": 0.25,
+          "duration": 2.688,
+          "words": [
+            {
+              "text": "You",
+              "start": 0.068,
+              "end": 0.136
+            },
+            {
+              "text": "sold",
+              "start": 0.148,
+              "end": 0.432
+            },
+            {
+              "text": "our",
+              "start": 0.443,
+              "end": 0.545
+            },
+            {
+              "text": "cinema",
+              "start": 0.557,
+              "end": 1.068
+            },
+            {
+              "text": "For",
+              "start": 1.42,
+              "end": 1.568
+            },
+            {
+              "text": "a",
+              "start": 1.58,
+              "end": 1.636
+            },
+            {
+              "text": "burger",
+              "start": 1.648,
+              "end": 1.977
+            },
+            {
+              "text": "job",
+              "start": 1.989,
+              "end": 2.352
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "She walks off without looking back.",
+          "audio": "ep008/s2_l1.mp3",
+          "start": 3.088,
+          "duration": 1.824,
+          "words": [
+            {
+              "text": "She",
+              "start": 0.1,
+              "end": 0.223
+            },
+            {
+              "text": "walks",
+              "start": 0.234,
+              "end": 0.469
+            },
+            {
+              "text": "off",
+              "start": 0.48,
+              "end": 0.636
+            },
+            {
+              "text": "without",
+              "start": 0.647,
+              "end": 0.904
+            },
+            {
+              "text": "looking",
+              "start": 0.915,
+              "end": 1.127
+            },
+            {
+              "text": "back",
+              "start": 1.138,
+              "end": 1.495
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "lobby",
+      "cast": [
+        {
+          "who": "kevin",
+          "x": 760,
+          "pose": "cheer",
+          "face": "happy",
+          "flip": true
+        },
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "shock",
+          "face": "shock"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "SELLOUT",
+        "left": 2,
+        "progress": 65
+      },
+      "stamp": {
+        "text": "HE'S BACK",
+        "color": "yellow",
+        "line": 1
+      },
+      "fx": "shake",
+      "zoom": "kevin",
+      "kind": "story",
+      "duration": 9.226,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "Inside, someone is already wheeling in fryers.",
+          "audio": "ep008/s3_l0.mp3",
+          "start": 0.25,
+          "duration": 2.952,
+          "words": [
+            {
+              "text": "Inside",
+              "start": 0.089,
+              "end": 0.58
+            },
+            {
+              "text": "someone",
+              "start": 0.915,
+              "end": 1.172
+            },
+            {
+              "text": "is",
+              "start": 1.183,
+              "end": 1.295
+            },
+            {
+              "text": "already",
+              "start": 1.306,
+              "end": 1.641
+            },
+            {
+              "text": "wheeling",
+              "start": 1.652,
+              "end": 1.998
+            },
+            {
+              "text": "in",
+              "start": 2.009,
+              "end": 2.076
+            },
+            {
+              "text": "fryers",
+              "start": 2.087,
+              "end": 2.623
+            }
+          ]
+        },
+        {
+          "who": "kevin",
+          "text": "Remember me? Twelve fryers. And nobody touches them.",
+          "audio": "ep008/s3_l1.mp3",
+          "start": 3.352,
+          "duration": 5.424,
+          "words": [
+            {
+              "text": "Remember",
+              "start": 0.096,
+              "end": 0.49
+            },
+            {
+              "text": "me",
+              "start": 0.501,
+              "end": 0.768
+            },
+            {
+              "text": "Twelve",
+              "start": 1.562,
+              "end": 1.921
+            },
+            {
+              "text": "fryers",
+              "start": 1.933,
+              "end": 2.558
+            },
+            {
+              "text": "And",
+              "start": 3.357,
+              "end": 3.542
+            },
+            {
+              "text": "nobody",
+              "start": 3.553,
+              "end": 3.912
+            },
+            {
+              "text": "touches",
+              "start": 3.924,
+              "end": 4.329
+            },
+            {
+              "text": "them",
+              "start": 4.34,
+              "end": 4.618
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "phone",
+      "cast": [],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "SELLOUT",
+        "left": 2,
+        "progress": 65
+      },
+      "phone": {
+        "contact": "BRENDA (BOSS)",
+        "messages": [
+          {
+            "from": "them",
+            "text": "Manager task one",
+            "line": 0
+          },
+          {
+            "from": "them",
+            "text": "CANCEL Friday's premiere",
+            "line": 1
+          },
+          {
+            "from": "them",
+            "text": "Refund all 400 tickets. Fryers go in during the movie",
+            "line": 2
+          }
+        ]
+      },
+      "kind": "story",
+      "duration": 6.952,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "Then your new boss texts your first order.",
+          "audio": "ep008/s4_l0.mp3",
+          "start": 0.25,
+          "duration": 2.184,
+          "words": [
+            {
+              "text": "Then",
+              "start": 0.1,
+              "end": 0.19
+            },
+            {
+              "text": "your",
+              "start": 0.201,
+              "end": 0.301
+            },
+            {
+              "text": "new",
+              "start": 0.312,
+              "end": 0.491
+            },
+            {
+              "text": "boss",
+              "start": 0.502,
+              "end": 0.815
+            },
+            {
+              "text": "texts",
+              "start": 0.826,
+              "end": 1.172
+            },
+            {
+              "text": "your",
+              "start": 1.183,
+              "end": 1.283
+            },
+            {
+              "text": "first",
+              "start": 1.295,
+              "end": 1.574
+            },
+            {
+              "text": "order",
+              "start": 1.585,
+              "end": 1.853
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Cancel the premiere.",
+          "audio": "ep008/s4_l1.mp3",
+          "start": 2.584,
+          "duration": 1.872,
+          "words": [
+            {
+              "text": "Cancel",
+              "start": 0.089,
+              "end": 0.312
+            },
+            {
+              "text": "the",
+              "start": 0.324,
+              "end": 0.402
+            },
+            {
+              "text": "premiere",
+              "start": 0.413,
+              "end": 0.826
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Refund every single ticket.",
+          "audio": "ep008/s4_l2.mp3",
+          "start": 4.606,
+          "duration": 1.896,
+          "words": [
+            {
+              "text": "Refund",
+              "start": 0.089,
+              "end": 0.525
+            },
+            {
+              "text": "every",
+              "start": 0.714,
+              "end": 0.937
+            },
+            {
+              "text": "single",
+              "start": 0.949,
+              "end": 1.217
+            },
+            {
+              "text": "ticket",
+              "start": 1.228,
+              "end": 1.562
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "auditorium",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "sad",
+          "face": "sad"
+        },
+        {
+          "who": "chad",
+          "x": 760,
+          "pose": "shrug",
+          "face": "neutral",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "SELLOUT",
+        "left": 2,
+        "progress": 65
+      },
+      "kind": "story",
+      "duration": 8.026,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "Four hundred people bought these seats just to save this place.",
+          "audio": "ep008/s5_l0.mp3",
+          "start": 0.25,
+          "duration": 3.216,
+          "words": [
+            {
+              "text": "Four",
+              "start": 0.123,
+              "end": 0.201
+            },
+            {
+              "text": "hundred",
+              "start": 0.212,
+              "end": 0.458
+            },
+            {
+              "text": "people",
+              "start": 0.469,
+              "end": 0.748
+            },
+            {
+              "text": "bought",
+              "start": 0.759,
+              "end": 0.982
+            },
+            {
+              "text": "these",
+              "start": 0.993,
+              "end": 1.183
+            },
+            {
+              "text": "seats",
+              "start": 1.194,
+              "end": 1.618
+            },
+            {
+              "text": "just",
+              "start": 1.763,
+              "end": 1.931
+            },
+            {
+              "text": "to",
+              "start": 1.942,
+              "end": 2.009
+            },
+            {
+              "text": "save",
+              "start": 2.02,
+              "end": 2.299
+            },
+            {
+              "text": "this",
+              "start": 2.31,
+              "end": 2.433
+            },
+            {
+              "text": "place",
+              "start": 2.444,
+              "end": 2.879
+            }
+          ]
+        },
+        {
+          "who": "chad",
+          "text": "Bro, my fans keep asking if Friday is still on.",
+          "audio": "ep008/s5_l1.mp3",
+          "start": 3.616,
+          "duration": 3.96,
+          "words": [
+            {
+              "text": "Bro",
+              "start": 0.095,
+              "end": 0.441
+            },
+            {
+              "text": "my",
+              "start": 0.764,
+              "end": 0.932
+            },
+            {
+              "text": "fans",
+              "start": 0.943,
+              "end": 1.289
+            },
+            {
+              "text": "keep",
+              "start": 1.3,
+              "end": 1.546
+            },
+            {
+              "text": "asking",
+              "start": 1.568,
+              "end": 2.014
+            },
+            {
+              "text": "if",
+              "start": 2.025,
+              "end": 2.115
+            },
+            {
+              "text": "Friday",
+              "start": 2.126,
+              "end": 2.517
+            },
+            {
+              "text": "is",
+              "start": 2.528,
+              "end": 2.662
+            },
+            {
+              "text": "still",
+              "start": 2.673,
+              "end": 2.896
+            },
+            {
+              "text": "on",
+              "start": 2.907,
+              "end": 3.175
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "marquee",
+      "cast": [
+        {
+          "who": "lily",
+          "x": 740,
+          "pose": "point",
+          "face": "angry",
+          "flip": true
+        },
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "shock",
+          "face": "shock"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "SELLOUT",
+        "left": 2,
+        "progress": 80
+      },
+      "stamp": {
+        "text": "80% SOLD",
+        "color": "yellow",
+        "line": 1
+      },
+      "fx": "flash",
+      "kind": "story",
+      "duration": 6.994,
+      "lines": [
+        {
+          "who": "lily",
+          "text": "I'm running that projector Friday. With or without you.",
+          "audio": "ep008/s6_l0.mp3",
+          "start": 0.25,
+          "duration": 3.36,
+          "words": [
+            {
+              "text": "I'm",
+              "start": 0.08,
+              "end": 0.216
+            },
+            {
+              "text": "running",
+              "start": 0.227,
+              "end": 0.489
+            },
+            {
+              "text": "that",
+              "start": 0.5,
+              "end": 0.67
+            },
+            {
+              "text": "projector",
+              "start": 0.682,
+              "end": 1.148
+            },
+            {
+              "text": "Friday",
+              "start": 1.159,
+              "end": 1.682
+            },
+            {
+              "text": "With",
+              "start": 2.045,
+              "end": 2.239
+            },
+            {
+              "text": "or",
+              "start": 2.25,
+              "end": 2.341
+            },
+            {
+              "text": "without",
+              "start": 2.352,
+              "end": 2.727
+            },
+            {
+              "text": "you",
+              "start": 2.739,
+              "end": 3.011
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "And the last tickets keep selling. Eighty percent.",
+          "audio": "ep008/s6_l1.mp3",
+          "start": 3.76,
+          "duration": 2.784,
+          "words": [
+            {
+              "text": "And",
+              "start": 0.089,
+              "end": 0.145
+            },
+            {
+              "text": "the",
+              "start": 0.156,
+              "end": 0.234
+            },
+            {
+              "text": "last",
+              "start": 0.246,
+              "end": 0.536
+            },
+            {
+              "text": "tickets",
+              "start": 0.547,
+              "end": 0.871
+            },
+            {
+              "text": "keep",
+              "start": 0.882,
+              "end": 1.06
+            },
+            {
+              "text": "selling",
+              "start": 1.071,
+              "end": 1.44
+            },
+            {
+              "text": "Eighty",
+              "start": 1.808,
+              "end": 1.964
+            },
+            {
+              "text": "percent",
+              "start": 1.975,
+              "end": 2.455
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "lobby",
+      "cast": [
+        {
+          "who": "brenda",
+          "x": 760,
+          "pose": "angry",
+          "face": "angry",
+          "flip": true
+        },
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "shrug",
+          "face": "neutral"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "SELLOUT",
+        "left": 2,
+        "progress": 80
+      },
+      "zoom": "brenda",
+      "kind": "story",
+      "duration": 11.41,
+      "lines": [
+        {
+          "who": "brenda",
+          "text": "Refunds by midnight, sweetie. Or you're fired twice in one week.",
+          "audio": "ep008/s7_l0.mp3",
+          "start": 0.25,
+          "duration": 5.016,
+          "words": [
+            {
+              "text": "Refunds",
+              "start": 0.094,
+              "end": 0.554
+            },
+            {
+              "text": "by",
+              "start": 0.565,
+              "end": 0.686
+            },
+            {
+              "text": "midnight",
+              "start": 0.697,
+              "end": 1.135
+            },
+            {
+              "text": "sweetie",
+              "start": 1.322,
+              "end": 1.793
+            },
+            {
+              "text": "Or",
+              "start": 2.555,
+              "end": 2.719
+            },
+            {
+              "text": "you're",
+              "start": 2.73,
+              "end": 2.851
+            },
+            {
+              "text": "fired",
+              "start": 2.862,
+              "end": 3.213
+            },
+            {
+              "text": "twice",
+              "start": 3.224,
+              "end": 3.564
+            },
+            {
+              "text": "in",
+              "start": 3.575,
+              "end": 3.695
+            },
+            {
+              "text": "one",
+              "start": 3.706,
+              "end": 3.882
+            },
+            {
+              "text": "week",
+              "start": 3.893,
+              "end": 4.254
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Refund everyone and keep the best job you ever had. Or run the premiere behind Brenda's back, with Lily.",
+          "audio": "ep008/s7_l1.mp3",
+          "start": 5.416,
+          "duration": 5.544,
+          "words": [
+            {
+              "text": "Refund",
+              "start": 0.089,
+              "end": 0.368
+            },
+            {
+              "text": "everyone",
+              "start": 0.379,
+              "end": 0.759
+            },
+            {
+              "text": "and",
+              "start": 0.949,
+              "end": 1.027
+            },
+            {
+              "text": "keep",
+              "start": 1.038,
+              "end": 1.239
+            },
+            {
+              "text": "the",
+              "start": 1.25,
+              "end": 1.339
+            },
+            {
+              "text": "best",
+              "start": 1.35,
+              "end": 1.629
+            },
+            {
+              "text": "job",
+              "start": 1.641,
+              "end": 1.841
+            },
+            {
+              "text": "you",
+              "start": 1.853,
+              "end": 1.942
+            },
+            {
+              "text": "ever",
+              "start": 1.953,
+              "end": 2.109
+            },
+            {
+              "text": "had",
+              "start": 2.121,
+              "end": 2.422
+            },
+            {
+              "text": "Or",
+              "start": 2.79,
+              "end": 2.913
+            },
+            {
+              "text": "run",
+              "start": 2.924,
+              "end": 3.08
+            },
+            {
+              "text": "the",
+              "start": 3.091,
+              "end": 3.17
+            },
+            {
+              "text": "premiere",
+              "start": 3.181,
+              "end": 3.571
+            },
+            {
+              "text": "behind",
+              "start": 3.583,
+              "end": 3.884
+            },
+            {
+              "text": "Brenda's",
+              "start": 3.895,
+              "end": 4.208
+            },
+            {
+              "text": "back",
+              "start": 4.219,
+              "end": 4.576
+            },
+            {
+              "text": "with",
+              "start": 4.766,
+              "end": 4.911
+            },
+            {
+              "text": "Lily",
+              "start": 4.922,
+              "end": 5.212
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "lobby",
+      "cast": [
+        {
+          "who": "brenda",
+          "x": 760,
+          "pose": "angry",
+          "face": "angry",
+          "flip": true
+        },
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "shrug",
+          "face": "neutral"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "SELLOUT",
+        "left": 2,
+        "progress": 80
+      },
+      "zoom": "brenda",
+      "kind": "choice",
+      "duration": 13.73,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "What do you do?",
+          "audio": "ep008/s8_l0.mp3",
+          "start": 0.25,
+          "duration": 0.84,
+          "words": [
+            {
+              "text": "What",
+              "start": 0.089,
+              "end": 0.145
+            },
+            {
+              "text": "do",
+              "start": 0.156,
+              "end": 0.19
+            },
+            {
+              "text": "you",
+              "start": 0.201,
+              "end": 0.268
+            },
+            {
+              "text": "do",
+              "start": 0.279,
+              "end": 0.502
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "REFUNDS: Refund everyone.",
+          "audio": "ep008/s8_l1.mp3",
+          "start": 1.24,
+          "duration": 2.256,
+          "words": [
+            {
+              "text": "REFUNDS",
+              "start": 0.089,
+              "end": 0.647
+            },
+            {
+              "text": "Refund",
+              "start": 0.904,
+              "end": 1.35
+            },
+            {
+              "text": "everyone",
+              "start": 1.496,
+              "end": 1.92
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Or PREMIERE: Run it secretly.",
+          "audio": "ep008/s8_l2.mp3",
+          "start": 3.646,
+          "duration": 1.992,
+          "words": [
+            {
+              "text": "Or",
+              "start": 0.089,
+              "end": 0.179
+            },
+            {
+              "text": "PREMIERE",
+              "start": 0.19,
+              "end": 0.603
+            },
+            {
+              "text": "Run",
+              "start": 0.949,
+              "end": 1.049
+            },
+            {
+              "text": "it",
+              "start": 1.06,
+              "end": 1.127
+            },
+            {
+              "text": "secretly",
+              "start": 1.138,
+              "end": 1.652
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Comment one word: REFUNDS or PREMIERE. The most-liked one decides part 5.",
+          "audio": "ep008/s8_l3.mp3",
+          "start": 5.788,
+          "duration": 4.992,
+          "words": [
+            {
+              "text": "Comment",
+              "start": 0.089,
+              "end": 0.391
+            },
+            {
+              "text": "one",
+              "start": 0.402,
+              "end": 0.614
+            },
+            {
+              "text": "word",
+              "start": 0.625,
+              "end": 0.915
+            },
+            {
+              "text": "REFUNDS",
+              "start": 1.284,
+              "end": 1.797
+            },
+            {
+              "text": "or",
+              "start": 1.975,
+              "end": 2.076
+            },
+            {
+              "text": "PREMIERE",
+              "start": 2.087,
+              "end": 2.556
+            },
+            {
+              "text": "The",
+              "start": 2.935,
+              "end": 2.991
+            },
+            {
+              "text": "most-liked",
+              "start": 3.002,
+              "end": 3.493
+            },
+            {
+              "text": "one",
+              "start": 3.504,
+              "end": 3.694
+            },
+            {
+              "text": "decides",
+              "start": 3.705,
+              "end": 4.062
+            },
+            {
+              "text": "part 5",
+              "start": 4.074,
+              "end": 4.654
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "music": "ep008/music.mp3",
+  "coldOpen": true
+}

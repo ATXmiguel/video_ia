@@ -26,7 +26,7 @@
       "arc": 1,
       "part": 1,
       "instagram": "https://www.instagram.com/shifthappensyoudecide/reel/DfSSVnOvOjV/",
-      "tiktok": null
+      "tiktok": "https://www.tiktok.com/@shifthappensyoudecide/video/7705474193822895368"
     },
     {
       "episode": 2,
@@ -48,7 +48,7 @@
       "part": 2,
       "views_ep1_at_check": 663,
       "instagram": "https://www.instagram.com/shifthappensyoudecide/reel/DfSSlP0vfab/",
-      "tiktok": null
+      "tiktok": "https://www.tiktok.com/@shifthappensyoudecide/video/7705474771177295122"
     },
     {
       "episode": 3,
@@ -71,14 +71,14 @@
       "views_ep1_at_check": 1083,
       "views_ep2_at_check": 592,
       "instagram": "https://www.instagram.com/shifthappensyoudecide/reel/DfSTYlJPcMn/",
-      "tiktok": null
+      "tiktok": "https://www.tiktok.com/@shifthappensyoudecide/video/7705475005290712328"
     },
     {
       "episode": 4,
       "file": "episodes/ep004.json",
       "url": "https://youtube.com/shorts/IduHb5EsZwI",
       "instagram": "https://www.instagram.com/shifthappensyoudecide/reel/DfSUIBHPK60/",
-      "tiktok": null,
+      "tiktok": "https://www.tiktok.com/@shifthappensyoudecide/video/7705475273420082439",
       "published": "2026-11-03",
       "options": {
         "A": "THEATER",
@@ -108,7 +108,7 @@
       "file": "episodes/ep005.json",
       "url": "https://youtube.com/shorts/x73w4P745SE",
       "instagram": null,
-      "tiktok": null,
+      "tiktok": "https://www.tiktok.com/@shifthappensyoudecide/video/7705475507374001426",
       "published": "2026-11-04",
       "options": {
         "A": "PROJECTOR",
@@ -139,7 +139,7 @@
       "file": "episodes/ep006.json",
       "url": "https://youtube.com/shorts/NefIRGxeabI",
       "instagram": null,
-      "tiktok": null,
+      "tiktok": "https://www.tiktok.com/@shifthappensyoudecide/video/7705475727482752264",
       "published": "2026-11-05",
       "options": {
         "A": "FANS",
@@ -177,7 +177,7 @@
       "file": "episodes/ep007.json",
       "url": "https://youtube.com/shorts/fAjyZ6okcL8",
       "instagram": null,
-      "tiktok": null,
+      "tiktok": "https://www.tiktok.com/@shifthappensyoudecide/video/7705475975731055890",
       "published": "2026-11-06",
       "options": {
         "A": "KEY",
@@ -204,6 +204,38 @@
           "ep6": 177
         }
       }
+    },
+    {
+      "episode": 8,
+      "file": "episodes/ep008.json",
+      "url": "https://youtube.com/shorts/2_kjRQyCUUo",
+      "instagram": null,
+      "tiktok": "https://www.tiktok.com/@shifthappensyoudecide/video/7705476265037401362",
+      "published": "2026-11-07",
+      "options": {
+        "A": "REFUNDS",
+        "B": "PREMIERE"
+      },
+      "pinned": false,
+      "topComment": {
+        "user": "@heitorfelix3482",
+        "text": "Brenda",
+        "likes": 1,
+        "platform": "youtube"
+      },
+      "winner": "B",
+      "arc": 2,
+      "part": 4,
+      "uploaded_via": "api",
+      "tiktok_via": "chrome",
+      "views_at_check": {
+        "youtube": {
+          "ep5": 177,
+          "ep6": 177,
+          "ep7": 151
+        },
+        "tiktok": "0 videos before today (TikTok had no votes)"
+      }
     }
   ],
   "arcs": [
@@ -225,15 +257,15 @@
     }
   ],
   "cloud_check": {
-    "date": "2026-11-06",
-    "audit": "no new email since Google 2026-11-03: compliance review completed, no further action required",
+    "date": "2026-11-07",
+    "audit": "no new email since Google 2026-11-03 (compliance review completed, no further action required)",
     "gh_cli": "not installed (prerequisite 1 missing)"
   },
   "backfilled": {
     "instagram": true,
-    "tiktok": false
+    "tiktok": true
   },
-  "tiktok_note": "2026-11-06: Claude in Chrome was not connected in the scheduled run (3 checks), so nothing could be posted or read here. TikTok backfill Parts 1-4 and Parts 5-7 pending; profile still has 0 videos as of the last look.",
+  "tiktok_note": "2026-11-07: backfill done (Parts 1-7 posted oldest first, then Part 8). New TikTok posts sit 'Somente eu / Conteudo sob analise' for a few minutes up to 12 h, then turn 'Todos'. Video URLs opened directly show an error page; open them from the profile grid. Uploads need the file copied into the session folder (file_upload only reads session files). Decline the 'Ativar verificacoes automaticas' dialog (Cancelar).",
   "instagram_note": "2026-11-06: the owner removed Instagram from this series; the account goes to E Se De Repente. Do not post or read votes there. The instagram links on older episodes are history only.",
   "opening_test": {
     "baseline_kept_watching_pct": 42,
@@ -242,11 +274,17 @@
         "episode": 6,
         "published": "2026-11-05",
         "kept_watching_pct": null,
-        "note": "2026-11-06: not read, Chrome extension not connected (Studio only)"
+        "note": "2026-11-07: not read, Chrome's YouTube Studio is signed into the E Se De Repente account (no access to this channel); did not switch accounts"
       },
       {
         "episode": 7,
         "published": "2026-11-06",
+        "kept_watching_pct": null,
+        "note": "2026-11-07: not read, Chrome's YouTube Studio is signed into the E Se De Repente account (no access to this channel); did not switch accounts"
+      },
+      {
+        "episode": 8,
+        "published": "2026-11-07",
         "kept_watching_pct": null,
         "note": "published today; retention takes up to 2 days to appear"
       }

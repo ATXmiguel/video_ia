@@ -97,3 +97,8 @@ usher, blond swoop, purple shirt, 2M followers, films everything), lily came alo
 - Ep 7 (story 2 part 3) "You told his fans. Look who's buying it?!" — vote FANS won (@SpaghettiGorebox, 1 like; Gloria's "go be a teacher or something" nods at the comment). Chad joins in, you go live to 2M fans and read Gloria's text; people buy tickets out of spite (65%, 3 shifts left). Gloria fires you and Lily and locks the doors (badge FIRED).
   Twist: **Brenda is the buyer**; it was never a parking lot but a Big Bun's 2 drive-thru with twelve fryers, and she wants YOU as manager. Chad slips you a master key he secretly copied.
   Choice: KEY (sneak back in, Gloria calls the cops) / BRENDA (take her deal, the cinema dies).
+- Ep 8 (story 2 part 4) "You took her deal. Who's installing the fryers?!" — vote BRENDA won (@heitorfelix3482, 1 like). You shake Brenda's hand and are a manager again
+  (Big Bun's 2 opens Saturday); Lily calls you a sellout and walks off (badge SELLOUT). **Kevin is back**, wheeling twelve fryers into the lobby. Twist: Brenda's first
+  order is to cancel Friday's premiere and refund all 400 tickets (fryers go in during the movie). Chad's fans ask if Friday is on; Lily will run the projector anyway; tickets
+  keep selling (80%, 2 shifts left). Brenda: refunds by midnight or you're fired twice in one week.
+  Choice: REFUNDS (keep the job, Lily never forgives you) / PREMIERE (run it secretly with Lily, Brenda fires you). Part 5 is the default final.

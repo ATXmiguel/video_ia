@@ -1,0 +1,156 @@
+{
+  "series": "Shift Happens",
+  "episode": 8,
+  "arc": {
+    "number": 2,
+    "part": 4,
+    "name": "Starlite Cinema"
+  },
+  "goal": {
+    "countdown": "SHIFTS LEFT",
+    "progress": "SOLD OUT"
+  },
+  "hook": "YOU TOOK HER DEAL.",
+  "hookAccent": "WHO'S INSTALLING THE FRYERS?!",
+  "topComment": {
+    "user": "@heitorfelix3482",
+    "text": "Brenda",
+    "likes": 1
+  },
+  "topCommentPicked": "BRENDA",
+  "coldOpen": {
+    "set": "marquee",
+    "cast": [
+      { "who": "brenda", "x": 760, "pose": "point", "face": "smug", "flip": true },
+      { "who": "you", "x": 300, "pose": "shrug", "face": "neutral" }
+    ],
+    "hud": { "tips": 0, "rage": 0, "badge": "FIRED", "left": 2, "progress": 65 },
+    "lines": [
+      "You have two shifts left to save this cinema, and you just shook hands with the woman who wants to tear it down."
+    ]
+  },
+  "scenes": [
+    {
+      "set": "marquee",
+      "cast": [
+        { "who": "you", "x": 320, "pose": "cheer", "face": "happy" },
+        { "who": "brenda", "x": 740, "pose": "cheer", "face": "smug", "flip": true }
+      ],
+      "hud": { "tips": 0, "rage": 0, "badge": "MANAGER", "left": 2, "progress": 65 },
+      "stamp": { "text": "DEAL SIGNED", "color": "green", "line": 0 },
+      "fx": "flash",
+      "lines": [
+        "You shake Brenda's hand. Just like that, you're a manager again.",
+        { "who": "brenda", "text": "Smart cookie. Big Bun's Two opens Saturday." }
+      ]
+    },
+    {
+      "set": "marquee",
+      "cast": [
+        { "who": "you", "x": 320, "pose": "shrug", "face": "sad" },
+        { "who": "lily", "x": 740, "pose": "angry", "face": "angry", "flip": true, "toX": 960 }
+      ],
+      "hud": { "tips": 0, "rage": 0, "badge": "SELLOUT", "left": 2, "progress": 65 },
+      "stamp": { "text": "SELLOUT", "color": "red", "line": 0 },
+      "lines": [
+        { "who": "lily", "text": "You sold our cinema. For a burger job?" },
+        "She walks off without looking back."
+      ]
+    },
+    {
+      "set": "lobby",
+      "cast": [
+        { "who": "kevin", "x": 760, "pose": "cheer", "face": "happy", "flip": true },
+        { "who": "you", "x": 300, "pose": "shock", "face": "shock" }
+      ],
+      "hud": { "tips": 0, "rage": 0, "badge": "SELLOUT", "left": 2, "progress": 65 },
+      "stamp": { "text": "HE'S BACK", "color": "yellow", "line": 1 },
+      "fx": "shake",
+      "zoom": "kevin",
+      "lines": [
+        "Inside, someone is already wheeling in fryers.",
+        { "who": "kevin", "text": "Remember me? Twelve fryers. And nobody touches them." }
+      ]
+    },
+    {
+      "set": "phone",
+      "cast": [],
+      "hud": { "tips": 0, "rage": 0, "badge": "SELLOUT", "left": 2, "progress": 65 },
+      "phone": {
+        "contact": "BRENDA (BOSS)",
+        "messages": [
+          { "from": "them", "text": "Manager task one", "line": 0 },
+          { "from": "them", "text": "CANCEL Friday's premiere", "line": 1 },
+          { "from": "them", "text": "Refund all 400 tickets. Fryers go in during the movie", "line": 2 }
+        ]
+      },
+      "lines": [
+        "Then your new boss texts your first order.",
+        "Cancel the premiere.",
+        "Refund every single ticket."
+      ]
+    },
+    {
+      "set": "auditorium",
+      "cast": [
+        { "who": "you", "x": 320, "pose": "sad", "face": "sad" },
+        { "who": "chad", "x": 760, "pose": "shrug", "face": "neutral", "flip": true }
+      ],
+      "hud": { "tips": 0, "rage": 0, "badge": "SELLOUT", "left": 2, "progress": 65 },
+      "lines": [
+        "Four hundred people bought these seats just to save this place.",
+        { "who": "chad", "text": "Bro, my fans keep asking if Friday is still on." }
+      ]
+    },
+    {
+      "set": "marquee",
+      "cast": [
+        { "who": "lily", "x": 740, "pose": "point", "face": "angry", "flip": true },
+        { "who": "you", "x": 320, "pose": "shock", "face": "shock" }
+      ],
+      "hud": { "tips": 0, "rage": 0, "badge": "SELLOUT", "left": 2, "progress": 80 },
+      "stamp": { "text": "80% SOLD", "color": "yellow", "line": 1 },
+      "fx": "flash",
+      "lines": [
+        { "who": "lily", "text": "I'm running that projector Friday. With or without you." },
+        "And the last tickets keep selling. Eighty percent."
+      ]
+    },
+    {
+      "set": "lobby",
+      "cast": [
+        { "who": "brenda", "x": 760, "pose": "angry", "face": "angry", "flip": true },
+        { "who": "you", "x": 300, "pose": "shrug", "face": "neutral" }
+      ],
+      "hud": { "tips": 0, "rage": 0, "badge": "SELLOUT", "left": 2, "progress": 80 },
+      "zoom": "brenda",
+      "lines": [
+        { "who": "brenda", "text": "Refunds by midnight, sweetie. Or you're fired twice in one week." },
+        "Refund everyone and keep the best job you ever had. Or run the premiere behind Brenda's back, with Lily."
+      ]
+    }
+  ],
+  "choice": {
+    "question": "WHAT DO YOU DO?",
+    "options": [
+      {
+        "key": "A",
+        "word": "REFUNDS",
+        "label": "Refund everyone",
+        "teaser": "Lily never forgives you",
+        "icon": "brenda",
+        "pose": "shrug",
+        "face": "neutral"
+      },
+      {
+        "key": "B",
+        "word": "PREMIERE",
+        "label": "Run it secretly",
+        "teaser": "Brenda fires you",
+        "icon": "lily",
+        "pose": "cheer",
+        "face": "happy"
+      }
+    ]
+  }
+}
