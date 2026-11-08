@@ -59,7 +59,7 @@ New recurring characters need a `CAST` entry (look) and a `VOICES` entry before 
 | # | job | parts | how it ended | views best part |
 |---|---|---|---|---|
 | 1 | Big Bun's (burger place) | 4 (ended early: part 3 had 70% fewer views than part 1) | Tyler busted on video and put on mop duty; Brenda turns out to OWN Big Bun's, fires Kevin and makes YOU manager — then the fryer, still on MAX, explodes and Big Bun's closes forever. Lily comes along to the next job | 1,096 (part 1) |
-| 2 | Starlite Cinema (old movie theater) | in progress | finish line: 5 shifts to sell out Friday's premiere (Zombie Prom 3) or it becomes a parking lot | |
+| 2 | Starlite Cinema (old movie theater) | 5 | sold out the premiere behind Brenda's back; Kevin's twelve fryers blew the street's power mid-movie, Lily and YOU hand-cranked the old projector, Chad streamed it to 2M and Brenda let the famous cinema live. Lily stays YOUR teammate; Kevin is left with twelve fryers | 1,041 (part 4) |
 
 ## Canon so far (story 1: Big Bun's)
 
@@ -102,3 +102,8 @@ usher, blond swoop, purple shirt, 2M followers, films everything), lily came alo
   order is to cancel Friday's premiere and refund all 400 tickets (fryers go in during the movie). Chad's fans ask if Friday is on; Lily will run the projector anyway; tickets
   keep selling (80%, 2 shifts left). Brenda: refunds by midnight or you're fired twice in one week.
   Choice: REFUNDS (keep the job, Lily never forgives you) / PREMIERE (run it secretly with Lily, Brenda fires you). Part 5 is the default final.
+- Ep 9 (story 2 part 5, final) "You ran the premiere. Who blew the power?!" — vote PREMIERE won (@heitorfelix3482, 1 like). You refund nothing and team up with Lily;
+  Chad tells 2M fans Friday is on, line around the block, SOLD OUT 100% (1 shift left). Brenda busts you (FIRED TWICE) while Kevin plugs in all twelve fryers. Twist: the old
+  fuse box blows and the whole street goes dark mid-movie; Lily: the projector is older than electricity, it has a crank. You crank, the movie comes back, crowd goes wild.
+  Chad streamed it all; Brenda: "A cinema this famous sells more burgers than a drive-thru. Keep it." CINEMA SAVED. Kevin: "where do my twelve fryers go?" Lily: "Same team, next job?"
+  Next-story vote: PARK (theme park, rides break down) / HOTEL (spooky hotel, room 13 knocks back).

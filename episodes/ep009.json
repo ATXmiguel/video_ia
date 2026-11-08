@@ -1,0 +1,386 @@
+{
+  "series": "Shift Happens",
+  "episode": 9,
+  "arc": {
+    "number": 2,
+    "part": 5,
+    "name": "Starlite Cinema",
+    "final": true
+  },
+  "goal": {
+    "countdown": "SHIFTS LEFT",
+    "progress": "SOLD OUT"
+  },
+  "hook": "YOU RAN THE PREMIERE.",
+  "hookAccent": "WHO BLEW THE POWER?!",
+  "topComment": {
+    "user": "@heitorfelix3482",
+    "text": "Premiere",
+    "likes": 1
+  },
+  "topCommentPicked": "PREMIERE",
+  "coldOpen": {
+    "set": "auditorium",
+    "cast": [
+      {
+        "who": "you",
+        "x": 320,
+        "pose": "shock",
+        "face": "shock"
+      },
+      {
+        "who": "lily",
+        "x": 760,
+        "pose": "point",
+        "face": "smug",
+        "flip": true
+      }
+    ],
+    "hud": {
+      "tips": 0,
+      "rage": 0,
+      "badge": "SELLOUT",
+      "left": 1,
+      "progress": 80
+    },
+    "lines": [
+      "You have one shift left to save this cinema, and you're about to run the premiere your own boss just cancelled."
+    ]
+  },
+  "scenes": [
+    {
+      "set": "lobby",
+      "cast": [
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "cheer",
+          "face": "happy"
+        },
+        {
+          "who": "lily",
+          "x": 760,
+          "pose": "cheer",
+          "face": "love",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "REBEL",
+        "left": 1,
+        "progress": 80
+      },
+      "stamp": {
+        "text": "PREMIERE IS ON",
+        "color": "green",
+        "line": 0
+      },
+      "fx": "flash",
+      "lines": [
+        "You don't refund a single ticket. You find Lily instead.",
+        {
+          "who": "lily",
+          "text": "I knew you'd come back. Grab a ticket roll."
+        }
+      ]
+    },
+    {
+      "set": "phone",
+      "cast": [],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "REBEL",
+        "left": 1,
+        "progress": 95
+      },
+      "phone": {
+        "contact": "CHAD",
+        "messages": [
+          {
+            "from": "them",
+            "text": "Told 2M fans Friday is ON",
+            "line": 0
+          },
+          {
+            "from": "them",
+            "text": "Bro the line is around the block",
+            "line": 1
+          },
+          {
+            "from": "me",
+            "text": "Do NOT tell Brenda",
+            "line": 1
+          }
+        ]
+      },
+      "lines": [
+        "Chad tells two million fans the premiere is on.",
+        "By nine, the line wraps around the block."
+      ]
+    },
+    {
+      "set": "auditorium",
+      "cast": [
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "cheer",
+          "face": "happy"
+        },
+        {
+          "who": "chad",
+          "x": 780,
+          "pose": "cheer",
+          "face": "happy",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "REBEL",
+        "left": 1,
+        "progress": 100
+      },
+      "stamp": {
+        "text": "SOLD OUT",
+        "color": "green",
+        "line": 0
+      },
+      "fx": "flash",
+      "lines": [
+        "Four hundred seats. Every single one full.",
+        {
+          "who": "chad",
+          "text": "Lights down, bro. Roll it!"
+        }
+      ]
+    },
+    {
+      "set": "lobby",
+      "cast": [
+        {
+          "who": "you",
+          "x": 240,
+          "pose": "shock",
+          "face": "shock"
+        },
+        {
+          "who": "brenda",
+          "x": 600,
+          "pose": "angry",
+          "face": "angry",
+          "flip": true
+        },
+        {
+          "who": "kevin",
+          "x": 860,
+          "pose": "point",
+          "face": "smug",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "FIRED TWICE",
+        "left": 1,
+        "progress": 100
+      },
+      "stamp": {
+        "text": "BUSTED",
+        "color": "red",
+        "line": 0
+      },
+      "fx": "shake",
+      "lines": [
+        {
+          "who": "brenda",
+          "text": "My refunds! My fryers! You're fired, sweetie!"
+        },
+        {
+          "who": "kevin",
+          "text": "Fryers go in now. All twelve. Plugging them in."
+        }
+      ]
+    },
+    {
+      "set": "blackout",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "shock",
+          "face": "shock"
+        },
+        {
+          "who": "lily",
+          "x": 760,
+          "pose": "shock",
+          "face": "shock",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "FIRED TWICE",
+        "left": 1,
+        "progress": 100
+      },
+      "stamp": {
+        "text": "BLACKOUT",
+        "color": "red",
+        "line": 0
+      },
+      "fx": "shake",
+      "lines": [
+        "Twelve fryers. One old fuse box. The whole street goes dark.",
+        "Mid-movie. Four hundred people in the dark."
+      ]
+    },
+    {
+      "set": "auditorium",
+      "cast": [
+        {
+          "who": "lily",
+          "x": 760,
+          "pose": "point",
+          "face": "happy",
+          "flip": true
+        },
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "cheer",
+          "face": "happy"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "HERO",
+        "left": 1,
+        "progress": 100
+      },
+      "stamp": {
+        "text": "IT'S BACK",
+        "color": "green",
+        "line": 1
+      },
+      "fx": "flash",
+      "lines": [
+        {
+          "who": "lily",
+          "text": "This projector is older than electricity. It has a crank!"
+        },
+        "You crank, Lily feeds the film, and the movie comes back. The crowd goes wild."
+      ]
+    },
+    {
+      "set": "marquee",
+      "cast": [
+        {
+          "who": "brenda",
+          "x": 760,
+          "pose": "shrug",
+          "face": "smug",
+          "flip": true
+        },
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "cheer",
+          "face": "happy"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "CINEMA SAVED",
+        "left": 0,
+        "progress": 100
+      },
+      "stamp": {
+        "text": "SAVED",
+        "color": "green",
+        "line": 1
+      },
+      "zoom": "brenda",
+      "lines": [
+        "Chad streamed all of it. Two million people watched you save this place.",
+        {
+          "who": "brenda",
+          "text": "Fine. A cinema this famous sells more burgers than a drive-thru. Keep it."
+        }
+      ]
+    },
+    {
+      "set": "lobby",
+      "cast": [
+        {
+          "who": "kevin",
+          "x": 780,
+          "pose": "sad",
+          "face": "sad",
+          "flip": true
+        },
+        {
+          "who": "you",
+          "x": 260,
+          "pose": "shrug",
+          "face": "happy"
+        },
+        {
+          "who": "lily",
+          "x": 500,
+          "pose": "cheer",
+          "face": "happy"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "CINEMA SAVED",
+        "left": 0,
+        "progress": 100
+      },
+      "lines": [
+        {
+          "who": "kevin",
+          "text": "So... where do my twelve fryers go?"
+        },
+        {
+          "who": "lily",
+          "text": "Same team, next job?"
+        }
+      ]
+    }
+  ],
+  "choice": {
+    "question": "WHERE DO YOU WORK NEXT?",
+    "options": [
+      {
+        "key": "A",
+        "word": "PARK",
+        "label": "Theme park",
+        "teaser": "Rides break down",
+        "icon": "you",
+        "pose": "cheer",
+        "face": "happy"
+      },
+      {
+        "key": "B",
+        "word": "HOTEL",
+        "label": "Spooky hotel",
+        "teaser": "Room 13 knocks back",
+        "icon": "you",
+        "pose": "shock",
+        "face": "shock"
+      }
+    ]
+  }
+}

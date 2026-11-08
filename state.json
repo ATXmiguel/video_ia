@@ -236,6 +236,50 @@
         },
         "tiktok": "0 videos before today (TikTok had no votes)"
       }
+    },
+    {
+      "episode": 9,
+      "file": "episodes/ep009.json",
+      "url": "https://youtube.com/shorts/JOhfGsMHl2k",
+      "instagram": null,
+      "tiktok": "https://www.tiktok.com/@shifthappensyoudecide/video/7705856199358467336",
+      "published": "2026-11-08",
+      "options": {
+        "A": "PARK",
+        "B": "HOTEL"
+      },
+      "pinned": false,
+      "topComment": {
+        "user": "@heitorfelix3482",
+        "text": "Premiere",
+        "likes": 1,
+        "platform": "youtube"
+      },
+      "winner": "B",
+      "arc": 2,
+      "part": 5,
+      "final": true,
+      "uploaded_via": "api",
+      "tiktok_via": "chrome",
+      "views_at_check": {
+        "youtube": {
+          "ep5": 178,
+          "ep6": 178,
+          "ep7": 208,
+          "ep8": 1041
+        },
+        "tiktok": {
+          "ep1": 149,
+          "ep2": 178,
+          "ep3": 130,
+          "ep4": 169,
+          "ep5": 97,
+          "ep6": 92,
+          "ep7": 1,
+          "ep8": 1
+        },
+        "tiktok_votes": "none on Part 4 (only the channel's own comment)"
+      }
     }
   ],
   "arcs": [
@@ -253,11 +297,14 @@
       "name": "Starlite Cinema",
       "job": "movie theater",
       "started_episode": 5,
-      "goal": "5 shifts to sell out the premiere"
+      "goal": "5 shifts to sell out the premiere",
+      "ended_episode": 9,
+      "peak_views": 1041,
+      "ending": "5 parts (default length; part 4 was the best part, 1,041 views). Premiere sold out behind Brenda's back, Kevin's twelve fryers blew the power, YOU and Lily hand-cranked the projector, Brenda let the famous cinema live. Next-story vote: PARK / HOTEL"
     }
   ],
   "cloud_check": {
-    "date": "2026-11-07",
+    "date": "2026-11-08",
     "audit": "no new email since Google 2026-11-03 (compliance review completed, no further action required)",
     "gh_cli": "not installed (prerequisite 1 missing)"
   },
@@ -274,17 +321,23 @@
         "episode": 6,
         "published": "2026-11-05",
         "kept_watching_pct": null,
-        "note": "2026-11-07: not read, Chrome's YouTube Studio is signed into the E Se De Repente account (no access to this channel); did not switch accounts"
+        "note": "2026-11-08: not read, YouTube Studio in Chrome shows 'Ops! Algo deu errado' for this channel's videos (signed into the E Se De Repente account); did not switch accounts"
       },
       {
         "episode": 7,
         "published": "2026-11-06",
         "kept_watching_pct": null,
-        "note": "2026-11-07: not read, Chrome's YouTube Studio is signed into the E Se De Repente account (no access to this channel); did not switch accounts"
+        "note": "2026-11-08: not read, YouTube Studio in Chrome shows 'Ops! Algo deu errado' for this channel's videos (signed into the E Se De Repente account); did not switch accounts"
       },
       {
         "episode": 8,
         "published": "2026-11-07",
+        "kept_watching_pct": null,
+        "note": "2026-11-08: not read, YouTube Studio in Chrome shows 'Ops! Algo deu errado' for this channel's videos (signed into the E Se De Repente account); did not switch accounts"
+      },
+      {
+        "episode": 9,
+        "published": "2026-11-08",
         "kept_watching_pct": null,
         "note": "published today; retention takes up to 2 days to appear"
       }
