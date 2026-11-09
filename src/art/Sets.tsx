@@ -331,7 +331,86 @@ const Auditorium: React.FC<{dark?: boolean}> = ({dark}) => {
 
 const Blackout: React.FC = () => <Auditorium dark />;
 
+
+const HotelBack: React.FC = () => {
+  const frame = useCurrentFrame();
+  const flick = Math.sin(frame * 0.7) > 0.8 ? 0.55 : 1;
+  return (
+    <>
+      <rect width={1080} height={1920} fill="#1d3a3a" />
+      {new Array(9).fill(0).map((_, i) => (
+        <rect key={i} x={i * 130} y={0} width={65} height={1920} fill="#183030" />
+      ))}
+      <rect x={0} y={150} width={1080} height={100} fill="#14202a" stroke={INK} strokeWidth={SW} />
+      <text x={540} y={225} textAnchor="middle" fontFamily={DISPLAY} fontSize={68} fill="#c9a227">
+        HOTEL HOLLOW
+      </text>
+      <g opacity={flick}>
+        <line x1={540} y1={250} x2={540} y2={360} stroke={INK} strokeWidth={6} />
+        <ellipse cx={540} cy={410} rx={150} ry={50} fill="#ffe9a8" stroke={INK} strokeWidth={SW} />
+        {[-110, -55, 0, 55, 110].map((cx) => (
+          <path key={cx} d={`M ${540 + cx} 450 l 0 40`} stroke="#ffe9a8" strokeWidth={8} strokeLinecap="round" />
+        ))}
+      </g>
+      <rect x={90} y={560} width={900} height={440} rx={10} fill="#3a2a1f" stroke={INK} strokeWidth={SW} />
+      {new Array(12).fill(0).map((_, i) => {
+        const col = i % 6;
+        const row = Math.floor(i / 6);
+        const is13 = i === 7;
+        return (
+          <g key={i}>
+            <rect x={130 + col * 140} y={600 + row * 200} width={100} height={130} rx={8} fill={is13 ? '#e8443a' : '#6b4a2f'} stroke={INK} strokeWidth={5} opacity={is13 ? 0.6 + 0.4 * Math.sin(frame * 0.3) : 1} />
+            <text x={180 + col * 140} y={680 + row * 200} textAnchor="middle" fontFamily={DISPLAY} fontSize={44} fill="#fff" stroke={INK} strokeWidth={4} paintOrder="stroke">
+              {i + 6}
+            </text>
+          </g>
+        );
+      })}
+      <rect x={0} y={1346} width={1080} height={574} fill="#2a1c2f" />
+    </>
+  );
+};
+
+const HotelFront: React.FC = () => (
+  <>
+    <rect x={-10} y={1330} width={1100} height={60} rx={12} fill="#c9a227" stroke={INK} strokeWidth={SW} />
+    <rect x={-10} y={1390} width={1100} height={560} fill="#14202a" stroke={INK} strokeWidth={SW} />
+    <rect x={60} y={1230} width={110} height={100} rx={12} fill="#e8443a" stroke={INK} strokeWidth={5} />
+    <text x={115} y={1295} textAnchor="middle" fontFamily={DISPLAY} fontSize={40} fill="#fff">
+      BELL
+    </text>
+  </>
+);
+
+const Hallway: React.FC = () => {
+  const frame = useCurrentFrame();
+  const glow = 0.5 + 0.5 * Math.sin(frame * 0.25);
+  return (
+    <>
+      <rect width={1080} height={1920} fill="#171a2b" />
+      <path d="M 0 0 L 1080 0 L 800 700 L 280 700 Z" fill="#232743" stroke={INK} strokeWidth={SW} />
+      <path d="M 0 0 L 280 700 L 280 1100 L 0 1920 Z" fill="#2a2e50" stroke={INK} strokeWidth={SW} />
+      <path d="M 1080 0 L 800 700 L 800 1100 L 1080 1920 Z" fill="#2a2e50" stroke={INK} strokeWidth={SW} />
+      <path d="M 280 1100 L 800 1100 L 1080 1920 L 0 1920 Z" fill="#7a1f2e" stroke={INK} strokeWidth={SW} />
+      <rect x={400} y={700} width={280} height={400} rx={10} fill="#2b1a14" stroke={INK} strokeWidth={SW} />
+      <rect x={400} y={700} width={280} height={400} rx={10} fill="#e8443a" opacity={0.15 + 0.25 * glow} />
+      <circle cx={540} cy={800} r={42} fill="#c9a227" stroke={INK} strokeWidth={5} />
+      <text x={540} y={815} textAnchor="middle" fontFamily={DISPLAY} fontSize={44} fill={INK}>
+        13
+      </text>
+      <rect x={440} y={1070} width={200} height={14} fill="#ffe9a8" opacity={glow} />
+      {[120, 960].map((lx, i) => (
+        <g key={lx} opacity={Math.sin(frame * 0.5 + i * 2) > -0.6 ? 1 : 0.2}>
+          <rect x={lx - 20} y={560} width={40} height={90} rx={12} fill="#ffe9a8" stroke={INK} strokeWidth={5} />
+        </g>
+      ))}
+    </>
+  );
+};
+
 export const SETS = {
+  hotel: {floorY: 1560, Back: HotelBack, Front: HotelFront},
+  hallway: {floorY: 1700, Back: Hallway, Front: null},
   marquee: {floorY: 1575, Back: Marquee, Front: null},
   lobby: {floorY: 1560, Back: LobbyBack, Front: LobbyFront},
   auditorium: {floorY: 1700, Back: Auditorium, Front: null},

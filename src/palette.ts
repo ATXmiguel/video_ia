@@ -30,4 +30,6 @@ export const CAST: Record<Exclude<Who, 'narrator'>, Look> = {
   // Story 2: Starlite Cinema
   gloria: {name: 'GLORIA', shirt: '#2b2a3a', pants: '#2b2a3a', height: 640, hair: 'bun', hairColor: '#9aa0ad', tie: '#c0392b', glasses: true},
   chad: {name: 'CHAD', shirt: '#7b2cbf', pants: '#2e3a5c', height: 650, hair: 'swoop', hairColor: '#f2c14e'},
+  // Story 3: Hotel Hollow
+  mortimer: {name: 'MORTIMER', shirt: '#1f3b3a', pants: '#14202a', height: 680, hair: 'swoop', hairColor: '#d5d8e0', tie: '#c9a227', mustache: true},
 };

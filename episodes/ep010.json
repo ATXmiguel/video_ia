@@ -1,0 +1,334 @@
+{
+  "series": "Shift Happens",
+  "episode": 10,
+  "arc": {
+    "number": 3,
+    "part": 1,
+    "name": "Hotel Hollow"
+  },
+  "goal": {
+    "countdown": "NIGHTS LEFT",
+    "progress": "FIVE STARS"
+  },
+  "hook": "ROOM 13 KNOCKED BACK.",
+  "hookAccent": "IT KNOWS YOUR NAME?!",
+  "topComment": {
+    "user": "@heitorfelix3482",
+    "text": "Spooky hotel",
+    "likes": 2
+  },
+  "topCommentPicked": "HOTEL",
+  "coldOpen": {
+    "set": "hallway",
+    "cast": [
+      {
+        "who": "you",
+        "x": 320,
+        "pose": "shock",
+        "face": "shock"
+      },
+      {
+        "who": "lily",
+        "x": 760,
+        "pose": "shock",
+        "face": "shock",
+        "flip": true
+      }
+    ],
+    "hud": {
+      "tips": 0,
+      "rage": 0,
+      "badge": "NIGHT BELLHOP",
+      "left": 5,
+      "progress": 0
+    },
+    "lines": [
+      "You have five nights to save this haunted hotel, and room thirteen just knocked back."
+    ]
+  },
+  "scenes": [
+    {
+      "set": "hotel",
+      "cast": [
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "idle",
+          "face": "happy"
+        },
+        {
+          "who": "mortimer",
+          "x": 780,
+          "pose": "point",
+          "face": "smug",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "NIGHT BELLHOP",
+        "left": 5,
+        "progress": 0
+      },
+      "stamp": {
+        "text": "RULE ONE",
+        "color": "red",
+        "line": 1
+      },
+      "lines": [
+        "Imagine a hotel where room thirteen is always booked, and nobody has ever seen the guest.",
+        {
+          "who": "mortimer",
+          "text": "Welcome to Hotel Hollow. Rule one: never answer room thirteen."
+        }
+      ]
+    },
+    {
+      "set": "hotel",
+      "cast": [
+        {
+          "who": "lily",
+          "x": 300,
+          "pose": "shrug",
+          "face": "sad"
+        },
+        {
+          "who": "you",
+          "x": 560,
+          "pose": "idle",
+          "face": "shock"
+        },
+        {
+          "who": "mortimer",
+          "x": 820,
+          "pose": "angry",
+          "face": "angry",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "NIGHT BELLHOP",
+        "left": 5,
+        "progress": 10
+      },
+      "lines": [
+        {
+          "who": "lily",
+          "text": "The last bellhop quit after one night. Or vanished."
+        },
+        {
+          "who": "mortimer",
+          "text": "Earn five stars in five nights, or I sell this place."
+        }
+      ]
+    },
+    {
+      "set": "phone",
+      "cast": [],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "NIGHT BELLHOP",
+        "left": 5,
+        "progress": 10
+      },
+      "phone": {
+        "contact": "ROOM 13",
+        "messages": [
+          {
+            "from": "them",
+            "text": "Room service please",
+            "line": 0
+          },
+          {
+            "from": "them",
+            "text": "One towel. One cake.",
+            "line": 1
+          },
+          {
+            "from": "me",
+            "text": "Who is this?",
+            "line": 1
+          },
+          {
+            "from": "them",
+            "text": "A cake with YOUR name",
+            "line": 1
+          }
+        ]
+      },
+      "lines": [
+        "At midnight, room service orders from room thirteen.",
+        "A towel. And a cake with your name on it."
+      ]
+    },
+    {
+      "set": "hallway",
+      "cast": [
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "idle",
+          "face": "shock"
+        },
+        {
+          "who": "lily",
+          "x": 780,
+          "pose": "point",
+          "face": "sad",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "NIGHT BELLHOP",
+        "left": 5,
+        "progress": 20
+      },
+      "stamp": {
+        "text": "KNOCK KNOCK",
+        "color": "yellow",
+        "line": 1
+      },
+      "fx": "shake",
+      "lines": [
+        "You push the cart down the hall. The lights flicker, one by one.",
+        {
+          "who": "lily",
+          "text": "Don't. Knock. Back."
+        }
+      ]
+    },
+    {
+      "set": "hallway",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "shock",
+          "face": "shock"
+        },
+        {
+          "who": "lily",
+          "x": 760,
+          "pose": "shock",
+          "face": "shock",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "NIGHT BELLHOP",
+        "left": 5,
+        "progress": 30
+      },
+      "stamp": {
+        "text": "IT KNOWS YOU",
+        "color": "red",
+        "line": 1
+      },
+      "fx": "flash",
+      "zoom": "you",
+      "lines": [
+        "The door opens by itself.",
+        "Inside, a wall of photos of YOU. In every uniform you ever wore."
+      ]
+    },
+    {
+      "set": "hotel",
+      "cast": [
+        {
+          "who": "mortimer",
+          "x": 780,
+          "pose": "idle",
+          "face": "smug",
+          "flip": true
+        },
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "shock",
+          "face": "shock"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "MARKED",
+        "left": 5,
+        "progress": 30
+      },
+      "lines": [
+        {
+          "who": "mortimer",
+          "text": "Burger place. Cinema. Room thirteen has booked your shifts since day one."
+        },
+        "Then the lobby phone starts ringing. The screen says: ROOM 13."
+      ]
+    },
+    {
+      "set": "hotel",
+      "cast": [
+        {
+          "who": "lily",
+          "x": 300,
+          "pose": "point",
+          "face": "shock"
+        },
+        {
+          "who": "you",
+          "x": 640,
+          "pose": "idle",
+          "face": "neutral"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "MARKED",
+        "left": 5,
+        "progress": 35
+      },
+      "stamp": {
+        "text": "4 NIGHTS LEFT?",
+        "color": "yellow",
+        "line": 1
+      },
+      "lines": [
+        {
+          "who": "lily",
+          "text": "The door is open. The phone is ringing. Pick one."
+        },
+        "Both are a terrible idea."
+      ]
+    }
+  ],
+  "choice": {
+    "question": "WHAT DO YOU DO?",
+    "options": [
+      {
+        "key": "A",
+        "word": "DOOR",
+        "label": "Walk into room 13",
+        "teaser": "The photos know more",
+        "icon": "you",
+        "pose": "shock",
+        "face": "shock"
+      },
+      {
+        "key": "B",
+        "word": "PHONE",
+        "label": "Answer the phone",
+        "teaser": "Someone is breathing",
+        "icon": "you",
+        "pose": "point",
+        "face": "angry"
+      }
+    ]
+  }
+}

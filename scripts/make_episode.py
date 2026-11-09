@@ -37,6 +37,7 @@ VOICES = {
     "brenda": ("en-US-MichelleNeural", "+14%", "+12Hz"),
     "gloria": ("en-US-AriaNeural", "+6%", "-6Hz"),
     "chad": ("en-US-RogerNeural", "+12%", "+2Hz"),
+    "mortimer": ("en-US-GuyNeural", "+0%", "-10Hz"),
 }
 
 

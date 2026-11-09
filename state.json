@@ -280,6 +280,39 @@
         },
         "tiktok_votes": "none on Part 4 (only the channel's own comment)"
       }
+    },
+    {
+      "episode": 10,
+      "file": "episodes/ep010.json",
+      "url": "https://youtube.com/shorts/Ghk1-Q26kzo",
+      "instagram": null,
+      "tiktok": null,
+      "published": "2026-11-09",
+      "options": {
+        "A": "DOOR",
+        "B": "PHONE"
+      },
+      "pinned": false,
+      "topComment": {
+        "user": "@heitorfelix3482",
+        "text": "Spooky hotel",
+        "likes": 2,
+        "platform": "youtube"
+      },
+      "winner": "B",
+      "arc": 3,
+      "part": 1,
+      "uploaded_via": "api",
+      "tiktok_note": "not posted 2026-11-09: Chrome showed a certificate privacy error on tiktok.com (twice); also TikTok votes on Part 5 could not be read",
+      "views_at_check": {
+        "youtube": {
+          "ep5": 183,
+          "ep6": 181,
+          "ep7": 218,
+          "ep8": 1173,
+          "ep9": 56
+        }
+      }
     }
   ],
   "arcs": [
@@ -301,11 +334,18 @@
       "ended_episode": 9,
       "peak_views": 1041,
       "ending": "5 parts (default length; part 4 was the best part, 1,041 views). Premiere sold out behind Brenda's back, Kevin's twelve fryers blew the power, YOU and Lily hand-cranked the projector, Brenda let the famous cinema live. Next-story vote: PARK / HOTEL"
+    },
+    {
+      "number": 3,
+      "name": "Hotel Hollow",
+      "job": "spooky hotel",
+      "started_episode": 10,
+      "goal": "5 nights to earn five stars"
     }
   ],
   "cloud_check": {
-    "date": "2026-11-08",
-    "audit": "no new email since Google 2026-11-03 (compliance review completed, no further action required)",
+    "date": "2026-11-09",
+    "audit": "no new email since Google 2026-11-03 (review completed, no further action)",
     "gh_cli": "not installed (prerequisite 1 missing)"
   },
   "backfilled": {
@@ -340,6 +380,12 @@
         "published": "2026-11-08",
         "kept_watching_pct": null,
         "note": "published today; retention takes up to 2 days to appear"
+      },
+      {
+        "episode": 10,
+        "published": "2026-11-09",
+        "kept_watching_pct": null,
+        "note": "2026-11-09: not read (Studio was not checked; retention takes up to 2 days)"
       }
     ]
   }

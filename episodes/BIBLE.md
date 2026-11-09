@@ -107,3 +107,10 @@ usher, blond swoop, purple shirt, 2M followers, films everything), lily came alo
   fuse box blows and the whole street goes dark mid-movie; Lily: the projector is older than electricity, it has a crank. You crank, the movie comes back, crowd goes wild.
   Chad streamed it all; Brenda: "A cinema this famous sells more burgers than a drive-thru. Keep it." CINEMA SAVED. Kevin: "where do my twelve fryers go?" Lily: "Same team, next job?"
   Next-story vote: PARK (theme park, rides break down) / HOTEL (spooky hotel, room 13 knocks back).
+
+## Canon so far (story 3: Hotel Hollow)
+
+Cast: **mortimer** (hotel manager, tall, slicked white hair, mustache, gold tie, voice en-US-GuyNeural low), lily came along. HUD: NIGHTS LEFT / FIVE STARS. YOU are the night bellhop.
+
+- Ep 10 (story 3 part 1) "Room 13 knocked back. It knows your name?!" — vote HOTEL won (@heitorfelix3482, 2 likes, YouTube; TikTok unreadable). Mortimer: rule one, never answer room thirteen; five stars in five nights or he sells the hotel. Room 13 orders room service by text (a cake with YOUR name). The door opens on a wall of photos of YOU in every uniform from past jobs; Mortimer: room 13 has booked your shifts since day one. The lobby phone rings: ROOM 13. (progress 35%, badge MARKED.)
+  Choice: DOOR (walk into room 13) / PHONE (answer the lobby phone).
