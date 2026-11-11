@@ -114,3 +114,5 @@ Cast: **mortimer** (hotel manager, tall, slicked white hair, mustache, gold tie,
 
 - Ep 10 (story 3 part 1) "Room 13 knocked back. It knows your name?!" — vote HOTEL won (@heitorfelix3482, 2 likes, YouTube; TikTok unreadable). Mortimer: rule one, never answer room thirteen; five stars in five nights or he sells the hotel. Room 13 orders room service by text (a cake with YOUR name). The door opens on a wall of photos of YOU in every uniform from past jobs; Mortimer: room 13 has booked your shifts since day one. The lobby phone rings: ROOM 13. (progress 35%, badge MARKED.)
   Choice: DOOR (walk into room 13) / PHONE (answer the lobby phone).
+- Ep 11 (story 3 part 2) "You answered room 13. The voice is yours?!" - vote PHONE won (@heitorfelix3482, 1 like, YouTube). The voice on the lobby phone sounds exactly like YOU and wants five stars for the hotel (and your hands). Mortimer: rule two, nobody talks to room 13. Room 13 fixes the broken sign; 40 guests check in, all five stars (70%, badge TOO HELPFUL, 4 nights left). The elevator opens by itself with button 13.
+  Choice: ELEVATOR (ride to room 13) / EXIT (run with Lily).

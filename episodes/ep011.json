@@ -1,0 +1,336 @@
+{
+  "series": "Shift Happens",
+  "episode": 11,
+  "arc": {
+    "number": 3,
+    "part": 2,
+    "name": "Hotel Hollow"
+  },
+  "goal": {
+    "countdown": "NIGHTS LEFT",
+    "progress": "FIVE STARS"
+  },
+  "hook": "YOU ANSWERED ROOM 13.",
+  "hookAccent": "THE VOICE IS YOURS?!",
+  "topComment": {
+    "user": "@heitorfelix3482",
+    "text": "Phone",
+    "likes": 1
+  },
+  "topCommentPicked": "PHONE",
+  "coldOpen": {
+    "set": "hotel",
+    "cast": [
+      {
+        "who": "you",
+        "x": 320,
+        "pose": "shock",
+        "face": "shock"
+      },
+      {
+        "who": "lily",
+        "x": 760,
+        "pose": "shock",
+        "face": "shock",
+        "flip": true
+      }
+    ],
+    "hud": {
+      "tips": 0,
+      "rage": 0,
+      "badge": "MARKED",
+      "left": 4,
+      "progress": 35
+    },
+    "lines": [
+      "You have four nights to save this haunted hotel, and the voice on room thirteen's phone just said your name."
+    ]
+  },
+  "scenes": [
+    {
+      "set": "hotel",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "point",
+          "face": "shock"
+        },
+        {
+          "who": "lily",
+          "x": 780,
+          "pose": "shock",
+          "face": "shock",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "MARKED",
+        "left": 4,
+        "progress": 35
+      },
+      "stamp": {
+        "text": "YOU PICKED UP",
+        "color": "red",
+        "line": 1
+      },
+      "fx": "shake",
+      "lines": [
+        "You grab the lobby phone. Someone is breathing on the other end.",
+        {
+          "who": "lily",
+          "text": "Hang up! Hang up!"
+        }
+      ]
+    },
+    {
+      "set": "phone",
+      "cast": [],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "MARKED",
+        "left": 4,
+        "progress": 40
+      },
+      "phone": {
+        "contact": "ROOM 13",
+        "messages": [
+          {
+            "from": "them",
+            "text": "Hello, bellhop",
+            "line": 0
+          },
+          {
+            "from": "them",
+            "text": "I am the guest nobody sees",
+            "line": 0
+          },
+          {
+            "from": "me",
+            "text": "What do you want?",
+            "line": 1
+          },
+          {
+            "from": "them",
+            "text": "Five stars. Same as you.",
+            "line": 1
+          }
+        ]
+      },
+      "lines": [
+        "The voice is calm. It sounds exactly like you.",
+        "It wants five stars for this hotel. And it needs your hands."
+      ]
+    },
+    {
+      "set": "hallway",
+      "cast": [
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "idle",
+          "face": "shock"
+        },
+        {
+          "who": "mortimer",
+          "x": 780,
+          "pose": "angry",
+          "face": "angry",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "MARKED",
+        "left": 4,
+        "progress": 45
+      },
+      "stamp": {
+        "text": "RULE TWO",
+        "color": "yellow",
+        "line": 1
+      },
+      "lines": [
+        "Mortimer storms in, yelling about rule one.",
+        {
+          "who": "mortimer",
+          "text": "Rule two: nobody talks to room thirteen and keeps their job!"
+        }
+      ]
+    },
+    {
+      "set": "hotel",
+      "cast": [
+        {
+          "who": "lily",
+          "x": 300,
+          "pose": "point",
+          "face": "shock"
+        },
+        {
+          "who": "you",
+          "x": 560,
+          "pose": "idle",
+          "face": "neutral"
+        },
+        {
+          "who": "mortimer",
+          "x": 820,
+          "pose": "shrug",
+          "face": "sad",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "MARKED",
+        "left": 4,
+        "progress": 55
+      },
+      "stamp": {
+        "text": "TASK DONE",
+        "color": "green",
+        "line": 1
+      },
+      "lines": [
+        "Room thirteen's first request: fix the hotel's broken sign.",
+        {
+          "who": "lily",
+          "text": "The sign works. The sign has never worked. How?"
+        }
+      ]
+    },
+    {
+      "set": "hallway",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "shock",
+          "face": "shock"
+        },
+        {
+          "who": "lily",
+          "x": 760,
+          "pose": "shock",
+          "face": "shock",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "TOO HELPFUL",
+        "left": 4,
+        "progress": 70
+      },
+      "stamp": {
+        "text": "GUESTS ARRIVE",
+        "color": "blue",
+        "line": 1
+      },
+      "fx": "flash",
+      "zoom": "you",
+      "lines": [
+        "By morning, forty guests check in. Every review says five stars.",
+        "They all ask for the bellhop with the red cap."
+      ]
+    },
+    {
+      "set": "hotel",
+      "cast": [
+        {
+          "who": "mortimer",
+          "x": 780,
+          "pose": "idle",
+          "face": "smug",
+          "flip": true
+        },
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "shock",
+          "face": "shock"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "TOO HELPFUL",
+        "left": 4,
+        "progress": 70
+      },
+      "lines": [
+        {
+          "who": "mortimer",
+          "text": "Five stars already. Room thirteen is pleased. Now it wants to meet you."
+        },
+        "Then the elevator opens by itself. The button says: 13."
+      ]
+    },
+    {
+      "set": "hotel",
+      "cast": [
+        {
+          "who": "lily",
+          "x": 300,
+          "pose": "point",
+          "face": "shock"
+        },
+        {
+          "who": "you",
+          "x": 640,
+          "pose": "idle",
+          "face": "neutral"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "TOO HELPFUL",
+        "left": 4,
+        "progress": 70
+      },
+      "stamp": {
+        "text": "3 NIGHTS LEFT?",
+        "color": "yellow",
+        "line": 1
+      },
+      "lines": [
+        {
+          "who": "lily",
+          "text": "The elevator is open. So is the front door. Pick one."
+        },
+        "Both are tempting."
+      ]
+    }
+  ],
+  "choice": {
+    "question": "WHAT DO YOU DO?",
+    "options": [
+      {
+        "key": "A",
+        "word": "ELEVATOR",
+        "label": "Ride to room 13",
+        "teaser": "Meet your voice",
+        "icon": "you",
+        "pose": "idle",
+        "face": "neutral"
+      },
+      {
+        "key": "B",
+        "word": "EXIT",
+        "label": "Run with Lily",
+        "teaser": "Leave the five stars",
+        "icon": "lily",
+        "pose": "shock",
+        "face": "shock"
+      }
+    ]
+  }
+}

@@ -313,6 +313,37 @@
           "ep9": 56
         }
       }
+    },
+    {
+      "episode": 11,
+      "file": "episodes/ep011.json",
+      "url": "https://youtube.com/shorts/VRogSVPM0yE",
+      "instagram": null,
+      "tiktok": null,
+      "published": "2026-11-11",
+      "options": {
+        "A": "ELEVATOR",
+        "B": "EXIT"
+      },
+      "pinned": false,
+      "topComment": {
+        "user": "@heitorfelix3482",
+        "text": "Phone",
+        "likes": 1,
+        "platform": "youtube"
+      },
+      "winner": "B",
+      "arc": 3,
+      "part": 2,
+      "uploaded_via": "api",
+      "tiktok_note": "not posted 2026-11-11: tiktok.com showed a certificate error page twice (ep010 also still missing there)",
+      "views_at_check": {
+        "youtube": {
+          "ep8": 1178,
+          "ep9": 90,
+          "ep10": 14
+        }
+      }
     }
   ],
   "arcs": [
@@ -344,8 +375,8 @@
     }
   ],
   "cloud_check": {
-    "date": "2026-11-09",
-    "audit": "no new email since Google 2026-11-03 (review completed, no further action)",
+    "date": "2026-11-11",
+    "audit": "no new email since Google 2026-11-03 (review completed)",
     "gh_cli": "not installed (prerequisite 1 missing)"
   },
   "backfilled": {
@@ -386,6 +417,12 @@
         "published": "2026-11-09",
         "kept_watching_pct": null,
         "note": "2026-11-09: not read (Studio was not checked; retention takes up to 2 days)"
+      },
+      {
+        "episode": 11,
+        "published": "2026-11-11",
+        "kept_watching_pct": null,
+        "note": "not read; retention takes up to 2 days"
       }
     ]
   }

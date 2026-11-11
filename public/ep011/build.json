@@ -1,0 +1,1408 @@
+{
+  "series": "Shift Happens",
+  "episode": 11,
+  "hook": "YOU ANSWERED ROOM 13.",
+  "hookAccent": "THE VOICE IS YOURS?!",
+  "choice": {
+    "question": "WHAT DO YOU DO?",
+    "options": [
+      {
+        "key": "A",
+        "word": "ELEVATOR",
+        "label": "Ride to room 13",
+        "teaser": "Meet your voice",
+        "icon": "you",
+        "pose": "idle",
+        "face": "neutral"
+      },
+      {
+        "key": "B",
+        "word": "EXIT",
+        "label": "Run with Lily",
+        "teaser": "Leave the five stars",
+        "icon": "lily",
+        "pose": "shock",
+        "face": "shock"
+      }
+    ]
+  },
+  "arc": {
+    "number": 3,
+    "part": 2,
+    "name": "Hotel Hollow"
+  },
+  "goal": {
+    "countdown": "NIGHTS LEFT",
+    "progress": "FIVE STARS"
+  },
+  "topComment": {
+    "user": "@heitorfelix3482",
+    "text": "Phone",
+    "likes": 1,
+    "picked": "PHONE"
+  },
+  "scenes": [
+    {
+      "set": "hotel",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "shock",
+          "face": "shock"
+        },
+        {
+          "who": "lily",
+          "x": 760,
+          "pose": "shock",
+          "face": "shock",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "MARKED",
+        "left": 4,
+        "progress": 35
+      },
+      "kind": "story",
+      "duration": 5.828,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "You have four nights to save this haunted hotel, and the voice on room thirteen's phone just said your name.",
+          "audio": "ep011/s0_l0.mp3",
+          "start": 0.05,
+          "duration": 5.328,
+          "words": [
+            {
+              "text": "You",
+              "start": 0.1,
+              "end": 0.223
+            },
+            {
+              "text": "have",
+              "start": 0.234,
+              "end": 0.413
+            },
+            {
+              "text": "four",
+              "start": 0.424,
+              "end": 0.681
+            },
+            {
+              "text": "nights",
+              "start": 0.692,
+              "end": 0.971
+            },
+            {
+              "text": "to",
+              "start": 0.982,
+              "end": 1.06
+            },
+            {
+              "text": "save",
+              "start": 1.071,
+              "end": 1.373
+            },
+            {
+              "text": "this",
+              "start": 1.384,
+              "end": 1.518
+            },
+            {
+              "text": "haunted",
+              "start": 1.529,
+              "end": 1.83
+            },
+            {
+              "text": "hotel",
+              "start": 1.841,
+              "end": 2.299
+            },
+            {
+              "text": "and",
+              "start": 2.578,
+              "end": 2.623
+            },
+            {
+              "text": "the",
+              "start": 2.634,
+              "end": 2.69
+            },
+            {
+              "text": "voice",
+              "start": 2.701,
+              "end": 3.002
+            },
+            {
+              "text": "on",
+              "start": 3.013,
+              "end": 3.158
+            },
+            {
+              "text": "room",
+              "start": 3.17,
+              "end": 3.337
+            },
+            {
+              "text": "thirteen's",
+              "start": 3.348,
+              "end": 3.85
+            },
+            {
+              "text": "phone",
+              "start": 3.862,
+              "end": 4.185
+            },
+            {
+              "text": "just",
+              "start": 4.297,
+              "end": 4.442
+            },
+            {
+              "text": "said",
+              "start": 4.453,
+              "end": 4.632
+            },
+            {
+              "text": "your",
+              "start": 4.643,
+              "end": 4.743
+            },
+            {
+              "text": "name",
+              "start": 4.754,
+              "end": 5.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "hotel",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "point",
+          "face": "shock"
+        },
+        {
+          "who": "lily",
+          "x": 780,
+          "pose": "shock",
+          "face": "shock",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "MARKED",
+        "left": 4,
+        "progress": 35
+      },
+      "stamp": {
+        "text": "YOU PICKED UP",
+        "color": "red",
+        "line": 1
+      },
+      "fx": "shake",
+      "kind": "story",
+      "duration": 5.986,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "You grab the lobby phone. Someone is breathing on the other end.",
+          "audio": "ep011/s1_l0.mp3",
+          "start": 0.25,
+          "duration": 3.264,
+          "words": [
+            {
+              "text": "You",
+              "start": 0.089,
+              "end": 0.167
+            },
+            {
+              "text": "grab",
+              "start": 0.179,
+              "end": 0.379
+            },
+            {
+              "text": "the",
+              "start": 0.391,
+              "end": 0.458
+            },
+            {
+              "text": "lobby",
+              "start": 0.469,
+              "end": 0.725
+            },
+            {
+              "text": "phone",
+              "start": 0.737,
+              "end": 1.049
+            },
+            {
+              "text": "Someone",
+              "start": 1.417,
+              "end": 1.685
+            },
+            {
+              "text": "is",
+              "start": 1.696,
+              "end": 1.808
+            },
+            {
+              "text": "breathing",
+              "start": 1.819,
+              "end": 2.221
+            },
+            {
+              "text": "on",
+              "start": 2.232,
+              "end": 2.31
+            },
+            {
+              "text": "the",
+              "start": 2.321,
+              "end": 2.4
+            },
+            {
+              "text": "other",
+              "start": 2.411,
+              "end": 2.634
+            },
+            {
+              "text": "end",
+              "start": 2.645,
+              "end": 2.924
+            }
+          ]
+        },
+        {
+          "who": "lily",
+          "text": "Hang up! Hang up!",
+          "audio": "ep011/s1_l1.mp3",
+          "start": 3.664,
+          "duration": 1.872,
+          "words": [
+            {
+              "text": "Hang",
+              "start": 0.08,
+              "end": 0.295
+            },
+            {
+              "text": "up",
+              "start": 0.307,
+              "end": 0.58
+            },
+            {
+              "text": "Hang",
+              "start": 0.943,
+              "end": 1.159
+            },
+            {
+              "text": "up",
+              "start": 1.17,
+              "end": 1.443
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "phone",
+      "cast": [],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "MARKED",
+        "left": 4,
+        "progress": 40
+      },
+      "phone": {
+        "contact": "ROOM 13",
+        "messages": [
+          {
+            "from": "them",
+            "text": "Hello, bellhop",
+            "line": 0
+          },
+          {
+            "from": "them",
+            "text": "I am the guest nobody sees",
+            "line": 0
+          },
+          {
+            "from": "me",
+            "text": "What do you want?",
+            "line": 1
+          },
+          {
+            "from": "them",
+            "text": "Five stars. Same as you.",
+            "line": 1
+          }
+        ]
+      },
+      "kind": "story",
+      "duration": 6.994,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "The voice is calm. It sounds exactly like you.",
+          "audio": "ep011/s2_l0.mp3",
+          "start": 0.25,
+          "duration": 2.784,
+          "words": [
+            {
+              "text": "The",
+              "start": 0.1,
+              "end": 0.145
+            },
+            {
+              "text": "voice",
+              "start": 0.156,
+              "end": 0.435
+            },
+            {
+              "text": "is",
+              "start": 0.446,
+              "end": 0.547
+            },
+            {
+              "text": "calm",
+              "start": 0.558,
+              "end": 0.904
+            },
+            {
+              "text": "It",
+              "start": 1.272,
+              "end": 1.339
+            },
+            {
+              "text": "sounds",
+              "start": 1.35,
+              "end": 1.596
+            },
+            {
+              "text": "exactly",
+              "start": 1.607,
+              "end": 2.031
+            },
+            {
+              "text": "like",
+              "start": 2.042,
+              "end": 2.277
+            },
+            {
+              "text": "you",
+              "start": 2.288,
+              "end": 2.444
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "It wants five stars for this hotel. And it needs your hands.",
+          "audio": "ep011/s2_l1.mp3",
+          "start": 3.184,
+          "duration": 3.36,
+          "words": [
+            {
+              "text": "It",
+              "start": 0.089,
+              "end": 0.167
+            },
+            {
+              "text": "wants",
+              "start": 0.179,
+              "end": 0.379
+            },
+            {
+              "text": "five",
+              "start": 0.391,
+              "end": 0.67
+            },
+            {
+              "text": "stars",
+              "start": 0.681,
+              "end": 1.004
+            },
+            {
+              "text": "for",
+              "start": 1.016,
+              "end": 1.116
+            },
+            {
+              "text": "this",
+              "start": 1.127,
+              "end": 1.261
+            },
+            {
+              "text": "hotel",
+              "start": 1.272,
+              "end": 1.696
+            },
+            {
+              "text": "And",
+              "start": 2.065,
+              "end": 2.121
+            },
+            {
+              "text": "it",
+              "start": 2.132,
+              "end": 2.21
+            },
+            {
+              "text": "needs",
+              "start": 2.221,
+              "end": 2.422
+            },
+            {
+              "text": "your",
+              "start": 2.433,
+              "end": 2.533
+            },
+            {
+              "text": "hands",
+              "start": 2.545,
+              "end": 3.025
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "hallway",
+      "cast": [
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "idle",
+          "face": "shock"
+        },
+        {
+          "who": "mortimer",
+          "x": 780,
+          "pose": "angry",
+          "face": "angry",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "MARKED",
+        "left": 4,
+        "progress": 45
+      },
+      "stamp": {
+        "text": "RULE TWO",
+        "color": "yellow",
+        "line": 1
+      },
+      "kind": "story",
+      "duration": 7.69,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "Mortimer storms in, yelling about rule one.",
+          "audio": "ep011/s3_l0.mp3",
+          "start": 0.25,
+          "duration": 2.64,
+          "words": [
+            {
+              "text": "Mortimer",
+              "start": 0.089,
+              "end": 0.379
+            },
+            {
+              "text": "storms",
+              "start": 0.391,
+              "end": 0.77
+            },
+            {
+              "text": "in",
+              "start": 0.781,
+              "end": 0.949
+            },
+            {
+              "text": "yelling",
+              "start": 1.317,
+              "end": 1.54
+            },
+            {
+              "text": "about",
+              "start": 1.551,
+              "end": 1.83
+            },
+            {
+              "text": "rule",
+              "start": 1.841,
+              "end": 2.042
+            },
+            {
+              "text": "one",
+              "start": 2.054,
+              "end": 2.31
+            }
+          ]
+        },
+        {
+          "who": "mortimer",
+          "text": "Rule two: nobody talks to room thirteen and keeps their job!",
+          "audio": "ep011/s3_l1.mp3",
+          "start": 3.04,
+          "duration": 4.2,
+          "words": [
+            {
+              "text": "Rule",
+              "start": 0.1,
+              "end": 0.363
+            },
+            {
+              "text": "two",
+              "start": 0.388,
+              "end": 0.625
+            },
+            {
+              "text": "nobody",
+              "start": 0.887,
+              "end": 1.212
+            },
+            {
+              "text": "talks",
+              "start": 1.238,
+              "end": 1.513
+            },
+            {
+              "text": "to",
+              "start": 1.525,
+              "end": 1.625
+            },
+            {
+              "text": "room",
+              "start": 1.65,
+              "end": 1.837
+            },
+            {
+              "text": "thirteen",
+              "start": 1.863,
+              "end": 2.375
+            },
+            {
+              "text": "and",
+              "start": 2.4,
+              "end": 2.5
+            },
+            {
+              "text": "keeps",
+              "start": 2.525,
+              "end": 2.762
+            },
+            {
+              "text": "their",
+              "start": 2.775,
+              "end": 2.913
+            },
+            {
+              "text": "job",
+              "start": 2.925,
+              "end": 3.312
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "hotel",
+      "cast": [
+        {
+          "who": "lily",
+          "x": 300,
+          "pose": "point",
+          "face": "shock"
+        },
+        {
+          "who": "you",
+          "x": 560,
+          "pose": "idle",
+          "face": "neutral"
+        },
+        {
+          "who": "mortimer",
+          "x": 820,
+          "pose": "shrug",
+          "face": "sad",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "MARKED",
+        "left": 4,
+        "progress": 55
+      },
+      "stamp": {
+        "text": "TASK DONE",
+        "color": "green",
+        "line": 1
+      },
+      "kind": "story",
+      "duration": 8.194,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "Room thirteen's first request: fix the hotel's broken sign.",
+          "audio": "ep011/s4_l0.mp3",
+          "start": 0.25,
+          "duration": 3.768,
+          "words": [
+            {
+              "text": "Room",
+              "start": 0.089,
+              "end": 0.357
+            },
+            {
+              "text": "thirteen's",
+              "start": 0.368,
+              "end": 0.871
+            },
+            {
+              "text": "first",
+              "start": 0.882,
+              "end": 1.172
+            },
+            {
+              "text": "request",
+              "start": 1.183,
+              "end": 1.674
+            },
+            {
+              "text": "fix",
+              "start": 1.92,
+              "end": 2.165
+            },
+            {
+              "text": "the",
+              "start": 2.176,
+              "end": 2.243
+            },
+            {
+              "text": "hotel's",
+              "start": 2.254,
+              "end": 2.757
+            },
+            {
+              "text": "broken",
+              "start": 2.768,
+              "end": 3.08
+            },
+            {
+              "text": "sign",
+              "start": 3.091,
+              "end": 3.426
+            }
+          ]
+        },
+        {
+          "who": "lily",
+          "text": "The sign works. The sign has never worked. How?",
+          "audio": "ep011/s4_l1.mp3",
+          "start": 4.168,
+          "duration": 3.576,
+          "words": [
+            {
+              "text": "The",
+              "start": 0.057,
+              "end": 0.114
+            },
+            {
+              "text": "sign",
+              "start": 0.125,
+              "end": 0.42
+            },
+            {
+              "text": "works",
+              "start": 0.432,
+              "end": 0.875
+            },
+            {
+              "text": "The",
+              "start": 1.227,
+              "end": 1.295
+            },
+            {
+              "text": "sign",
+              "start": 1.307,
+              "end": 1.591
+            },
+            {
+              "text": "has",
+              "start": 1.602,
+              "end": 1.784
+            },
+            {
+              "text": "never",
+              "start": 1.795,
+              "end": 2.114
+            },
+            {
+              "text": "worked",
+              "start": 2.125,
+              "end": 2.58
+            },
+            {
+              "text": "How",
+              "start": 2.932,
+              "end": 3.239
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "hallway",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "shock",
+          "face": "shock"
+        },
+        {
+          "who": "lily",
+          "x": 760,
+          "pose": "shock",
+          "face": "shock",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "TOO HELPFUL",
+        "left": 4,
+        "progress": 70
+      },
+      "stamp": {
+        "text": "GUESTS ARRIVE",
+        "color": "blue",
+        "line": 1
+      },
+      "fx": "flash",
+      "zoom": "you",
+      "kind": "story",
+      "duration": 7.258,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "By morning, forty guests check in. Every review says five stars.",
+          "audio": "ep011/s5_l0.mp3",
+          "start": 0.25,
+          "duration": 4.032,
+          "words": [
+            {
+              "text": "By",
+              "start": 0.1,
+              "end": 0.167
+            },
+            {
+              "text": "morning",
+              "start": 0.179,
+              "end": 0.558
+            },
+            {
+              "text": "forty",
+              "start": 0.737,
+              "end": 1.004
+            },
+            {
+              "text": "guests",
+              "start": 1.016,
+              "end": 1.317
+            },
+            {
+              "text": "check",
+              "start": 1.328,
+              "end": 1.551
+            },
+            {
+              "text": "in",
+              "start": 1.562,
+              "end": 1.741
+            },
+            {
+              "text": "Every",
+              "start": 2.109,
+              "end": 2.31
+            },
+            {
+              "text": "review",
+              "start": 2.321,
+              "end": 2.679
+            },
+            {
+              "text": "says",
+              "start": 2.734,
+              "end": 2.913
+            },
+            {
+              "text": "five",
+              "start": 2.924,
+              "end": 3.192
+            },
+            {
+              "text": "stars",
+              "start": 3.203,
+              "end": 3.694
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "They all ask for the bellhop with the red cap.",
+          "audio": "ep011/s5_l1.mp3",
+          "start": 4.432,
+          "duration": 2.376,
+          "words": [
+            {
+              "text": "They",
+              "start": 0.1,
+              "end": 0.19
+            },
+            {
+              "text": "all",
+              "start": 0.201,
+              "end": 0.368
+            },
+            {
+              "text": "ask",
+              "start": 0.379,
+              "end": 0.603
+            },
+            {
+              "text": "for",
+              "start": 0.614,
+              "end": 0.692
+            },
+            {
+              "text": "the",
+              "start": 0.703,
+              "end": 0.781
+            },
+            {
+              "text": "bellhop",
+              "start": 0.792,
+              "end": 1.228
+            },
+            {
+              "text": "with",
+              "start": 1.306,
+              "end": 1.395
+            },
+            {
+              "text": "the",
+              "start": 1.406,
+              "end": 1.462
+            },
+            {
+              "text": "red",
+              "start": 1.473,
+              "end": 1.674
+            },
+            {
+              "text": "cap",
+              "start": 1.685,
+              "end": 2.031
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "hotel",
+      "cast": [
+        {
+          "who": "mortimer",
+          "x": 780,
+          "pose": "idle",
+          "face": "smug",
+          "flip": true
+        },
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "shock",
+          "face": "shock"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "TOO HELPFUL",
+        "left": 4,
+        "progress": 70
+      },
+      "kind": "story",
+      "duration": 11.65,
+      "lines": [
+        {
+          "who": "mortimer",
+          "text": "Five stars already. Room thirteen is pleased. Now it wants to meet you.",
+          "audio": "ep011/s6_l0.mp3",
+          "start": 0.25,
+          "duration": 6.888,
+          "words": [
+            {
+              "text": "Five",
+              "start": 0.1,
+              "end": 0.488
+            },
+            {
+              "text": "stars",
+              "start": 0.512,
+              "end": 0.887
+            },
+            {
+              "text": "already",
+              "start": 0.912,
+              "end": 1.462
+            },
+            {
+              "text": "Room",
+              "start": 2.337,
+              "end": 2.625
+            },
+            {
+              "text": "thirteen",
+              "start": 2.65,
+              "end": 3.125
+            },
+            {
+              "text": "is",
+              "start": 3.138,
+              "end": 3.263
+            },
+            {
+              "text": "pleased",
+              "start": 3.275,
+              "end": 3.8
+            },
+            {
+              "text": "Now",
+              "start": 4.662,
+              "end": 4.975
+            },
+            {
+              "text": "it",
+              "start": 4.987,
+              "end": 5.1
+            },
+            {
+              "text": "wants",
+              "start": 5.125,
+              "end": 5.388
+            },
+            {
+              "text": "to",
+              "start": 5.412,
+              "end": 5.5
+            },
+            {
+              "text": "meet",
+              "start": 5.513,
+              "end": 5.725
+            },
+            {
+              "text": "you",
+              "start": 5.75,
+              "end": 6.0
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Then the elevator opens by itself. The button says: 13.",
+          "audio": "ep011/s6_l1.mp3",
+          "start": 7.288,
+          "duration": 3.912,
+          "words": [
+            {
+              "text": "Then",
+              "start": 0.089,
+              "end": 0.167
+            },
+            {
+              "text": "the",
+              "start": 0.179,
+              "end": 0.257
+            },
+            {
+              "text": "elevator",
+              "start": 0.268,
+              "end": 0.815
+            },
+            {
+              "text": "opens",
+              "start": 0.826,
+              "end": 1.094
+            },
+            {
+              "text": "by",
+              "start": 1.105,
+              "end": 1.261
+            },
+            {
+              "text": "itself",
+              "start": 1.272,
+              "end": 1.763
+            },
+            {
+              "text": "The",
+              "start": 2.143,
+              "end": 2.199
+            },
+            {
+              "text": "button",
+              "start": 2.21,
+              "end": 2.489
+            },
+            {
+              "text": "says",
+              "start": 2.5,
+              "end": 2.924
+            },
+            {
+              "text": "13",
+              "start": 3.103,
+              "end": 3.583
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "hotel",
+      "cast": [
+        {
+          "who": "lily",
+          "x": 300,
+          "pose": "point",
+          "face": "shock"
+        },
+        {
+          "who": "you",
+          "x": 640,
+          "pose": "idle",
+          "face": "neutral"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "TOO HELPFUL",
+        "left": 4,
+        "progress": 70
+      },
+      "stamp": {
+        "text": "3 NIGHTS LEFT?",
+        "color": "yellow",
+        "line": 1
+      },
+      "kind": "story",
+      "duration": 6.586,
+      "lines": [
+        {
+          "who": "lily",
+          "text": "The elevator is open. So is the front door. Pick one.",
+          "audio": "ep011/s7_l0.mp3",
+          "start": 0.25,
+          "duration": 3.864,
+          "words": [
+            {
+              "text": "The",
+              "start": 0.068,
+              "end": 0.114
+            },
+            {
+              "text": "elevator",
+              "start": 0.125,
+              "end": 0.648
+            },
+            {
+              "text": "is",
+              "start": 0.659,
+              "end": 0.818
+            },
+            {
+              "text": "open",
+              "start": 0.83,
+              "end": 1.273
+            },
+            {
+              "text": "So",
+              "start": 1.603,
+              "end": 1.74
+            },
+            {
+              "text": "is",
+              "start": 1.751,
+              "end": 1.853
+            },
+            {
+              "text": "the",
+              "start": 1.865,
+              "end": 1.967
+            },
+            {
+              "text": "front",
+              "start": 1.978,
+              "end": 2.262
+            },
+            {
+              "text": "door",
+              "start": 2.274,
+              "end": 2.683
+            },
+            {
+              "text": "Pick",
+              "start": 3.023,
+              "end": 3.205
+            },
+            {
+              "text": "one",
+              "start": 3.216,
+              "end": 3.511
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Both are tempting.",
+          "audio": "ep011/s7_l1.mp3",
+          "start": 4.264,
+          "duration": 1.872,
+          "words": [
+            {
+              "text": "Both",
+              "start": 0.1,
+              "end": 0.257
+            },
+            {
+              "text": "are",
+              "start": 0.268,
+              "end": 0.335
+            },
+            {
+              "text": "tempting",
+              "start": 0.346,
+              "end": 0.725
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": "hotel",
+      "cast": [
+        {
+          "who": "lily",
+          "x": 300,
+          "pose": "point",
+          "face": "shock"
+        },
+        {
+          "who": "you",
+          "x": 640,
+          "pose": "idle",
+          "face": "neutral"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "TOO HELPFUL",
+        "left": 4,
+        "progress": 70
+      },
+      "stamp": {
+        "text": "3 NIGHTS LEFT?",
+        "color": "yellow",
+        "line": 1
+      },
+      "kind": "choice",
+      "duration": 13.658,
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "What do you do?",
+          "audio": "ep011/s8_l0.mp3",
+          "start": 0.25,
+          "duration": 0.84,
+          "words": [
+            {
+              "text": "What",
+              "start": 0.089,
+              "end": 0.145
+            },
+            {
+              "text": "do",
+              "start": 0.156,
+              "end": 0.19
+            },
+            {
+              "text": "you",
+              "start": 0.201,
+              "end": 0.268
+            },
+            {
+              "text": "do",
+              "start": 0.279,
+              "end": 0.502
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "ELEVATOR: Ride to room 13.",
+          "audio": "ep011/s8_l1.mp3",
+          "start": 1.24,
+          "duration": 2.4,
+          "words": [
+            {
+              "text": "ELEVATOR",
+              "start": 0.089,
+              "end": 0.536
+            },
+            {
+              "text": "Ride",
+              "start": 0.882,
+              "end": 1.15
+            },
+            {
+              "text": "to",
+              "start": 1.161,
+              "end": 1.25
+            },
+            {
+              "text": "room",
+              "start": 1.261,
+              "end": 1.54
+            },
+            {
+              "text": "13",
+              "start": 1.551,
+              "end": 2.065
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Or EXIT: Run with Lily.",
+          "audio": "ep011/s8_l2.mp3",
+          "start": 3.79,
+          "duration": 1.896,
+          "words": [
+            {
+              "text": "Or",
+              "start": 0.089,
+              "end": 0.223
+            },
+            {
+              "text": "EXIT",
+              "start": 0.234,
+              "end": 0.558
+            },
+            {
+              "text": "Run",
+              "start": 0.938,
+              "end": 1.105
+            },
+            {
+              "text": "with",
+              "start": 1.116,
+              "end": 1.25
+            },
+            {
+              "text": "Lily",
+              "start": 1.261,
+              "end": 1.551
+            }
+          ]
+        },
+        {
+          "who": "narrator",
+          "text": "Comment one word: ELEVATOR or EXIT. The most-liked one decides part 3.",
+          "audio": "ep011/s8_l3.mp3",
+          "start": 5.836,
+          "duration": 4.872,
+          "words": [
+            {
+              "text": "Comment",
+              "start": 0.089,
+              "end": 0.379
+            },
+            {
+              "text": "one",
+              "start": 0.391,
+              "end": 0.592
+            },
+            {
+              "text": "word",
+              "start": 0.603,
+              "end": 0.893
+            },
+            {
+              "text": "ELEVATOR",
+              "start": 1.228,
+              "end": 1.719
+            },
+            {
+              "text": "or",
+              "start": 1.875,
+              "end": 2.042
+            },
+            {
+              "text": "EXIT",
+              "start": 2.054,
+              "end": 2.455
+            },
+            {
+              "text": "The",
+              "start": 2.835,
+              "end": 2.891
+            },
+            {
+              "text": "most-liked",
+              "start": 2.902,
+              "end": 3.426
+            },
+            {
+              "text": "one",
+              "start": 3.438,
+              "end": 3.627
+            },
+            {
+              "text": "decides",
+              "start": 3.638,
+              "end": 4.007
+            },
+            {
+              "text": "part 3",
+              "start": 4.018,
+              "end": 4.542
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "music": "ep011/music.mp3",
+  "coldOpen": true
+}
