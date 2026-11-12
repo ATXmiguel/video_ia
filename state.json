@@ -343,6 +343,35 @@
           "ep9": 90,
           "ep10": 14
         }
+      },
+      "vote_note": "2026-11-12: no vote comments on YouTube (0 besides the channel's own); not on TikTok. ELEVATOR chosen as the funnier story"
+    },
+    {
+      "episode": 12,
+      "file": "episodes/ep012.json",
+      "url": "https://youtube.com/shorts/aOYRDbBoSfA",
+      "instagram": null,
+      "tiktok": null,
+      "published": "2026-11-12",
+      "options": {
+        "A": "TRADE",
+        "B": "CAP"
+      },
+      "pinned": false,
+      "topComment": null,
+      "winner": "A",
+      "winner_note": "no votes anywhere on Part 2; ELEVATOR picked as the funnier story",
+      "arc": 3,
+      "part": 3,
+      "uploaded_via": "api",
+      "tiktok_note": "not posted 2026-11-12: tiktok.com showed an error page twice (profile and /upload); ep010 and ep011 also still missing there",
+      "views_at_check": {
+        "youtube": {
+          "ep8": 1183,
+          "ep9": 90,
+          "ep10": 14,
+          "ep11": 11
+        }
       }
     }
   ],
@@ -375,7 +404,7 @@
     }
   ],
   "cloud_check": {
-    "date": "2026-11-11",
+    "date": "2026-11-12",
     "audit": "no new email since Google 2026-11-03 (review completed)",
     "gh_cli": "not installed (prerequisite 1 missing)"
   },
@@ -421,6 +450,12 @@
       {
         "episode": 11,
         "published": "2026-11-11",
+        "kept_watching_pct": null,
+        "note": "not read; retention takes up to 2 days"
+      },
+      {
+        "episode": 12,
+        "published": "2026-11-12",
         "kept_watching_pct": null,
         "note": "not read; retention takes up to 2 days"
       }

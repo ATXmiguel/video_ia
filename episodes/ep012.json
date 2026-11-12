@@ -1,0 +1,327 @@
+{
+  "series": "Shift Happens",
+  "episode": 12,
+  "arc": {
+    "number": 3,
+    "part": 3,
+    "name": "Hotel Hollow"
+  },
+  "goal": {
+    "countdown": "NIGHTS LEFT",
+    "progress": "FIVE STARS"
+  },
+  "hook": "YOU RODE TO ROOM 13.",
+  "hookAccent": "IT'S YOU IN THERE?!",
+  "topComment": null,
+  "coldOpen": {
+    "set": "hotel",
+    "cast": [
+      {
+        "who": "you",
+        "x": 320,
+        "pose": "shock",
+        "face": "shock"
+      },
+      {
+        "who": "lily",
+        "x": 760,
+        "pose": "shock",
+        "face": "shock",
+        "flip": true
+      }
+    ],
+    "hud": {
+      "tips": 0,
+      "rage": 0,
+      "badge": "TOO HELPFUL",
+      "left": 3,
+      "progress": 70
+    },
+    "lines": [
+      "You have three nights to save this haunted hotel, and the elevator just opened for a floor that does not exist."
+    ]
+  },
+  "scenes": [
+    {
+      "set": "hotel",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "idle",
+          "face": "neutral",
+          "toX": 520
+        },
+        {
+          "who": "lily",
+          "x": 800,
+          "pose": "shock",
+          "face": "shock",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "TOO HELPFUL",
+        "left": 3,
+        "progress": 70
+      },
+      "stamp": {
+        "text": "GOING UP",
+        "color": "blue",
+        "line": 0
+      },
+      "lines": [
+        "You step into the elevator. Button thirteen presses itself.",
+        {
+          "who": "lily",
+          "text": "You are not riding that thing alone!"
+        }
+      ]
+    },
+    {
+      "set": "phone",
+      "cast": [],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "TOO HELPFUL",
+        "left": 3,
+        "progress": 70
+      },
+      "phone": {
+        "contact": "ROOM 13",
+        "messages": [
+          {
+            "from": "them",
+            "text": "Going up, bellhop",
+            "line": 0
+          },
+          {
+            "from": "them",
+            "text": "Floor 13 is not on the map",
+            "line": 0
+          },
+          {
+            "from": "me",
+            "text": "Who are you?",
+            "line": 1
+          },
+          {
+            "from": "them",
+            "text": "Your best employee",
+            "line": 1
+          }
+        ]
+      },
+      "lines": [
+        "Halfway up, your phone buzzes. Room thirteen is texting.",
+        "It says it has waited for you since your very first shift."
+      ]
+    },
+    {
+      "set": "hallway",
+      "cast": [
+        {
+          "who": "you",
+          "x": 320,
+          "pose": "shock",
+          "face": "shock"
+        },
+        {
+          "who": "lily",
+          "x": 760,
+          "pose": "shrug",
+          "face": "shock",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "FLOOR 13",
+        "left": 3,
+        "progress": 70
+      },
+      "stamp": {
+        "text": "FLOOR 13",
+        "color": "red",
+        "line": 0
+      },
+      "fx": "shake",
+      "lines": [
+        "The doors open on a hallway with one single door. It is already open.",
+        {
+          "who": "lily",
+          "text": "Why does it smell like clean towels?"
+        }
+      ]
+    },
+    {
+      "set": "hallway",
+      "cast": [
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "shock",
+          "face": "shock"
+        },
+        {
+          "who": "you",
+          "x": 780,
+          "pose": "idle",
+          "face": "smug",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "DOUBLE BOOKED",
+        "left": 3,
+        "progress": 75
+      },
+      "stamp": {
+        "text": "IT'S YOU",
+        "color": "yellow",
+        "line": 1
+      },
+      "fx": "flash",
+      "lines": [
+        "Inside, someone is folding towels. Red cap. Your face. Much better posture.",
+        {
+          "who": "lily",
+          "text": "There are two of you. I can barely handle one."
+        }
+      ]
+    },
+    {
+      "set": "hotel",
+      "cast": [
+        {
+          "who": "you",
+          "x": 300,
+          "pose": "sad",
+          "face": "sad"
+        },
+        {
+          "who": "mortimer",
+          "x": 780,
+          "pose": "idle",
+          "face": "smug",
+          "flip": true
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "DOUBLE BOOKED",
+        "left": 3,
+        "progress": 85
+      },
+      "stamp": {
+        "text": "NEVER FIRED",
+        "color": "green",
+        "line": 0
+      },
+      "lines": [
+        {
+          "who": "mortimer",
+          "text": "My best worker. Never sleeps, never quits, never asks for a raise."
+        },
+        "Every shift you got fired from, your double stayed and finished."
+      ]
+    },
+    {
+      "set": "hallway",
+      "cast": [
+        {
+          "who": "you",
+          "x": 540,
+          "pose": "point",
+          "face": "smug"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "DOUBLE BOOKED",
+        "left": 3,
+        "progress": 85
+      },
+      "zoom": "you",
+      "stamp": {
+        "text": "NO CHECKOUT",
+        "color": "red",
+        "line": 1
+      },
+      "lines": [
+        {
+          "who": "you",
+          "text": "Trade with me. I take your life. You take room thirteen."
+        },
+        "Five stars, guaranteed. You just never check out."
+      ]
+    },
+    {
+      "set": "hallway",
+      "cast": [
+        {
+          "who": "lily",
+          "x": 300,
+          "pose": "point",
+          "face": "shock"
+        },
+        {
+          "who": "you",
+          "x": 660,
+          "pose": "idle",
+          "face": "neutral"
+        }
+      ],
+      "hud": {
+        "tips": 0,
+        "rage": 0,
+        "badge": "DOUBLE BOOKED",
+        "left": 3,
+        "progress": 85
+      },
+      "stamp": {
+        "text": "2 NIGHTS LEFT?",
+        "color": "yellow",
+        "line": 1
+      },
+      "lines": [
+        {
+          "who": "lily",
+          "text": "The cap! This hotel only knows you by the cap. Steal it, and you are the boss!"
+        },
+        "Both are tempting."
+      ]
+    }
+  ],
+  "choice": {
+    "question": "WHAT DO YOU DO?",
+    "options": [
+      {
+        "key": "A",
+        "word": "TRADE",
+        "label": "Swap with your double",
+        "teaser": "Five stars, no exit",
+        "icon": "you",
+        "pose": "idle",
+        "face": "smug"
+      },
+      {
+        "key": "B",
+        "word": "CAP",
+        "label": "Steal the double's cap",
+        "teaser": "Boss of room 13",
+        "icon": "lily",
+        "pose": "point",
+        "face": "happy"
+      }
+    ]
+  }
+}
