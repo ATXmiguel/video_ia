@@ -1,6 +1,11 @@
-# Daily run — Shift Happens
+# Daily run — Shift Happens (RETIRED)
 
-Runs every day at 13:30 (Brasília) as a scheduled task in the Claude desktop app, on this PC
+> **Retired on 2026-11-13.** The `shift-happens-daily` scheduled task was deleted: the full focus is now
+> E Se De Repente (the `esederrepente-short-diario` routine, built in the `claude/esederrepente-internet`
+> branch). No new Shift Happens episodes are made or published. The steps below are kept only as a record.
+> Its prompt is still on disk at `~/.claude/scheduled-tasks/shift-happens-daily/SKILL.md` if it ever comes back.
+
+Ran every day at 13:30 (Brasília) as a scheduled task in the Claude desktop app, on this PC
 (project: `D:\CODE\IA\automações\video_diarios_ia`). Chrome with the Claude extension must be open.
 If the app is closed at 13:30, the run happens when it's next opened. One episode per day, maximum.
 

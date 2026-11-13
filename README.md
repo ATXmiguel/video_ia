@@ -1,4 +1,8 @@
-# Shift Happens — interactive story channel
+# Shift Happens — interactive story channel (retired)
+
+> **Retired on 2026-11-13.** The daily Shift Happens routine is off; the focus is entirely on
+> **E Se De Repente** (daily Portuguese "E se, de repente...?" Shorts, branch `claude/esederrepente-internet`,
+> guide in `specials/SHORTS.md` there). The 12 published episodes stay up; nothing new is made here.
 
 **Shift Happens Uploader uses YouTube API Services** to publish episodes to the creator's own YouTube channel
 and read the A/B votes in its comments.
